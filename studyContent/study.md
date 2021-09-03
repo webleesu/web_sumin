@@ -150,3 +150,10 @@ GitHub Desktop ([GitHub Desktop 다운받기](Https://desktop.github.com))과 Gi
   - 전체의 밑바탕이 되는 부분
   - address, social network, family site, fnb(footer 네비게이션)
   - 윤리강령, 개인정보보호 등 : `info list`
+
+---
+
+접근성 관점에서 배경색과 글씨색을 그레이톤으로 변경했을때 audeh가 4.5:1 이상 나와야함 <br />
+14pt + bold / 18pt
+
+모든 사이트의 로고는 가이드를 따라야함(ex. 유튜브, 인스타그램, 페이스북)
