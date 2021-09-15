@@ -39,9 +39,196 @@
 
 
 
+---
+
+## 21.09.15
+
+#### 코딩
+
+- html
+  - list  (순서 없는 것, 순서 있는 것, 제목/내용이 있는 것)
+  - id/class 개념
+- style - 선택자
+  - 선택자 (모든 선택자, 타입 선택자, id 선택자, class 선택자, 부모 선택자, 자식 선택자)
+  - 사이즈, 색상처리, 
+- cli
+  - 파일 이동/파일 복제
+  - 목록보기
+  - 화면 정리/작성 내용 보기
+  - 현재 페이지 위치/컴퓨터 이름 파악
+
+---
+
+### html
+
+class 이름에 띄어쓰기 하면 이름 두개됨
+
+target="_blank" : 새창에서 띄우기 `<a target="_blank" href=""></a>`
 
 
 
+#### list
+
+- `<li>` 리스트를 뜻함
+
+- `<ul>` 순서가 없는 리스트 (불릿기호)
+  - `ul`안에는 자식으로 `li`만 가능
+
+- `<ol>` 순서가 있는 리스트 (1, 2, 3, ...)
+
+- `<dl>` 제목이 있는 리스트
+  - `<dt>` 제목
+  - `<dd>` 내용 - 한 탭 정도 들여쓰기
+
+리스트 내부에는 반드시 `li`요소만 작성이 가능!!
+
+`dl`의 경우에는 `dt/dd`의 요소만 작성 가능
+
+다른 태그를 쓰고 싶다면 `<li><p></p></li>` 처럼 내부에 사용해야 함
+
+- 다단리스트는 최대 3단계 권장
+
+
+
+#### style
+
+```css
+<style>
+      div {
+        background-color: rgb(252, 232, 252); 
+        border-width: 1px; border-color: #333; border-style: solid;
+      }
+      .ex_part {background-color: violet;}
+</style>
+```
+
+```css
+	<style>
+
+      #wrap {
+        width: 800px;
+        border-radius: 8px;
+        margin: auto; padding: 20px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,3);
+        background-color: #dcf;
+      }
+
+      div {width:500px;}
+      .ex_part {background-color:#fdf;}
+      .other_part {border-radius: 5px;}
+    </style>
+```
+
+````css
+h1 { width: 200px; height: 50px; background-color: #ccf;}
+h1 a { display: block; width:100%; height: 100%; color:#973; text-decoration: none;}
+````
+
+- 주석처리할때 /* */ 는 그냥 주석 /** */ 처럼 *이 두개들어가면 암묵적으로 설명
+- class 를 적용시킬땐 class 이름 앞에 `.` 적음
+
+- id를 적용시킬땐 id 이름 앞에 `#` 적음
+
+- `<div>` 는 블럭요소
+  - 블럭요소에서 `display: inline;` 하면 강제로 inline 형태로 변경 가능
+
+- `<span>` 은 인라인 요소
+  - 인라인 요소에서 `display: block;` 하면 블럭 형태로 변경 가능
+
+  - `inline-block` : 블럭처럼 height는 갖지만 인라인처럼 width 는 갖지 못함/잘 사용 안함
+
+- 기본 inline-block 요소 : img, button, input, select, textarea
+
+- display 를 두번 사용하면 위에 display는 삭제처리
+
+- 글씨 색은 다른거 쓰지말고`color` 만
+
+- 자손선택자
+  - 어느 부모 안의 자손만 선택해서 사용할 경우 `h1 a{ display: block; width:100%; height: 100%; color:#973;}` 처럼 한칸 띄고 사용
+
+  - `.ex_part ul > li ` 에서 > 은 자손 선택자 라는 뜻
+
+- `section.ex_part > h2 { color: #333;}` section 과 뒤에 class 이름을 붙이면 동급 (띄면 자식)
+- 하나의 요소를 선택하여 css를 적용 : 타입/요소 선택자
+  - ex: div {} || p {} || a {} || li {}
+- 요소 (스페이스 요소를 선택하여 css적용 : 자손(후손) 선택자) 
+  - ex: ul li {} || ol li {} || div a {} || #box li {} || .test a {}
+- 요소 > 요소 선택자 : 자식 선택자.
+  - ex: ul > li {} || div > h3 {} || #box > h2 {}
+- id/class : id -> #id명 , class -> .class명
+
+* 전체선택자 : 가급적 사용 x 
+
+
+
+#### cli (git-bash)
+
+`\` : window에서 폴더 이동
+
+`/` : linux/unix(mac) 에서 폴더이동
+
+`ipconfig` : ip주소 찾기
+
+`컨트롤 insert` : 복사
+
+`pwd` : 현재위치
+
+`cd ..` : 한단계 위 디렉토리로
+
+`cd -` : 이전 위치로
+
+`ls` : 현재위치에서 목록보기
+
+하드 디렉토리는 이동할때 하드 이름 뒤에 `:` 붙이기
+
+`clear` : 화면 정리
+
+`start .` : 해당 디렉토리 열기
+
+`mkdir` : 디렉토리 만들기
+
+`ls -a` : 숨겨진 모든 파일/디렉토리포함 리스트 보기
+
+`cd /` : 현재위치에서 최상단
+
+`cd ~` : 
+
+`whoami` : 컴퓨터 이름 확인
+
+`history` : 지금까지 썼던 명령어
+
+- `!숫자` : 해당하는 라인의 명령어 수행
+
+`touch` : 파일 만들기
+
+`&&` : 명령어 한번에 수행
+
+`ll` : 
+
+`mv` : 파일 이동 (mv '이동할 파일이름' '이동할 디렉토리')
+
+​		파일 이름 변경 (mv '변경할 파일' '변경할 파일 이름')
+
+`cp` : 복사
+
+- `cp -r 디렉토리 이름` : 디렉토리 안에 파일이 있어도 강제로 복사해라
+
+
+
+#### 단축키
+
+| 단축키                                                       |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ctrl + shift + l (L)                                         | 같은 단어 감싸기                                             |
+| ctrl + shift + P (view -> comment palette) 하고 wrap검색 -> 태그 | 자동으로 넣어짐                                              |
+|                                                              | ctrl + alt + = : 에 기능 넣어놓음                            |
+|                                                              | 내부에 또다른 태그 넣고싶으면 > 넣고 태그 넣으면 계속 내부로 넣어짐 |
+| ctrl + alt + i                                               | 숫자 자동으로 맞추기                                         |
+| ctrl + enter                                                 | 밑에줄 엔터                                                  |
+| shift + ctrl + enter                                         | 위에줄 엔터                                                  |
+| shift + alt + 방향키                                         | 그 줄 끝으로 전체선택                                        |
+| alt + 방향키(위,아래)                                        | 위 아래 줄 변경                                              |
+| 선택 + shift + delete                                        | 잘라내기                                                     |
 
 
 
