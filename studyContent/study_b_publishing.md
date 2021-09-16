@@ -373,3 +373,6 @@ h1 a { display: block; width:100%; height: 100%; color:#973; text-decoration: no
 
 - favicon은 svg불가능
 
+
+
+- css 적용 우선순위 공부하기
