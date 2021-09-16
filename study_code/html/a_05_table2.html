@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- a_05_table2.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 예제</title>
+  <!-- style -->
+  <style>
+    h1,h2 { font-size: 1.2rem;}
+    table,tr,td,th,thead,tbody {
+      margin: 0; padding: 0;
+      border-spacing: 0; border-collapse: collapse;
+      border-width: 1px; border-style: solid; border-color: #555;
+    }
+
+    th,td { 
+      width: 20%; height: 80px;
+      border-radius: 3px; border-color: #fff;
+      text-align: center;
+    }
+  
+    #tableTitle { text-align: left; font-size: 20px; font-weight: 600;}
+    thead {background-color: #445E9B; color: #fff; }
+    /* td { min-width: 150px; min-height: 100px;} */
+    tbody>tr { background-color: #ddd;}
+    .tableFirst { background-color: #445E9B; color: #fff;}
+  
+
+  </style>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_00_content.html">웹 기초</a></h1>
+    <hr />
+    <div class="part">
+      <h2>테이블 연습</h2>
+      <table summary="오피스 클리닝 서비스 가격">
+        <caption id="tableTitle">&gt;&gt;&gt;오피스 클리닝 서비스 가격 <span style="color: #999;">SERVEIC PRICE</span></caption>
+        <thead>
+          <tr>
+            <td>구분</td>
+            <td>내역</td>
+            <td>단위</td>
+            <td>단가 (원)</td>
+            <td>비고</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tableFirst">사무실 / 업소 <br /> 리모델링 대청소</td>
+            <td colspan="4" style="font-size: 20px; font-weight: 500;">전화상담 후 무료방문</td>
+          </tr>
+
+          <tr>
+            <td class="tableFirst">준공 청소</td>
+            <td>아파트 <br /><br /> 빌딩</td>
+            <td>m2</td>
+            <td>1,500~3,000</td>
+            <td>전화상담 후 무료방문견적</td>
+          </tr>
+
+          <tr>
+            <td class="tableFirst">바닥 청소 <br /> 코팅</td>
+            <td>비닐/타일 <br /><br /> 대리석</td>
+            <td>평</td>
+            <td>6,000 <br /><br /> 25,000</td>
+            <td>집기의 유무, 오염정도에 따라 <br /> 가격이 추가될 수 있습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div> <!-- // #wrap -->
+  
+  <!-- script -->
+  <script></script>
+</body>
+</html>
