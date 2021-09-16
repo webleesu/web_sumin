@@ -108,19 +108,20 @@
 
 ## 21.09.15
 
-#### 코딩
+- ##### 코딩
 
-- html
-  - list  (순서 없는 것, 순서 있는 것, 제목/내용이 있는 것)
-  - id/class 개념
-- style - 선택자
-  - 선택자 (모든 선택자, 타입 선택자, id 선택자, class 선택자, 부모 선택자, 자식 선택자)
-  - 사이즈, 색상처리, 
-- cli
-  - 파일 이동/파일 복제
-  - 목록보기
-  - 화면 정리/작성 내용 보기
-  - 현재 페이지 위치/컴퓨터 이름 파악
+  - html
+    - [x] list ( 순서없는것, 순서가 있는것, 제목/내용이 있는것 )
+    - [x] id/class 개념
+  - style 
+    - [x] 선택자 ( 모든선택자, 타입선택자, id선택자, class선택자, 부모, 자식 )
+    - [x] 사이즈, 색상처리
+    - [ ] margin(여백-시각적 공간), padding(여백-내장지방), border-radius(테두리 R값), box-shadow(그림자)
+  - cli 
+    - 파일 이동(`mv`)/ 파일 복제(`cp`)
+    - 목록보기( `ls` , `ls -a` )
+    - 화면정리( `clear` ) / 명령어 기록 보기 ( `history`) / 이전명령어 사용 ( `!숫자` )
+    - 현재페이지 위치( `pwd` )/컴퓨터 이름파악( `whoami` )
 
 ---
 
@@ -297,5 +298,78 @@ h1 a { display: block; width:100%; height: 100%; color:#973; text-decoration: no
 
 
 
+---
 
+## 21.09.16
+
+#### 코딩
+
+- [ ] id/class : id의 역할, class의 역할(?)
+- [ ] table (표만들기) - 게시판, 주식, 안내판, 경기표
+- [ ] 이미지 + 글쓰기 (float, clear)
+- [ ] 문제풀이 1-5
+
+
+
+---
+
+### html
+
+- `#` : 최상단으로 이동 `<a href="#"></a>`
+
+- `#id이름` : css에서 적용하는것 처럼 a태그에 `href`에 #id이름 적용 가능(**마이크로 링크**)
+  - 마이크로  링크는 id만 가능/class는 불가능
+- class명에 **,** 넣으면 에러
+- id명에 **띄어쓰기** 넣으면 에러
+- html에서는 `<` `>` `&` 절대 사용 불가
+  - 특수문자를 삽입하는 코드 : entity code
+    - < : `&lt;` 으로 사용
+    - `>` : `&gt;` 으로 사용
+    - & : `&amp;` 으로 사용
+    - &#8361; :  `&#8361;` 으로 사용
+- emmet에서 `$`는 숫자를 뜻함
+
+
+
+#### style
+
+- `min-height` : 최소한의 높이 설정
+- `border-spacing` : 보드 사이의 간격 조정 (오늘 table에는 0 이용)
+- `border-collapse: collapse;` : 보더 선과 선 사이를 굳히기 (table)
+- `border-color : transparent;` : 투명하게
+- `opacity` : 투명도 / 100%을 1로 표현 
+
+
+
+#### table
+
+- `<table> </table>` : 으로 사용
+  - `<caption>제목</caption>` : 테이블의 제목
+    - 코드작성은 `<table>`안에 들어가지만 실제 보이기는 테이블 밖에 제목 써짐
+  - `summary` 는 설명해주는 옵션 `<table summary="">` / 쓰지 말라고 권장 but 업계에서는 사용
+  - `<tr></tr>` : 가로 한줄 (행) / <u>tr은 border 가 없음</u>
+    - `<td></td>` : `<tr>` 안의 하나하나의 셀
+  - `<thead> </thead>` : 테이블 머리
+    - `<th></th>` : `<thead>` 안의 셀
+  - `<tbody> </tbody>` : 테이블 내용
+  - `<tfoot> </tfoot>` : 테이블 하단 / 생략가능
+  - `colspan` : 가로로 셀 합치기
+  - `rowspan` : 세로로 셀 합치기 
+
+
+
+
+
+#### 기타
+
+- favicon : 탭메뉴 옆에 뜨는 아이콘
+
+```
+  <link rel="shortcut icon" href="../favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+```
+
+- 두번째 줄은 애플에서만
+
+- favicon은 svg불가능
 
