@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.box_02 {
+  width: 600px; height: 600px;
+  /* width: 700px; height: 700px; */
+  background-color: #95D6A4;
+  padding: 10px;
+}
+
+.inner {
+  width: 200px; height: 100%;
+  float: left;
+  font-weight: 600;
+  /* margin: 15px; */
+}
+
+.inner_01 { 
+  /* margin-right: 5px; */
+  background-color: #456EA2; 
+  color: #FFF;
+}
+.inner_02 { 
+  /* margin-left: 5px; margin-right: 5px; */
+  background-color: #FFF9EB; 
+  color: #000;
+}
+.inner_03 { 
+  /* margin-left: 5px; */
+  background-color: #FFCF5D; 
+  color: #000;
+}

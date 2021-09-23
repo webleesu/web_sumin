@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* a_homework_06.css */
+
+.box_06 {
+  width: 600px; height: auto;
+  background-color: #95D6A4;
+  padding: 10px;
+}
+
+.inner {
+  width: 100%; height: auto;
+  padding: 10px;
+}
+
+.inner_01 { background-color: #456EA2;}
+.inner_02 { background-color: #FFFFF1;}
+.inner_03 { background-color: #FFCF5D;}
+
+.inner > div { 
+  width: 230px; height: 200px;
+  margin: auto;
+  font-weight: 600;
+}
+
+/* ------------------------------------------ */
+.inner_01 > .insert_01 {
+  background-color: #FFCF5D;
+  float: left;
+}
+
+.inner_01 > .insert_02 {
+  background-color: #FFEBD2;
+  float: right;
+}
+
+hr {
+  margin: 0; padding: 0; border: 0;
+  width: 100%; height: 0px;
+  background-color: #fff;
+}
+
+/* -------------------------------------- */
+.inner_02 > .insert_01 {
+  background-color: #DB5446;
+  color: #fff;
+  float: left;
+}
+
+.inner_02 > .insert_02 {
+  width: 140px; height: 200px;
+  background-color: #6C7A88;
+  color: #fff;
+  float: left;
+}
+
+.inner_02 > .insert_03 {
+  background-color: #e48353;
+  color: #fff;
+  float: left;
+}
+
+/* ----------------------------------------- */
+.inner_03 > .insert_01 {
+  width: 370px; height: 200px;
+  background-color: #7E94FF;
+  color: #fff;
+  float: left;
+}
+
+.inner_03 > .insert_02 {
+  background-color: #6C7A88;
+  color: #fff;
+  float: left;
+}
