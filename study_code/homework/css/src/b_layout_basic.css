@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* b_layout_basic.css */
+
+/* reset.css 
+===================================== */
+body { margin: 0; }
+
+h1,h2,h3,h4,h5,h6,
+p,pre,address,
+ul,ol,li,dl,dt,dd{
+  margin: 0; padding: 0;
+  font-size: 1rem; font-family: sans-serif;
+} 
+
+ul,ol { list-style: none;}
+
+a { text-decoration: none; color: inherit;}
+button { border: 0; background-color: transparent; cursor: pointer;}
+
+/* common.css 
+===================================== */
+.clearfix:after,
+.clearfix::after{
+  content: ""; display: block; clear: both;
+}
+
+/* design ====================================*/
+body > div {width: 1600px;}
+/* headBox
+------------------------------------------ */
+#headBox { height: 150px; }  
+
+
+
+/* adViewBox
+------------------------------------------ */
+#adViewBox { height: 750px;}
+
+
+
+/* localNavBox
+------------------------------------------ */
+#localNavBox { height: 250px;}
+
+
+
+/* popularContentBox
+------------------------------------------ */
+#popularContentBox { height: 600px;}
+
+
+
+/* newContentBox
+------------------------------------------ */
+#newContentBox {height: 900px;}
+
+
+
+/* recommendedContentBox
+------------------------------------------ */
+#recommendedContentBox { height: 600px;}
+
+
+
+/* communityBox
+------------------------------------------ */
+#communityBox { height: 800px;}
+
+
+
+/* miniAdBox
+------------------------------------------ */
+#miniAdBox { height: 400px;}
+
+
+
+/* footerBox
+------------------------------------------ */
+#footerBox { height: 200px;}
+
+
