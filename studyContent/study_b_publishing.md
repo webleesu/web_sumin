@@ -385,15 +385,15 @@ h1 a { display: block; width:100%; height: 100%; color:#973; text-decoration: no
 
 #### css
 
-- [ ] psuedo code (의사전달코드)
-  - [ ] 마우스를 올렸을 경우
-  - [ ] 마우스 버튼을 누르고 있는 경우
-  - [ ] a요소를 이용하여 페이지를 방문한 경우
-  - [ ] 초점을 맞추는 경우 (focus 처리)
-  - [ ] 가상의 존재
-  - [ ] 첫 글자 / 첫 줄
-- [ ] 이미지+글쓰기 (float, clear)
-- [ ] 가로형 레이아웃, 세로형 레이아웃
+- [x] psuedo code (의사전달코드)
+  - [x] 마우스를 올렸을 경우
+  - [x] 마우스 버튼을 누르고 있는 경우
+  - [x] a요소를 이용하여 페이지를 방문한 경우
+  - [x] 초점을 맞추는 경우 (focus 처리)
+  - [x] 가상의 존재
+  - [x] 첫 글자 / 첫 줄
+- [x] 이미지+글쓰기 (float, clear)
+- [x] 가로형 레이아웃, 세로형 레이아웃
 
 ---
 
@@ -403,10 +403,10 @@ h1 a { display: block; width:100%; height: 100%; color:#973; text-decoration: no
 
 #### css
 
-- [ ] margin
-- [ ] padding
-- [ ] border
-- [ ] outline
+- [x] margin
+- [x] padding
+- [x] border
+- [x] outline
 
 ---
 
@@ -459,9 +459,9 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
 
 #### css
 
-- [ ] nth-child
-- [ ] nth-of-type
-- [ ] layout
+- [x] nth-child
+- [x] nth-of-type
+- [x] layout
 
 
 
@@ -561,3 +561,80 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
 
 - `<a href="#" title="">` : 타이틀은 마우스 올렸을때 말풍선
 
+
+
+---
+
+
+
+## 21.09.27
+
+#### 코딩
+
+- [ ] layout 풀이
+- [ ] position
+- [ ] font
+- [ ] unit (단위) 16px == 12px == 100% == 1em == 1rem
+
+#### 과제(10/4)
+
+- 프로토타입 페이지 - 1440기준 (크게 커지는 경우) 
+- 큰 박스부터 만들기
+- 주석
+- 새로운 프로젝트 디렉토리 만들기
+
+
+
+---
+
+
+
+##### 속성작성요령
+
+- 선택자 { 
+
+  ​	존재유무/형태 ► display, overflow
+
+  ​	위치 ► position
+
+  ​	크기 ► width ⇒ height 
+
+  ​	공간 ► margin ⇒ box-sizing ⇒ padding ⇒ border
+
+  ​	서체 ► font-weight, font-style, font-size, line-height, family....
+
+  ​	배경처리 ► background-image, repeat, posion, size, clip ....
+
+  ​	기타효과 ► shadow, ....
+
+  ​	애니메이션 
+
+  }
+
+
+
+---
+
+
+
+- float 사용하면 속성은 block로 바뀜
+
+- background-clip : 배경색상을 칠하는 범위
+  - content-box : 내용만 칠해라
+  - padding-box : padding의 범위까지 칠해라
+  - border-box : 외곽선까지 칠해라
+  - 구형브라우저에서는 안되는 경우 많음
+
+- line-height : 픽셀 
+  - 행간 / 한 줄의 간격을 해당 픽셀만큼 맞춰줌 ( text를 중간쯤에 넣어줌)
+  - 한 줄일 경우에만 사용 할 수 있음
+  - 워드나 한글에서 쓰는 첫줄은 움직이지 않는 행간은 영어로 'leading' - 웹에서는 없음
+  - ![](C:\work\a_sumin\web_sumin\studyContent\images\line-height.png) line-height를 분홍색 박스의 height 만큼 넣어줌
+  - vertical align : 세로정렬을 뜻하지만 <u>잘 사용은 안함</u>
+  - vertical align 속성 :![](C:\work\a_sumin\web_sumin\studyContent\images\vertical-align.png)
+
+
+
+
+
+aria : 더 공부하기
