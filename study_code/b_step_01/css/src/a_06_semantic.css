@@ -3,6 +3,10 @@
 /* reset.css */
 html,body { margin: 0; padding: 0;}
 
+header, nav, section, main, article, 
+aside, footer, figure, figcaption {
+  display: block; margin: 0; padding: 0; border: 0;
+}
 
 /* design */
 #wrap {
@@ -24,12 +28,34 @@ html,body { margin: 0; padding: 0;}
   background-color: #faa;
 }
 
+.content_wrap {
+  width: 100%; height: auto;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
 /* contentBox
 ===================================== */
 #contentBox {
   width: 100%; height: 400px;
   background-color: #ddd;
 }
+
+#contentBox2 {
+  height: 200px;
+  background-color: #aaa;
+} 
+#contentBox3 {
+  height: 200px;
+  background-color: #ccc;
+} 
+#contentBox4 {
+  height: 200px;
+  background-color: #ddd;
+} 
+
+
+
 
 /* footBox
 ===================================== */
