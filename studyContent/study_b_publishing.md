@@ -571,7 +571,14 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
 
 #### 코딩
 
-- [ ] layout 풀이
+- [x] layout 풀이
+  - [x] float
+  - [x] h1~h6 heading 구조
+  - [x] 유효성검사
+  - [x] wai-area
+  - [x] margin/padding
+  - [x] 1600 기준 틀 만들고 내부에서는 고정형, 외부는 늘어나게 처리
+- [ ] semantic 구조
 - [ ] position
 - [ ] font
 - [ ] unit (단위) 16px == 12px == 100% == 1em == 1rem
@@ -638,3 +645,10 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
 
 
 aria : 더 공부하기
+
+
+
+---
+
+
+
