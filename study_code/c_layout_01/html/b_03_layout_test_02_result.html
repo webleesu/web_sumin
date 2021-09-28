@@ -16,9 +16,9 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    <div id="headBox" role="banner">
+    <header id="headBox">
       <h1>file name</h1>
-      <div class="gnb" role="navigation">
+      <nav class="gnb">
         <h2 class="blind">global navigation</h2>
         <ul class="clearfix">
           <li>li_01</li>
@@ -27,16 +27,18 @@
           <li>li_04</li>
           <li>li_05</li>
         </ul>
-      </div>
-      <div class="unb" role="navigation">
+      </nav>
+      <nav class="unb">
         <h2 class="blind">utility navigation</h2>
-      </div>
-    </div>
+      </nav>
+    </header>
     <!-- // #headBox-->
     
-    <div id="adViewBox" role="region">
+    <section id="adViewBox">
       <h2 class="blind">주요 광고 내용</h2>
-      <div class="view_outer">view_outer</div>
+      <article class="view_outer">
+        <h3>view_outer</h3>
+      </article>
       <div class="view_indicator">
         <ul class="clearfix">
           <li>ad_01</li>
@@ -47,10 +49,10 @@
           <li>ad_06</li>
         </ul>
       </div>
-    </div>
+    </section>
     <!-- // #adViewBox-->
     
-    <div id="localNavBox" role="navigation">
+    <nav id="localNavBox">
       <h2 class="blind">local navigation</h2>
       <div class="local_nav_outer">
         <ul class="clearfix">
@@ -62,12 +64,12 @@
           <li>lnb_06</li>
         </ul>
       </div>
-    </div>
+    </nav>
     <!-- // #localNavBox-->
     
-    <div class="content_box_wrap" role="main">
+    <main class="content_box_wrap">
       <h2 class="blind">주요 내용</h2>
-      <div id="popularContentBox">
+      <article id="popularContentBox">
         <h3 class="area_title">인기 콘텐츠</h3>
         <div class="pop_con_area">
         <div class="card">
@@ -83,10 +85,10 @@
           <div class="con_part"></div>
         </div>
         </div>
-      </div>
+      </article>
       <!-- // #popularContentBox-->
       
-      <div id="newContentBox" class="box_space">
+      <article id="newContentBox" class="box_space">
         <h3 class="area_title">최신 컨텐츠</h3>
         <div class="new_con_area">
           <div class="new_con_title_area">
@@ -99,10 +101,10 @@
           </div>
           <div class="new_con_more_area"></div>
         </div>
-      </div>
+      </article>
       <!-- // #newContentBox-->
       
-      <div id="recommendedContentBox" class="box_space">
+      <article id="recommendedContentBox" class="box_space">
         <h3 class="area_title">추천컨텐츠</h3>
         <div class="recom_con_area">
           <ul class="clearfix">
@@ -124,12 +126,12 @@
             </li>
           </ul>
         </div>
-      </div>
+      </article>
       <!-- // #recommendedContentBox-->
-    </div>
+    </main>
     <!-- // .content_box_wrap -->
 
-    <div id="communityBox" class="box_space" role="main">
+    <section id="communityBox" class="box_space">
       <h2 class="area_title">community</h2>
       <div class="community_area">
         <ul>
@@ -153,19 +155,19 @@
           </li>
         </ul>
       </div>
-    </div>
+    </section>
     <!-- // #communityBox-->
     
-    <div id="miniAdBox" class="box_space" role="region">
+    <aside id="miniAdBox" class="box_space">
       <h2 class="blind">보조광고</h2>
       <div class="mini_ad_outer">mini_ad_outer</div>
-    </div>
+    </aside>
     <!-- // #miniAdBox-->
     
-    <div id="footerBox" role="contentinfo">
+    <footer id="footerBox" role="contentinfo">
       <h2 class="blind">site information</h2>
       <div class="foot_outer">foot_outer</div>
-    </div>
+    </footer>
     <!-- // #footerBox-->
     
   </div><!-- // #wrap -->
