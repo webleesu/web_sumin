@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* b_06_positon.css */
+/* reset.css */
+html, body { height: 100%; }
+
+html,body,div, 
+h1,h2,h3,h4,h5,h6,
+p,pre,ul,li,ol,dl,dt,dd {
+  margin: 0; padding: 0;
+}
+
+ul,ol {list-style: none;}
+hr {margin: 0; padding: 0; border: 0; border-bottom: 1px solid #555;}
+
+hgroup { display: block; margin: 0; padding: 0;}
+
+
+/* common.css */
+
+
+/* design */
+
+#wrap{ 
+  width: 900px; height: 500px;
+  margin: auto; padding-bottom: 2000px;
+  background-color: #fdd;
+  background-image: linear-gradient(360deg, #fdd, #ccf, rgba(230,230,230,0.5));
+}
+
+hgroup { 
+  width: 100%; height: 100px;
+  box-sizing: border-box; padding: 20px;
+}
+
+.part {
+  width: 650px; height: 120px;
+  margin: auto; margin-top: 50px;
+  box-sizing: border-box; padding: 10px;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+.part ul {
+  width: 100%; height: 100%;
+}
+
+.part li {
+  float: left;
+  width: 100px; height: 100px;
+  border: 1px solid #a7f;
+  box-sizing: border-box;
+  text-align: center; line-height: 100px; 
+  font-weight: 800; font-size: 1.2rem; color: #fff;
+}
+
+.default { background-color: #45D4FA;}
+.static { background-color: #7A56C6;}
+.fixed { background-color: #C95D79;}
+.absolute { background-color: #57BC93;}
+.relative { background-color: #CB9AE8;}
+
+/* ------------------------ */
+
+
+.part { position: relative;}
+.part ul { position: absolute; top: 0; left: 0;}
+.static { position: static; top: 1000px; left: 1000px; z-index: -1000;}
+.fixed { 
+  position: fixed; 
+  top: 0; left: 0; z-index: -1;
+}
+.absolute { 
+  position: absolute; 
+  bottom: 150px; left: 50px; z-index: 100;
+}
+.relative { 
+  position: relative; top: 150px; left: -50px;
+}
+
+
+/* -------------------- */
+.ex_part {
+  width: 80%; height: 400px; 
+  border: 2px solid #567;
+  margin: 100px; padding: 30px;
+}
+
+/* 화면의 한가운데 배치 */
+.view_center {
+  /* 내가 푼 방법 */
+  /* position: fixed; top: calc(50% - 150px); left: calc(50% - 250px); */
+
+  /* 다른 방법 1 (위 방법에서 calc만 뺀것) */
+  /* position: fixed;
+  top: 50%; left: 50%;
+  width: 500px; height: 300px;
+  margin-top: -150px; margin-left: -250px; */
+
+  /* 다른 방법 2 */
+  width: 500px; height: 300px;
+  position: fixed; z-index: 100;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto;
+  border: 4px solid #777;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.close { 
+  position: absolute; right: -20px; top: -20px;
+  width: 40px; height: 40px;
+}
+.close button { 
+  width: 100%; height: 100%; 
+  border: 0; margin: 0;
+  background-color: #0ac;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+
+.view_bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
