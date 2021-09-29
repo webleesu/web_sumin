@@ -3,7 +3,7 @@
 #### 능력단위 시험
 
 - 시험내용 : 레이아웃 구조 제작하기 (메인페이지 기준 - 고정형으로 이미지 삽입한 레이아웃)
-  - 1차: 레이아웃 구조 제작하기 (메인페이지 기준 - 고정형으로 이미지 삽입한 레이아웃)
+  - 1차 ( **10/7** ) : 레이아웃 구조 제작하기 (메인페이지 기준 - 고정형으로 이미지 삽입한 레이아웃)
     - 1280px 보다 큰 규걱에 해당하는 경우 처리
   - 2차 : 레이아웃 구조 제작하기 (메인페이지 기준 - 고정형 레이아웃)
     - 1280px 고정 기준
@@ -567,7 +567,7 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
 
 
 
-## 21.09.27
+## 21.09.27~
 
 #### 코딩
 
@@ -578,8 +578,19 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
   - [x] wai-area
   - [x] margin/padding
   - [x] 1600 기준 틀 만들고 내부에서는 고정형, 외부는 늘어나게 처리
-- [ ] semantic 구조
+- [x] semantic 구조
+  - [x] header
+  - [x] nav
+  - [x] article
+  - [x] section
+  - [x] aside
+  - [x] footer
+  - [x] main
+  - [x] figure/figcaption
 - [ ] position
+  - [ ] positon은 적재적소에 맞게 사용해라 (용도에 맞게 사용)
+  - [ ] 성향 - static, relative, absolute, fixed
+  - [ ] 위치- left, right, top, bottom, z-index (float)
 - [ ] font
 - [ ] unit (단위) 16px == 12px == 100% == 1em == 1rem
 
@@ -595,6 +606,8 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
 ---
 
 
+
+## 21.09.27
 
 ##### 속성작성요령
 
@@ -702,4 +715,12 @@ aria : 더 공부하기
   ```
 
 - section 내부에는 작은 웹 구성이 가능 (header, article, footer 등 가능)
+
+
+
+---
+
+
+
+## 21.09.29
 
