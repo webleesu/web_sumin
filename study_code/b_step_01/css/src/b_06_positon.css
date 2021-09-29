@@ -125,3 +125,33 @@ hgroup {
   width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.3);
 }
+
+/* 내가 한 풀이----------------------- */
+/* .btn {
+  position: fixed; 
+  left: 50%; bottom: 50px;
+  width: 100px; height: 100px;
+  margin-left: 500px;
+}
+
+.btn button {
+  width: 100%; height: 100%;
+  border: 0; margin: 0;
+  cursor: pointer;
+} */
+
+/* 선생님 풀이 --------------- */
+.btn {
+  position: fixed;
+  z-index: 200; left: 50%; bottom: 50px;
+  width: 100px; height: 100px;
+  margin-left: 500px;
+  border: 3px solid #171717;
+  background-color: #adf;
+}
+
+.btn button {
+  background-color: transparent;
+  border: 0; margin: 0;
+  cursor: pointer;
+}
