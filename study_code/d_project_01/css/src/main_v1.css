@@ -2,7 +2,7 @@
 /* main_v1.css */
 body {
   --color-gray1 : #c4c4c4;
-  --color-sample1 : #acf;
+  --color-sample1 : rgba(20, 100, 255, 0.15);
 }
 /* main_common.css */
 
@@ -26,6 +26,16 @@ body {
   background-color: var(--color-sample1);
 }
 
+h1 {
+  float: left;
+  width: 120px; height: 70px;
+  background-color: #555;
+}
+#navigation {
+  float: right;
+  width: 510px; height: 70px;
+  background-color: var(--color-sample1);
+}
 
 /* viewBox
 ------------------------------------------------- */
@@ -40,6 +50,43 @@ body {
   margin: auto;
   background-color: var(--color-sample1);
 }
+
+.view_inner dl {
+  float: left;
+  width: 300px; height: 270px;
+  margin-top: 70px;
+  background-color: var(--color-sample1);
+}
+.view_inner dt {
+  width: 100%; height: auto;
+  margin-bottom: 12px;
+}
+.view_inner dd {
+  width: 100%; height: 140px;
+  background-color: var(--color-sample1);
+}
+.view_inner dd:last-of-type {
+  height: 50px;
+  margin-top: 5px;
+  background-color: var(--color-sample1);
+}
+.view_inner dd:last-of-type a {
+  display: block;
+  width: 100%; height: 100%;
+  /* padding: 10px 20px; padding-right: 200px; */
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.img_source {
+  float: right;
+  width: 380px; height: 400px;
+  background-color: var(--color-sample1);
+}
+
+
+
+
 
 /* newBox
 ------------------------------------------------- */
