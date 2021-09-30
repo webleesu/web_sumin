@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* b_05_layout_test_pdf.css */
+
+/* reset.css */
+html,body { font-family: 'Noto Sans KR', sans-serif;}
+
+html,body,
+h1,h2,h3,h4,h5,h6,
+p,pre,blockquote,address,
+ul,ol,li,dl,dt,dd,
+hr, button, img,
+header, article, nav, section, footer, aside, 
+main, figure, figcaption, hgroup {
+  margin: 0; padding: 0; font-size: 100%;
+  box-sizing: border-box;
+}
+
+ul, ol { list-style: none;}
+hr { width: 100%; border: 0; border-bottom: 1px solid #555;}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { border: 0; background-color: transparent; cursor: pointer; border-radius: 0;}
+em, address, i { font-style: normal;}
+abbr { text-decoration: none;}
+table, tr, td, th, thead, tbody, tfoot { 
+  border: 1px solid #777; border-spacing: 0; border-collapse: collapse;
+}
+
+header, article, nav, section, footer, aside, 
+main, figure, figcaption, hgroup { display: block;}
+/* common.css */
+.blind {
+  width: auto; height: 0; overflow: hidden;
+}
+
+.clearfix {
+  content: ""; display: block; clear: both;
+}
+
+/* design */
+
+#wrap {
+  width: 1200px; height: auto;
+  margin: auto;
+}
+
+/* headBox 
+------------------------------------------ */
+#headBox {
+  width: 1200px; height: 100px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+h1 {
+  float: left;
+  width: 200px; height: 40px;
+  margin: auto;
+  background-color: #aaa;
+  
+}
+.menu_area {
+  /* position: relative; */
+  float: right;
+  width: 600px; height: 60px;
+  margin: auto;
+  background-color: #DAF9EA;
+}
+
+.menu_area > li {
+  position: relative;
+  float: left;
+  width: 150px; height: 60px;
+  margin: auto;
+  border: 1px solid #333;
+}
+
+.menu_area div {
+  position: absolute;
+  top: 60px; right: 0;
+  width: 150px; height: 300px;
+}
+
+.menu_area div li {
+  width: 150px; height: 60px;
+  text-align: center;
+  line-height: 60px;
+  /* border: 1px solid #333; */
+}
+
+.menu_area a {
+  display: block;
+  width: 150px; height: 60px;
+}
+
+.menu_area div a:hover {
+  display: none;
+}
+
+
+/* contentBox 
+------------------------------------------ */
+#contentBox {
+  width: 1200px; height: 300px;
+  background-color: #c3c3c3;
+}
+
+.img_area {
+  width: 1200px; height: 300px;
+}
+
+/* noticeBox 
+------------------------------------------ */
+#noticeBox {
+  width: 1200px; height: 200px;
+  background-color: #ddd;
+}
+
+.notice_area {
+  float: left;
+  width: 400px; height: 200px;
+  background-color: #900FAF;
+}
+.banner_area {
+  float: left;
+  width: 400px; height: 200px;
+  background-color: #C77B74;
+}
+.content_area {
+  float: left;
+  width: 400px; height: 200px;
+  background-color: #BBCA5F;
+}
+
+
+/* footBox 
+------------------------------------------ */
+#footBox {
+  width: 1200px; height: 100px;
+  background-color: #c3c3c3;
+}
+
+#footBox h2 {
+  float: left;
+  width: 200px; height: 100px;
+  background-color: #851A41;
+}
+
+.companyinfo_area {
+  float: left;
+  width: 800px; height: 100px;
+  background-color: #63C5C1;
+}
+.sns_area {
+  float: left;
+  width: 200px; height: 100px;
+  background-color: #7E3DD4;
+}
+
+

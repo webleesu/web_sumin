@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- b_05_layout_test_pdf.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- css 불러오는 순서 : font/icon -> reset.css -> common.css -> design.css -->
+  <!-- font : 구글 폰트 - noto-sans-KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_05_layout_test_pdf.css">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>웹 프로토타입</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox">
+      <h1>로고</h1>
+      <ul class="menu_area">
+        <li>
+          menu_01
+          <div class="submenu1">
+            <ul>
+              <li><a>SubMenu-1</a></li>
+              <li><a>SubMenu-2</a></li>
+              <li><a>SubMenu-3</a></li>
+              <li><a>SubMenu-4</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          menu_02
+          <div class="submenu2">
+            <ul>
+              <li><a>SubMenu-1</a></li>
+              <li><a>SubMenu-2</a></li>
+              <li><a>SubMenu-3</a></li>
+              <li><a>SubMenu-4</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          menu_03
+          <div class="submenu3">
+            <ul>
+              <li><a>SubMenu-1</a></li>
+              <li><a>SubMenu-2</a></li>
+              <li><a>SubMenu-3</a></li>
+              <li><a>SubMenu-4</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          menu_04
+          <div class="submenu4">
+            <ul>
+              <li><a>SubMenu-1</a></li>
+              <li><a>SubMenu-2</a></li>
+              <li><a>SubMenu-3</a></li>
+              <li><a>SubMenu-4</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <!-- <div class="menu_area">
+        <div class="menu_01">menu_01</div>
+        <div class="menu_02">menu_02</div>
+        <div class="menu_03">menu_03</div>
+        <div class="menu_04">menu_04</div>
+      </div> -->
+    </header>
+
+    <section id="contentBox">
+      <h2 class="blind">이미지 슬라이드</h2>
+      <div class="img_area">이미지 슬라이드</div>
+    </section>
+
+    <section id="noticeBox">
+      <h2 class="blind">공지사항, 갤러리, 배너, 바로가기</h2>
+      <div class="notice_area">공지사항/갤러리</div>
+      <div class="banner_area">배너</div>
+      <div class="content_area">바로가기</div>
+    </section>
+
+    <footer id="footBox">
+      <h2>로고</h2>
+      <div class="companyinfo_area">copyright</div>
+      <div class="sns_area">SNS</div>
+    </footer>
+  </div>
+  
+</body>
+</html>
