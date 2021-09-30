@@ -6,6 +6,7 @@
 .wrap {
   position: relative;
   width: 800px; height: 600px;
+  margin: 30px;
   background-color: #f0a;
 }
 
@@ -64,3 +65,40 @@
 .q_9 li a:hover > span {
   display: inline-block;
 }
+
+/* ---------------------------------- */
+.q_10 .side_indicator {
+  position: absolute;
+  right: 30px; top: 30%; bottom: 0; margin: auto; 
+  width: 50px; height: auto;
+  background-color: #0af;
+}
+
+.q_10 ul {
+  list-style: none;
+  width: 100%; height: auto;
+  padding: 10px; box-sizing: border-box;
+}
+
+.q_10 li {
+  width: 30px; height: 30px;
+  margin-bottom: 20px;
+}
+
+.q_10 li:last-child { margin-bottom: 0;}
+
+.q_10 a {
+  display: block;
+  width: 100%; height: 100%;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.q_10 span {
+  display: none;
+  width: 200px; height: 40px;
+  background-color: #06c;
+  margin-left: -250px;
+}
+
+.q_10 a:hover + span { display: block;}
