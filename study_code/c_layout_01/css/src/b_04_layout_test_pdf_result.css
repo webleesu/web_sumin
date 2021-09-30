@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* b_04_layout_test_pdf_result.css */
+
+*{margin: 0; padding: 0; border: 0;}
+
+.wrap {
+  position: relative;
+  width: 800px; height: 600px;
+  background-color: #f0a;
+}
+
+.q_8 > .modal {
+  --width: 500px;
+
+  width: var(--width); height: 150px;
+  background-color: #0af;
+  position: absolute;
+  top: 30%; left: 50%; 
+  margin-left: -250px;
+  /* margin-left: calc( var(--width) / 2 ); */
+}
+
+.q_9 > .side_indicator {
+  position: absolute;
+  right: 30px;
+  width: 50px; 
+  /* height: 350px; */
+  height: auto;
+  background-color: #0af;
+
+  /* 방법 1 */
+  /* top : 125px; */
+  
+  /* 방법 2 */
+  top: 50%; margin-top: -175px;
+}
+.q_9 ul {
+  list-style: none;
+  width: 100%; height: auto;
+  padding-top: 10px; padding-bottom: 10px;
+}
+
+.q_9 li {
+  width: 30px; height: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30px;
+}
+
+.q_9 li:last-child { margin-bottom: 0;}
+
+
+.q_9 span{
+  display: none;
+  position: absolute;
+  right: 50px;
+  width: 200px; height: 40px;
+  background-color: #06c;
+}
+
+.q_9 li a:hover > span {
+  display: inline-block;
+}
