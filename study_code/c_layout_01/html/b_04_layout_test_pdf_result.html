@@ -8,12 +8,12 @@
   <title>pdf 결과</title>
 </head>
 <body>
-  <div class="q_8 wrap">
+  <div class="q_8 wrap" hidden>
     q-8
     <div class="modal"></div>
   </div>
 
-  <div class="q_9 wrap">
+  <div class="q_9 wrap" hidden>
     q-9
       <div class="side_indicator">
       <ul>
@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <div class="q_10 wrap">
+  <div class="q_10 wrap" hidden>
     q_10
     <div class="side_indicator">
       <ul>
@@ -76,7 +76,48 @@
           <span>text 내용</span>
         </li>
       </ul>
+    </div>
   </div>
+
+  <dl class="siblings" hidden>
+    <dt>dt-title</dt>
+    <dd>data_01</dd>
+    <dd>data_02</dd>
+    <dd>data_03</dd>
+    <dd>data_04</dd>
+
+    <dt>dt-title</dt>
+    <dd>data_01</dd>
+    <dd>data_02</dd>
+
+    <dt>dt-title</dt>
+    <dd>data_01</dd>
+    <dd>data_02</dd>
+    <dd>data_03</dd>
+  </dl>
+
+<!-- 11번 푼것 / img박스가 한번에 두개가 생성 안됨 -->
+  <!-- <div class="q_11 wrap">
+    <div class="title_box">
+      <h1>Title</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum maxime eaque iste ipsa eum soluta deserunt at voluptatem necessitatibus doloremque?
+      </p>
+    </div>
+    <div class="img1"></div>
+    <div class="img2"></div>
+  </div> -->
+
+  <div class="q_11 wrap">
+    <div class="title_box">
+      <h1>title</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum maxime eaque iste ipsa eum soluta deserunt at voluptatem necessitatibus doloremque?
+      </p>
+    </div>
+    <div class="img2">img2-1</div>
+    <div class="img2">img2-2</div>
   </div>
+
 </body>
 </html>
