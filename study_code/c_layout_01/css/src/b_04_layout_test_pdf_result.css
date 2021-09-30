@@ -108,3 +108,100 @@
 }
 
 .q_10 a:hover + span { display: block;}  /* a와 span이 형제 관계이기 때문에 + 사용 */
+
+.siblings {
+  width: 400px; height: 800px;
+  margin: auto;
+  border: 1px solid #777;
+}
+
+.siblings:hover dt {
+  background-color: #ccf;
+}
+
+.siblings > dt:hover + dd {
+  background-color: #faa;
+}
+
+.siblings > dt:hover ~ dd{
+  background-color: #afa;
+}
+
+/* -------------------------------------- */
+
+/* 11번 푼것 오류있음 */
+/* .title_box {
+  position: absolute;
+  top: 30%; left: 20px; z-index: 100;
+  width: 450px; height: 200px;
+  background-color: rgba(22,22,225,0.3);
+  color: #fff;
+}
+
+.title_box h1 {
+  font-size: 1.5rem;
+}
+
+.title_box p {
+  font-size: 1rem;
+}
+
+.q_11 {
+  position: relative;
+}
+
+
+.img1 {
+  position: absolute;
+  right: 20px; bottom: 0;
+  width: 250px; height: 500px;
+  background-color: #798;
+}
+
+.img2 {
+  position: absolute;
+  bottom: 0; right: 20px;
+  margin-right: 200px;
+  width: 250px; height: 400px;
+  background-color: #5bb;
+} */
+
+/* -------------------------------------------- */
+/* .wrap 은 위에 작성 */
+.q_11 { position: relative;}
+
+.title_box {
+  position: absolute;
+  z-index: 300;
+  top: 30%; left: 20px;
+  width: 450px; height: 200px;
+  box-sizing: border-box; padding: 10px;
+  color: #fff;
+  background-color: rgba(150,0,150,0.5);
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.img2 { 
+  position: absolute;
+  bottom: 0;
+  width: 250px; 
+}
+.img2:nth-child(2) {
+  z-index: 200;
+  right: 250px;
+  height: 400px;
+  background-color: #5bb;
+}
+.img2:nth-child(3) { 
+  right: 20px; 
+  height: 500px;
+  background-color: #798;
+}
