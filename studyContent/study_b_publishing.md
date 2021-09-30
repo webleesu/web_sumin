@@ -786,3 +786,132 @@ body {
 
 IR : image replace 알아보기
 
+
+
+---
+
+## 21.09.30
+
+position - pdf 문제 풀이
+
+웹디자인 기능사  - 12가지 문제
+
+
+
+---
+
+position 에서 기준을 잡아주는 속성은 relative
+
+그 기준에 맞춰 포지션을 넣는것은 absolute
+
+
+
+`+` : 형제선택자
+
+position 안에 position 또 사용 가능 / relative 기준 잡아놓은것 잘 확인하기
+
+- 인접형제선택자 `+` : 선택요소 바로 뒤에 오는 요소
+
+- ```html
+  <dl class="siblings">
+      <dt>dt-title</dt>
+      <dd>data_01</dd>
+      <dd>data_02</dd>
+      <dd>data_03</dd>
+      <dd>data_04</dd>
+  
+      <dt>dt-title</dt>
+      <dd>data_01</dd>
+      <dd>data_02</dd>
+  
+      <dt>dt-title</dt>
+      <dd>data_01</dd>
+      <dd>data_02</dd>
+      <dd>data_03</dd>
+  
+    </dl>
+  ```
+
+- ```css
+  .siblings {
+    width: 400px; height: 800px;
+    margin: auto;
+    border: 1px solid #777;
+  }
+  
+  .siblings:hover dt {
+    background-color: #ccf;
+  }
+  
+  .siblings > dt:hover + dd {
+    background-color: #faa;
+  }
+  ```
+
+  - dl에 마우스 올리면 dt배경색 변경
+
+    <img src="E:\work\a_SM\web_sumin\studyContent\images\sibling_hover1.png" style="zoom : 80%" align="left" />
+
+  - dt에 마우스 올리면 바로 뒤에있는 dd에만 배경색 변경
+
+    <img src="E:\work\a_SM\web_sumin\studyContent\images\sibling_hover2.png" style="zoom : 80%"  align="left" />
+
+    <img src="E:\work\a_SM\web_sumin\studyContent\images\sibling_hover3.png" style="zoom : 80%"  align="left" />
+
+
+
+
+
+- 형제선택자 `~` : 선택요소 뒤에 오는 조건에 맞는 요소
+
+- ```css
+  .siblings > dt:hover ~ dd{
+    background-color: #afa;
+  }
+  ```
+
+  - 마우스를 올린 dt기준으로 뒤에 dd만 배경색 변경
+
+    <img src="E:\work\a_SM\web_sumin\studyContent\images\sibling_hover4.png" style="zoom : 80%"  align="left" />
+
+    <img src="E:\work\a_SM\web_sumin\studyContent\images\sibling_hover5.png" style="zoom : 80%"  align="left" />
+
+  
+
+
+
+---
+
+
+
+- 핵사코드로 투명도
+  - #aa00aa_ _ : 뒷자리에 16진수로 숫자 넣어서 투명도
+
+
+
+- `text-transform: capitalize;` : 첫 글자를 대문자로
+
+
+
+- 클래스나 id명에 ad, banner 사용 금지 : 광고차단프로그램에 막힘
+
+- copyright 부분을 보통 `address` 사용
+
+
+
+- chrome 에서 목차 확인하는 확장프로그램 : 웹스토어 ► outliner 
+
+  ​																						   ► headingsmap : 주소가 localhost일때만 작동
+
+
+
+- `box-shadow: 3px 3px 3px #333;` : 그림자의 x좌표, y좌표, 블러, 색상
+
+- `autofocus` : 포커스를 먼저 잡아주기
+
+  ```html
+  <button type="button" autofocus>닫기</button>
+  ```
+
+  - 구형브라우저는 안먹음
+  - 한 문서에 보통 최대 하나만 사용
