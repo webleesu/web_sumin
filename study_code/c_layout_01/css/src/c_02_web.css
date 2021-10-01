@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* c_02_web.css */
+
+#wrap {
+  width: 1200px; height: auto;
+}
+
+
+/* #headBox
+  ====================================================== */
+#headBox {
+  width: 1200px; height: 100px;
+  box-sizing: border-box; padding: 20px;
+  background-color: #eee;
+}
+
+  h1 {
+    float: left;
+    width: 200px; height: 80px;
+    text-align: center;
+    background-color: #B67A61;
+  }
+
+  .gnb {
+    float: right;
+    width: 600px; height: 50px;
+  }
+
+    .menu {
+      margin-top: 30px;
+    }
+
+    .menu > li {
+      position: relative;
+      float: left;
+      width: 150px; height: 50px;
+      text-align: center;
+    }
+
+      .submenu li{
+        position: absolute;
+        top: 80px;
+        width: 150px; height: 30px;
+        margin: auto;
+        background-color: #333;
+        color: #fff;
+      }
+
+/* #viewBox
+  ====================================================== */
+#viewBox {
+  width: 1200px; height: 300px;
+  background-color: #ccc;
+}
+
+
+/* #noticeBox
+  ====================================================== */
+#noticeBox {
+  width: 1200px; height: 200px;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+
+  .notice_area {
+    float: left;
+    width: 400px; height: 200px;
+    box-sizing: border-box; padding: 10px;
+    background-color: #bbb;
+  }
+
+    .notice_title {
+      width: 80px; height: 40px;
+      box-sizing: border-box; margin-left: 10px;
+      text-align: center;
+      background-color: #51968E;
+    }
+
+    .notice_detail {
+      width: 380px; height: 140px;
+      margin: auto;
+      background-color: #996970;
+    }
+
+  .gallery_area {
+    float: left;
+    width: 400px; height: 200px;
+    box-sizing: border-box; padding: 10px;
+    background-color: #aaa;
+  }
+
+    .gallery_title { 
+      width: 80px; height: 40px;
+      box-sizing: border-box; margin-left: 10px;
+      text-align: center;
+      background-color: #51968E;
+    }
+    .gallery_detail {
+      width: 380px; height: 140px;
+      margin: auto;
+      background-color: #996970;
+    }
+
+  .banner {
+    float: left;
+    width: 400px; height: 200px;
+    background-color: #967161;
+  }
+
+
+/* #footBox
+  ====================================================== */
+#footBox {
+  width: 1200px; height: 100px;
+  background-color: #ccc;
+}
+
+  #footBox h2 {
+    width: 200px; height: 80px;
+  }
+
+  address {
+    width: 800px; height: 200px;
+
+  }
+
+  .familysite {
+    width: 200px; height: 80px;
+  }
