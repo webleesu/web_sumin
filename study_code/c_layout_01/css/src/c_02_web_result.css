@@ -26,6 +26,23 @@
     background-color: #aff;
   }
 
+  .navigation ul {
+    width: 100%; height: auto;
+    background-color: #999;
+  }
+  .navigation li {
+    float: left;
+    width: 25%; height: auto;
+    padding: 0 5px;
+  }
+  .navigation a {
+    display: block;
+    width: 100%; height: 30px;
+    text-align: center; line-height: 30px;
+    background-color: #faa;
+  }
+
+
 /* #viewBox */
 #viewBox {
   width: 100%; height: 300px;
@@ -36,7 +53,7 @@
   width: 100%; height: 200px;
 }
 
-#contentBox > div {
+#contentBox > .con_area {
   float: left; width: 400px; height: 200px;
 }
 
