@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* c_02_web_result.css */
+
+#wrap {
+  width: 1200px; height: auto;  min-height: 700px;
+  margin: auto;
+}
+
+/* #headBox */
+#headBox {
+  width: 100%; height: 100px;
+  box-sizing: border-box;
+  padding: 0 20px; padding-top: 60px;
+  background-color: #ccc;
+}
+
+  h1 {
+    float: left;
+    width: 200px; height: 40px;
+    background-color: #afa;
+  }
+  .navigation {
+    float: right;
+    width: 400px; height: 30px;
+    margin-top: 10px;
+    background-color: #aff;
+  }
+
+/* #viewBox */
+#viewBox {
+  width: 100%; height: 300px;
+  background-color: #aaa;
+}
+/* #contentBox */
+#contentBox {
+  width: 100%; height: 200px;
+}
+
+#contentBox > div {
+  float: left; width: 400px; height: 200px;
+}
+
+  .notice_area {
+    background-color: #afd;
+  }
+  .gallery_area {
+    background-color: #daf;
+  }
+  .commercial_area {
+    background-color: #afd;
+  }
+
+/* #footBox */
+#footBox {
+  width: 100%; height: 100px;
+  box-sizing: border-box;
+  padding: 30px 20px; padding-bottom: 20px;
+  background-color: #999;
+}
+
+  #footBox > h2 {
+    float: left; width: 200px; height: 40px;
+    background-color: #faa;
+  }
+
+  address {
+    float: left; width: 600px; height: 30px;
+    margin-top: 10px; margin-left: 100px;
+    background: #afa;
+  }
+
+  .family {
+    float: right; width: 200px; height: 30px;
+    margin-top: 10px;
+    background-color: #aaf;
+  }
