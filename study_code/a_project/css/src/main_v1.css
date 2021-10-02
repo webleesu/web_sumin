@@ -9,6 +9,45 @@
   background-color: var(--color-sample1);
 }
 
+.title_text { 
+  float: left;
+  width: 500px; height: 60px;
+}
+
+.title {
+  width: 250px; height: 30px;
+  font-size: 24px; font-weight: 700;
+  text-align: left;
+}
+.sub_title {
+  width: 450px; height: 30px;
+  font-size: 16px; font-weight: 400;
+  text-align: left;
+}
+.title_all {
+  float: right;
+  width: 90px; height: 30px;
+  margin-top: 30px;
+  font-size: 16px; font-weight: 400;
+}
+
+.text_title {
+  width: 300px; height: 33px;
+  display: block;
+  font-size: 18px; font-weight: 400;
+}
+.text_price {
+  width: 300px; height: 33px;
+  display: block;
+  font-size: 16px; font-weight: 700;
+}
+.text_detail {
+  width: 300px; height: 33px;
+  display: block;
+  font-size: 16px; font-weight: 400;
+}
+
+
 /* --------------- */
 body {
   --color-sample1 : rgba(20, 100, 255, 0.15);
@@ -36,12 +75,32 @@ body {
     background-color: var(--color-sample1);
   }
   #gnb {
+    position: absolute; left: 0; right: 0;
     float: left;
+    margin: auto;
     margin-top: 50px;
-    margin-left: 120px;
     width: 500px; height: 40px;
     background-color: var(--color-sample1);
   }
+
+    #gnb li{
+      float: left;
+      width: 80px; height: 40px;
+      margin: auto;
+      margin-right: 12px;
+      font-size: 18px;
+      text-align: center; line-height: 40px;
+    }
+    #gnb li:nth-child(1) { width: 80px;}
+    #gnb li:nth-child(2) { width: 60px;}
+    #gnb li:nth-child(3) { width: 60px;}
+    #gnb li:nth-child(4) { width: 60px;}
+    #gnb li:nth-child(5){ width: 100px;}
+    #gnb li:last-child{
+      width: 80px;
+      margin-right: 0;
+    }
+
   #unb {
     float: right;
     width: 200px; height: 90px;
@@ -67,6 +126,15 @@ body {
     background-color: var(--color-sample1);
   }
 
+    .side_view {
+      width: 400px; height: 180px;
+      background-color: var(--color-sample1);
+      margin: auto;
+      margin-bottom: 5px;
+    }
+
+    .side_view:last-child {margin-bottom: 0;}
+
 /* #bestBox
   =================================================== */
 #bestBox {
@@ -81,6 +149,26 @@ body {
     margin: auto;
     background-color: var(--color-sample1);
   }
+
+    .best_item {
+      float: left;
+      width: 320px; height: 420px;
+      margin-right: 20px;
+      background-color: var(--color-sample1);
+    }
+
+    .best_item:last-child { margin-right: 0;}
+
+      .best_img {
+        width: 320px; height: 320px;
+        background-color: rgb(127, 98, 255);
+      }
+
+      .best_text {
+        width: 320px; height: 100px;
+        padding: 0 10px;
+        background-color: var(--color-sample1);
+      }
 
 
 /* #benefitBox
