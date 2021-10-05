@@ -168,7 +168,13 @@
       margin-bottom: 3px; 
       line-height: 18px; color: #575757;
     }
-    .notice li::before { content: "+"; color: #f06; margin-right: 3px; }
+    .notice li::before { 
+       /* fontawesome 유니코드로 사용하기 */
+      content: "\f54b"; font-family: 'Font Awesome 5 Free';
+      font-weight: 900; font-size: 0.5rem;
+      color: #f06; margin-right: 3px; 
+    }
+    
     .notice a:focus { 
       outline: 0; 
       text-decoration: underline; text-decoration-color: #f06; 

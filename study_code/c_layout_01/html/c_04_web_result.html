@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
   
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/src/c_04_web_result.css">
@@ -25,10 +27,18 @@
   <div id="wrap">
     <header id="headBox">
       <h1><a href="#">해운대 빛축제</a></h1>
+      <!-- fontawesome html에 추가하는 법 -->
+      <div class="btn">
+        <button type="button">
+          <!-- aria-hidden="true" : 읽지 말아라!! -->
+          <i class="fas fa-bars" aria-hidden="true"></i>
+          <span class="blind">메뉴</span>
+        </button>
+      </div>
       <nav class="navigation">
         <h2 class="blind">네비게이션</h2>
-        <ul>
-          <li>
+        <ul role="menu">
+          <li role="listitem">
             <dl>
               <dt><a href="#">이용안내</a></dt>
               <dd>
@@ -38,7 +48,7 @@
               </dd>
             </dl>
           </li>
-          <li>
+          <li role="listitem">
             <dl>
               <dt><a href="#">이벤트 정보</a></dt>
               <dd>
@@ -48,7 +58,7 @@
               </dd>
             </dl>
           </li>
-          <li>
+          <li role="listitem">
             <dl>
               <dt><a href="#">프로그램</a></dt>
               <dd>
@@ -58,7 +68,7 @@
               </dd>
             </dl>
           </li>
-          <li>
+          <li role="listitem">
             <dl>
               <dt><a href="#">고객센터</a></dt>
               <dd>
