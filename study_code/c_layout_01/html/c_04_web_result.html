@@ -75,16 +75,77 @@
 
     <section id="viewBox">
       <h2 class="blind">광고영역</h2>
+      <!-- <div class="clip_t">
+        <div class="insert"></div>
+      </div> -->
+      <div class="view_btn" hidden>다음/이전버튼</div>
+      <div class="view_indicator" hidden>인디케이터</div>
+
+      <!-- .view_area 영역의 위치를 잡기 위한 틀 -->
+      <div class="view_area">
+        <!-- .view_wrapper 광고영역의 나열 시 범위 -->
+        <div class="view_wrapper">
+          <!-- .view_content 광고 내용 -->
+          <div class="view_content view_01">광고 01</div>
+          <div class="view_content view_02">광고 02</div>
+          <div class="view_content view_03">광고 03</div>
+        </div>
+      </div>
     </section> 
     <!-- // #viewBox-->
 
-    <article id="conBox">
+    <article id="conBox" class="clearfix">
       <h2 class="blind">본문내용</h2>
+      <div class="info_content_area">
+        <ul class="tab_title">
+          <li class=action><button type="button">공지사항</button></li>
+          <li><button type="button">갤러리</button></li>
+        </ul>
+        <div class="tab_content">
+          <div class="notice">
+            <h3>공지사항</h3>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
+              <li><a href="#">Lorem, ipsum dolor.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit.</a></li>
+              <li><a href="#">Lorem, ipsum.</a></li>
+            </ul>
+          </div>
+          <div class="gallery" hidden>갤러리</div>
+        </div>
+      </div>
+      <div class="sub_view_area"></div>
+      <div class="location_link_area"></div>
     </article> 
     <!-- // #conBox-->
 
     <footer id="footBox">
-      <h2 class="blind">site information</h2>
+      <h2>site information</h2>
+      <div class="info_nav"></div>
+      <address>
+        <p hidden>사이트명</p>
+        <p hidden>사이트 주소</p>
+        <!-- <dl>
+          <dt>연락처 : </dt>    <dd>02-0000-0000</dd>
+          <dt>팩스 : </dt>      <dd>02-0000-0001</dd>
+          <dt>이메일 : </dt>    <dd>xxx@naver.com</dd>
+        </dl> -->
+        <!-- 강조의 표현 :
+          strong : 강요성(위협, 무조건적인)을 띤 강조 - danger
+          em : 권유성 강조
+          ins : 추가 점부된 내용
+          del : 기존 내용에서 삭제된 것
+          mark : 인식 (형광펜) -->
+        <!-- <p>
+        
+          <em>연락처</em> :    <span>02-0000-0000</span>
+          <em>팩스</em> :      <span>02-0000-0001</span>
+          <em>이메일</em> :    <span>xxx@naver.com</span>
+        </p> -->
+        <p hidden>사업자번호, 통신판매번호</p>
+        <span class="blind">copyright</span>&copy; web tutorial.
+      </address>
     </footer> 
     <!-- // #footBox-->
   </div><!-- #wrap -->

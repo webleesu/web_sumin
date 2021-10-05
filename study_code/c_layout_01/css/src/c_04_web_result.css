@@ -25,10 +25,7 @@
     font-size: 1.2rem;
   }
   
-  .navigation { 
-    width: 100%; height: auto;
-    background-color: #ddf;
-  }
+  .navigation { width: 100%; height: auto; }
 
     .navigation ul { width: 100%; height: auto; }
     .navigation li { width: 100%; height: auto; }
@@ -39,6 +36,7 @@
       padding-bottom: 3px;
       background-color: #fff;
     }
+    .navigation dt:last-of-type {padding: 0;}
 
     .navigation dt a {
       display: block;
@@ -46,21 +44,37 @@
       text-align: center; line-height: 40px;
     }
 
-    .navigation dt a:hover { background-color: #333;}
+    .navigation dt a:hover { 
+      color: #fff;
+      background-color: #333;
+    }
 
     .navigation dd {
+      /* display: none; */
       width: 100%; height: auto;
       background-color: #fff;
+      height: 0; overflow-y: hidden; transition: height 300ms linear;
     }
 
     .navigation dd a {
-      display: block0;
+      display: block;
       width: 100%; height: 30px;
       margin-bottom: 5px;
+      text-indent: 10px; line-height: 30px;
     }
 
     .navigation dd a:hover {
       color: #fff; font-weight: 700;
+      background-color: #333;
+    }
+
+    .navigation dl:hover > dd { 
+      /* display: block; */
+      height: 120px;
+    }
+
+    .navigation dl:hover > dt {
+      color: #fff;
       background-color: #333;
     }
 
@@ -70,16 +84,113 @@
 #viewBox {
   float: left;
   width: 750px; height: 350px;
+  padding: 10px 50px;
   background-color: #eee;
 }
+
+.view_area {
+  width: 100%; height: 100%;
+  border: 1px solid #333;
+  background-color: #afc;
+}
+/* 
+.view_wrapper {
+  width: 300%; height: 100%;
+  background-color: #fca;
+}
+
+.view_content {
+  float: left;
+  width: calc(100% / 3); height: 100%;
+}
+
+
+.view_01 { background-color: #8D0909aa;}
+.view_02 { background-color: #23BE93aa;}
+.view_03 { background-color: #9A6DCAaa;} */
+
+/* 같은자리에 모여있는 형태 */
+.view_wrapper {
+  position: relative;
+  width: 100%; height: 100%;
+  background-color: #fca;
+}
+
+.view_content {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+.view_01 { z-index: 10; background-color: #8D0909aa;}
+.view_02 { z-index: 9; background-color: #23BE93aa;}
+.view_03 { background-color: #9A6DCAaa;}
 
 /* #conBox
 ======================================= */
 #conBox {
   float: left;
-  width: 750px; height: 200px;
+  width: 750px; height: auto;
   background-color: #aaa;
 }
+
+  /* .info_content_area -------------------------- */
+  .info_content_area {
+    float: left;
+    width: 50%; height: 200px;
+    padding: 10px;
+    background-color: #0B904433;
+  }
+
+    .tab_title{ width: 100%; height: 30px; }
+    .tab_title li { float: left; width: 100px; height: 30px;}
+    .tab_title button {
+      width: 100%; height: 100%;
+      background-color: #fff;
+    }
+    .tab_title button:hover {background-color: #aaa; text-decoration: underline;}
+    .tab_title li.action > button { background-color: #333; color: #fff; font-weight: 700;}
+
+    .tab_content{ 
+      width: 100%; height: 150px; 
+      border-top: 1px solid #333;
+    }
+    .tab_content > div { 
+      width: 100%; height: 100%; 
+      padding: 5px;
+      background-color: #fff;
+    }
+
+    .notice h3 { width: 100%; height: auto; padding-bottom: 5px;}
+    .notice ul { width: 100%; height: auto; max-height: 120px;}
+    .notice li { 
+      width: 100%; height: 18px; 
+      margin-bottom: 3px; 
+      line-height: 18px; color: #575757;
+    }
+    .notice li::before { content: "+"; color: #f06; margin-right: 3px; }
+    .notice a:focus { 
+      outline: 0; 
+      text-decoration: underline; text-decoration-color: #f06; 
+      font-weight: 700; color: #333;
+    }
+
+
+
+
+  /* .sub_view_area -------------------------- */
+  .sub_view_area {
+    float: left;
+    width: 25%; height: 200px;
+    background-color: #BBF55E33;
+  }
+
+  /* .location_link_area -------------------------- */
+  .location_link_area {
+    float: left;
+    width: 25%; height: 200px;
+    background-color: #C6733C33;
+  }
 
 /* #footBox
 ======================================= */
@@ -88,3 +199,35 @@
   width: 750px; height: 100px;
   background-color: #777;
 }
+
+#footBox > h2 {
+  float: left;
+  width: 100px; height: 100px;
+  background-color: #fa0;
+}
+.info_nav {
+  float: left;
+  width: 650px; height: 50px;
+  background-color: #aff;
+}
+address {
+  clip: rect(10px 100px 40px 5px);
+  background-image: linear-gradient(#afc #faa);
+  float: left;
+  width: 650px; height: 50px;
+  background-color: #faa;
+}
+
+/* clip 사용법 */
+/* .clip_t {
+  position: absolute;
+  clip: rect(18px, 122px, 92px, 18px);
+  width: 200px; height: 200px;
+  box-sizing: border-box; padding: 20px;
+  background-image: radial-gradient(#64f, #fc5);
+}
+
+.insert {
+  width: 100px; height: 70px;
+  background-color: rgba(255,255,255,0.2);
+} */
