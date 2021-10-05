@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* c_04_web_result.css */
+
+#wrap {
+  width: 1000px; height: 650px;
+  margin: auto;
+}
+
+/* #headBox
+======================================= */
+#headBox {
+  float: left;
+  width: 250px; height: 650px;
+  padding: 20px 25px; box-sizing: border-box;
+  background-color: #ccc;
+}
+
+  h1 {
+    width: 200px; height: 40px;
+    background-color: #aaa;
+  }
+  h1 a {
+    display: block; width: 100%; height: 100%;
+    text-align: center; line-height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .navigation { 
+    width: 100%; height: auto;
+    background-color: #ddf;
+  }
+
+    .navigation ul { width: 100%; height: auto; }
+    .navigation li { width: 100%; height: auto; }
+    .navigation dl { width: 100%; height: auto; }
+
+    .navigation dt {
+      width: 100%; height: 40px;
+      padding-bottom: 3px;
+      background-color: #fff;
+    }
+
+    .navigation dt a {
+      display: block;
+      width: 100%; height: 100%;
+      text-align: center; line-height: 40px;
+    }
+
+    .navigation dt a:hover { background-color: #333;}
+
+    .navigation dd {
+      width: 100%; height: auto;
+      background-color: #fff;
+    }
+
+    .navigation dd a {
+      display: block0;
+      width: 100%; height: 30px;
+      margin-bottom: 5px;
+    }
+
+    .navigation dd a:hover {
+      color: #fff; font-weight: 700;
+      background-color: #333;
+    }
+
+
+/* #viewBox
+======================================= */
+#viewBox {
+  float: left;
+  width: 750px; height: 350px;
+  background-color: #eee;
+}
+
+/* #conBox
+======================================= */
+#conBox {
+  float: left;
+  width: 750px; height: 200px;
+  background-color: #aaa;
+}
+
+/* #footBox
+======================================= */
+#footBox {
+  float: left;
+  width: 750px; height: 100px;
+  background-color: #777;
+}
