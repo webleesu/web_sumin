@@ -1,43 +1,6 @@
 ## 능력단위 : 웹퍼블리싱
 
-#### 능력단위 시험
-
-- 시험내용 : 레이아웃 구조 제작하기 (메인페이지 기준 - 고정형으로 이미지 삽입한 레이아웃)
-  - 1차 ( **10/7** ) : 레이아웃 구조 제작하기 (메인페이지 기준 - 고정형으로 이미지 삽입한 레이아웃)
-    - 1280px 보다 큰 규걱에 해당하는 경우 처리
-  - 2차 ( **10/13** ) : 레이아웃 구조 제작하기 (메인페이지 기준 - 고정형 레이아웃)
-    - 1280px 고정 기준
-
-- 시험시간 : 6시간
-
----
-
-## 과정내용
-
 ## 21.09.14
-
-#### 피드백 1
-
-- 발표
-- 수정사항 전반
-
-#### 웹코드
-
-- vscode 설치 - 세팅
-  - 마우스 휠
-  - 탭인덱스
-  - word
-  - 테마 (아이콘) - material iccon theme
-  - 웹서버 설정 - live sever / browsersync
-- 웹 프로토콜 포함 + html 구조/css 개념
-  - 제목
-  - 내용
-  - 리스트
-  - 링크
-  - 이미지
-  - id/class 개념
-
----
 
 #### html
 
@@ -108,24 +71,7 @@
 
 ## 21.09.15
 
-- ##### 코딩
-
-  - html
-    - [x] list ( 순서없는것, 순서가 있는것, 제목/내용이 있는것 )
-    - [x] id/class 개념
-  - style 
-    - [x] 선택자 ( 모든선택자, 타입선택자, id선택자, class선택자, 부모, 자식 )
-    - [x] 사이즈, 색상처리
-    - [ ] margin(여백-시각적 공간), padding(여백-내장지방), border-radius(테두리 R값), box-shadow(그림자)
-  - cli 
-    - 파일 이동(`mv`)/ 파일 복제(`cp`)
-    - 목록보기( `ls` , `ls -a` )
-    - 화면정리( `clear` ) / 명령어 기록 보기 ( `history`) / 이전명령어 사용 ( `!숫자` )
-    - 현재페이지 위치( `pwd` )/컴퓨터 이름파악( `whoami` )
-
----
-
-### html
+#### html
 
 class 이름에 띄어쓰기 하면 이름 두개됨
 
@@ -302,18 +248,7 @@ h1 a { display: block; width:100%; height: 100%; color:#973; text-decoration: no
 
 ## 21.09.16
 
-#### 코딩
-
-- [ ] id/class : id의 역할, class의 역할(?)
-- [ ] table (표만들기) - 게시판, 주식, 안내판, 경기표
-- [ ] 이미지 + 글쓰기 (float, clear)
-- [ ] 문제풀이 1-5
-
-
-
----
-
-### html
+#### html
 
 - `#` : 최상단으로 이동 `<a href="#"></a>`
 
@@ -381,36 +316,7 @@ h1 a { display: block; width:100%; height: 100%; color:#973; text-decoration: no
 
 ---
 
-## 21.09.17
-
-#### css
-
-- [x] psuedo code (의사전달코드)
-  - [x] 마우스를 올렸을 경우
-  - [x] 마우스 버튼을 누르고 있는 경우
-  - [x] a요소를 이용하여 페이지를 방문한 경우
-  - [x] 초점을 맞추는 경우 (focus 처리)
-  - [x] 가상의 존재
-  - [x] 첫 글자 / 첫 줄
-- [x] 이미지+글쓰기 (float, clear)
-- [x] 가로형 레이아웃, 세로형 레이아웃
-
----
-
-
-
 ## 21.09.23
-
-#### css
-
-- [x] margin
-- [x] padding
-- [x] border
-- [x] outline
-
----
-
-
 
 [구형브라우저 대처](modernizr.com)
 
@@ -456,18 +362,6 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
 ---
 
 ## 21.09.24
-
-#### css
-
-- [x] nth-child
-- [x] nth-of-type
-- [x] layout
-
-
-
----
-
-
 
 #### border
 
@@ -560,46 +454,6 @@ clear: both; 는 block요소만 먹음 / inline은 안먹음
 #### html
 
 - `<a href="#" title="">` : 타이틀은 마우스 올렸을때 말풍선
-
-
-
----
-
-
-
-## 21.09.27~
-
-#### 코딩
-
-- [x] layout 풀이
-  - [x] float
-  - [x] h1~h6 heading 구조
-  - [x] 유효성검사
-  - [x] wai-area
-  - [x] margin/padding
-  - [x] 1600 기준 틀 만들고 내부에서는 고정형, 외부는 늘어나게 처리
-- [x] semantic 구조
-  - [x] header
-  - [x] nav
-  - [x] article
-  - [x] section
-  - [x] aside
-  - [x] footer
-  - [x] main
-  - [x] figure/figcaption
-- [ ] position
-  - [ ] positon은 적재적소에 맞게 사용해라 (용도에 맞게 사용)
-  - [ ] 성향 - static, relative, absolute, fixed
-  - [ ] 위치- left, right, top, bottom, z-index (float)
-- [ ] font
-- [ ] unit (단위) 16px == 12px == 100% == 1em == 1rem
-
-#### 과제(10/4)
-
-- 프로토타입 페이지 - 1440기준 (크게 커지는 경우) 
-- 큰 박스부터 만들기
-- 주석
-- 새로운 프로젝트 디렉토리 만들기
 
 
 
@@ -790,15 +644,11 @@ IR : image replace 알아보기
 
 ---
 
+
+
 ## 21.09.30
 
-position - pdf 문제 풀이
 
-웹디자인 기능사  - 12가지 문제
-
-
-
----
 
 position 에서 기준을 잡아주는 속성은 relative
 
@@ -1025,10 +875,6 @@ git bash (cli)로 깃 첨부방법
   - ins : 추가 점부된 내용
   - del : 기존 내용에서 삭제된 것
   - mark : 인식 (형광펜)
-
-
-
-
 
 
 
