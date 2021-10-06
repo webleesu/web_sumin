@@ -561,7 +561,7 @@ body {
 }
 
   .foot_main_btn {
-    width: 500px; height: 30px;
+    width: 600px; height: 30px;
     font-size: 16px; font-weight: 400;
     text-align: left; font-weight: 30px;
     color: #fff;
@@ -569,7 +569,30 @@ body {
 
   .foot_main_btn > div {
     float: left;
-    margin-right: 15px;
+  }
+
+    .foot_main_btn a { 
+      display: block;
+      position: relative;
+      margin-right: 10px;
+      padding-right: 15px;
+    }
+
+  .foot_main_btn a:after,
+  .foot_main_btn a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%; right: 0;
+    width:3px; height: 3px;
+    background-color: #fff;
+  }
+
+  .foot_agreement:after,
+  .foot_agreement::after{
+    content: "";
+    display: block;
+    width: 0; height: 0;
   }
 
   .foot_main_btn > div:last-child {margin-right: 0;}
