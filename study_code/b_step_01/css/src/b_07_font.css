@@ -1,6 +1,11 @@
 @charset "UTF-8";
 /* b_07_font.css */
 
+#wrap {
+  width: 100%;
+  padding-bottom: 500px;
+}
+
 p {
   font-family: 'IBM Plex Sans KR', 'Ephesis', 'Noto Sans KR', cursive, sans-serif;
   border: 1px solid #333;
@@ -8,8 +13,34 @@ p {
 
 p:nth-of-type(1) {
   font-weight: 600;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  word-spacing: 0;
+  text-align: justify;
+  word-break: keep-all;
+  font-size: 16px;
 }
 
 p:nth-of-type(2) {
   font-weight: 100;
+  line-height: 160%;
+  letter-spacing: -1px;
+  /* word-spacing: -3px; */
+  text-align: justify;
+  word-break: break-all;
+}
+
+p:nth-of-type(3) {
+  /* font: weight style size/line family...; */
+  font-size: 8px;
+  width: 500px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+button { 
+  word-spacing: -3px;
 }
