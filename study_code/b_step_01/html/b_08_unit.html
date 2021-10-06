@@ -25,7 +25,7 @@
     
     <h2>단위의 이해</h2>
 
-    <div class="unit_part px_part">
+    <div class="unit_part px_part" hidden>
       <h3>px영역(w600, h600)</h3>
 
       <div class="outer">
@@ -47,7 +47,7 @@
 
     <hr />
 
-    <div class="unit_part pt_part">
+    <div class="unit_part pt_part" hidden>
       <h3>pt영역(w600, h600)</h3>
 
       <div class="outer">
@@ -68,7 +68,7 @@
     </div><!-- // .unit_part-->
     <hr />
 
-    <div class="unit_part percent_part">
+    <div class="unit_part percent_part" hidden>
       <h3>percent영역(w600, h600)</h3>
 
       <div class="outer">
@@ -89,7 +89,7 @@
     </div><!-- // .unit_part-->
     <hr />
 
-    <div class="unit_part em_part">
+    <div class="unit_part em_part" hidden>
       <h3>em영역(w600, h600)</h3>
 
       <div class="outer">
@@ -110,7 +110,7 @@
     </div><!-- // .unit_part-->
     <hr />
 
-    <div class="unit_part rem_part">
+    <div class="unit_part rem_part" hidden>
       <h3>rem영역(w600, h600)</h3>
 
       <div class="outer">
@@ -131,6 +131,19 @@
     </div><!-- // .unit_part-->
     <hr />
 
+    <div class="size_test" hidden>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum maiores sit totam fugit sed dignissimos impedit vero ullam eligendi vitae.
+    </div>
+
+    <div class="sizing_check">
+      기준 : 200px * 200px
+      <div class="size_02">
+        부모기준 : w/h 50%
+        <div class="size_03">
+          원기준 크기로 돌아가기
+        </div>
+      </div>
+    </div>
   </div><!-- // #wrap -->
 
   <!-- script -->
