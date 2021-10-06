@@ -123,15 +123,38 @@ body {
       margin: auto; margin-bottom: 30px;
     }
 
-      .unb_btn > div {
+      .unb_btn > li {
+        display: block;
         float: left;
-        width: 60px; height: 20px;
-        margin-right: 10px;
+        /* width: 60px;  */
+        height: 20px;
+        /* margin-right: 10px; */
         font-size: 16px; font-weight: 400;
         text-align: center; line-height: 20px;
       }
 
-      .unb_btn > div:last-child {margin-right: 0;}
+      .unb_btn > li:last-child {margin-right: 0;}
+
+      .unb_btn a { 
+        display: block;
+        position: relative;
+        margin-right: 5px;
+        padding-right: 5px;
+      }
+      .unb_btn a:after,
+      .unb_btn a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px; right: 0;
+        width:1px; height: 20px;
+        background-color: #999;
+      }
+
+      .unb_cs a:last-child:after,
+      .unb_cs a:last-child::after {
+        display: none;
+      }
 
       .unb_sign {color: #E13100;}
 
@@ -150,16 +173,25 @@ body {
 
         .unb_search_icon { 
           position: absolute;
-          top: 7px; right: 10px;
+          top: 4px; right: 10px;
           width: 16px; height: 16px;
-          background-color: #777;
+          /* background-color: #777; */
+        }
+
+        .unb_search_icon img {
+          width: 16px; height: 16px;
         }
 
       .unb_cart {
         float: right;
-        width: 26px; height: 26px;
+        width: 24px; height: 24px;
         margin: auto;
-        background-color: var(--color-sample1);
+        margin-top: 3px;
+        /* background-color: var(--color-sample1); */
+      }
+
+      .unb_cart img {
+        width: 24px; height: 24px;
       }
 
 /* #viewBox
@@ -210,7 +242,7 @@ body {
   .side_view_area {
     float: right;
     width: 400px; height: 550px;
-    background-color: var(--color-sample1);
+    /* background-color: var(--color-sample1); */
   }
 
     .side_view {
@@ -240,7 +272,7 @@ body {
       float: left;
       width: 320px; height: 420px;
       margin-right: 20px;
-      background-color: var(--color-sample1);
+      /* background-color: var(--color-sample1); */
     }
 
     .best_item:last-child { margin-right: 0;}
@@ -253,7 +285,7 @@ body {
       .best_text {
         width: 320px; height: 100px;
         padding: 0 10px;
-        background-color: var(--color-sample1);
+        /* background-color: var(--color-sample1); */
       }
 
 
@@ -324,17 +356,19 @@ body {
   .challenge_area {
     width: 1000px; height: 420px;
     margin: auto;
-    background-color: var(--color-sample1);
+    /* background-color: var(--color-sample1); */
   }
 
     .challenge {
       float: left;
+      position: relative;
       width: 450px; height: 420px;
       margin: auto; margin-right: 100px;
-      /* background-color: var(--color-sample1); */
+      background-color: var(--color-sample1);
     }
 
     .challenge:last-child { margin-right: 0; }
+
 
 /* #eventBox
   =================================================== */
@@ -440,6 +474,23 @@ body {
       margin-top: -35px;
       background-color: var(--color-sample1);
     }
+
+  .awards_bottom {
+    width: 220px; height: 20px;
+    background-color: var(--color-sample1);
+    margin: auto;
+    margin-top: 40px;
+  }
+
+    .awards_circle {
+      float: left;
+      width: 20px; height: 20px;
+      border-radius: 100%;
+      background-color: var(--color-sample1);
+      margin-right: 30px;
+    }
+
+    .awards_circle:last-child { margin-right: 0;}
 
 
 
@@ -588,11 +639,9 @@ body {
     background-color: #fff;
   }
 
-  .foot_agreement:after,
-  .foot_agreement::after{
-    content: "";
-    display: block;
-    width: 0; height: 0;
+  .foot_agreement a:after,
+  .foot_agreement a::after{
+    display: none;
   }
 
   .foot_main_btn > div:last-child {margin-right: 0;}
