@@ -37,3 +37,102 @@ h1 {
 }
 .btn > button:hover {background-color: #9aa;}
 .btn > button:focus {outline: 5px solid #333;}
+
+.card {
+  position: relative;
+  width: 250px; height: 340px;
+  margin-top: 50px;
+  background-color: #ccc;
+  box-shadow: 3px 3px 3px #333;
+}
+
+.card a {
+  display: block;
+  width: 100%; height: 100%;
+  padding: 10px; box-sizing: border-box;
+}
+
+.view_card { 
+  width: 100%; height: 100%;
+  padding: 25px; box-sizing: border-box;
+  background-color: #fff;
+}
+.blind_card { 
+  display: none;
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  padding: 25px; box-sizing: border-box;
+  color: #fff; font-weight: 700;
+  background-color: rgba(0, 50, 50, 0.85);
+}
+
+.card > a:hover .blind_card,
+.card > a:focus .blind_card {
+  display: block;
+}
+
+/* 나의 풀이 */
+/* ul {
+  width: 100%; height: 100px;
+  padding: 20px;
+}
+
+ul > li {
+  float: left;
+  display: block;
+  position: relative;
+  display: block;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+ul li:after,
+ul li::after {
+  content: "";
+  position: absolute; top: 5px; right: 0;
+  display: block;
+  width: 1px; height: 10px;
+  background-color: #333;
+}
+
+
+ul li:last-child:after,
+ul li:last-child::after {display: none;} */
+
+
+.nav_list {
+  width: 600px; height: 100px;
+  margin:auto; margin-top: 100px;
+  border: 1px solid #171717;
+  background-color: #fff;
+}
+
+.nav_list ul {
+  width: 100%; height: 30px;
+}
+.nav_list li {
+  float: left;
+  width: auto; height: auto;
+  margin-right: 10px;
+  background-color: #fda;
+}
+
+.nav_list li:last-child {
+  margin-right: 0;
+}
+
+.nav_list li:before,
+.nav_list li::before {
+  content: ""; float: left;
+  width: 1px; height: 10px;
+  margin-left: -5px; margin-top: 5px;
+  background-color: #777;
+}
+
+.nav_list li:first-child:before,
+.nav_list li:first-child::before {display: none;}
+
+.nav_list a {
+  width: 100%; height:50px;
+  padding: 3px 5px;
+}
