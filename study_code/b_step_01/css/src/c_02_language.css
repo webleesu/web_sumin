@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* c_02_language.css */
+
+#unb {background-color: #faa;}
+#unb ul { display: none;}
+#unb:hover ul,
+#unb:focus ul { display: block;}
