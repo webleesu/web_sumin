@@ -108,8 +108,15 @@ h1 {
 }
 
 /* ----------------------------------------------------------------------- */
-#slide_01 { background-color: #355E7477;}
-#slide_02 { background-color: #FD5B1B77;}
-#slide_03 { background-color: #2C86CB77;}
-#slide_04 { background-color: #BBBA2877;}
-#slide_05 { background-color: #180CEA77;}
+
+.slide_con_wrap > div { padding: 50px;}
+.slide_con_wrap a {
+  padding: 10px 30px; 
+  color: #fff; font-size: 1.25rem;
+  background-color: #35a;
+}
+.slide_01 { background-color: #855E7477;}
+.slide_02 { background-color: #FD5B1B77;}
+.slide_03 { background-color: #2C86CB77;}
+.slide_04 { background-color: #BBBA2877;}
+.slide_05 { background-color: #180CEA77;}
