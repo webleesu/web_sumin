@@ -15,11 +15,11 @@
   --color-grey4:    #757575;
   
   /* font */
-  --font-normal:  16px;
-  --font-small:   12px;
-  --font-regular: 14px;
+  --font-point:   50px;
   --font-title:   32px;
-  --font-point:   72px;
+  --font-normal:  16px;
+  --font-regular: 14px;
+  --font-small:   12px;
 }
 
 
@@ -30,21 +30,118 @@
   background-color: #eee;
   padding-top: 1.875rem;
 }
-
+/* ================================================= */
 #headBox {
   float: left;
   width: 15.625rem; height: 44.375rem;
-  width: 250px; height: 710px;
+  padding: 56px 52px 50px 42px;
+
   background-color: var(--color-grey4);
   background-color: #757575;
 }
 
+h1 {
+  width: 154px; height: 104px;
+  margin-bottom: 42px;
+  /* background-color: #fa0; */
+}
+
+h1 a {
+  background-image: url(../../img/gcass/gcass_logo.png);
+  /* 이미지가 다 들어가게 해라 */
+  background-size: contain;
+}
+
+.gnb {
+  width: 100%; height: auto; min-height: 300px;
+  font-size: var(--font-title);
+  color: var(--color-white);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -1;
+  
+}
+
+.gnb > ul {
+  width: 100%; height: auto;
+  padding-right: 20px;
+}
+
+.gnb li {
+  width: 100%; height: 40px;
+  margin-bottom: 24px;
+  /* background-color: #eee; */
+  padding-bottom: 5px;
+  border-bottom: 5px solid var(--color-white);
+}
+
+.gnb li:last-of-type {
+  width: 110px;  height: 110px;
+  margin-left: 20px;
+  border: 0;
+  font-size: var(--font-point);
+  color: var(--color-grey4);
+  text-align: center; 
+  line-height: 110px;
+  letter-spacing: -1px;
+}
+
+.gnb li:last-child a {
+  padding: 0;
+  border-radius: 100%;
+  background-color: var(--color-white);
+}
+
+.gnb li:last-of-type span {
+  font-size: var(--font-title);
+}
+
+
+.gnb a {
+  display: block;
+  width: 100%; height: 100%;
+  padding: 3px 8px; padding-right: 4px;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+.gnb a:hover { text-decoration: none;}
+
+.gnb i {
+  float: right;
+  font-size: var(--font-normal);
+  line-height: 31px;
+}
+
+
+
+/* ========================================================== */
 #viewBox {
+  position: relative;
   float: right;
   width: calc(100% - 15.625rem); height: 44.375rem;
   background-color: #adf;
 }
 
+#viewBox::before {
+  content: ""; display: block; width: 100%; height: 50px;
+  background-color: #fa0;
+}
+
+.view_img {
+  position: absolute;
+  right: 297px; bottom: 64px; z-index: 10;
+  width: 328px; height: 520px;
+  background-color: #ddf;
+}
+.view_content {
+  position: absolute;
+  right: 48px; bottom: 120px;
+  width: 294px; height: 444px;
+  background-color: #acd;
+}
+
+/* ========================================================== */
 #sideBox {
   position: absolute;
   top: 0; left: 0;
@@ -54,10 +151,83 @@
   background-color: var(--color-grey2);
 }
 
+.unb {
+  float: right;
+  width: auto; min-width: 300px; height: 100%;
+  background-color: #fff;
+}
+
+.unb li {
+  float: left;
+  width: 95px; height: 100%;
+  padding: 3px;
+  color: var(--color-white); text-align: center;
+  text-transform: uppercase;
+}
+
+
+.unb li:last-child {
+  position: relative;
+  width: 245px; 
+  text-align: left;
+  color: var(--color-black);
+  text-indent: 0.5rem;
+}
+
+.unb li:last-child span {
+  display: block; position: absolute;
+  right: 0; top: 50%; z-index: 10;
+  width: 56px; height: 1px;
+  background-color: var(--color-black);
+}
+
+.unb li:last-child span::after {
+  content: ""; display: block; 
+  position: absolute; top: -5px; right: 0;
+  width: 10px; height: 10px;
+  border: 1px solid var(--color-black);
+  border-bottom: 0; border-left: 0;
+  transform: rotate(45deg);
+}
+
+.unb li a {
+  display: block; width: 100%; height: 100%;
+}
+
+.home { background-color: var(--color-grey2);}
+.study { background-color: var(--color-black);}
+.education { background-color: var(--color-yellow1);}
+
+/* ============================================================== */
 #footBox {
   clear:both;
-  width: 100%; height: 110px;
-  width: 100%; height: 6.875rem;
+  width: 100%; height: auto;
+  padding: 6px 40px 25px;
   border-top: 1px solid var(--color-grey3);
-  background-color: var(--color-white);
+  background-color: var(--color-gray1);
+}
+
+#footBox h2 {
+  float: left;
+  width: 78px; height: 53px;
+  margin-top: 6px;
+  background-color: #fff;
+}
+.site_service {
+  float: left;
+  width: 95px; height: 35px;
+  margin-top: 25px; margin-left: 35px;
+  background-color: #aaa;
+}
+address {
+  float: left;
+  width: 350px; height: 45px;
+  margin-top: 16px;
+  margin-left: 20px;
+  background-color: #aaa;
+}
+.other {
+  float: right;
+  width: 300px; height: 82px;
+  background-color: #aaa;
 }
