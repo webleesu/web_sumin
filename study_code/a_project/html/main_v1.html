@@ -11,10 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
   
+  <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/src/main_v1.css">
 
+  <!-- js -->
   <script src="../js/common/modernizr-custom.js"></script>
 
   <title>cubeme</title>
@@ -23,6 +25,7 @@
 <body>
   <!-- layout -->
   <div id="wrap">
+    <!-- #headBox -->
     <header id="headBox">
       <h1>
         <a href="#">
@@ -33,7 +36,7 @@
       <nav id="navigation">
         <h2 class="blind">navigation</h2>
         <nav id="gnb">
-          <h3 class="blind">gnb</h3>
+          <h3 class="blind">주요 네비게이션</h3>
           <ul>
             <li class="gnb_item"><a href="#">모든 상품</a></li>
             <li class="gnb_challenge"><a href="#">챌린지</a></li>
@@ -45,14 +48,13 @@
         </nav>
         <nav id="unb">
           <h3 class="blind">사용자 네비게이션</h3>
-          <!-- <ul class="unb_btn"> -->
-            <!-- <li class="unb_language"> -->
-              <select tabindex="1"></select>
-                <option value="koren">한국어</option>
-                <option value="english">ENGLISH</option>
-                <option value="chinese">中國語</option>
-            <!-- </li> -->
-            <ul class="unb_btn">
+          <ul class="unb_btn">
+            <li class="unb_language">
+              언어선택
+              <button type="button">한국어</button>
+              <button type="button">ENGLISH</button>
+              <button type="button">中國語</button>
+            </li>
             <li class="unb_sign"><a href="#">회원가입</a></li>
             <li class="unb_login"><a href="#">로그인</a></li>
             <li class="unb_cs"><a href="#">고객센터</a></li>
@@ -78,6 +80,7 @@
     </header> <!-- // #headBox-->
 
 
+    <!-- #viewBox -->
     <section id="viewBox">
       <h2 class="blind">메인 광고</h2>
       <div class="view_area">
@@ -105,6 +108,7 @@
     </section> <!-- // #viewBox-->
 
 
+    <!-- #bestBox -->
     <section id="bestBox">
       <div class="title_area">
         <div class="title_text">
@@ -143,6 +147,7 @@
     </section> <!-- // #bestBox-->
 
 
+    <!-- #bendfitBox -->
     <section id="benefitBox">
       <h2 class="blind">혜택</h2>
       <div class="benefit_title_area">
@@ -189,6 +194,7 @@
     </section> <!-- // #benefitBox-->
 
 
+    <!-- #challengeBox -->
     <article id="challengeBox">
       <div class="title_area">
         <div class="title_text">
@@ -204,6 +210,7 @@
     </article> <!-- // #challengeBox-->
 
 
+    <!-- #eventBox -->
     <section id="eventBox">
       <div class="title_area">
         <div class="title_text">
@@ -240,6 +247,7 @@
     </section> <!-- // #eventBox-->
 
 
+    <!-- #awardsBox -->
     <aside id="awardsBox">
       <h2 class="blind">awards</h2>
       <div class="awards_title">We're making headlines</div>
@@ -271,6 +279,7 @@
     </aside> <!-- // #awardsBox-->
 
 
+    <!-- saleBox -->
     <section id="saleBox">
       <div class="title_area">
         <div class="title_text">
@@ -348,6 +357,7 @@
     </section> <!-- // #saleBox-->
 
 
+    <!-- #magazineBox -->
     <article id="magazineBox">
       <h2 class="blind">매거진</h2>
       <div class="magazine"></div>
@@ -355,6 +365,7 @@
     </article> <!-- // #magazineBox-->
 
 
+    <!-- #footBox -->
     <footer id="footBox">
       <div class="foot_top_area">
         <h2>
@@ -385,15 +396,14 @@
           <p>Copyright 2020 CUBE ME. All rights reserved.</p>
         </address>
 
-        <div class="foot_bottom_btn">
-          <div class="foot_language">KOR</div>
-          <div class="foot_facebook">
+        <ul class="foot_bottom_btn">
+          <li class="foot_facebook">
             <a href="#"><img src="../img/facebook.png" alt="페이스북 바로가기"></a>
-          </div>
-          <div class="foot_instagram">
+          </li>
+          <li class="foot_instagram">
             <a href="#"><img src="../img/instagram.png" alt="인스타그램 바로가기"></a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
 
     </footer> <!-- // #footBox-->
