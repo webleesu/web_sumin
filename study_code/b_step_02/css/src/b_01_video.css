@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* b_01_video.css */
+
+#wrap {
+  width: 50rem; height: auto;
+  margin: auto;
+}
+
+.part {
+  width: 100%; height: 31.25rem;
+  margin: 3.125rem auto;
+  border: 0.0625rem solid #333;
+  padding: 0.5rem;
+}
+
+.movie {
+  overflow: hidden;
+  position: relative;
+  width: 100%; height: 450px;
+  background-color: #ddd;
+  background-image: url(../../multi/video/toddler-g86332d6fc_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.movie_area {
+  /* background-image를 보기 위한 display: none; */
+  /* display: none; */
+  position: absolute;
+  top: 50%; left: 50%;
+  width: auto; height: auto;
+  min-width: 100%; min-height: 100%;
+  max-width: 120%; max-height: 120%;
+  /* max-width: 100%; 
+  max-height: 100%; */
+  transform: translate(-50%, -50%);
+}
