@@ -132,10 +132,8 @@ h3 {background-color: #ddf;}
 
 .multi_tr li { margin: 40px; transition: all 1000ms ease;}
 
-.multi_tr:hover li:nth-child(1) {
-  transform: translateX(500px) rotate(180deg);
-}
-.multi_tr:hover li:nth-child(2) {
-  transform: rotate(180deg) translateX(500px);
-}
+.multi_tr:hover li:nth-child(1) {  transform: translateX(500px) rotate(180deg);}
+.multi_tr:hover li:nth-child(2) {  transform: rotate(180deg) translateX(500px);}
+.multi_tr li:nth-child(3) { transform-origin: 100% 100%;}
+.multi_tr:hover li:nth-child(3) {  transform: rotate(360deg);}
 
