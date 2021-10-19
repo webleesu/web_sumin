@@ -35,6 +35,50 @@
     <h2>form</h2>
     <p>무언가를 입력, 선택, 자료를 전송하게 만드는 기능을 가진 요소</p>
     <p>양방향 전송방식 - 입력 - 보내기 - 받아서 처리 - 결과를 피드백</p>
+    <p>검색, 로그인, 회원가입, 구매, 게시판</p>
+
+    <ol>
+      <li>검색하기 위해 필요한 단어/문장을 작성(글을 작성할 수 있는 영역)</li>
+      <li>전송 버튼을 클릭(a는 data를 보내는 능력x, data를 보내는 능력을 가진 버튼)</li>
+      <li>데이터를 전송받을 곳으로 전송(어디로 보낼지 체크, 공개/비공개/ ...)</li>
+      <li>전송받은 곳에서 무언가 수행(backend)</li>
+      <li>수행에 대한 결과를 피드백</li>
+      <li>피드백 받은 결과를 도출</li>
+    </ol>
+
+    <hr />
+
+    <div class="content_input_area">
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>각 영역별 기능 구분</legend>
+
+          <label for="userName">사용자 이름</label>
+          <input type="text" id="userName" value="" name="userName">
+
+          <label for="userPW">비밀번호</label>
+          <input type="password" id="userPW" value="" name="userPW">
+
+          <label for="userOld">나이(만)
+            <span class="blind">를 태어난 해를 기준으로 입력하세요.</span>
+          </label>
+          <input type="text" id="userOld" value="" name="userOld">
+
+          <input type="submit" value="확인">
+
+          <!-- 
+            userName : leesu
+            userGender : female
+            userOld : 25
+          -->
+
+        </fieldset>
+
+      </form>
+    </div>
+
+
+
   </div><!-- // #wrap -->
 
   <!-- script -->
