@@ -1,3 +1,114 @@
 @charset "UTF-8";
 /* b_03_form.css */
 
+.part {
+  width: 650px; height: auto;
+  margin: auto;
+}
+.login_area {
+  width: 600px; height: auto;
+  margin: auto; margin-top: 200px;
+  padding: 20px 50px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(68, 68, 68, 0.08);
+}
+
+
+.id_area {
+  width: 500px; height: 50px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 10px;
+}
+.id_icon {
+  float: left;
+  width: 30px; height: 30px;
+  margin-right: 20px;
+  background-image: url("../../img/user.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#userId {
+  float: left;
+  width: 400px; height: 30px;
+  border: 0;
+  font-size: 18px;
+}
+
+
+.password_area {
+  width: 500px; height: 50px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(68, 68, 68, 0.08);
+  /* box-shadow: 0 2px 6px 0 rgb(68 68 68 / 8%); */
+}
+
+.pw_icon {
+  float: left;
+  width: 30px; height: 30px;
+  margin-right: 20px;
+  background-image: url("../../img/lock.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#userPw {
+  float: left;
+  width: 400px; height: 30px;
+  border: 0;
+  font-size: 18px;
+}
+
+.login_stay {
+  width: 500px; height: 40px;
+  margin-top: 20px;
+}
+#loginCheck {
+  float: left;
+  width: 23px; height: 23px;
+}
+.login_stay_text {
+  float: left;
+  display: block;
+  width: auto; height: 30px;
+  font-size: 18px; line-height: 30px;
+  color: #555;
+}
+#userLogin {
+  width: 500px; height: 50px;
+  margin-top: 20px;
+  border-radius: 5px; border: 0;
+  background-color: #03c75a;
+  font-size: 22px; font-weight: 700;
+  text-align: center;
+  line-height: 50px; color: #fff; 
+}
+
+.user_find {
+  width: auto; height: 30px;
+  margin: auto; margin-top: 20px; margin-left: 175px;
+}
+
+.user_find li {
+  position: relative;
+  float: left;
+  margin-right: 10px; padding-right: 10px;
+  font-size: 18px; line-height: 30px;
+  color: #555; 
+}
+
+.user_find li:after {
+  position: absolute;
+  top: 10px; right: 0;
+  content: ""; display: block;
+  width: 1px; height: 10px;
+  background-color: #bbb;
+}
+
+.user_find li:last-child::after {
+  display: none;
+}
