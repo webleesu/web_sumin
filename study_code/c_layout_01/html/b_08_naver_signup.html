@@ -29,7 +29,7 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    <h1><a href="./a_content.html">웹</a></h1>
+    <h1><a href="./a_content.html"></a></h1>
 
     <ul class="join_wrap">
       <li>
@@ -46,7 +46,7 @@
         <fieldset class="join_pw">
           <legend class="blind">비밀번호 입력란</legend>
           <input type="password" id="joinPw">
-          <span class="pw_icon"></span>
+          <label for="joinPw" class="pw_icon"></label>
         </fieldset>
       </li>
 
@@ -55,7 +55,7 @@
         <fieldset class="join_re_pw">
           <legend class="blind">비밀번호 재입력란</legend>
           <input type="password" id="joinRePw">
-          <span class="pw_re_icon"></span>
+          <label for="joinRePw" class="pw_re_icon"></label>
         </fieldset>
       </li>
 
@@ -67,19 +67,35 @@
         </fieldset>
       </li>
 
-      <li>
+      <li class="clearfix">
         <h2 class="join_title"><label for="yy">생년월일</label></h2>
         <fieldset class="join_yy">
           <legend class="blind">년도 입력란</legend>
-          <input type="text" id="yy">
+          <input type="text" id="yy" placeholder="년(4자)">
         </fieldset>
+
         <fieldset class="join_mm">
           <legend class="blind">월 입력란</legend>
-          <input type="text" id="mm">
+          <select name="mm" id="mm">
+            <option value>월</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
         </fieldset>
+
         <fieldset class="join_dd">
           <legend class="blind">일 입력란</legend>
-          <input type="text" id="dd">
+          <input type="text" id="dd" placeholder="일">
         </fieldset>
       </li>
 
@@ -87,7 +103,12 @@
         <h2 class="join_title"><label for="joinGender">성별</label></h2>
         <fieldset class="join_gender">
           <legend class="blind">성별 선택</legend>
-          <select name="gender" id="joinGender"></select>
+          <select name="gender" id="joinGender">
+            <option value selected>성별</option>
+            <option value="M">남자</option>
+            <option value="W">여자</option>
+            <option value="U">선택 안함</option>
+          </select>
         </fieldset>
       </li>
 
@@ -95,18 +116,35 @@
         <h2 class="join_title"><label for="joinEmail">본인 확인 이메일<span>(선택)</span></label></h2>
         <fieldset class="join_email">
           <legend class="blind">본인 확인 이메일 입력란</legend>
-          <input type="text" id="joinEmail">
+          <input type="text" id="joinEmail" placeholder="선택 입력">
         </fieldset>
       </li>
 
       <li>
-        <h2 class="join_title"><label for="joinPhone">휴대전화번호 입력란</label></h2>
-        <fieldset class="join_phone">
-          <legend class="blind">휴대전화</legend>
-          <select name="nation" id="joinNation"></select>
-          <input type="tel" id="joinPhone">
-          <button type="submit">인증번호 받기</button>
+        <h2 class="join_title"><label for="joinPhone">휴대전화</label></h2>
+        <fieldset class="join_nation">
+          <legend class="blind">거주하는 나라 선택</legend>
+          <select name="nation" id="joinNation">
+            <option value="82">대한민국 +82</option>
+          </select>
         </fieldset>
+
+        <div class="join_num_area clearfix">
+          <fieldset class="join_phone">
+            <legend class="blind">휴대전화 번호 입력란</legend>
+            <input type="tel" id="joinPhone" placeholder="전화번호 입력">
+          </fieldset>
+          <button type="button" class="join_num_btn">인증번호 받기</button>
+        </div>
+
+        <fieldset class="join_num">
+          <legend class="blind">인증번호 입력란</legend>
+          <input type="text" id="joinNum" placeholder="인증번호를 입력하세요">
+        </fieldset>
+      </li>
+
+      <li>
+        <button type="button" class="join_btn">가입하기</button>
       </li>
     </ul>
 
