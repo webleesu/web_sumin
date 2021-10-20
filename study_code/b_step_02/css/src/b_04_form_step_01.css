@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* b_04_form_step_01.css */
 
-#wrap {  width: 900px; height: auto; min-height: 500px;}
+#wrap {  width: 900px; height: auto; min-height: 500px; padding-bottom: 500px;}
 
 form {
   width: 100%; height: auto;
