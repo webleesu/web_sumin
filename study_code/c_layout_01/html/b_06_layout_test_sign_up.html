@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- b_06_layout_test_sign_up.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- font : 구글 폰트 - noto-sans-KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- ibm_plex -->
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_06_layout_test_sign_up.css">
+
+  <!-- script -->
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>sign up</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">웹</a></h1>
+
+    <div class="part">
+      <h2>회원가입</h2>
+
+      <fieldset class="user user_company">
+        <legend class="blind">회사명 입력란</legend>
+        <label class="blind" for="userCom"></label>
+        <input type="text" id="userCom" value="" name="user__com" placeholder="회사명" />
+      </fieldset>
+
+      <fieldset class="user user_email">
+        <legend class="blind">이메일 입력란</legend>
+        <label class="blind" for="userEmail"></label>
+        <input type="text" id="userEmail" value="" name="user__email" placeholder="이메일" />
+      </fieldset>
+
+      <fieldset class="user user_password">
+        <legend class="blind">비밀번호 입력란</legend>
+        <label class="blind" for="userPw"></label>
+        <input type="password" id="userPw" value="" name="user__pw" placeholder="비밀번호" />
+      </fieldset>
+
+      <fieldset class="user user_number">
+        <legend class="blind">휴대폰 번호 입력란</legend>
+        <label class="blind" for="userNum"></label>
+        <input type="text" id="userNum" value="" name="user__num" placeholder="휴대폰 번호" />
+      </fieldset>
+
+      <div class="info_area">
+        <p>잠깐! 이미 자비스에 가입된 회사의 직원인가요? <br>
+          담당자가 보낸 초대메일을 먼저 확인해 주세요. <span><a href="#">자세히보기</a></span></p>
+      </div>
+
+      <fieldset class="join_btn">
+        <legend class="blind">계정 만들기 버튼</legend>
+        <button type="button">우리회사 계정 만들기</button>
+      </fieldset>
+
+      <div class="agree">
+        <p>가입하면 <span><a href="#">이용약관</a></span>과 <span><a href="#">개인정보취급방침</a></span>에 동의한 것으로 봅니다.</p>
+      </div>
+
+      <div class="login_area">
+        <p>이미 가입하셨나요? <span><a href="#">로그인</a></span></p>
+      </div>
+    </div>
+
+
+
+
+  </div><!-- // #wrap -->
+
+  <!-- script -->
+  <script>
+  </script>
+</body>
+</html>
