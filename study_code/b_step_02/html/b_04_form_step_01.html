@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- b_04_form_step_01.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- font : 구글 폰트 - noto-sans-KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- ibm_plex -->
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_04_form_step_01.css">
+
+  <!-- script -->
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>form</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">웹</a></h1>
+
+    <!-- form문서 -->
+    <h2>form 이해</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>입력형태, 특수형</legend>
+        <div>
+          <input type="hidden" name="sendName" value="" />
+        </div>
+        <div>
+          <label for="idText">입력할 내용 작성 설명</label>
+          <input type="text" name="id__text" id="idText" value="" placeholder="입력할 사항의 예시" maxlength="10" />
+        </div>
+        <div>
+          <label for="pwText">숨겨지는 글자를 작성</label>
+          <input type="password" name="pw__text" id="pwText" value="" placeholder="비밀번호 입력">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>체크항목</legend>
+        
+        <div>
+          <h3>type-radio</h3>
+          <p>다음중 가장 쉬운 언어는 무엇일까?</p>
+          <ul>
+            <li>
+              <input type="radio" id="radio_01" name="radio" value="javascript" checked />
+              <label for="radio_01">javascript</label>
+            </li>
+            <li>
+              <input type="radio" id="radio_02" name="radio" value="python" />
+              <label for="radio_02">python</label>
+            </li>
+            <li>
+              <input type="radio" id="radio_03" name="radio" value="java" />
+              <label for="radio_03">java</label>
+            </li>
+            <li>
+              <input type="radio" id="radio_04" name="radio" value="c" />
+              <label for="radio_04">c</label>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>type-checkbox</h3>
+          <p>이번 주말에 먹고 싶은 음식을 고르시오.</p>
+          <ul>
+            <li>
+              <input type="checkbox" id="check_01" name="check" value="초밥">
+              <label for="check_01">초밥</label>
+            </li>
+            <li>
+              <input type="checkbox" id="check_02" name="check" value="족발">
+              <label for="check_02">족발</label>
+            </li>
+            <li>
+              <input type="checkbox" id="check_03" name="check" value="보쌈">
+              <label for="check_03">보쌈</label>
+            </li>
+            <li>
+              <input type="checkbox" id="check_04" name="check" value="랍스타">
+              <label for="check_04">랍스타</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>버튼형식</legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>멀티형</legend>
+      </fieldset>
+
+    </form>
+  </div><!-- // #wrap -->
+
+  <!-- script -->
+  <script>
+  </script>
+</body>
+</html>
