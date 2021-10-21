@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- b_09_coupang_login.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- font : 구글 폰트 - noto-sans-KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- ibm_plex -->
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_09_coupang_login.css">
+
+  <!-- script -->
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>coupang login</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html"><span class="blind">웹</span></a></h1>
+    <form action="#" method="post">
+      <fieldset class="login_area">
+        <legend class="blind">로그인 입력창</legend>
+        <div class="login_id_box">
+          <div class="login_id_wrap action">
+            <label for="loginId"><i class="far fa-envelope"></i></label>
+            <input type="email" name="login__id" id="loginId" placeholder="아이디(이메일)" required />
+          </div>
+          <p class="error_id_message">아이디(이메일)를 입력해주세요.</p>
+        </div>
+
+        <div class="error_pw_message">
+          <div class="login_pw_wrap error">
+            <label for="loginPw"><i class="fas fa-lock"></i></label>
+            <input type="password" name="login__pw" id="loginPw" placeholder="비밀번호" required />
+            <button type="button" class="pw_show"><i class="fas fa-eye"></i></button>
+          </div>
+          <p class="error_pw_message">비밀번호를 입력해주세요.</p>
+        </div>
+
+        <div class="login_other clearfix">
+          <input type="checkbox" name="auto__login" id="autoLogin" value="자동로그인">
+          <label for="autoLogin">자동로그인</label>
+          <a href="#" class="find_id_pw">
+            아이디(이메일)/비밀번호 찾기 
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+
+        <div class="login_btn_area">
+          <button type="submit">로그인</button>
+        </div>
+        <hr />
+      </fieldset>
+
+      <div class="join">
+        <a href="#">회원가입</a>
+      </div>
+    </form>
+
+    <footer id="footBox">
+      <div>©Coupang Corp. All rights reserved.</div>
+    </footer>
+  </div><!-- // #wrap -->
+
+  <!-- script -->
+  <script>
+  </script>
+</body>
+</html>
