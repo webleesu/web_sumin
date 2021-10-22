@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* b_10_coupang_join.css */
+html, body { color: #171717;}
+#wrap { width: 460px; height: auto; padding-bottom: 500px;}
+
+h1 { 
+  width: 460px; height: 95px;
+  padding-top: 50px;
+}
+
+h1 a {
+  display: block;
+  width: 195px; height: 46px;
+  margin: auto;
+  background-image: url(../../img/coupang.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h2 { 
+  margin-bottom: 10px; 
+  font-size: 14px;
+}
+
+/* form ----------------------------------------------------- */
+form { 
+  width: 100%; height: auto;
+  margin: auto;
+}
+
+/* input ------------------------------------------------------- */
+.join_input_area {
+  width: 100%; height: auto;
+  padding-top: 20px;
+}
+
+
+.join_input_wrap { width: 100%; height: auto;}
+.id_input_area, .pw_input_area,
+.pw_re_input_area, .name_input_area, .phone_input_area  {
+  width: 460px; height: 50px;
+  margin-top: 15px;
+  border: 1px solid #bbb;
+  box-sizing: content-box;
+}
+.join_input_wrap label {
+  float: left;
+  width: 45px; height: 50px;
+  border-right: 1px solid #bbb;
+  box-sizing: border-box;
+  background-color: #eee;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+.join_input_wrap input {
+  float: left;
+  width: 369px; height: 50px;
+  border: 0;
+  text-indent: 0.5rem;
+}
+
+.join_input_wrap li:focus { border-bottom: 2px solid #0074e9;}
+
+.id_input_area label {  background-image: url('../../img/mail.png');}
+.pw_input_area label {  background-image: url('../../img/padlock.png');}
+.pw_re_input_area label {  background-image: url('../../img/lock.png');}
+.name_input_area label {  background-image: url('../../img/user.png');}
+.phone_input_area label {  background-image: url('../../img/smartphone.png');}
+
+/* validator ------------------------------------------ */
+.validator {
+  display: none;
+  float: right;
+  width: 46px; height: 50px;
+  background-image: url("//img1a.coupangcdn.com/image/static/login/sprite-join.20160902.svg"),none;
+  background-repeat: no-repeat;
+  background-size: 86px 86px;
+  background-position: -64px 16px;
+}
+
+.validator_right .validator { display: block; }
+
+/* error -------------------------------------------- */
+.error { border-bottom: 2px solid #e52528;}
+
+.error_id_message span {
+  display: none; 
+  width: 436px; height: 18px; 
+  margin: 9px 12px 0;
+  font-size: 12px; line-height: 18px;
+  color: #e52528;
+}
+.error_id_form {
+  display: block;
+}
+.error_pw_message span {
+  display: block;
+  width: 450px; height: 18px; 
+  margin: 9px 12px 0;
+  font-size: 12px; line-height: 18px;
+  color: #888;
+}
+.error_pw_message span::before { content: "X ";}
+
+.error_pw_re_message span {
+  display: block;
+  width: 450px; height: 18px; 
+  margin: 9px 12px 0;
+  font-size: 12px; line-height: 18px;
+  color: #888;
+}
+.error_pw_re_message span::before { content: "X ";}
+
+.error_name_message span {
+  display: none; 
+  width: 436px; height: 18px; 
+  margin: 9px 12px 0;
+  font-size: 12px; line-height: 18px;
+  color: #e52528;
+}
+.error_phone_message span {
+  /* display: none;  */
+  width: 436px; height: 18px; 
+  margin: 9px 12px 0;
+  font-size: 12px; line-height: 18px;
+  color: #e52528;
+}
+
+hr { margin-top: 20px; border-bottom: 1px solid #ddd;}
+
+/* agreement ------------------------------------ */
+
+.agree_area {
+  padding-top: 20px;
+}
+.check_all_area { font-weight: bold;}
+.check_all_message {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #555;
+}
+
+.agree_check_area {
+  width: 100%; height: auto;
+  margin-top: 20px;
+  padding: 18px 16px;
+  border: 1px solid #bbb;
+}
