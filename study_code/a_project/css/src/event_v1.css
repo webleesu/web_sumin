@@ -13,156 +13,7 @@ body {
 
 /* design */
 
-/* #headBox
-  =================================================== */
-  #headBox { 
-    position: fixed;
-    top: 0; z-index: 1500;
-    width: 1280px; height: 150px;
-    padding: 30px 100px;
-    background-color: #ffffffdd;
-  }
-  
-    h1 {
-      float: left;
-      width: 170px; height: 60px;
-      margin-top: 30px;
-      /* background-color: var(--color-sample1); */
-    }
-      h1 a {
-        display: block;
-        width: 170px; height: 60px;
-      }
-  
-      .logo {
-        width: 170px; height: auto;
-        margin-top: 10px;
-      }
-  
-    #gnb {
-      position: absolute; left: 0; right: 0;
-      float: left;
-      margin: auto;
-      margin-top: 50px;
-      width: 500px; height: 40px;
-      /* background-color: var(--color-sample1); */
-    }
-  
-      #gnb li{
-        float: left;
-        width: auto;
-        margin-right: 20px;
-        font-size: 18px;
-        text-align: center; line-height: 40px;
-      }
-  
-      #gnb li:last-child {margin-right: 0;}
-  
-  
-    #unb {
-      float: right;
-      width: 300px; height: auto;
-      /* background-color: var(--color-sample1); */
-    }
-  
-    
-    .unb_btn {
-      float: left;
-      width: auto; height: 30px;
-      margin: auto; margin-left: 44px; margin-bottom: 20px;
-    }
-  
-  
-      .unb_btn > li {
-        position: relative;
-        float: left;
-        display: block;
-        width: auto;  height: 20px;
-        margin-right: 5px;
-        padding-right: 5px;
-        font-size: 16px; font-weight: 400;
-        text-align: center; line-height: 20px;
-      }
-      .unb_btn li:after,
-      .unb_btn li::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 3px; right: 0;
-        width:1px; height: 15px;
-        background-color: #999;
-      }
-  
-      .unb_btn li:last-child:after,
-      .unb_btn li:last-child::after {
-        display: none;
-      }
-  
-      .unb_btn > li:last-child {margin-right: 0;}
-  
-      .unb_language button {
-        display: none;
-        margin-bottom: 5px;
-        font-size: 14px;
-      }
-      .unb_language:hover button {
-        display: block;
-      }
-  
-  
-      .unb_btn a { 
-        display: block;
-        text-align: center;
-      }
-  
-  
-      .unb_sign {color: #E13100;}
-  
-    .unb_search_area {
-      float: left;
-      width: 200px; height: 30px;
-      margin-left: 100px;
-    }
-  
-      .unb_search {
-        float: left;
-        position: relative;
-        width: 160px; height: 30px;
-        border-radius: 15px;
-        margin: auto; margin-right: 10px;
-        background-color: #EBEBEB;
-      }
-  
-        #search_bar {
-          width: 160px; height: 30px;
-          border-radius: 15px;
-        }
-  
-        .unb_search_icon { 
-          position: absolute;
-          top: 4px; right: 10px;
-          width: 16px; height: 16px;
-          /* background-color: #777; */
-        }
-  
-        .unb_search_icon img {
-          width: 16px; height: 16px;
-        }
-  
-      .unb_cart {
-        float: right;
-        width: 24px; height: 24px;
-        margin: auto;
-        margin-top: 3px;
-        /* background-color: var(--color-sample1); */
-      }
-  
-      .unb_cart img {
-        width: 24px; height: 24px;
-      }
-
-
-/* #eventBox */
+/* #eventBox ============================================================ */
 #eventBox {
   width: 1280px; height: auto;
   margin-top: 150px;
@@ -184,145 +35,75 @@ body {
     }
 
   .event_area {
-    width: 1200px; height: 1400px;
+    position: relative;
+    width: 1200px; height: auto; min-height: 1300px;
     margin: auto;
     padding: 30px 60px;
     background-color: var(--color-sample1);
   }
     .event_tab {
       width: 1080px; height: 40px;
-      margin: auto;
+      margin: 0 auto; padding: 0;
       border-bottom: 1px solid #333;
     }
-
-    .action {
-      border-bottom: 2px solid #171717;
-    }
-
+    
     .event_tab li {
       float: left;
-      margin: 10px;
-    }
-
-
-/* #footBox
-  =================================================== */
-  #footBox {
-    width: 1280px; height: 500px;
-    padding: 70px 0;
-    background-color: #1c1c1c;
-  }
-  
-  .foot_top_area {
-    width: 1200px; height: 40px;
-    margin: auto;
-    margin-bottom: 30px;
-    /* background-color: var(--color-sample1); */
-  }
-  
-    #footBox h2 {
-      float: left;
-      width: 112px; height: 30px;
-    }
-  
-    .foot_top_btn {
-      float: right;
-      width: 300px; height: 30px;
-      font-size: 16px; font-weight: 400;
-      text-align: left; color: #fff;
-    }
-  
-      .foot_top_btn > div {
-        float: left;
-        margin-right: 20px;
-        line-height: 30px;
-      }
-  
-      .foot_top_btn > div:last-child {margin-right: 0;}
-  
-  
-  
-  .foot_main_area {
-    position: relative;
-    width: 1200px; height: 300px;
-    margin: auto;
-    /* background-color: var(--color-sample1); */
-  }
-  
-    .foot_main_btn {
-      width: 600px; height: 30px;
-      font-size: 16px; font-weight: 400;
-      text-align: left;
-      color: #fff;
-    }
-  
-    .foot_main_btn > li {
-      position: relative;
-      float: left;
-      margin-right: 10px;
-      padding-right: 15px;
-    }
-  
-      .foot_main_btn a { 
-        display: block;
-        /* margin-right: 10px;
-        padding-right: 15px; */
-      }
-  
-    .foot_main_btn li:after,
-    .foot_main_btn li::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%; right: 0;
-      width:3px; height: 3px;
-      background-color: #fff;
-    }
-  
-    .foot_main_btn li:last-child:after,
-    .foot_main_btn li:last-child::after{
-      display: none;
-    }
-  
-    .foot_main_btn > div:last-child {margin-right: 0;}
-  
-    .foot_personal { font-weight: 700;}
-  
-    .foot_info {
-      width: 600px; height: 250px;
-      margin-top: 40px;
-    }
-  
-    .foot_info > p {
-      display: block;
+      margin-top: 3px;
       margin-bottom: 20px;
-      font-size: 16px; font-weight: 400;
-      color: #fff;
+      margin-right: 20px; 
+      padding: 0 10px; padding-bottom: 10px;
     }
-  
-    .foot_info > span:last-child {margin-bottom: 0;}
-  
-    .foot_bottom_btn {
-      position: absolute;
-      bottom: 0; right: 0;
+    .event_tab li:last-child {
+      margin-right: 0;
     }
-  
-    .foot_bottom_btn li {
-      float: left; 
-      margin-right: 20px;
+    
+    .action {
+      border-bottom: 3px solid #171717;
     }
-  
-    .foot_language {
-      width: 60px; height: 30px;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      text-align: center; line-height: 30px;
-      color: #fff;
-    }
-    .foot_facebook img {
-      width: 30px; height: auto;
-    }
-  
-    .foot_instagram img {
-      width: 30px; height: auto;
-    }
+
+/* .tab_content ---------------------------------------------- */
+  .tab_content {
+    width: 1080px; height: auto; min-height: 820px;
+    margin: auto; margin-top: 50px;
+    background-color: var(--color-sample1);
+  }
+
+  .event_ing_wrap {
+    width: 100%; height: auto;
+  }
+
+  .event {
+    float: left;
+    width: 300px; height: 380px;
+    margin-right: 90px; margin-bottom: 60px;
+    background-color: var(--color-sample1);
+  }
+
+  .event:nth-child(3n) {margin-right: 0;}
+
+  .event_img {
+    width: 300px; height: 300px;
+    background-color: var(--color-sample1);
+  }
+  .event_title {
+    width: 300px; height: 40px;
+    font-size: 20px; line-height: 40px;
+    font-weight: 700;
+  }
+  .event_date {
+    width: 300px; height: 40px;
+    font-size: 16px; line-height: 40px;
+    font-weight: 400;
+
+  }
+
+
+  .event_more {
+    position: absolute;
+    bottom: 110px; left: 50%;
+    width: 300px; height: 60px;
+    margin-left: -150px;
+    border-radius: 10px;
+    background-color: var(--color-sample1);
+  }
