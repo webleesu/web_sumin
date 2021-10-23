@@ -133,6 +133,7 @@ html, body {
         #search_bar {
           width: 160px; height: 30px;
           border-radius: 15px;
+          text-indent: 8px;
         }
   
         .unb_search_icon { 
@@ -166,6 +167,8 @@ html, body {
         background-repeat: no-repeat;
         background-size: contain;
       }
+
+
 
 /* #footBox
   =================================================== */
@@ -273,19 +276,20 @@ html, body {
       float: left; 
       margin-right: 20px;
     }
-  
-    .foot_language {
-      width: 60px; height: 30px;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      text-align: center; line-height: 30px;
-      color: #fff;
-    }
-    .foot_facebook img {
-      width: 30px; height: auto;
+
+    .foot_facebook a {
+      display: block;
+      width: 30px; height: 30px;
+      background-image: url(../../img/facebook.png);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   
-    .foot_instagram img {
-      width: 30px; height: auto;
+    .foot_instagram a {
+      display: block;
+      width: 30px; height: 30px;
+      background-image: url(../../img/instagram.png);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     

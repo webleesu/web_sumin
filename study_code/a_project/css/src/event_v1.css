@@ -105,5 +105,7 @@ body {
     width: 300px; height: 60px;
     margin-left: -150px;
     border-radius: 10px;
+    font-size: 18px; line-height: 60px;
+    font-weight: 400; color: #fff;
     background-color: var(--color-sample1);
   }
