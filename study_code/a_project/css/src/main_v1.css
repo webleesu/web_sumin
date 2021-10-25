@@ -156,6 +156,7 @@ body {
   =================================================== */
 #bestBox {
   width: 1280px; height: 600px;
+  margin-top: 20px;
   padding: 40px;
 }
 
@@ -191,6 +192,7 @@ body {
   =================================================== */
 #benefitBox {
   width: 1280px; height: 500px;
+  margin-top: 20px;
   padding: 80px;
   background-color: #FFF1E0;
 }
@@ -270,6 +272,7 @@ body {
   =================================================== */
 #challengeBox {
   width: 1280px; height: 600px;
+  margin-top: 20px;
   padding: 40px;
 }
 
@@ -294,6 +297,7 @@ body {
   =================================================== */
 #eventBox {
   width: 1280px; height: 600px;
+  margin-top: 20px;
   padding: 40px;
 }
 
@@ -331,6 +335,7 @@ body {
 #awardsBox {
   /* position: relative; */
   width: 1280px; height: 500px;
+  margin-top: 20px;
   background-color: #FFF1E0;
   padding-top: 50px;
 }
@@ -359,12 +364,15 @@ body {
       width: 70px; height: 70px;
       background-color: var(--color-sample1);
     }
+    .awards_before_btn button {width: 100%; height: 100%;}
+    
     .awards_after_btn {
       position: absolute;
       bottom: 50%; right: 30px;
       width: 70px; height: 70px;
       background-color: var(--color-sample1);
     }
+    .awards_after_btn button {width: 100%; height: 100%;}
 
     .awards_indicator {
       position: absolute;
@@ -381,8 +389,9 @@ body {
         background-color: var(--color-sample1);
         margin-right: 30px;
       }
-  
       .awards_circle:last-child { margin-right: 0;}
+
+      .awards_circle button { width: 100%; height: 100%;}
     
     .awards_main { 
       width: 1160px; height: 220px;
@@ -427,6 +436,7 @@ body {
   =================================================== */
 #saleBox {
   width: 1280px; height: 600px;
+  margin-top: 20px;
   padding: 40px;
 }
 
