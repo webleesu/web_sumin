@@ -80,3 +80,88 @@ li {
     background-color: #057; color: #fff;
   }
 }
+
+.ani li:nth-child(4):hover > span {
+  animation-play-state: paused;
+}
+/* ------------------------------------------------ */
+
+.sample_test {
+  width: 100%; height: 900px;
+  padding-top: 100px;
+  background-color: #00012e;
+}
+
+.car {
+  position: relative; 
+  top: 0; left: 0; z-index: 10;
+  width: 780px; height: 300px;
+  margin: auto;
+  background-image: url(https://www.movvcorp.com/images/img_car.png);
+  background-repeat: no-repeat;
+  transform: translate(100vw);
+  transition: all 1000ms ease 1000ms;
+  animation: onceMove 1000ms 1 normal both 1000ms;
+}
+
+@keyframes onceMove {
+  100% { transform:translate(0)}
+}
+
+  .window {
+    position: absolute;
+    top: 50px; left: 267px;
+    width: 128px; height: 53px;
+    overflow: hidden;
+  }
+  .window_img {
+    width: 100%; height: 100%;
+    background-image: url(https://www.movvcorp.com/images/st.png);
+    background-repeat: no-repeat;
+    animation: carWindow 7000ms 1 alternate ease-in both 1000ms;
+  }
+
+  @keyframes carWindow {
+    0% { transform: translate(0);}
+    100% {transform: translateY(40px);}
+  }
+
+  .side_mirror {
+    position: relative;
+    top: 75px; left: 262px;
+    width: 38px; height: 38px;
+    background-image: url(https://www.movvcorp.com/images/side_m.png);
+    background-repeat: no-repeat;
+  }
+
+  .wheel {
+    position: absolute;
+    width: 80px; height: 80px;
+    background: url(https://www.movvcorp.com/images/img_tire.png);
+    background-repeat: no-repeat;
+    animation: wheel 1000ms infinite normal linear forwards;
+  }
+  .wheel_1 {
+    bottom: 44px; left: 138px;
+  }
+  .wheel_2 {
+    bottom: 40px; right: 121px;
+  }
+
+  @keyframes wheel {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(-360deg);}
+  }
+
+.scroll {
+  width: 27px; height: 43px;
+  margin: auto; margin-top: 100px;
+  background-image: url(https://www.movvcorp.com/images/scroll.png);
+  background-repeat: no-repeat;
+  animation: scroll 1000ms infinite alternate ease-in-out;
+}
+
+@keyframes scroll {
+  0% {transform: translateY(-30%);}
+  100% {transform: translateY(30%);}
+}
