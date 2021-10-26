@@ -95,12 +95,12 @@ html, body {
       }
   
       .unb_btn > li:last-child {margin-right: 0;}
-  
-      .unb_language { position: relative; z-index: 10;}
 
       .language_img {
         display: block;
-        width: 60px; height: 20px;
+        /* width: 60px; height: 20px; */
+        width: 30px; height: 20px;
+        margin-left: 30px;
         margin-bottom: 10px;
         background-image: url(../../img/global_1.png);
         background-repeat: no-repeat;
