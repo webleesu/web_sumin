@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* c_09_media_query2.css */
+
+body { background-color: #eee;}
+h2 {
+  width: 70%; height: 100px;
+  margin: auto;
+  background-color: #fda;
+}
