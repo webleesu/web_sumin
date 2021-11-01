@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* c_11_responsive_test.css */
+
+#wrap { width: 100%; height: auto;}
+
+#headBox { width: 100%; background-color: #FFF78C;}
+  h1 { 
+    float: left;
+    width: 100px; height: 100%;
+    background-color: #A3D48D;
+  }
+
+#viewBox { width: 100%; background-color: #A184BE;}
+
+#conBox { width: 100%;}
+  .con {
+    float: left;
+    width: calc(100% / 4); height: 100%;
+    border: 1px solid #ddd;
+    background-color: #A5D27D;
+  }
+  .con:nth-child(2n) { background-color: #93DAF8;}
+
+#conBox2 { width: 100%; height: 300px;}
+  .con_2_1 { width: 100%; height: 100px; background-color: #FEF200;}
+  .con_2_2 { width: 100%; height: 200px; background-color: #F57722;}
+
+#footBox { width: 100%; height: 100px; background-color: #AC8035;}
+  h2 {
+    width: 100px; height: 100%;
+    background-color: #01AEF0;
+  }
+
+/* ~ 480px */
+@media screen and (max-width: 480px) {
+  #headBox { height: 100px; background-color: #A3D48D;}
+    h1 {
+      float: right;
+      width: 45px; height: 80px; 
+      margin-top: 10px; margin-right: 10px;
+      background-color: #fff;
+    } 
+  #viewBox { height: 450px;}
+  #conBox { height: 400px;}
+    .con { width: calc(100% / 2); height: 200px;}
+  #conBox2 { display: block;}
+  /* #footBox { } */
+    h2 { width: 50%; margin: auto; }
+} /* ~ 480px ===================================================== */
+
+/* 481px ~ 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #headBox { height: 150px;}
+  #viewBox { height: 300px;}
+  #conBox { height: 400px;}
+  #conBox2 { height: 300px; }
+  /* #footBox {} */
+    h2 { float: left;}
+} /* 481px ~ 768px ================================================ */
+
+/* ~ 960px */
+@media screen and (min-width : 769px) and (max-width: 960px) {
+  #headBox { height: 150px;}
+  #viewBox { height: 450px;}
+  #conBox { height: 600px;}
+  #conBox2 {display: none;}
+  /* #footBox {} */
+} /* ~ 960px ======================================================== */
