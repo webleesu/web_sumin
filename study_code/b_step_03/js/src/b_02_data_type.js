@@ -25,15 +25,37 @@ var str4 = parseInt(str2) + 567;
 console.log( str4 );
 
 console.log( typeof('50.4%') );
-console.log( parseInt('50.4%') );
-console.log( parseFloat('50.4%') );
-console.log( Number('50.4%') );
+console.log( parseInt('50.4%') ); // 첫글자부터 시작해서 숫자로 변환 가능한 것 까지만 숫자화 처리
+console.log( parseFloat('50.4%') ); // 첫글자부터 시작해서 실수 모두 숫자로 변환 가능한 것까지만 숫자화 처리
+console.log( Number('50.4%') ); // 문자든 숫자든 관계없이 모두 숫자로 변환처리
 
-var nan = NaN;
+var nan = NaN; // Not a Number
 console.log( nan, typeof(nan) );
+
+//Math 함수
+var n = 5.54;
+console.log( '올림처리', Math.ceil(n) );
+console.log( '내림처리', Math.floor(n) );
+console.log( '반올림처리', Math.round(n) );
+console.log( '0~1까지의 난수', parseInt( Math.random() * 10 ) );
+console.log( '절대값', Math.abs(-n) );
 
 
 // 논리(boolean)
+// 논리형은 결과를 true/false로 확인하여 처리하지만, 그 결과를 확인하는 검증이 매우 많다.
+// !, === ...
+var bool = false;
+console.log( bool, typeof(bool) );
+
+// 존재하는 값에 !를 붙이면 값이 없다는 의미로 -> false가 되지만 본 의도는 값이 있느냐 없느냐 판단용도로 쓰면 ! 한번더
+.console.log(!n); // false
+console.log(!!n); 
+console.log(!!0);
+
+console.log( 1 == '1' ); // true / 유사의 유무
+console.log( 1 === '1' ); // false / 동일의 유무
+
+
 // undefined
 // null
 // Object
