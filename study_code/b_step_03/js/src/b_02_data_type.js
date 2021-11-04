@@ -149,3 +149,65 @@ console.log( obj2 );
 
 
 // function -------------------------------------------------------------------------------------------
+
+var fn = function(a){
+  // a는 매개변수 (parameter) / 인수/인자(argument)
+  // return 마지막에 작성하는것으로 어쨋든간에 최종 결론은?
+  return 1 + a;
+};
+
+console.log( fn(5) );
+
+var fn2 = function(a,b){
+  var c = a + b;
+  return c;
+};
+
+console.log( fn2(1,6) );
+
+var d = 1+6;
+console.log( d );
+
+// 함수의 기본 형태 : function(){}
+// 함수 선언식 : 이름을 부여한다 -> 기명함수 : function 이름(){}
+// 함수 표현식 : 이름을 부여하지 않는다 -> 익명함수 -> 
+//              이름이 없기에 대신 이름을 할당할 수 있는 무언가를 선언(변수) : var 변수명 = function(){}
+
+// 함수 선언식
+function fn3(){
+  return 'test';
+};
+
+console.log(fn3());
+
+//  함수 표현식
+var fn4 = function() {
+  return 'test2';
+};
+
+console.log( fn4() );
+
+// -------------------------------------------------------------------------------------------
+console.clear();
+
+var x = 'hero'; // 광범위한 범위를 가지고 있다. 전역변수
+function ckFn() {
+  var y = 'leesu'; // y의 사용 범위는 function ckFn() 내부에서만 동작가능하기에 지역변수
+  console.log( x, y ); // 콘솔을 사용했으므로, 반환과는 관계없이 무조건 console창에 내용을 작성
+  return y;
+};
+
+console.log(x); // hero
+ckFn(); // hero leesu
+var rel = ckFn();
+console.log('rel : ' + rel); // leesu
+// console.log( y ); // 에러
+
+function ckFn2(){
+  var x = 'who?';
+  return x;
+};
+
+console.log( x );
+ckFn2();
+console.log( x );
