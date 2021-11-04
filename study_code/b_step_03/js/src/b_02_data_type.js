@@ -125,5 +125,27 @@ arA.pop();
 arA.shift();
 console.log( arA );
 
+// 2. Object ---------------------------------------------------------------------------------------------
+
+var obj = {};
+console.log( obj, typeof(obj) );
+console.log( obj.constructor === Object );
+
+obj.apple = 'iphone';
+obj.samsung = 'galaxy';
+obj.google = 'pixel';
+obj['농심'] = '너구리';
+obj['오뚜기'] = '진라면'; 
+obj['한국 야쿠르트'] = '건국우유';
+
+console.log( obj );
+console.log( obj.google );
+
+var obj2 = {};
+obj2[0] = '마이크';
+obj2[1] = 'pen';
+obj2[2] = '텀블러';
+console.log( obj2 );
+
 
 // function -------------------------------------------------------------------------------------------
