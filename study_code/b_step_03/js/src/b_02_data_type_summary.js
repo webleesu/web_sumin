@@ -15,3 +15,33 @@ console.clear();
 // 7-1. 함수에 이름을 다는 방법은 변수명 = function(){} 으로 처리
 // 7-2. 함수에 return이라는게 있는데 최종 결론 도출
 // 8. 스코프(범위) -> 변수가 사용할 수 있는 범위 - 전역/지역
+
+// ----------------------------------------------------------------
+
+var a = '2021년';
+var b = '11월';
+var c = '04일';
+var dot = '.';
+var date;
+// date = parseInt(a) + dot + parseInt(b) + dot + '0' + parseInt(c);
+
+var iFn = function(i){
+  return parseInt(i);
+};
+  date = iFn(a) + dot + iFn(b) + dot + '0' + iFn(c);
+
+console.log( date ); // 2021.11.04 만들기
+
+// -----------------------------------------------------------------
+
+var user = function(x){
+  x = x + '님'
+  return x;
+};
+
+
+console.log( user('수민') + Math.random( randomText ) * 3 ); 
+
+
+// 1. xx님 오늘도 고생하셨어요 2. xx님 힘내세요. 3. xx님 내일도 또 다시!!!
+
