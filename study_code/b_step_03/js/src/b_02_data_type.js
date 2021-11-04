@@ -205,9 +205,17 @@ console.log('rel : ' + rel); // leesu
 
 function ckFn2(){
   var x = 'who?';
-  return x;
+  console.log( x );
+  // return x;
 };
 
 console.log( x );
 ckFn2();
 console.log( x );
+// ------------------------------------------------------------------------------------------------
+
+function ff(){}
+ff();
+
+(function(){})(); // 익명함수의 기다림 없이 바로 실행
+(function(){}()); // 익명함수의 기다림 없이 바로 실행
