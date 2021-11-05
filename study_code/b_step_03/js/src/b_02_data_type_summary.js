@@ -33,15 +33,53 @@ var iFn = function(i){
 console.log( date ); // 2021.11.04 만들기
 
 // -----------------------------------------------------------------
+console.clear();
 
 var user = function(x){
   x = x + '님'
   return x;
 };
+// console.log( user('수민') + Math.random( randomText ) * 3 ); 
 
+var ran = parseInt(Math.random() * 3) ;
+console.log( ran );
 
-console.log( user('수민') + Math.random( randomText ) * 3 ); 
+var arrSample = [' 오늘도 고생하셨어요', ' 힘내세요.', ' 내일도 또 다시!!!'];
 
-
+// x = 'sumin';
+console.log( user('sumin') + arrSample[ran] );
 // 1. xx님 오늘도 고생하셨어요 2. xx님 힘내세요. 3. xx님 내일도 또 다시!!!
 
+
+var content = [];
+content[0] = '힘내세요';
+content.push('내일도 또 다시!!');
+content.unshift('오늘도 고생하셨어요');
+
+var userFn = function(data){
+  var random = Math.random() * 3;
+  var int = parseInt(random);
+  var plusText = data + '님' + ' ' + content[int];
+  return plusText;
+}
+
+var userRel = userFn('me');
+console.log( userRel );
+
+// js에서 id명을 선택하는 방법
+
+/**
+ * 1. document.getElementById(id이름);
+ * 2. document.querySelector(css와 동일한 선택자); 
+*/
+
+// 요소 생성하는 방법
+// document.createElement(); // 생성해서 어딘가에 넣을 준비
+// 선택자.innerHTML = '요소'; // 기존 선택자 내부에 존재하는 것 삭제
+// 선택자.append(요소); // 선택자 내부 뒤에 요소를 삽입 (단, text형태는 글자로 삽입)
+
+var wrap = document.getElementById('wrap');
+var p = document.createElement('p');
+p.innerText = userRel;
+
+wrap.append(p);
