@@ -17,7 +17,8 @@ console.log( dicList );
 */
 
 var fn1 = function( data ){
-  return dicList.push( data );
+  dicList.push( data ); // 배열에 담는 기능
+  return data;  // 함수 실행시 결과값
 };
 
 fn1('button');
