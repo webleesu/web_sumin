@@ -99,35 +99,42 @@ document.write( variable );
 // svg(a, b); // 평균: 'a * b / 2 = ' 값
 // remainder(a, b); // 나머지값: 'a % b = ' 값
 
+var dic = [];
 
 var sum = function(a, b){
   var c = a + '+' + b + '= ' + (a + b);
+  dic.push(c);
   return c;
   
 }
 
 var minus = function(a, b){
   var c = a + '-' + b + '= ' + (a - b);
+  dic.push(c);
   return c;
 }
 
 var mul = function(a, b){
   var c = a + '*' + b + '= ' + (a * b);
+  dic.push(c);
   return c;
 }
 
 var divide = function(a, b){
   var c = a + '/' + b + '= ' + parseInt(a / b);
+  dic.push(c);
   return c;
 }
 
 var svg = function(a, b){
   var c = a + '*' + b + ' / 2' + '= ' + (a + b) / 2;
+  dic.push(c);
   return c;
 }
 
 var remain = function(a, b){
   var c = a + '%' + b + '= ' + a % b;
+  dic.push(c);
   return c;
 }
 
@@ -138,3 +145,19 @@ console.log( mul(10, 2) );
 console.log( divide(10, 3) );
 console.log( svg(10, 2) );
 console.log( remain(10, 3) );
+
+// ---------------------------------------------------------
+
+
+// dic[0] = sum(10,2);
+// dic[1] = minus(10,2);
+// dic[2] = mul(10,2);
+// dic[3] = divide(10,2);
+// dic[4] = svg(10,2);
+// dic[5] = remain(10,2);
+
+
+
+sum(3,3);
+
+console.log( dic );
