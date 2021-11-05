@@ -83,3 +83,11 @@ var p = document.createElement('p');
 p.innerText = userRel;
 
 wrap.append(p);
+
+// ---------------------------------------------------------------
+
+var variable = '이것은 변수입니다';
+
+document.write( variable );
+
+
