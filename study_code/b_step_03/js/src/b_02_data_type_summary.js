@@ -90,4 +90,51 @@ var variable = '이것은 변수입니다';
 
 document.write( variable );
 
+// ---------------------------------------------
 
+// sum(a, b); // 덧셈: 'a + b = ' 값
+// minus(a, b); // 뺄셈: 'a - b = ' 값
+// mul(a, b); // 곱셈: 'a * b = ' 값
+// divide(a, b); // 나눗셈: 'a / b = ' 값
+// svg(a, b); // 평균: 'a * b / 2 = ' 값
+// remainder(a, b); // 나머지값: 'a % b = ' 값
+
+
+var sum = function(a, b){
+  var c = a + '+' + b + '= ' + (a + b);
+  return c;
+  
+}
+
+var minus = function(a, b){
+  var c = a + '-' + b + '= ' + (a - b);
+  return c;
+}
+
+var mul = function(a, b){
+  var c = a + '*' + b + '= ' + (a * b);
+  return c;
+}
+
+var divide = function(a, b){
+  var c = a + '/' + b + '= ' + parseInt(a / b);
+  return c;
+}
+
+var svg = function(a, b){
+  var c = a + '*' + b + ' / 2' + '= ' + (a + b) / 2;
+  return c;
+}
+
+var remain = function(a, b){
+  var c = a + '%' + b + '= ' + a % b;
+  return c;
+}
+
+
+console.log( sum(10, 2) );
+console.log( minus(10, 2) );
+console.log( mul(10, 2) );
+console.log( divide(10, 3) );
+console.log( svg(10, 2) );
+console.log( remain(10, 3) );
