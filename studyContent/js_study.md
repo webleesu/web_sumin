@@ -225,3 +225,152 @@ console.log( num, typeof(num) );
   - `선택자.innerHTML = '<div></div>';`
 - `선택자.append(요소);`
   - 선택자 내부 뒤에 요소를 삽입 (단, text형태는 글자로 삽입)
+
+
+
+#### 할당
+
+`+=` : 자기 자신에게 값을 할당/연산
+
+- `n += 60;` 은 `n = n + 60;`과 같은 의미
+- `-=`
+- `*=`
+- `/=`
+
+
+
+#### 증감
+
+`++` : 1씩 늘어남
+
+- `n++` : 결과 도출 후 1 더하기 / 후치
+- `++n` : 1 더한 후 결과 도출 / 전치
+
+`--` : 1씩 줄어듬
+
+
+
+#### 비교
+
+- `a === b` : type 형식까지 동일한지 여부 (같으면 true / 다르면 false)
+
+- `a !== b` : type 형식까지 다른지 여부 (다르면 true / 같으면 false)
+
+- `a < b` : a가 b보다 작은가? (작으면 true / 크거나 같으면 false)
+  - `a <= b` : a가 b보다 작거나 같은가? (작거나 같으면 true / 크면 false)
+
+- `a > b` : a가 b보다 큰가? (크면 true / 작거나 같으면 false)
+  - `a >= b` : a가 b보다 크거나 같은가? (크거나 같으면 true / 작으면 false)
+
+- `||` : 또는 (or) / 둘중 하나 이상 참이면 true
+  - `|` : 0/1로 결과 도출
+
+- `&&` : 그리고 (and) / 둘다 참이면 true
+  - `&` : 0/1로 결과 도출
+- `!` : 부정(반대)
+
+
+
+#### 삼항연산자
+
+`(조건)? 참 : 거짓;` : 삼항연산자 기본 형태
+
+
+
+#### 배열
+
+- 참조변수 : 원본의 데이터는 따로 두고 그 값을 공유하여 체크
+
+  - `var arr = [];`
+
+- 이중배열
+
+  - ```js
+    var arr = ['과일', '고기', '깐풍기', '회', '냉면'];
+    var arr2 = ['포도', '사과', '배', '감', '귤', '자몽'];
+    var arr3 = ['냉면', '라면', '우동', '회냉면', '쫄면', '밀면', '야끼우동', '국수'];
+    
+    var arrList = [arr, arr2, '회', arr3];
+    ```
+
+  - ```js
+    console.log(arrList[2], arrList[0][3]); // 회 찾기
+    console.log(arrList[3][0], arrList[0][3]); // 냉면 찾기
+    ```
+
+- ```js
+  // 배열 예시
+  
+  var phone = '010-1234-5678';
+  var addr = '서울시 영등포구 여의도동 kbs홀 본관 402호';
+  var myArr = phone.split('-');
+  var myAddr = addr.split(' ');
+  console.log(myArr, myAddr);
+  console.log(myArr.join('. '), myAddr);
+  ```
+
+
+
+#### 객체
+
+- `new` : 원형의 형태를 복제한다는 의미
+
+  - `var objOrigin = new Object();`
+
+- `obj = {meat: '채끝살', fruit: '머루포도', '국수': '쫄면', 'mobile phone': 'samsung'};`
+
+  - meat는 property, 채끝살은 value
+
+  - 한글은 property도 되도록 ' '로 묶기
+
+  - 띄어쓰기 있으면 ' '로 묶기
+
+  - 객체 내에는 ' '를 써도 되지만 웬만하면 " "로 사용하기 -> 추후 json 때문에
+
+    - `{"meat": "채끝살", "fruit": "머루포도", "국수": "쫄면", "mobile phone": "samsung" };`
+
+  - ```js
+    console.log(obj.fruit); // 기본적인 방
+    console.log(obj["mobile phone"]); // 띄어쓰기가 있을 경우
+    ```
+
+  - 이중객체 가능
+
+#### 배열+객체
+
+```js
+var drink = [
+  {'coffee': ['esspresso', 'americano', 'latte', 'mocha', 'choco latte']},
+  {'alcole': ['맥주', '소주', '막걸리', '청주', '데낄라']},
+  {'juice': ['오렌지', '포도', '자몽', '망고']},
+  {'tea': ['black first', 'green', 'red', 'lemon', 'elgray', 'papermint']},
+  {'ade': ['자몽', '키위', '레몬']}
+];
+
+console.log( drink[3].tea[5] ); // 페퍼민트
+```
+
+- 객체 내부에 함수사용도 가능
+
+  - ```js
+    var data = {};
+    
+    var mySet = {
+      name: function(d){
+        return data.user = d;
+      },
+      old: function(d){
+        return data.old = d;
+      },
+      gender: function(d){
+        return data.gender = d;
+      }
+    };
+    
+    mySet.name('sumin');
+    mySet.old('25');
+    mySet.gender('female');
+    
+    console.log(data);
+    ```
+
