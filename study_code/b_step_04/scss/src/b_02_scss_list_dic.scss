@@ -1,0 +1,45 @@
+// b_02_scss_list_dic.scss
+/* b_02_scss_list_dic.css */
+
+// -----------------------------------------------------
+// color
+$yellow: #fa0;
+$blue: (#00f, #0af, #0df, #7af, #adf); // list
+$psuedoCode: (
+  "hover": #87f, 
+  "focus": #4f3, 
+  "active": #fda, 
+  "selected": #dfd
+  ); //dic(map)
+// -----------------------------------------------------
+
+#wrap {
+  width: 100%; height: 100%;
+  background-color: lighten($yellow, 30%);
+}
+
+.list_area {
+  width: 100%; height: auto;
+  & > li {
+    width: 100%;
+    background-color: nth($blue, 2);
+    &:hover { background-color: map-get($psuedoCode, "hover"); }
+    &:focus { background-color: map-get($psuedoCode, "focus"); }
+  } // li
+} // .list_area
+
+$coffee: ("esspresso", "latte", "choco", "vanila", "other");
+// #{변수명/숫자} 인터폴레이션 기법으로 내용을 담을 수 있게 처리하는 
+.coffee_#{nth($coffee, 1)} { width: 100%; }
+// .coffee_#{2} {width: 100%;}
+
+// scss 반복문
+// for(변수명 in 배열){}
+// @for $임의변수 from 시작숫자 through 마지막 숫자 {}
+// @for $임의변수 from 시작숫자 to 마지막 직전 숫자 {}
+
+@for $key from 1 through 5 {
+  .coffee_#{ nth($coffee, $key) } {
+    background-color: nth($blue, $key);
+  }
+}

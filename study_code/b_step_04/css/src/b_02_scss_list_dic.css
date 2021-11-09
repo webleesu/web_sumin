@@ -1,0 +1,45 @@
+/* b_02_scss_list_dic.css */
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #ffdd99;
+}
+
+.list_area {
+  width: 100%;
+  height: auto;
+}
+.list_area > li {
+  width: 100%;
+  background-color: #0af;
+}
+.list_area > li:hover {
+  background-color: #87f;
+}
+.list_area > li:focus {
+  background-color: #4f3;
+}
+
+.coffee_esspresso {
+  width: 100%;
+}
+
+.coffee_esspresso {
+  background-color: #00f;
+}
+
+.coffee_latte {
+  background-color: #0af;
+}
+
+.coffee_choco {
+  background-color: #0df;
+}
+
+.coffee_vanila {
+  background-color: #7af;
+}
+
+.coffee_other {
+  background-color: #adf;
+}
