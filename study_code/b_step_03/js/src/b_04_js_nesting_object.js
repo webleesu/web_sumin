@@ -84,3 +84,11 @@ mySet.gender('female');
 console.log(data);
 
 
+// 반복수행( 객체(data) 안에 임의변수)
+for (sam in data) {
+  console.log(sam + ':' + data[sam]);
+}
+
+var js = 'javascript';
+var jsArr = js.split('').reverse().join('');
+console.log(jsArr);
