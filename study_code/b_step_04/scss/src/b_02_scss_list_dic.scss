@@ -38,8 +38,78 @@ $coffee: ("esspresso", "latte", "choco", "vanila", "other");
 // @for $임의변수 from 시작숫자 through 마지막 숫자 {}
 // @for $임의변수 from 시작숫자 to 마지막 직전 숫자 {}
 
-@for $key from 1 through 5 {
-  .coffee_#{ nth($coffee, $key) } {
+// 숫자 1부터 5까지 5번 반복수행하면서 해당 숫자는 매개변수 $key에 임의 할당
+@for $key from 1 through length($coffee) {
+  // .coffee_esspresso_area{} ..coffee_latte_area{} ... 의 형태로 .coffee_ 의 글자에
+  // $coffee변수 내부에 있는 이름을 각각 할당하기 위해 보간법인 #{} 를 사용
+  // list 형식을 사용하기 위해서는 nth(변수명, 순번)
+
+  // $coffee: ("esspresso", "latte", "choco", "vanila", "other");
+  // $blue: (#00f, #0af, #0df, #7af, #adf);
+
+  .coffee_#{ nth($coffee, $key) }_area {
+    // width: calc(#{$key} * 10%); 
+    width: $key * 10%; 
+    height: 100%;
     background-color: nth($blue, $key);
+    margin: auto; padding: 0; box-sizing: border-box;
   }
+}
+
+$device: 768;
+#viewBox {
+  width: 100%; height: 500 / $device * 100vw;
+}
+// ---------------------------------------------------------------------------------------
+
+// 변수 - $변수명 : 값
+// 중첩 - #box{ > li{} }
+// @mixin / @include
+
+@mixin blind(){
+  display: block; width: 0; height: 0;
+  position:absolute; z-index: -1; clip: rect(0 0 0 0); overflow: hidden;
+} // @mixin blind();
+
+@mixin bar(){
+  &:after, &::after{
+    content: ""; display: block; clear: both;
+  }
+} // @mixin bar();
+
+@mixin full(){
+  display: block; width: 100%; height: 100%;
+  @content; // 코드에 추가할 수 있는 기능
+  & > span { @include blind(); }
+} // @mixin full();
+
+@mixin MakeCard(){
+  li{
+    float: left; width: 100%; height: 200px;
+    margin: 10px; background-color: $yellow;
+    > a {
+      @include full();
+      @content;
+    }
+  }
+} // @mixin MakeCard();
+
+.nav_area {
+  width: 960px; height: auto;
+  & > li {
+    float: left; width: auto; height: 30px;
+  }
+  a { @include full() { background-color: $yellow;}; } // background는 위에 @content;때문에 내부로 들어갈 수 있는 것
+
+  @include bar();
+}
+
+.card {
+  width: 100%; height: auto;
+  @include MakeCard(){
+    background-image: url(../../img/bar.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  };
+  @include bar();
 }
