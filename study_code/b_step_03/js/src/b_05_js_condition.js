@@ -264,6 +264,8 @@ var box2 = function() {
 var box1 = function(){
   var list;
   list = box2();
+  var sam = list;
+  sam.push('789');
   console.log(list);
 }
 
