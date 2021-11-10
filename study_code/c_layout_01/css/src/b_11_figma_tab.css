@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* b_11_figma_tab.css */
+
+#wrap {  width: 1440px; height: auto;}
+
+#headBox { 
+  width: 100%; height: 100px;
+  padding: 15px 170px;
+  background-color: #eee;
+}
+  h1 {
+    float: left;
+    width: 120px; height: 70px;
+    background-color: #ddd;
+  }
+
+  .navi_area {
+    float: right;
+    width: 530px; height: 70px;
+  }
+    .unb { 
+      float: right;
+      width: 270px; height: 26px;
+      margin-right: 10px;
+      padding: 3px 5px;
+    }
+      .unb li { 
+        float: left;
+        width: 50px; height: 20px;
+        margin-right: 20px;
+        font-size: 12px; color: #505050;
+        text-align: center;
+      }
+      .unb li:last-child { margin-right: 0;}
+    .gnb { 
+      float: right;
+      width: 535px; height: 35px;
+      padding: 5px;
+    }
+      .gnb li { 
+        position: relative;
+        float: left;
+        width: 79px; height: 25px;
+        margin-right: 10px;
+        padding-right: 10px;
+        font-size: 16px; color: #171717;
+        text-align: center; text-transform: capitalize;
+      }
+      .gnb li:last-child{ margin-right: 0; padding-right: 0;}
+      .gnb li::after {
+        position: absolute; top: 0; right: 0;
+        content: ""; display: block;
+        width: 1px; height: 24px;
+        background-color: #aaa;
+      }
+      .gnb li:last-child::after{
+        display: none;
+      }
+
+#contentBox { 
+  width: 100%; height: auto;
+
+}
+  .title_area { width: 100%; height: 250px; background-color: #ddd;}
+  .content_area {
+    width: 1100px; height: auto; min-height: 900px;
+    margin: 155px 170px;
+    background-color: #eee;
+  }
+    .tab_title {
+      width: 100%; height: 57px;
+      border-bottom: 1px solid #aaa;
+    }
+    .tab_title_list {
+      width: 700px; height: 36px;
+      margin: 0 auto 21px;
+    }
+    .tab_title_list li {
+      position: relative;
+      float: left;
+      width: auto; height: 36px;
+      margin-right: 43px; padding-right: 43px;
+      font-size: 22px; font-weight: 600;
+      text-align: center; text-transform: capitalize;
+      color: #757575;
+    }
+    .tab_title_list li:last-child {margin-right: 0; padding-right: 0;}
+
+    .tab_title_list li::after{
+      position: absolute; top: 0; right: 0;
+      content: ""; display: block;
+      width: 1px; height: 36px;
+      background-color: #aaa;
+    }
+    .tab_title_list li:last-child::after {display: none;}
+
+#footBox { width: 100%; height: 450px;}
