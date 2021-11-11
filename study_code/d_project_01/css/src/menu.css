@@ -21,7 +21,7 @@ h1 { width: 120px; height: 70px; background-color: #fff; }
 
 .menu_content { width: 100%; height: auto; }
 
-.menu_content > div { width: inherit; height: inherit; }
+.coffee { width: inherit; height: inherit; }
 
 .menu_content ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
