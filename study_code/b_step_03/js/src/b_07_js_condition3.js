@@ -66,3 +66,34 @@ var nn = parS.padStart(10, '0');
 var cut = nn.slice(-3);
 var num2 = cut;
 console.log(num2);
+
+// ---------------------------
+console.clear();
+// 중첩함수
+var a = function (n) {
+  var b = function (i) {
+    var c = function (j) {
+      var r = j * j / 2;
+      return r;
+    } //c
+    var r2 = c(i) / 2;
+    return r2;
+  } //b
+  var r3 = b(n);
+  return r3;
+}
+console.log(a(4));
+
+// 클로저
+var aFn = function (n) {
+
+  return (function (i) {
+
+    return (function (j) {
+      var r = j + j;
+      return r;
+    })(i) / 2;
+
+  })(n) + 5;
+
+};
