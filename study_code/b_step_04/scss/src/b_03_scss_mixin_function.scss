@@ -20,3 +20,12 @@ $device: 360;
 .div1 {
   width: vw(40);
 }
+
+.box2 {
+  @include unit(width, 320);
+  @include unit(height, 640);
+  @include unit(border-radius, 10);
+  @include unit(padding, 10);
+  @include unit(margin, 30);
+
+}

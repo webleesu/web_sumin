@@ -16,4 +16,17 @@ p {
   width: 11.1111111111vw;
 }
 
+.box2 {
+  width: 320px;
+  width: 20rem;
+  height: 640px;
+  height: 40rem;
+  border-radius: 10px;
+  border-radius: 0.625rem;
+  padding: 10px;
+  padding: 0.625rem;
+  margin: 30px;
+  margin: 1.875rem;
+}
+
 /*# sourceMappingURL=b_03_scss_mixin_function.css.map */
