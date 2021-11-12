@@ -9,6 +9,11 @@
 p {
   width: 100px;
   width: 6.25rem;
+  height: 3.125rem;
+}
+
+.div1 {
+  width: 11.1111111111vw;
 }
 
 /*# sourceMappingURL=b_03_scss_mixin_function.css.map */

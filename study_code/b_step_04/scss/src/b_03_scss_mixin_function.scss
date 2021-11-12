@@ -12,5 +12,11 @@
 
 
 p{
-  @include px(width, 100)
+  @include unit(width, 100);
+  height: rem(50);
+}
+
+$device: 360;
+.div1 {
+  width: vw(40);
 }
