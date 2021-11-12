@@ -1,0 +1,14 @@
+/* b_03_scss_mixin_function.css */
+#wrap {
+  background-image: url(../../img/file.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+
+p {
+  width: 100px;
+  width: 6.25rem;
+}
+
+/*# sourceMappingURL=b_03_scss_mixin_function.css.map */
