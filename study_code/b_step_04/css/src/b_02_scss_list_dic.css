@@ -20,70 +20,70 @@
   background-color: #4f3;
 }
 
-.coffee_esspresso {
+.coffee_esspress {
   width: 100%;
 }
 
-.coffee_esspresso_area {
+.coffee_2 {
+  width: 100%;
+}
+
+.area_esspress {
   width: 10%;
   height: 100%;
   background-color: #00f;
   margin: auto;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.coffee_latte_area {
+.area_latte {
   width: 20%;
   height: 100%;
   background-color: #0af;
   margin: auto;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.coffee_choco_area {
+.area_choco {
   width: 30%;
   height: 100%;
   background-color: #0df;
   margin: auto;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.coffee_vanila_area {
+.area_vanila {
   width: 40%;
   height: 100%;
   background-color: #7af;
   margin: auto;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.coffee_other_area {
+.area_other {
   width: 50%;
   height: 100%;
   background-color: #adf;
   margin: auto;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #viewBox {
   width: 100%;
-  height: 65.1041666667vw;
+  height: 78.125vw;
 }
 
+/* ------------------------------------------------------------ */
 .nav_area {
   width: 960px;
   height: auto;
 }
-.nav_area > li {
+.nav_area li {
   float: left;
   width: auto;
   height: 30px;
@@ -124,11 +124,25 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url(../../img/bar.png);
+  background-image: url("../../img/bar.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 .card li > a > span {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.card li > a > i {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.card li > a > i > span {
   display: block;
   width: 0;
   height: 0;
@@ -142,3 +156,17 @@
   display: block;
   clear: both;
 }
+
+#wrap {
+  width: 100%;
+  min-width: 900px;
+  background-color: #fa0;
+}
+@media screen and (max-width: 768px) {
+  #wrap {
+    min-width: auto;
+    background-color: #adf;
+  }
+}
+
+/*# sourceMappingURL=b_02_scss_list_dic.css.map */
