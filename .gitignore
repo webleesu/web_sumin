@@ -14,3 +14,10 @@
 
 # prepros이용하여 생긴 config파일
 **/prepros.config
+
+# node-modul 삭제
+**/node_moduls
+node_moduls
+
+# vscode
+**/*.vscode
