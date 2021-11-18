@@ -3,32 +3,33 @@
 
 @import "../common/variable";
 @import "../common/mixin";
+// --------------------------------
+  $headH:50px;
+// --------------------------------
 
 #wrap {
-  width:100%;  height:500px; 
-  // @include mobile{
-  //   min-width:320px; height:400px;
-  // }
-  // @include tablet{
-  //   min-width:600px; height:700px;
-  // }
+  width:100%;  
+  height:auto; min-height:800px;
+  background-color: #ddd;
+
+  @include mobile{
+    min-width:320px;
+    background-color: #fda;
+  }
+  @include tablet{ background-color: #adf;  }
+  @include laptop{ background-color: #fdf;  }
+  @include pc{ background-color: #dfd; }
+  
+  @import "../page/common/headBox";
+  @import "../page/main/slideBox";
 }
 
-#headBox {
-  width: 100%; 
-  // @include mobile{
-  //   width:90%;
-  // }
-  // @include tablet{
-  //   width:95%;
-  // }
-}
 
-@include mobile{
-  #wrap {min-width:320px; height:400px;}
-  #headBox {width:90%}
-}
-@include tablet{
-  #wrap{min-width:600px; height:700px;}
-  #headBox{width:95%;}
-}
+
+
+  // #newBox {}
+  // #commercialBox {}
+  // #bestBox {}
+  // #galleryBox {}
+  // #sponsorBox {}
+  // #footBox {}
