@@ -5,7 +5,7 @@
   min-height: 800px;
   background-color: #ddd;
 }
-@media all and (max-width: 590px) {
+@media all and (max-width: 599px) {
   #wrap {
     min-width: 320px;
     background-color: #fda;
@@ -42,7 +42,7 @@ h1 {
   height: 35px;
   background-color: #fff;
 }
-@media all and (max-width: 590px) {
+@media all and (max-width: 599px) {
   h1 {
     position: absolute;
     left: 0;
@@ -53,6 +53,29 @@ h1 {
   }
   .head_area {
     padding: 0;
+  }
+}
+h1 > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../multi/img/base/logo_color.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+h1 > a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  h1 > a {
+    background-image: url(../../multi/img/base/logo_color_pc.png);
   }
 }
 
@@ -88,7 +111,7 @@ h1 {
   min-height: 500px;
   background-color: #dff;
 }
-@media all and (max-width: 590px) {
+@media all and (max-width: 599px) {
   #slideBox {
     padding-top: 50;
   }
@@ -117,7 +140,7 @@ h1 {
   height: 100vh;
   background-color: #add;
 }
-@media all and (max-width: 590px) {
+@media all and (max-width: 599px) {
   #newBox {
     min-height: 600px;
   }
@@ -159,7 +182,7 @@ h1 {
   height: auto;
   background-color: #ffffff;
 }
-@media all and (max-width: 590px) {
+@media all and (max-width: 599px) {
   #bestBox {
     min-height: 1500px;
   }
@@ -185,7 +208,7 @@ h1 {
   height: auto;
   background-color: #f7e9d3;
 }
-@media all and (max-width: 590px) {
+@media all and (max-width: 599px) {
   #galleryBox {
     min-height: 970px;
   }
@@ -211,7 +234,7 @@ h1 {
   height: auto;
   background-color: #ffffff;
 }
-@media all and (max-width: 590px) {
+@media all and (max-width: 599px) {
   #sponsorBox {
     height: 400px;
   }
@@ -237,7 +260,7 @@ h1 {
   height: 450px;
   background-color: #333333;
 }
-@media all and (max-width: 590px) {
+@media all and (max-width: 599px) {
   #footBox {
     height: 435px;
   }
