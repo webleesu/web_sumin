@@ -175,8 +175,8 @@ obj.reName.call(obj2);
 
 var listFn = function(){
   // return arguments;
-  return Array.prototype.join.call(arguments); // 문자로 처리
-  return Array.prototype.join.call(arguments).split(','); // 문자로 처리한 것을 배열로 처리
+  // return Array.prototype.join.call(arguments); // 문자로 처리
+  // return Array.prototype.join.call(arguments).split(','); // 문자로 처리한 것을 배열로 처리
   return Array.prototype.slice.call(arguments); // 유사배열을 배열로 처리
 }
 
