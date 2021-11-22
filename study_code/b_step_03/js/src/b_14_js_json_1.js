@@ -65,6 +65,7 @@ navi.append(makeUl);
 
 // step 1 : li요소 하나만 생성하여 삽입하기!
 var UlList = document.querySelector('.list');
+/*
 var makeLi = document.createElement('li');
 var title = dataList[0].title;
 var link =  dataList[0].link;
@@ -74,3 +75,26 @@ var findA = makeLi.querySelector('a');
 findA.href = link;
 findA.innerText = title;
 UlList.append(makeLi);
+*/
+
+// step 2 : li 요소를 ul에 각각 여러개 삽입 // for(){}
+
+var i = 0;
+var len = dataList.length;
+var makeLi, makeA, findA, title, link;
+
+for(; i<len; i+=1){
+  makeLi = document.createElement('li');
+  makeA = '<a class="link">sample</a>';
+  makeLi.innerHTML = makeA;
+  findA = makeLi.querySelector('a');
+  
+  title = dataList[i].title;
+  link = dataList[i].link;
+  findA.href = link;
+  findA.innerText = title;
+  UlList.append(makeLi); // Ullist.내부의 뒤에 삽입(생성된 li)
+}
+
+
+// step 3 : forEach()
