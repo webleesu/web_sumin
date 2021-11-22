@@ -163,8 +163,15 @@ var obj2 = {
   string : 'sub name'
 };
 
+var obj3 = {
+  string : [1,3,4,5]
+};
+
 console.log(obj2.string);
 obj.reName.call(obj2);
+obj.reName.apply(obj3);
+
+
 // ---------------------------------------------------------------
 
 // var listFn = function(){
@@ -182,6 +189,51 @@ var listFn = function(){
 
 var makeList = listFn('test', 'file', 1, 2, 5, 7, 10);
 console.log(makeList);
+// ----------------------------------------------------------------
+
+var btn = document.querySelector('#btn');
+btn.addEventListener('click', function(e){
+  console.log(this);
+});
+
+console.clear();
+
+// ----------------------------------------------------------------
+
+var objBox = {
+  penname : 'board maker',
+  rename : function(){
+    console.log(this.penname);
+  }
+}
+
+var obj1 = {penname : ['sharp', 'magic']};
+objBox.rename.call(obj1); // call(null, (여러 arguments))
+objBox.rename.apply(obj1); // apply(null, [list])
+// console.log( objBox2.penname );
+
+// ----------------------------------------------------------------
+
+var Phone = function(brand, product){
+  this.brand = brand;
+  this.product = product;
+
+};
+
+// var setFn = function(brand, product){
+//   return this.brand + this.product;
+// };
+
+Phone.prototype.set = function(version, year){
+  console.log(this.brand, this.product, version, year);
+};
+
+var br1 = new Phone('samsung', 'gallaxy');
+console.log(br1);
+br1.set('s21', 2021);
+br1.set.call(br1, ['s21', 2021]);
+
+
 
 
 // ----------------------------------------------------------------
@@ -190,4 +242,5 @@ console.log(makeList);
   2. this : 일반함수 - window이지만, 엄격모드('use strict')로 전환시 undefined
   3. this : 생성자 함수로 만들어진 객체
   4. this : 메서드 처리시 객체로 처리되어있는 변수명
+  5. this : 이벤트 핸들러 - 이벤트의 주체가 되는 선택자
 */
