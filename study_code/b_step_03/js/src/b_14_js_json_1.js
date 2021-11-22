@@ -78,7 +78,7 @@ UlList.append(makeLi);
 */
 
 // step 2 : li 요소를 ul에 각각 여러개 삽입 // for(){}
-
+/*
 var i = 0;
 var len = dataList.length;
 var makeLi, makeA, findA, title, link;
@@ -88,7 +88,59 @@ for(; i<len; i+=1){
   makeA = '<a class="link">sample</a>';
   makeLi.innerHTML = makeA;
   findA = makeLi.querySelector('a');
-  
+
+  title = dataList[i].title;
+  link = dataList[i].link;
+  findA.href = link;
+  findA.innerText = title;
+  UlList.append(makeLi); // Ullist.내부의 뒤에 삽입(생성된 li)
+}
+*/
+
+// step 3 : forEach()
+/*
+dataList.forEach(function(content){
+  // console.log(data.title, data.link, index);
+  // forEach가 끝나면 외부에서 변수는 모르는 변수이기 때문에 내부에 써주는 것이 맞음
+  var makeLi = document.createElement('li'); 
+  var makeA = '<a class="link">sample</a>';
+  makeLi.innerHTML = makeA;
+  var findA = makeLi.querySelector('a');
+  findA.href = content.link;
+  findA.innerText = content.title;
+  UlList.append(makeLi);
+});
+*/
+
+// --------------------------------------------------------
+// 함수화 처리
+// forEach로
+/*
+var loopFn1 = function(content){
+  var makeLi = document.createElement('li'); 
+  var makeA = '<a class="link">sample</a>';
+  makeLi.innerHTML = makeA;
+  var findA = makeLi.querySelector('a');
+  findA.href = content.link;
+  findA.innerText = content.title;
+  UlList.append(makeLi);
+};
+
+dataList.forEach( loopFn1 );
+*/
+// --------------------------------------------------------
+
+// for문을 함수화 처리
+var i = 0;
+var len = dataList.length;
+
+var loopFn2 = function(i){
+  var makeLi, makeA, findA, title, link;
+  makeLi = document.createElement('li');
+  makeA = '<a class="link">sample</a>';
+  makeLi.innerHTML = makeA;
+  findA = makeLi.querySelector('a');
+
   title = dataList[i].title;
   link = dataList[i].link;
   findA.href = link;
@@ -96,5 +148,6 @@ for(; i<len; i+=1){
   UlList.append(makeLi); // Ullist.내부의 뒤에 삽입(생성된 li)
 }
 
-
-// step 3 : forEach()
+for(; i<len; i+=1){
+  loopFn2(i);
+}
