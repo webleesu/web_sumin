@@ -1,0 +1,71 @@
+// c_02_dom_make_nav_01.scss
+/* c_02_dom_make_nav_01.css */
+@import "../common/variable", "../common/mixin";
+
+#wrap { width: 100%; height: auto; min-height:800px; }
+#headBox { 
+  display:flex; justify-content:space-between;
+  width: 100%; height:56px; padding:8px 10px; background-color: $color_gray_op; 
+  }
+
+h1 { width: 60px; height:40px; background-color: $color_primary_01;}
+.nav_area { width:calc(100% - 70px); height:auto; min-height:40px; background-color: #dfd;}
+
+.navi_btn {
+  display: none; float:right; width: 40px; height: 40px; 
+  & > button { width: 100%; height:100%; background-color: $color_yellow_02;}
+}
+.navi_inner { display:flex; justify-content:space-between;
+  width: 100%; height:auto; min-height:40px;
+  background-color: $color_white_02;
+}
+
+.global_part {width:auto; height:auto; background-color: $color_primary_02;}
+.main_menu {display:flex; width:auto; height:40px;
+  & > li { position: relative;
+    width:auto; margin-right:16px; color:#fff; text-transform:capitalize;
+    &:last-child {margin-right: 0;}
+    & > a {display:flex; align-items:center; padding:0 10px; color:inherit; height:100%;}
+    @at-root .drop_btn { height:100%;
+      & > button {height: 100%; padding:0 10px; color:inherit; text-transform:inherit;}
+    } // .drop_btn
+    @at-root .sub_menu { 
+      position: absolute; left: 0; top: 100%; width:200%; height: auto; 
+      border:1px solid $color_light_gray_03;
+      border-radius:3px; color:$color_black_01;
+      background-color: $color_gray_op;
+      & > li {
+        width:100%; height:auto;
+        padding:10px;
+      }
+      & > .border_line {
+        border-bottom:1px solid $color_light_gray_03;
+      }
+    }// .sub_menu
+  }// li
+}// .main_menu
+
+.search_part { height:40px; background-color: $color_yellow_01;}
+
+
+@include handhelds{
+  .navi_btn {display: block;}
+  .navi_inner{
+    flex-direction:column;
+    padding:10px;
+    // display: none;
+  }
+  .main_menu {
+    flex-direction: column;
+    height:auto;
+    & > li {width:100%; height:auto; min-height:40px; margin-right: 0;  
+      & > a {width:100%; min-height:40px; }
+      @at-root .drop_btn {height: 40px;
+        & > button { width: 100%; text-align: left;}
+      }
+    }
+  }// .main_menu
+
+  .global_part {margin-bottom:16px;}
+  // .search_part {}
+} // @include handhelds
