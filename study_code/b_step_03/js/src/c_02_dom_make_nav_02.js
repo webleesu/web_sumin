@@ -19,6 +19,8 @@ dropBtn.addEventListener('click', function(event){
   // subMenu.style.display = 'block';
   if(subMenuStyle.display === 'none'){
     subMenu.style.display = 'block';
+  }else{
+    subMenu.style.display = 'none';
   }
 
   console.log( subMenu.style.display );
