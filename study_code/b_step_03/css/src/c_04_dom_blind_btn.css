@@ -50,11 +50,5 @@
   border-radius: 0.25rem;
   background-color: #fdd;
 }
-#contentBox > .content_area.slide_up {
-  display: none;
-}
-#contentBox > .content_area.slide_down {
-  display: block;
-}
 
 /*# sourceMappingURL=c_04_dom_blind_btn.css.map */
