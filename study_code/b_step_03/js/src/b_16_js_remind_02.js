@@ -84,7 +84,68 @@ console.log( minFn(ranFn(arrNumber)) );
 */
 
 // -------------------------------------------------------
-// 문제1 - 최소값 구하기 풀이
-// 1-1 Array.prototype.min();
-var minResult = arrNumber.prototype.min();
-console.log( minResult );
+// 풀이: 문제1 - 최소값 구하기
+// 1-1 : Math.min()
+
+// Array.prototype.call(?, 1,2,3,4), 
+// Array.prototype.apply(?, [1,2,3,4,5]);
+// var minResult = Math.min.apply(null, arrNumber); 
+// console.log( minResult );
+
+// 1-2 : 
+// var arrR2 =  [1,4,6,2,99,10,456,98765].sort(function(a,b){
+//     return a - b;
+// });
+// console.log( arrR2 );
+var arrNumber2 = [90, 5, 30, 60, 450, 250, 3, 60, 8];
+var sortMin = arrNumber2.sort(function(a, b){ return a - b; });
+    console.log( sortMin[0] );    
+
+    // 배열의내용을.정렬로처리( 정렬기준을 설정(앞의값, 뒤의값){} ) 
+    //arrNumber2.sort(function(a, b){ 
+      // 앞의값 - 뒤의값을 계산하여 결과가 음수이면 앞,뒤 그대로배치
+      // 앞의값 - 뒤의값을 계산하여 결과가 양수이면 뒤,앞 순서로배치
+      //  var c =  a - b;
+      // 정렬기준을 처리하여 반환
+      //  return c; 
+    //});
+
+// 1-3 : for문 이용
+var arrNumber4 = [90, 5, 30, 60, 450, 250, 3, 60, 8];
+var arr4Len = arrNumber4.length;
+var minNumber = arrNumber4[0];
+for(i=0; i<arr4Len; i+=1){
+  if(minNumber > arrNumber4[i]){
+    minNumber =  arrNumber4[i];
+  }
+}
+console.log('for:', minNumber );
+
+
+// ------------------------------------------------------
+// 풀이: 문제2 - 최대값구하기
+// 2-1 : Math.max()
+var maxResult = Math.max.apply(null, arrNumber); 
+// console.log( maxResult );
+
+// 2-2 : [].sort()
+var arrNumber3 = [90, 5, 30, 60, 450, 250, 3, 60, 8];
+var sortMax = arrNumber3.sort(function(a, b){ return b - a; });
+console.log( sortMax[0] );
+var last = sortMin.length - 1;
+console.log( sortMin[last] );
+
+
+
+
+// --------------------------------------------------------------
+// 문제 3번을 풀기위한 random 숫자만들기
+var arrRan = [];
+var random; //= Math.floor(Math.random() * 1000);
+var i=0;
+for(; i<10; i++){
+  random = Math.floor(Math.random() * 1000);
+  arrRan.push( random );
+}
+// console.log( arrRan );
+// ---------------------------------------------------------------
