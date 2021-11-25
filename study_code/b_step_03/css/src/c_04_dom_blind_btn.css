@@ -30,6 +30,10 @@
   border-radius: 0.25rem;
   background-color: #fff;
 }
+#contentBox > .btn > button:hover {
+  background-color: rgba(85, 119, 170, 0.3);
+  text-transform: capitalize;
+}
 #contentBox > .btn > button.on {
   background-color: #57a;
   color: #fff;
@@ -38,8 +42,19 @@
 #contentBox > .content_area {
   width: 100%;
   height: 350px;
+}
+#contentBox > .content_area > ul {
+  width: 100%;
+  height: 100%;
   padding: 1rem;
+  border-radius: 0.25rem;
   background-color: #fdd;
+}
+#contentBox > .content_area.slide_up {
+  display: none;
+}
+#contentBox > .content_area.slide_down {
+  display: block;
 }
 
 /*# sourceMappingURL=c_04_dom_blind_btn.css.map */
