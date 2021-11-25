@@ -135,9 +135,6 @@ console.log( sortMax[0] );
 var last = sortMin.length - 1;
 console.log( sortMin[last] );
 
-
-
-
 // --------------------------------------------------------------
 // 문제 3번을 풀기위한 random 숫자만들기
 var arrRan = [];
@@ -149,3 +146,68 @@ for(; i<10; i++){
 }
 // console.log( arrRan );
 // ---------------------------------------------------------------
+
+// 구구단 문제
+
+var mulFn = function(a, b){
+  var a = 2, b = 1;
+  for (a=2; a < 10; a++) {
+    for (b=1; b < 10; b++) {
+      console.log(a + " x " + b + " = ", a*b);
+    }
+  }
+}
+
+mulFn();
+/* 불가능한 함수
+var loop1 = function(i){
+  var n;
+  for(n=1; n<10; n++){
+    console.log(i+'x'+n+'='+(i*n));
+    // loop1(i);
+  }
+}
+// for(i=2; i<10; i++){
+//   console.log(i+'단 -------------------');
+//   loop1(i);
+// }
+i=0;
+loop1(i=1);
+*/
+
+// --------------------------------------------
+console.clear();
+
+var startNum = 500;
+var timed = 10;
+var endNum = 250;
+var intervalFn;
+// -------------
+var btn = document.querySelector('.btn');
+var pSpan = document.querySelector('p>span');
+pSpan.innerText = 'text작성';
+
+var countFn = function(start){
+  var goCheck = true;
+  var start = start;
+
+  if(goCheck){
+    goCheck = false;
+
+    intervalFn = setInterval(function(){
+      pSpan.innerText = start;
+      start -= 1;
+      if(start <= endNum){
+        pSpan.innerText= endNum + ' 처리완료';
+        clearInterval(intervalFn);
+        goCheck = true;
+      }
+    }, timed);
+  }
+};
+
+
+btn.addEventListener('click', function(e){
+  e.preventDefault();
+  countFn(startNum);
+});
