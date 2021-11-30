@@ -37,7 +37,9 @@
   width: 90%;
   min-width: 180px;
   max-width: 300px;
-  height: 400px;
+  height: 66.6666666667vw;
+  min-height: 400px;
+  max-height: 500px;
   padding: 0.5rem;
   border: 1px solid #1a5d54;
 }
@@ -51,19 +53,6 @@
   height: 200px;
   margin-bottom: 0.5rem;
   background-color: #ddd;
-  background-image: url(../img/bottle.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-}
-.card > a > .img_zone > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
 }
 .card > a > dl {
   width: 100%;
@@ -79,51 +68,102 @@
 .card > a dd {
   width: 100%;
 }
+.card:nth-of-type(1) .img_zone {
+  background-image: url(../../multi/img/bottle.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.card:nth-of-type(1) .img_zone > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.card:nth-of-type(2) .img_zone {
+  background-image: url(../../multi/img/cart.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.card:nth-of-type(2) .img_zone > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.card:nth-of-type(3) .img_zone {
+  background-image: url(../../multi/img/earth.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.card:nth-of-type(3) .img_zone > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
-#newBox:nth-of-type(1) .img_zone {
-  background-image: url(../img/bottle.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+.new_area_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 60%;
+  margin: auto;
+  padding: 1rem;
+  padding-top: 5rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+  background-color: #505050;
 }
-#newBox:nth-of-type(1) .img_zone > span {
+.new_area_modal::before {
+  content: "";
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(51, 51, 51, 0.8);
 }
-#newBox:nth-of-type(2) .img_zone {
-  background-image: url(../img/cart.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+.new_area_modal .close_btn {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.75rem;
+  transform: translate(-50%);
 }
-#newBox:nth-of-type(2) .img_zone > span {
+.new_area_modal .close_btn > button {
   display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  background-color: #ffffff;
 }
-#newBox:nth-of-type(3) .img_zone {
-  background-image: url(../img/earth.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+.new_area_modal .close_btn > button:focus {
+  background-color: #ffbd55;
+  font-weight: 900;
 }
-#newBox:nth-of-type(3) .img_zone > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
+.new_area_modal .close_btn > button:hover {
+  background-color: #f7e9d3;
 }
 
 @supports (width: clamp(10px, 10%, 300px)) {

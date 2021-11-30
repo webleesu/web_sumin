@@ -4,7 +4,7 @@
 @import "../common/mixin";
 
 // -------------------------------------------
-  $url : '../../multi/img/';
+  $imgPath : '../../multi/img/'; // mixin에서 사용하는 변수명과 일치해야합니다..!^^
   $cardImg : ('bottle.jpg', 'cart.jpg', 'earth.jpg', 'table.jpg');
 // -------------------------------------------
 #wrap {
@@ -17,22 +17,46 @@
 #newBox { width: 100%; height: auto; padding: 1rem; 
   h2 { width: 100%; margin-bottom: 1rem; font-size: 1.5rem; text-align: center; text-decoration: underline;}
   @at-root .new_area { display: flex; justify-content: space-around; width: 100%; height: auto; background-color: $color_yellow_02;}
-  @at-root .card { width: 90%; min-width: 180px; max-width: 300px; height: 400px; padding: 0.5rem; border: $line2;
+  @at-root .card { width: 90%; min-width: 180px; max-width: 300px; height: makeVw(400,600); min-height: 400px; max-height: 500px; padding: 0.5rem; border: $line2;
     & > a { @include full;
       & > .img_zone { 
         width: 100%; height: 200px; margin-bottom: 0.5rem; background-color: #ddd;
-        @include img(nth($cardImg, 1), $size: cover);
       }
       & > dl { width: 100%; height: 180px;}
       & dt { width: 100%; margin-bottom: 1rem; font-weight: bold; font-size: 1.3rem; text-transform: uppercase;}
       & dd { width: 100%;}
     } // a
-  } //card 내부의 이미지 반복하여 첨부
-  // &:nth-of-type(1) .img_zone { @include img(nth($cardImg, 1), $size: cover);}
-  @for $i from 1 through 3 {
-    &:nth-of-type(#{$i}) .img_zone { @include img(nth($cardImg, $i), $size: cover);}
+    // .card 내부의 이미지 반복하여 첨부
+    @for $i from 1 through 3 {
+      &:nth-of-type(#{$i}) .img_zone{ @include img(nth($cardImg, $i), $size:cover); }
+    }
+  } // .card
+  @at-root .new_area_modal { display: none;
+    &::before {
+      content: ""; display: block; 
+      position: fixed; z-index: -1; top: 0; left: 0;
+      width: 100vw; height: 100vh; background-color: rgba($color_black_01, 0.8); 
+    }
+    position: fixed; top: 0; left: 0; bottom: 0; right: 0; 
+    width: 70%; height: 60%;
+    margin: auto; padding: 1rem; padding-top: 5rem; border-radius: 0.25rem;
+    color: $color_white; font-size: 1.3rem;
+    background-color: $color_deep_gray;
+    .close_btn { 
+      $w : 2rem;
+      position: absolute; top: 1rem; left: 50%; 
+      width: $w; height: $w; 
+      font-size: 0.75rem; 
+      transform: translate(-50%);
+      > button { @include full; border-radius: $w; background-color: $color_white; }
+      > button:focus { background-color: $color_yellow_01; font-weight: 900;}
+      > button:hover { background-color: $color_yellow_02; }
+    }
   }
-}
+
+  // vw 는 브라우저의 가로값이 변할때, vh는 브라우저의 세로크기가 변할때 그 비율이 처리되는 단위이므로, width/height와는 관계가 없다
+
+} //#newBox
 
 
 @supports(width: clamp(10px, 10%, 300px)){
