@@ -31,7 +31,7 @@ var displayFn = function(view){
     modal.style.opacity = 0;
   }else {
     modal.style = null;
-    // modal.style.display = 'none';
+    modal.style.display = 'none';
   }
 }
 // ==========================================================================
@@ -134,7 +134,6 @@ var intervalHideFn = function(){
     }else {
       clearInterval( interval );
       displayFn(true);
-      
     }
   }, 1);
 };
