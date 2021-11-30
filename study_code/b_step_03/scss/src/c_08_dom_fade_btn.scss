@@ -1,0 +1,41 @@
+// c_08_dom_fade_btn.scss
+/* c_08_dom_fade_btn.css */
+@import "../common/variable";
+@import "../common/mixin";
+
+// -------------------------------------------
+  $url : '../../multi/img/';
+  $cardImg : ('bottle.jpg', 'cart.jpg', 'earth.jpg', 'table.jpg');
+// -------------------------------------------
+#wrap {
+  width: 90%; min-width: 600px; max-width: 1440px;
+  margin: auto; background-color: $color_white_02;
+
+}
+
+#headBox { width: 100%; height: auto; border-bottom: $line1; }
+#newBox { width: 100%; height: auto; padding: 1rem; 
+  h2 { width: 100%; margin-bottom: 1rem; font-size: 1.5rem; text-align: center; text-decoration: underline;}
+  @at-root .new_area { display: flex; justify-content: space-around; width: 100%; height: auto; background-color: $color_yellow_02;}
+  @at-root .card { width: 90%; min-width: 180px; max-width: 300px; height: 400px; padding: 0.5rem; border: $line2;
+    & > a { @include full;
+      & > .img_zone { 
+        width: 100%; height: 200px; margin-bottom: 0.5rem; background-color: #ddd;
+        @include img(nth($cardImg, 1), $size: cover);
+      }
+      & > dl { width: 100%; height: 180px;}
+      & dt { width: 100%; margin-bottom: 1rem; font-weight: bold; font-size: 1.3rem; text-transform: uppercase;}
+      & dd { width: 100%;}
+    } // a
+  } //card 내부의 이미지 반복하여 첨부
+  // &:nth-of-type(1) .img_zone { @include img(nth($cardImg, 1), $size: cover);}
+  @for $i from 1 through 3 {
+    &:nth-of-type(#{$i}) .img_zone { @include img(nth($cardImg, $i), $size: cover);}
+  }
+}
+
+
+@supports(width: clamp(10px, 10%, 300px)){
+  #wrap { width: clamp(600px, 90%, 1440px);}
+  .card { width: clamp(180px, 90%, 300px); }
+}
