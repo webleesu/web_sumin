@@ -50,7 +50,8 @@ titleArr.forEach(function(element, index){
 
     // li내부의 button 선택
     // console.log( this );
-    // ------------------------------------------------0
+    /*
+    // ------------------------------------------------
     // Q.3-1 :
     titleArr[indexCheck].classList.remove(optionName);
     contentPart[indexCheck].classList.remove(optionName);
@@ -59,14 +60,51 @@ titleArr.forEach(function(element, index){
     indexCheck = index;
     titleArr[indexCheck].classList.add(optionName);
     contentPart[indexCheck].classList.add(optionName);
+    */
+  
+  /*
+    // Q.3-2 : - li요소에 전부 on제거
+    // ----------------------------------------------------
+    titleArr.forEach(function(el){
+      el.classList.remove(optionName);
+    });
+    contentPart.forEach(function(el){
+      el.classList.remove(optionName);
+    });
+    // ------------------------------------------
+    indexCheck = index;
+    titleArr[indexCheck].classList.add(optionName);
+    contentPart[indexCheck].classList.add(optionName);
+  */
+  
+    // Q.3-3 : -li 순번에 맞는 것은 add, 아닌것은 모두(for) remove처리
+    // 선택된것, 선택되지 않은 것을 구분
+
+    indexCheck = index;
+    titleArr.forEach(function(el, idx){
+      // if(idx !== indexCheck){
+      //   el.classList.remove(optionName);
+      // }else{
+      //   el.classList.add(optionName);
+      // }
+      (idx !== indexCheck) ? el.classList.remove(optionName) : el.classList.add(optionName);
+    }); // titileArr.forEach
+
+    contentPart.forEach(function(el,idx){
+      (idx !== indexCheck) ? el.classList.remove(optionName) : el.classList.add(optionName);
+    }); // contentPart.forEach
+
+
   });
 });
 
 
 
 
-// Question ------------------------------------
-/*
-  1. titleBtn.addEventListener('click', function(){ .... console.log( 클릭한 순번 ) });
-  2. 순번에 맞는 요소에 class = 'on'을 첨부
-*/
+// Question ---------------------------------
+// 1. titleBtn.addEventListener('click', function(){ ...  console.log( 클릭한 순번 ) });
+// 2. 순번에 맞는 요소에 class='on'을 첨부
+// 3. 기존에 있는 'on'을 제거
+// 3-1. 기존의 순번을 파악해서 제거
+// 3-2. 모든(for) 요소에 있는 'on'을 제거 후 'on'을 삽입
+// 3-3. 선택순번만 'on' 첨부, 선택순번 외 모든 요소에 'on' 제거
