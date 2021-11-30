@@ -130,9 +130,11 @@ var intervalHideFn = function(){
     value -= 1;
     if(value >= 0){
       style.opacity = value / 100;
+      style.transition = null;
     }else {
       clearInterval( interval );
       displayFn(true);
+      
     }
   }, 1);
 };
@@ -141,6 +143,8 @@ var intervalHideFn = function(){
 // 이벤트
 closeBtn.addEventListener('click', function(event){
   event.preventDefault();
-  // displayFn(true);
   intervalHideFn();
 });
+
+// 이슈 : css-transition 기능으로 나타난 효과는 사라질 때 갑자기 사라지는 효과가 있으므로,
+// opacitiy가 1이된 이후에는 css-transition기능이 강제로 삭제처리해야함
