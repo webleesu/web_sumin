@@ -1,0 +1,120 @@
+/* z_01_practice_event_modal.css */
+#wrap {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  padding: 0 100px;
+}
+
+#headBox {
+  width: 100%;
+  height: 100px;
+  background-color: #eee;
+}
+#headBox h1 {
+  font-size: 1.2rem;
+}
+
+#contentBox {
+  width: 100%;
+  height: auto;
+}
+.content_title {
+  width: 100%;
+  height: 250px;
+  background-color: #ddd;
+  padding: 100px 20px;
+}
+.content_title span {
+  width: 944px;
+  height: auto;
+  margin: auto;
+  text-transform: capitalize;
+  font-size: 40px;
+}
+
+.content_area {
+  width: 940px;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+.content_area .year_area {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: auto;
+  font-size: 1.1rem;
+}
+.content_area .year_area a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.content_area .year_area a:focus {
+  border: 1px solid #1A5D54;
+}
+.content_area .year_area a:hover {
+  background-color: #1A5D54;
+  color: #fff;
+}
+.content_area .content_part {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.content_area .content_part li {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 30px;
+  border-radius: 0.25rem;
+  background-color: #fdd;
+}
+.content_area .content_part li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+}
+.content_area .content_part li a:focus {
+  border: 2px solid #b88;
+}
+.content_area .content_part li a:hover {
+  background-color: #b88;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 70%;
+  height: 60%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+.modal span {
+  font-size: 28px;
+}
+.modal hr {
+  margin-bottom: 50px;
+}
+.modal button {
+  position: absolute;
+  top: 1rem;
+  right: 3%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background-color: #1A5D54;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+/*# sourceMappingURL=z_01_practice_event_modal.css.map */
