@@ -13,7 +13,7 @@
   width: 100%;
   height: 56px;
   padding: 8px 10px;
-  background-color: rgba(85, 85, 85, 0.3);
+  background-color: rgba(85, 85, 85, 0.1);
 }
 
 h1 {
@@ -170,7 +170,7 @@ h1 a {
     width: 100%;
     flex-direction: column;
     padding: 10px;
-    background-color: rgba(85, 85, 85, 0.3);
+    background-color: rgba(85, 85, 85, 0.1);
   }
 
   .nav_area.on .navi_inner {
