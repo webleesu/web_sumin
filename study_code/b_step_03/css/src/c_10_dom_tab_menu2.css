@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* c_10_dom_tab_menu2.scss */
 #wrap {
   width: 100%;
@@ -105,8 +106,23 @@
 .event_area .event_particle {
   width: 100%;
   height: auto;
+  /*
+  <button type="button" data-import="../event/y21042_data.json" id="event_21042">
+  <h4 class="event_title">summer flaver</h4>
+  <p class="evetn_narration">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, beatae.</p>
+  <dl class="date">
+    <dt class="blind">기간</dt>
+    <dd>2122. 01. 05 - 2022. 02. 15</dd>
+  </dl>
+  <dl class="event_check success">
+    <dt>이벤트 진행 상태</dt>
+    <dd>이벤트 종료</dd>
+  </dl>
+  </button>
+  */
 }
 .event_area .event_particle > li {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -119,6 +135,70 @@
   padding-right: 30px;
   padding-bottom: 36px;
   background-color: #da9;
+}
+.event_area .event_particle a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease;
+  text-align: left;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event_area .event_particle a h4 {
+  width: 100%;
+  height: auto;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(51, 51, 51, 0.7);
+}
+.event_area .event_particle a p {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0.4rem 0;
+}
+.event_area .event_particle a .date > dd {
+  color: #ffffff;
+  font-size: 22px;
+}
+.event_area .event_particle a .event_check {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+}
+.event_area .event_particle a .event_check:before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+.event_area .event_particle a .event_check > dt {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.event_area .event_particle a .event_check > dd {
+  margin-left: 0.5rem;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.event_area .event_particle .end .event_check:before {
+  background-color: #c4c4c4;
+}
+.event_area .event_particle .end .event_check > dd {
+  color: #c4c4c4;
 }
 
 #footBox {
