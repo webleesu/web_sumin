@@ -18,6 +18,7 @@ var titleLiEl = [].slice.call(titleList); // button선택자는 추후 진행
 var contentInner = eventBox.querySelector('.content_inner');
 var contentYear = contentInner.querySelectorAll('.year_part');
 var optionIndex = 0;
+var optionName = 'on';
 
 // 기능++++++++++++++++++++++
 // optionIndex 순번에 맞는 탭메뉴 구성
@@ -25,14 +26,45 @@ var optionIndex = 0;
 // contentYear[optionIndex].classList.add('on');
 
 // 각각 들어있는 on클래스 제거
-  titleLiEl.forEach(function(data, idx){     
-    if(idx !== optionIndex){ titleLiEl[idx].classList.remove('on'); 
-    }else{ titleLiEl[idx].classList.add('on'); }
+/*
+  titleLiEl.forEach(function(data, idx){    
+    if(idx !== optionIndex){ 
+      // titleLiEl[idx].classList.remove('on'); 
+      data.classList.remove(optionName);
+    }else{ 
+      // titleLiEl[idx].classList.add('on'); 
+      data.classList.add(optionName);
+    }
   });
+  */ // 함수 classSwitchFn(선택자); 기능으로 처음 요소에 'on'첨부
   // contentYear
-  // contentYear.forEach(function(data){ data.classList.remove('on'); });
+  /*
+  contentYear.forEach(function(data, idx){ 
+    if(idx !== optionIndex){
+      data.classList.remove(optionName); 
+    }else{
+      data.classList.add(optionName); 
+    }
+  });
+  */
 
 // 함수++++++++++++++++++++++
+var classSwitchFn = function(element){
+  element.forEach(function(data, idx){ 
+    if(idx !== optionIndex){
+      data.classList.remove(optionName); 
+    }else{
+      data.classList.add(optionName); 
+    }
+  });
+};
+
+// 함수 사전 수행 +++++++++++++++++++++++++
+classSwitchFn(titleLiEl);
+classSwitchFn(contentYear);
+
+
+
 // 이벤트++++++++++++++++++++++
   // li의 요소 각각을 클릭시 수행하는 기능
   titleLiEl.forEach(function(element, index){
@@ -40,6 +72,8 @@ var optionIndex = 0;
     liBtn.addEventListener('click', function(event){
       event.preventDefault();
       optionIndex = index;
+      classSwitchFn(titleLiEl);
+      classSwitchFn(contentYear);
     });
   });
 
