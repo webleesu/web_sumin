@@ -19,18 +19,18 @@ var data = [
   }, // data[1].title
   
   {
-    title: 'javascript', 
+    title: 'remove link', 
     contents: 'Laborum fuga eveniet iste necessitatibus iusto possimus',
-    link:'http://google.com',
+    // link:'http://google.com',
     bgImg: '../multi/img/earth.jpg',
     bgNarr: '지구 이미지에 대한 간략한 설명'
   },
   
   {
-    title: 'winter', 
+    title: 'remove image', 
     contents: 'corporis maxime minima ab ratione, esse recusandae doloremque?',
     link:'http://naver.com',
-    bgImg: '../multi/img/table.jpg',
+    // bgImg: '../multi/img/table.jpg',
     bgNarr: '테이블 이미지에 대한 간략한 설명'
   },
   
@@ -99,7 +99,7 @@ var baseCode = '<div class="bg_img"><span class="blind"></span></div>\
                   </dd>\
                 </dl>';
 
-                for(; i < len; i+=1){
+for(; i < len; i+=1){
   makeLi = document.createElement('li');
   makeLi.innerHTML = baseCode;
   cardUl.appendChild(makeLi);
@@ -117,8 +117,9 @@ var baseCode = '<div class="bg_img"><span class="blind"></span></div>\
   2. 공통 n번째를 가르키는 변수를 생성
 */
 
-
-  var idx = 0;
+var setCardFn = function(n){
+  // var idx = 0;
+  var idx = n;
   var li = cardUl.querySelectorAll('li');
   var dt = li[idx].querySelector('dt');
   var narr = li[idx].querySelector('dd span');
@@ -126,13 +127,39 @@ var baseCode = '<div class="bg_img"><span class="blind"></span></div>\
   var bgImg = li[idx].querySelector('.bg_img');
   var bgNarr = li[idx].querySelector('span');
 
+  // 사용 이미지가 없거나, 링크 주소가 없거나(!!undefined) 한다면 해동 요소는 삭제
   dt.innerText = data[idx].title;
   narr.innerText = data[idx].contents;
-  link.href = data[idx].link; // html상에 존재하는 property에 값을 처리
+  // link.href = data[idx].link; // html상에 존재하는 property에 값을 처리
   // link.setAttribute('href', data[idx].link); // 어떠한 속성도 처리 (ex. data- 속성)
-  bgImg.style.backgroundImage = 'url(' + data[idx].bgImg +')';
-  bgNarr.innerText = data[idx].bgNarr;
+  // 링크 처리 (삼항연산자) , 위에 기존코드 주석처리
+  (!!data[idx].link)? link.href = data[idx].link: link.remove();
+  
+  // 이미지 처리 (if문) , 아래 기존 코드 주석처리
+  if(!!data[idx].bgImg){
+    bgImg.style.backgroundImage = 'url(' + data[idx].bgImg +')';
+  }else{
+    bgImg.remove();
+  }
 
+  // bgImg.style.backgroundImage = 'url(' + data[idx].bgImg +')';
+  bgNarr.innerText = data[idx].bgNarr;
+}; // setCardFn(n);
+
+// li 내용 처리
+for(i=0; i < len; i++){
+  setCardFn(i);
+};
+
+/*
+setCardFn(0);
+setCardFn(1);
+setCardFn(2);
+setCardFn(3);
+setCardFn(4);
+setCardFn(5);
+setCardFn(6);
+*/
 
 // data.forEach(function(d,i){
 //   cardSetting(i);
