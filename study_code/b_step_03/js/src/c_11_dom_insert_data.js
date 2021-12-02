@@ -82,9 +82,52 @@ for(; i < len; i+=1){
   makeLi = document.createElement('li');
   // makeLi.innerText = data[i].title + ' ' + '<br />' + data[i].contents + ' ';
   // makeLi.innerText = data[i].contents + ' ' + (i + 1);
-  makeLi.innerHTML = '<div class="bg_img" style="background-image: url('+ data[i].bgImg +')"><span class="blind">'+ data[i].bgNarr +'</span></div> <dl><dt>' + data[i].title + '</dt> <dd><span>'+ data[i].contents + '</span><br /><a href=\"'+ data[i].link +'\" target="_blank">자세히보기</a></dd> </dl>'
+  makeLi.innerHTML = '<div class="bg_img" style="background-image: url('+ data[i].bgImg +')"><span class="blind">'+ data[i].bgNarr +'</span></div> <dl><dt>' + data[i].title + '</dt> <dd><span>'+ data[i].contents + '</span><br /><a href=\"'+ data[i].link +'\" target="_blank">자세히보기</a></dd> </dl>';
   cardUl.appendChild(makeLi);
 }
 */
 
 // 우선 기본 코드를 모두 담은 후에 필요한 부분만 색출해서 수정/첨부/삭제
+
+var baseCode = '<div class="bg_img"><span class="blind"></span></div>\
+                <dl>\
+                  <dt></dt>\
+                  <dd>\
+                    <span></span>\
+                    <br />\
+                    <a href="" target="_blank">자세히보기</a>\
+                  </dd>\
+                </dl>';
+
+                for(; i < len; i+=1){
+  makeLi = document.createElement('li');
+  makeLi.innerHTML = baseCode;
+  cardUl.appendChild(makeLi);
+};
+
+/*
+  내용 중 1번째 내용만 우선 정리해서 삽입
+  bgImg: background-image, bgNarr: 설명
+  title: 제목
+  contents: 내용, link: link 주소
+*/
+/*
+  시나리오 2:
+  1. li요소 첫번째 선택
+  2. 공통 n번째를 가르키는 변수를 생성
+*/
+
+var cardSetting = function(n){
+  var idx = 0;
+  var li = cardUl.querySelectorAll('li');
+  var dt = li[idx].querySelector('dt');
+  var narr = li[idx].querySelector('dd>span');
+
+  dt.innerText = data[idx].title;
+  narr.innerText = data[idx].contents;
+
+};
+
+// data.forEach(function(d,i){
+//   cardSetting(i);
+// });
