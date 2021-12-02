@@ -46,6 +46,7 @@ var innerCode = '<a href="#" data-id><h4 class="event_title">제목</h4><p class
   var makeLiLen = data.length; // 실제 생성할 배열의 갯수만큼 처리
   var makeLi;//  = document.createElement('li');
 
+/*
   for(; i < makeLiLen; i+=1){
     makeLi = document.createElement('li');
     makeLi.innerHTML = innerCode;
@@ -53,24 +54,42 @@ var innerCode = '<a href="#" data-id><h4 class="event_title">제목</h4><p class
   }
 
   // 생성한 내용 기준 li에 내용 첨부
-  var selectI = 0;
-  var eventList = yearUl.querySelectorAll('li');
-  var selectorLi = eventList[selectI];
-  var dataSelect = data[selectI];
+  var selectI = 0; // 공통 순번을 가진 변수
+  var eventList = yearUl.querySelectorAll('li'); // 생성된 li를 선택
+  var selectorLi = eventList[selectI]; // li의 순번
+  var dataSelect = data[selectI]; // 첨부할 순번의 data위치
 
+  // 각 내용을 담을 선택자
   var selectorLink =selectorLi.querySelector('a');
   var selectorH4 = selectorLi.querySelector('.event_title');
   var selectorP  = selectorLi.querySelector('.event_narration');
   var selectorDate  = selectorLi.querySelector('.date > dd');
   var selectorStatus  = selectorLi.querySelector('.event_check');
   
+  // 각 선택자에 맞는 내용 첨부
   selectorLink.setAttribute('data-id', dataSelect.id );
   selectorLink.setAttribute('href', dataSelect.modalPath );
   selectorH4.innerText = dataSelect.title;
   selectorP.innerText  = dataSelect.narr;
   selectorDate.innerText = dataSelect.date;
   selectorStatus.classList.add(dataSelect.eventStatus);
+*/
 
+// 위 내용이 길어서 조금 줄이면
+
+var innerCode, dataSelect, selectorStatus
+for(; i < makeLiLen; i+=1){
+
+  makeLi = document.createElement('li');
+  dataSelect = data[i];
+
+  innerCode = '<a href="'+ dataSelect.modalPath +'" data-id="'+ dataSelect.id +'"><h4 class="event_title">'+ dataSelect.title +'</h4><p class="event_narration">'+ dataSelect.narr +'</p><dl class="date"><dt class="blind">기간</dt><dd>'+ dataSelect.date +'</dd></dl><dl class="event_check success"><dt></dt><dd>진행예정</dd></dl></a>';
+
+  makeLi.innerHTML = innerCode;
+  yearUl.append(makeLi);
+  selectorStatus = makeLi.querySelector('.event_check');
+  selectorStatus.classList.add(dataSelect.eventStatus);
+}
 
 
   
