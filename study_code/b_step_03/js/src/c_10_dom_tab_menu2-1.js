@@ -14,9 +14,19 @@ var latestYear = yearPart[0];
   // 1. ul 생성
   var makeUl = document.createElement('ul');
   var makeLi = document.createElement('li');
+
+
+  makeUl.className = 'two'; // 기존내용지우고 대체
+  makeUl.classList.add('one');// 기존에 추가
+  makeUl.setAttribute('data-id','three'); // 대체, 속성 변경가능
+
   latestYear.append( makeUl );
+  // latestYear.appendChild( mkt );// 문자불가능
   var yearUl = latestYear.querySelector('ul');
-  yearUl.append( makeLi );
+  yearUl.append(makeLi);
+  
+
+  
 // -----------------------------------------------------------------------------------------------------
 // latestYear.innerHTML = '<ul></ul>'; // innerHTML 은 안의 코드를 삭제하고 해당 코드를 추가함
 // latestYear.append('<ul></ul>'); // append는 코드 형식이든 element형식이든 구분안하고 추가
