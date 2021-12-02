@@ -2,6 +2,32 @@
 
 var innerCode = '<a href="#" data-id="event_21042"><h4 class="event_title">summer flaver</h4><p class="evetn_narration">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, beatae.</p><dl class="date"><dt class="blind">기간</dt><dd>2122. 01. 05 - 2022. 02. 15</dd></dl><dl class="event_check success"><dt>이벤트 진행 상태</dt><dd>이벤트 종료</dd></dl></a>';
 
+
+// 1. html 요소를 생성, 지정된 위치에 삽입 - innerHTML, append
+
+// 선택변수
+var contentInner = document.querySelector('.content_inner');
+var yearPart = contentInner.querySelectorAll('.year_part');
+var latestYear = yearPart[0];
+
+// 기능
+  // 1. ul 생성
+  var makeUl = document.createElement('ul');
+  var makeLi = document.createElement('li');
+  latestYear.append( makeUl );
+  var yearUl = latestYear.querySelector('ul');
+  yearUl.append( makeLi );
+// -----------------------------------------------------------------------------------------------------
+// latestYear.innerHTML = '<ul></ul>'; // innerHTML 은 안의 코드를 삭제하고 해당 코드를 추가함
+// latestYear.append('<ul></ul>'); // append는 코드 형식이든 element형식이든 구분안하고 추가
+// latestYear.appendChild(''); // element요소로 이루어진 node를 의미
+
+// append는 지정된 선택자 내부에 필요한 요소(내용)을 기존 내용에 추가로 덧붙이는 기능
+// appendChild는 'Node'형식으로 구성도니 내용만 담을 수 있다. (element)
+// creatElement는 요소를 생성하는 기능 - 생성만 가능하며, 추가로 덧붙이기 위해서는 append, appendChild.. 를 사용 (1회용)
+
+
+
 /* innerCode는 태그와 속성 조금씩 변경
 var innerCode2 = '\
 <button type="button" data-import="../event/y21042_data.json" id="event_21042">\

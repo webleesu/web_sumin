@@ -59,11 +59,9 @@ var classSwitchFn = function(element){
   });
 };
 
-// 함수 사전 수행 +++++++++++++++++++++++++
+// 함수 사전 수행 +++++++++++++
 classSwitchFn(titleLiEl);
 classSwitchFn(contentYear);
-
-
 
 // 이벤트++++++++++++++++++++++
   // li의 요소 각각을 클릭시 수행하는 기능
