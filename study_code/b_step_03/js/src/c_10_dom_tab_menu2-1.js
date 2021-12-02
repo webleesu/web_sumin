@@ -2,7 +2,13 @@
 
 // * li요소에 삽입할 객체 리스트
 var data = [
-  {id: 'event_21042', title: 'summer flaver'}
+  { id: 'event_21042', 
+    modalPath: '../event/y21042_data.json',
+    title: 'summer flaver',
+    narr: 'event_narration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eaque?',
+    date: '2022. 01. 05 - 2022. 02. 15',
+    eventStatus: 'ready' // true/false/auto
+  }
 ];
 
 
@@ -50,13 +56,22 @@ var innerCode = '<a href="#" data-id><h4 class="event_title">제목</h4><p class
   var selectI = 0;
   var eventList = yearUl.querySelectorAll('li');
   var selectorLi = eventList[selectI];
-  var selectorLink = selectorLi.querySelector('h4');
-  var selectorH4 = selectorLi.querySelector('h4');
+  var dataSelect = data[selectI];
 
-  // selectorH4 = data[selectI].title;
+  var selectorLink =selectorLi.querySelector('a');
+  var selectorH4 = selectorLi.querySelector('.event_title');
+  var selectorP  = selectorLi.querySelector('.event_narration');
+  var selectorDate  = selectorLi.querySelector('.date > dd');
+  var selectorStatus  = selectorLi.querySelector('.event_check');
+  
+  selectorLink.setAttribute('data-id', dataSelect.id );
+  selectorLink.setAttribute('href', dataSelect.modalPath );
+  selectorH4.innerText = dataSelect.title;
+  selectorP.innerText  = dataSelect.narr;
+  selectorDate.innerText = dataSelect.date;
+  selectorStatus.classList.add(dataSelect.eventStatus);
 
-  selectorLink.setAttribute('data-id', data[selectI].id);
-  selectorH4.innerText = data[selectI].title;
+
 
   
 // -----------------------------------------------------------------------------------------------------
