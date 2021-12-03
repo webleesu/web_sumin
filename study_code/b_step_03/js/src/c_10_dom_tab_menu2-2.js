@@ -28,44 +28,121 @@
 
 // -----------------------------------------------------
 // data : 
-var eventData = { heading : '2021년 이벤트'};
-
-
-// -----------------------------------------------------
+var eventData = { 
+  heading: '2021년 이벤트', 
+  eventList : [ 
+    {
+      title:'spring event',
+      content:'신년 맞이 대축제..',
+      date:'2021.02.04 - 2021.02.21',
+      status:'end',
+      morePath:'../data/y21.0201.json',
+      bgImg:'../multi/img/event/bg1.jpg'
+    },
+    {
+      title:'spring event2',
+      content:'싱그러운 봄을 위한 세일 이벤트',
+      date:'2021.03.04 - 2021.04.05',
+      status:'end',
+      morePath:'../data/y21.0402.json',
+      bgImg:'../multi/img/event/bg2.jpg'
+    },
+    {
+      title:'summer flaver',
+      date:'2021.07.15 - 2021.07.30',
+      status:'play',
+      morePath:'../data/y21.0702.json',
+      bgImg:'../multi/img/event/bg3.jpg'
+    }
+  ]
+};
 
 // =====================================================
-// 변수
+// 기본 변수
+var EVENT_INSERT_CODE = '<a href="" data-id="">\
+                        <h4 class="event_title"></h4>\
+                        <p class="event_narration"></p>\
+                        <dl class="date">\
+                          <dt class="blind">기간</dt>\
+                          <dd></dd>\
+                        </dl>\
+                        <dl class="event_check success">\
+                          <dt>이벤트 진행</dt>\
+                          <dd></dd>\
+                        </dl>\
+                      </a>';
+
+
 var elEventBox = document.querySelector('#eventBox');
 var elContentInner = elEventBox.querySelector('.content_inner');
 
-
-
-
-// =====================================================
+var yearPartList = eventData.eventList;
+var partLen = yearPartList.length;
+var i = 0;
+// ===========================================
 // 기능
-var mkYearPart = document.createElement('div');
-// var setYearPart = mkYearPart.setAttribute('class', 'year_part');
-mkYearPart.className = 'year_part';
-mkYearPart.innerHTML = '<h3>'+ eventData.heading +'</h3>';
+// 생성 후 삽입 - h3/ul -------------------------------------
 
-elContentInner.prepend(mkYearPart);
+var mkYearPart = document.createElement('div'); // div 생성
+    mkYearPart.setAttribute('class','year_part');   // div에 이름부여(.year_part)
+    // mkYearPart.className = 'year_part';          // .year_part 에 이름부여기능 동일
+    mkYearPart.innerHTML = '<h3>' + eventData.heading + '</h3>'; // .year_part에 h3생성
+var elYearPartH3 = mkYearPart.querySelector('h3'); // h3 선택
+var mkEventParticle = document.createElement('ul');// ul 생성
+    mkEventParticle.setAttribute('class','event_particle'); // ul에 이름부여 (.event_particle)
+    elYearPartH3.after(mkEventParticle); // .event_particle h3뒤에 삽입
+    elContentInner.prepend(mkYearPart);  // .year_part 를 삽입    
+var elEventParticle = elContentInner.querySelector('.event_particle'); // ul 선택자
 
-// =====================================================
+// ===========================================
 // 함수
+// var fnMake = function(el,name){
+//   var mkEl = document.createElement(el);
+//   if(!!name) { mkEl.setAttribute('class', name); }
+//   return mkEl;
+// };
 
-// =====================================================
-// 이벤트
+// li내부에 각각의 내용을 설정하는 함수
+var fnFixContent = function(parentElement, data){
+    var elParent = parentElement;
+
+    // data요소 내부에 들어있는 property: title, content(option), date, status(select), morePath(외부주소), bgImg(배경)
+    var elH4 = elParent.querySelector('.event_title');
+    var elP = elParent.querySelector('.event_narration');
+    var elDate = elParent.querySelector('.date > dd');
+    
+    elH4.innerText = data.title;
+    (data.content !== undefined) ? elP.innerText = data.content :  elP.remove();
+    elDate.innerText = data.date;    
+};
+
+// ===========================================
+// 이벤트(실제 최종 처리 기능)
+// 목록 생성 및 삽입 - li -----------------------------------
+// li의 갯수를 파악
+yearPartList.forEach(function(data, index){
+  var mkLi = document.createElement('li');
+  mkLi.innerHTML = EVENT_INSERT_CODE;
+  elEventParticle.append(mkLi);
+
+  // var mkLi = fnMake('li');
+  // elEventParticle.append(mkLi);  
+
+  fnFixContent(mkLi, data);
+});
 
 
-// =====================================================
+// ===========================================
 // 첨부 : 
-  // el    : 요소(element)선택에 대한 변수
-  // make  : 요소 생성에 대한 변수
-  // check : 단순한 값을 판단하는 변수
-  // fn    : 함수를 선택하는 변수
-  // Pascal: 생성자 함수
-  // _     : 임시용 지역변수
-  // 대문자 : 'string'
-  //       : 기타
+  //  el     : 요소(element)선택에대한변수
+  //  mk   : 요소생성에 대한 변수
+  //  ck     : 단순한 값을 판단하는 변수
+  //  fn     : 함수 선택하는 변수
+  //  Pascal : 생성자함수
+  //  _      : 임시용 지역변수
+  //  대문자 : 'string'
+  //         : 기타
+// append-prepend  before-after next-prev
 
-// -----------------------------------------------------
+// -------------------------------------------
+
