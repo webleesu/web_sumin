@@ -1,0 +1,71 @@
+// c_10_dom_tab_menu2-2.js
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  * 시나리오
+  - 새로운 2021년에 해당하는 div를 생성 ( <div class="year_part></div> ")내부에 각 이벤트 내용을 담기
+  1. .year_part는 .content_inner 내용의 뒤에 생성하는 것이 아닌 앞에 생성
+  2. .year_part를 생성함과 동시, ( <h3>2021년도 이벤트</h3> )를 생성
+  3. h3뒤에 ( <ul class="event_particle"></ul> ) 생성
+  4. ul 내부에 li를 생성 및 각 기능에 따르는 추가 요소를 처리
+
+  <a href="" data-id="">
+    <h4 class="event_title"></h4>
+    <p class="event_narration"></p>
+    <dl class="date">
+      <dt class="blind">기간</dt>
+      <dd></dd>
+    </dl>
+    <dl class="event_check success">
+      <dt>이벤트 진행</dt>
+      <dd></dd>
+    </dl>
+  </a>
+
+  5. 내부에 들어가는 각 요소의 내용을 별도의 객체로 생성하여 담을 수 있게 처리
+  6. 상황에 맞게 조건을 보고 그에 다른 추가 기능을 제작
+  7. li의 내부에 존재하는 a를 클릭시 별도의 모달창이 나타나게 하여, 향후 추가 data를 불러와서 적용할 수 있도록 처리
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  */
+
+// -----------------------------------------------------
+// data : 
+var eventData = { heading : '2021년 이벤트'};
+
+
+// -----------------------------------------------------
+
+// =====================================================
+// 변수
+var elEventBox = document.querySelector('#eventBox');
+var elContentInner = elEventBox.querySelector('.content_inner');
+
+
+
+
+// =====================================================
+// 기능
+var mkYearPart = document.createElement('div');
+// var setYearPart = mkYearPart.setAttribute('class', 'year_part');
+mkYearPart.className = 'year_part';
+mkYearPart.innerHTML = '<h3>'+ eventData.heading +'</h3>';
+
+elContentInner.prepend(mkYearPart);
+
+// =====================================================
+// 함수
+
+// =====================================================
+// 이벤트
+
+
+// =====================================================
+// 첨부 : 
+  // el    : 요소(element)선택에 대한 변수
+  // make  : 요소 생성에 대한 변수
+  // check : 단순한 값을 판단하는 변수
+  // fn    : 함수를 선택하는 변수
+  // Pascal: 생성자 함수
+  // _     : 임시용 지역변수
+  // 대문자 : 'string'
+  //       : 기타
+
+// -----------------------------------------------------
