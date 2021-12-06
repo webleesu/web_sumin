@@ -6,8 +6,8 @@
 html, body {
   width: 100%;
   height: 100%;
-  font-family: "apple GD", "noto sans KR", "noto sans KR", "IBM Plex Sans KR", sans-serif;
-  font-weight: 300;
+  font-family: "noto sans KR", "noto sans KR", sans-serif;
+  font-weight: 100;
 }
 
 html, body,

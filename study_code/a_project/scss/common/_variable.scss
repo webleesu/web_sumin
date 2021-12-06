@@ -1,5 +1,10 @@
 // variable.scss
 
+// color =====================================
+$color_white: #ffffff;
+$color_red : #E13100;
+
+
 // color =========================
 $color_primary_01: #1a5d54;
 $color_primary_02: #834c33;
@@ -21,14 +26,13 @@ $line2 : 1px solid $color_primary_01;
 $line3 : 2px solid $color_primary_01;
 
 // font ===========================
-$font_family_en:"apple GD", "noto sans KR";
-$font_family_kr:"noto sans KR", "IBM Plex Sans KR";
+$font_family_en:"noto sans KR";
+$font_family_kr:"noto sans KR";
 $font_family_common:sans-serif;
-$font_weight_thin:300;
+$font_weight_thin:100;
 $font_weight_normal:400;
-$font_weight_bold:500;
-$font_weight_bolder:700;
-$font_weight: (300, 400, 500, 700);
+$font_weight_bold:700;
+$font_weight: (100, 400, 700);
 $font_size:(
   title2:40px,title3:36px,title4:28px,title5:22px,
   content1:22px, content2:18px, content3:16px, content4:12px,
@@ -40,3 +44,5 @@ $tablet : 600px;
 $laptop : 1024px;
 $pc:1440px;
 // $pcfull : 1920px;
+
+

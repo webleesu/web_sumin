@@ -30,10 +30,10 @@ html, body {
         background-position-y: 10px;
       }
   
-      .logo {
+      /* .logo {
         width: 170px; height: auto;
         margin-top: 10px;
-      }
+      } */
   
     #gnb {
       position: absolute; left: 0; right: 0;

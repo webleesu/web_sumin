@@ -1,0 +1,122 @@
+// headBox.scss
+
+@import '../common/mixin';
+@import '../common/variable';
+
+#headBox {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between;
+  width: 1280px; height: 150px;
+  padding: 30px 100px;
+  background-color: rgba($color_white, 0.8);
+  
+  @at-root h1 {
+    width: 170px; height: 60px;
+    margin-top: 30px;
+    a{ 
+      @include full;
+      @include img('logo-cubeme-text.png');
+      // background-position-y: 10px;
+      
+    }
+  } // h1
+
+  @at-root #gnb ul {
+    position: absolute; left: 0; right: 0;
+    display: flex; justify-content: space-between;
+    width: 500px; height: 40px;
+    margin: auto; margin-top: 50px;
+
+    li {
+      width: auto;
+      text-align: center; line-height: 40px;
+      font-size: 18px;
+    }
+  } // #gnb
+
+  @at-root .unb {
+    width: 300px; height: auto;
+
+    @at-root .unb_btn {
+      display: flex; justify-content: space-between;
+      width: auto; height: 30px;
+      margin: auto; margin-left: 40px; margin-bottom: 20px;
+      
+      li {
+        position: relative;
+        display: block;
+        width: auto; height: auto;
+        margin-right: 5px; padding-right: 5px;
+        font-size: 16px;
+        text-align: center; line-height: 20px;
+      }
+      li::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px; right: 0;
+        width:1px; height: 15px;
+        background-color: #999;
+      }
+      li:last-child::after { display: none;}
+
+      .language_img {
+        display: block;
+        width: 30px; height: 20px;
+        margin-left: 30px;
+        @include img('global_1.png');
+      }
+
+      .unb_language span {
+        display: none;
+        margin: 0; margin-bottom: 5px;
+        font-size: 14px;
+      }
+
+      .unb_language:hover span { display: block;}
+      .unb_language:focus span { display: block;}
+
+      .unb_btn a {
+        display: block;
+        text-align: center;
+      }
+      .unb_sign {color: $color_red;}
+
+    } // .unb_btn
+
+    @at-root .unb_search_area {
+      // float: left;
+      width: 200px; height: 30px;
+      margin-left: 100px;
+
+      @at-root .user_search {
+        // float: left;
+        position: relative;
+        width: 160px; height: 30px;
+        margin: auto; margin-right: 10px;
+        border-radius: 15px;
+        background-color: #ebebeb;
+
+        #search_bar {
+          width: 100%; height: 100%;
+          border-radius: 15px;
+          text-indent: 8px;
+        }
+
+        .unb_search_icon {
+          position: absolute;
+          top: 4px; right: 10px;
+          width: 20px; height: 20px;
+
+          button {
+            @include full;
+            margin-top: 4px;
+            @include img('search.png');
+          }
+        }
+      }
+    } // .unb_search_area
+  } // .unb
+
+
+} // #headBox
