@@ -1,0 +1,71 @@
+@charset "UTF-8";
+// main_v2.scss
+/* main_v2.css */
+
+@import '../common/reset.scss';
+@import '../common/common.scss';
+@import '../common/mixin';
+@import '../common/variable';
+
+html, body { color: #171717; }
+
+#wrap { width: 1280px; height: auto;}
+
+// #headBox
+#headBox {
+  position: fixed; top: 0; z-index: 100;
+  width: 1280px; height: 150px;
+  padding: 30px 100px;
+  background-color: rgba(#fff, 0.8);
+  h1 {
+    float: left;
+    width: 170px; height: 60px;
+    margin-top: 30px;
+    
+    & a { 
+      display: block;
+      width: 100%; height: 100%;
+      @include img($file:'logo-cubeme-text.png', $size: contain);
+      // background-position-y: 10px;
+    }
+  } // h1
+
+  @at-root #gnb {
+    display: flex; justify-content: space-between;
+    position: absolute; left: 0; right: 0;
+    float: left; 
+    width: 500px; height: 40px;
+    margin: auto; margin-top: 50px;
+
+    li { 
+      width: auto;
+      font-size: 18px; text-align: center; line-height: 40px;
+    }
+  } // #gnb
+
+  @at-root #unb {
+    float: right;
+    width: 300px; height: auto;
+
+    .unb_btn {
+      display: flex; justify-content: space-between;
+      float: left;
+      width: auto; height: 30px; margin: auto; margin-bottom: 20px;
+      & > li {
+        position: relative;
+        width: auto; height: auto;
+        font-size: 16px; font-weight: 400;
+        text-align: center; line-height: 20px;
+      }
+      & > li::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px; right: 0;
+        width:1px; height: 15px;
+        background-color: #999;
+      }
+      & > li:last-child::after { display: none;}
+    } // .unb_btn
+  } // #unb
+} // #headBox

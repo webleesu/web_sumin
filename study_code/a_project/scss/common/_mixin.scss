@@ -20,9 +20,9 @@
 }
 
 // image
-$imgPath:'../img/';
+$imgPath:'../../img/';
 
-@mixin img($file, $repeat:no-repeat, $position:50% 50%, $size:initial){
+@mixin img($file, $repeat:no-repeat, $position:50% 50%, $size:contain){
   background: {
     image: url(#{$imgPath}#{$file});
     repeat: $repeat;
