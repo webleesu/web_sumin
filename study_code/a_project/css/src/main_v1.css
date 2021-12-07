@@ -77,30 +77,38 @@ body {
     /* background-color: var(--color-sample1); */
   }
 
-  .view_before_btn {
-    position: absolute;
-    top: 50%; left: 0;
-    width: 50px; height: 50px;
-    margin-top: -25px;
-    background-color: var(--color-sample1);
-  }
-
-  .view_btn button { width: 100%; height: 100%;}
-  .view_btn button:hover { background-color: rgba(#171717, 0.5);}
-  .view_btn button:focus { outline: 2px solid #171717;}
-  
   .view_after_btn {
     position: absolute;
     top: 50%; right: 0;
     width: 50px; height: 50px;
     margin-top: -25px;
+  }
+
+  .view_before_btn {
+    position: absolute;
+    top: 50%; left: 0;
+    width: 50px; height: 50px;
+    margin-top: -25px;
     /* background-color: var(--color-sample1); */
+  }
+  
+  .view_btn button { width: 100%; height: 100%;}
+  .view_after_btn button {
     background-image: url('../../img/forward.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;
   }
-  
+  .view_before_btn button {
+    background-image: url('../../img/back.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+  }
+  .view_btn button:hover { transform: scale(1.3); transition: transform 300ms ease;}
+  .view_btn button:focus { border-radius: 0.25rem; outline: 3px solid #171717;}
+
+
   .view_num {
     position: absolute;
     left: 20px; bottom: 10px;
@@ -371,27 +379,40 @@ body {
     /* background-color: var(--color-sample1); */
   }
 
-    .awards_before_btn {
-      position: absolute;
-      bottom: 50%; left: 30px;
-      width: 70px; height: 70px;
-      background-color: var(--color-sample1);
-    }
-    .awards_before_btn button {width: 100%; height: 100%;}
-    
     .awards_after_btn {
       position: absolute;
-      bottom: 50%; right: 30px;
+      bottom: 50%; right: 20px;
       width: 70px; height: 70px;
-      background-color: var(--color-sample1);
     }
-    .awards_after_btn button {width: 100%; height: 100%;}
+    .awards_after_btn button {
+      width: 100%; height: 100%;
+      background-image: url('../../img/forward_orange.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+
+    .awards_before_btn {
+      position: absolute;
+      bottom: 50%; left: 20px;
+      width: 70px; height: 70px;
+    }
+    .awards_before_btn button {
+      width: 100%; height: 100%;
+      background-image: url('../../img/back_orange.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+    
+    .awards_btn button:hover { transform: scale(1.2); transition: transform 300ms ease; }
+    .awards_btn button:focus { border-radius: 0.25rem; outline: 3px solid #171717;}
 
     .awards_indicator {
       position: absolute;
       bottom: 20px; left: 0; right: 0;
       width: 220px; height: 20px;
-      background-color: var(--color-sample1);
+      /* background-color: var(--color-sample1); */
       margin: auto;
     }
   
@@ -399,40 +420,45 @@ body {
         float: left;
         width: 20px; height: 20px;
         border-radius: 100%;
-        background-color: var(--color-sample1);
+        background-color: #FFD9AD;
         margin-right: 30px;
       }
       .awards_circle:last-child { margin-right: 0;}
+      .awards_circle.on { background-color: #E17900;}
 
-      .awards_circle button { width: 100%; height: 100%;}
+      .awards_circle button { width: 100%; height: 100%; border-radius: 100%;}
+      .awards_circle button:hover { background-color: rgba(23, 23, 23, 0.2);}
+      .awards_circle button:focus { outline: 3px solid #171717;}
     
     .awards_main { 
+      display: flex; justify-content: space-between;
       width: 1160px; height: 220px;
       margin: auto;
     }
 
       .awards_before {
-        float: left;
+        /* float: left; */
         width: 160px; height: 160px;
         margin: auto;
-        margin-top: 30px; margin-right: 50px;
+        /* margin-top: 30px; margin-right: 50px; */
         background-color: var(--color-sample1);
       }
 
       .awards {
-        float: left;
+        /* float: left; */
         width: 220px; height: 220px;
-        margin-right: 40px;
+        /* margin-right: 40px; */
+        margin: 0 20px;
         background-color: var(--color-sample1);
       }
 
       .awra ds:last-child {margin-right: 0;}
 
       .awards_after {
-        float: left;
+        /* float: left; */
         width: 160px; height: 160px;
         margin: auto ;
-        margin-top: 30px;
+        /* margin-top: 30px; */
         background-color: var(--color-sample1);
       }
 
@@ -463,7 +489,7 @@ body {
       float: left;
       width: 190px; height: auto;
       margin-right: 12px;
-      background-color: var(--color-sample1);
+      /* background-color: var(--color-sample1); */
     }
 
     .sale_item:last-child {margin-right: 0;}
