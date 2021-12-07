@@ -1,0 +1,45 @@
+// a_01_js_modal.scss
+/* a_01_js_modal.css */
+@import '../common/mixin';
+
+#wrap {
+  width: 80%; height: auto;
+  margin: auto;
+}
+
+h1 { font-size: 1.2rem;}
+
+.img_area {
+  width: 80%; height: auto; min-height: 300px;
+  margin: auto;
+  .img_btn {
+    width: 100%; height: 400px;
+    margin: auto; margin-top: 30px;
+    border-radius: 0.5rem;
+    // background-image: url(../../);
+    @include img('img_01.jpg', $size: cover);
+    // background-color: #eee;
+  }
+  p { margin-top: 20px;}
+}
+
+.modal {
+  display: none;
+  position: fixed; top: 0; left: 0; z-index: 10;
+  width: 100vw; height: 100vh;
+  background-color: rgba(#333, 40%);
+  &.on { display: block;}
+  .modal_img {
+    position: absolute; 
+    top: calc(50% - 40%); 
+    left: calc(50% - 45%);
+    display: block;
+    width: 90%; height: 80%;
+    @include img('img_01.jpg', $size: contain);
+  }
+  .close {
+    position: relative; top: calc(50% - 40%); left: calc(50% + 45%); 
+    width: 10px; height: 10px;
+    font-size: 2rem;
+  }
+}

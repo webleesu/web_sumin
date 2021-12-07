@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- c_08_menu_stlye.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- font : 구글 폰트 - noto-sans-KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- ibm_plex -->
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/c_08_menu_stlye.css">
+
+  <!-- script -->
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>menu style</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">웹</a></h1>
+
+    <div class="head_area type1">
+      <h2>logo</h2>
+      <div class="navi">
+        <ul>
+          <li>
+            <div class="title_link"><a href="#">link_1</a></div>
+            <div class="sub_nav">
+              <a href="#">sub_link_1_01</a>
+              <a href="#">sub_link_1_02</a>
+              <a href="#">sub_link_1_03</a>
+              <a href="#">sub_link_1_04</a>
+            </div>
+          </li>
+          <li>
+            <div class="title_link"><a href="#">link_2</a></div>
+            <div class="sub_nav">
+              <a href="#">sub_link_2_01</a>
+              <a href="#">sub_link_2_02</a>
+              <a href="#">sub_link_2_03</a>
+              <a href="#">sub_link_2_04</a>
+            </div>
+          </li>
+          <li>
+            <div class="title_link"><a href="#">link_3</a></div>
+            <div class="sub_nav">
+              <a href="#">sub_link_3_01</a>
+              <a href="#">sub_link_3_02</a>
+              <a href="#">sub_link_3_03</a>
+              <a href="#">sub_link_3_04</a>
+            </div>
+          </li>
+          <li>
+            <div class="title_link"><a href="#">link_4</a></div>
+            <div class="sub_nav">
+              <a href="#">sub_link_4_01</a>
+              <a href="#">sub_link_4_02</a>
+              <a href="#">sub_link_4_03</a>
+              <a href="#">sub_link_4_04</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="head_area type2" hidden>
+      <h2>logo</h2>
+      <div class="navi">
+        <ul>
+          <li>
+            <div class="title_link"><a href="#">link_1</a></div>
+            <div class="sub_nav">
+              <a href="#">sub_link_1_01</a>
+              <a href="#">sub_link_1_02</a>
+              <a href="#">sub_link_1_03</a>
+              <a href="#">sub_link_1_04</a>
+            </div>
+          </li>
+          <li>
+            <div class="title_link"><a href="#">link_2</a></div>
+            <div class="sub_nav">
+              <a href="#">sub_link_2_01</a>
+              <a href="#">sub_link_2_02</a>
+              <a href="#">sub_link_2_03</a>
+              <a href="#">sub_link_2_04</a>
+            </div>
+          </li>
+          <li>
+            <div class="title_link"><a href="#">link_3</a></div>
+            <div class="sub_nav">
+              <a href="#">sub_link_3_01</a>
+              <a href="#">sub_link_3_02</a>
+              <a href="#">sub_link_3_03</a>
+              <a href="#">sub_link_3_04</a>
+            </div>
+          </li>
+          <li>
+            <div class="title_link"><a href="#">link_4</a></div>
+            <div class="sub_nav">
+              <a href="#">sub_link_4_01</a>
+              <a href="#">sub_link_4_02</a>
+              <a href="#">sub_link_4_03</a>
+              <a href="#">sub_link_4_04</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- // #wrap -->
+
+  <!-- script -->
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.js"></script>
+  <script src="https://unpkg.com/jquery-ui@1.13.0/ui/widget.js"></script>
+  <script>
+    // js : document.querySelector(선택자);
+    // jQuery : $(선택자);
+    
+    $('html,body').css({overflowX:'hidden'});
+
+    $('.navi').on('mouseenter', function(){
+      $('.sub_nav').stop().slideDown();
+    });
+
+    $('.navi').on('mouseleave', function(){
+      $('.sub_nav').stop().slideUp();
+    });
+  </script>
+</body>
+</html>

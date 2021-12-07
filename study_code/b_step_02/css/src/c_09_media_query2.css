@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* c_09_media_query2.css */
+
+body { background-color: #eee;}
+h2 {
+  width: 70%; height: 100px;
+  margin: auto;
+  background-color: #fda;
+}
+
+@media all and (min-width: 320px) and (max-width: 600px) {
+  body { background-color: #f06;}
+} /* @media (320px ~ 600px) */

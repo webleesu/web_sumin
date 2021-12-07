@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* b_11_figma_tab.css */
+
+.container { width: 1100px; height: auto; margin:auto;}
+
+/* ----------------------------------------- */
+#wrap {  width: 1440px; height: auto;}
+
+#headBox { 
+  width: 100%; height: 100px;
+  padding: 15px 170px;
+  background-color: #eee;
+}
+  h1 {
+    float: left;
+    width: 120px; height: 70px;
+    background-color: #ddd;
+  }
+
+  .navi_area {
+    float: right;
+    width: 530px; height: 70px;
+  }
+    .unb { 
+      float: right;
+      width: 270px; height: 26px;
+      margin-right: 10px;
+      padding: 3px 5px;
+    }
+      .unb li { 
+        float: left;
+        width: 50px; height: 20px;
+        margin-right: 20px;
+        font-size: 12px; color: #505050;
+        text-align: center;
+      }
+      .unb li:last-child { margin-right: 0;}
+    .gnb { 
+      float: right;
+      width: 535px; height: 35px;
+      padding: 5px;
+    }
+      .gnb li { 
+        position: relative;
+        float: left;
+        width: 79px; height: 25px;
+        margin-right: 10px;
+        padding-right: 10px;
+        font-size: 16px; color: #171717;
+        text-align: center; text-transform: capitalize;
+      }
+      .gnb li:nth-child(4) { text-transform: uppercase;}
+      .gnb li:last-child{ margin-right: 0; padding-right: 0;}
+      .gnb li::after {
+        position: absolute; top: 0; right: 0;
+        content: ""; display: block;
+        width: 1px; height: 24px;
+        background-color: #aaa;
+      }
+      .gnb li:last-child::after{
+        display: none;
+      }
+
+#contentBox { 
+  width: 100%; height: auto;
+
+}
+  .title_area { 
+    width: 100%; height: 250px; background-color: #ddd;
+    padding-top:92px; padding-bottom:17px;
+  }
+  .content_area {
+    width: 1100px; height: auto; min-height: 900px;
+    margin: 155px 170px;
+    background-color: #eee;
+  }
+    .tab_title {
+      width: 100%; height: 57px;
+      border-bottom: 1px solid #aaa;
+    }
+    .tab_title_list {
+      width: 700px; height: 36px;
+      margin: 0 auto 21px;
+    }
+    .tab_title_list li {
+      position: relative;
+      float: left;
+      width: auto; height: 36px;
+      margin-right: 43px; padding-right: 43px;
+      font-size: 22px; font-weight: 600;
+      text-align: center; text-transform: capitalize;
+      color: #757575;
+    }
+    .tab_title_list li:last-child {margin-right: 0; padding-right: 0;}
+
+    .tab_title_list li::after{
+      position: absolute; top: 0; right: 0;
+      content: ""; display: block;
+      width: 1px; height: 36px;
+      background-color: #aaa;
+    }
+    .tab_title_list li:last-child::after {display: none;}
+
+    .action {
+      border-radius: 3px;
+      background-color: #1A5D54;
+      color: #fff;
+    }
+
+  .menu_list {
+    width: 100%; height: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+    .menu_list > li {
+      width: 240px; height: 350px;
+      margin-right: 26px;
+      margin-bottom: 60px;
+      padding: 10px;
+      background-color: #fff;
+    }
+    .menu_list li:nth-child(4n) { margin-right: 0;}
+
+      .menu_item_img { 
+        width: 218px; height: 220px;
+        margin: auto; margin-bottom: 5px;
+        border-radius: 3px;
+        background-color: #ddd;
+      }
+      .menu_item_title {
+        width: 210px; height: 28px;
+        margin: auto; margin-bottom: 6px;
+        border-bottom: 1px solid #757575;
+        font-size: 20px; font-weight: 400;
+        color: #171717;
+        text-indent: 8px;
+        text-transform: capitalize;
+      }
+      .menu_item_detail {
+        width: 190px; height: 40px;
+        margin: auto;
+        font-size: 12px; color: #757575;
+      }
+      .menu_item_feature {
+        width: 200px; height: 22px;
+        padding-left: 10px;
+      }
+      .menu_item_feature > li {
+        float: left;
+        width: auto; height: 22px;
+        margin-right: 5px;
+        padding: 0 5px;
+        border-radius: 3px;
+        border: 1px solid #c4c4c4;
+        font-size: 12px; color: #757575;
+        line-height: 22px;
+      }
+      .feature_ice, .feature_hot, .feature_sale { text-transform: uppercase;}
+
+#footBox { 
+  width: 100%; height: 450px;
+  background-color: #171717;
+}

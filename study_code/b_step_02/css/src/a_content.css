@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* a_content.css */
+
+#wrap {
+  width: 800px; height: auto;
+  margin: auto;
+}
+
+.part {
+  width: 100%; height: auto;
+  margin: auto; margin-bottom: 30px;
+  padding: 2rem;
+  border-bottom: 1px solid #333;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem; font-weight: 700;
+}

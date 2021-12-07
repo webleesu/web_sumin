@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- b_03_form.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- font : 구글 폰트 - noto-sans-KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- ibm_plex -->
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_03_form.css">
+
+  <!-- script -->
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>form</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">웹</a></h1>
+    <hr>
+
+    <h2>form</h2>
+    <p>무언가를 입력, 선택, 자료를 전송하게 만드는 기능을 가진 요소</p>
+    <p>양방향 전송방식 - 입력 - 보내기 - 받아서 처리 - 결과를 피드백</p>
+    <p>검색, 로그인, 회원가입, 구매, 게시판</p>
+
+    <ol>
+      <li>검색하기 위해 필요한 단어/문장을 작성(글을 작성할 수 있는 영역)</li>
+      <li>전송 버튼을 클릭(a는 data를 보내는 능력x, data를 보내는 능력을 가진 버튼)</li>
+      <li>데이터를 전송받을 곳으로 전송(어디로 보낼지 체크, 공개/비공개/ ...)</li>
+      <li>전송받은 곳에서 무언가 수행(backend)</li>
+      <li>수행에 대한 결과를 피드백</li>
+      <li>피드백 받은 결과를 도출</li>
+    </ol>
+
+    <hr />
+
+    <div class="content_input_area">
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>각 영역별 기능 구분</legend>
+
+          <label for="userName">사용자 이름</label>
+          <input type="text" id="userName" value="" name="userName">
+
+          <label for="userPW">비밀번호</label>
+          <input type="password" id="userPW" value="" name="userPW">
+
+          <label for="userOld">나이(만)
+            <span class="blind">를 태어난 해를 기준으로 입력하세요.</span>
+          </label>
+          <input type="text" id="userOld" value="" name="userOld">
+
+          <input type="submit" value="확인">
+
+          <!-- 
+            userName : leesu
+            userGender : female
+            userOld : 25
+          -->
+
+        </fieldset>
+
+      </form>
+    </div>
+
+    <div class="part">
+      <div class="login_area">
+        <div class="id_area">
+          <div class="id_icon"></div>
+          <input type="text" id="userId" value="" name="userId" placeholder="아이디">
+        </div>
+
+        <div class="password_area">
+          <div class="pw_icon"></div>
+          <input type="password" id="userPw" value="" name="userPw" placeholder="비밀번호">
+        </div>
+
+        <div class="login_stay">
+          <input type="checkbox" id="loginCheck">
+          <span class="login_stay_text">로그인 상태 유지</span>
+        </div>
+
+        <input type="submit" id="userLogin" value="로그인">
+      </div>
+      <ul class="user_find">
+        <li class="pw_find">비밀번호 찾기</li>
+        <li class="id_find">아이디 찾기</li>
+        <li class="sign_up">회원가입</li>
+      </ul>
+    </div>
+
+
+  </div><!-- // #wrap -->
+
+  <!-- script -->
+  <script>
+  </script>
+</body>
+</html>

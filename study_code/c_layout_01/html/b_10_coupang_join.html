@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- b_10_coupang_join.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- font : 구글 폰트 - noto-sans-KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- ibm_plex -->
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_10_coupang_join.css">
+
+  <!-- script -->
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>coupang join</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html"></a></h1>
+
+    <form action="#" method="post">
+      <!-- input =================================================== -->
+      <fieldset class="join_input_area">
+        <legend class="blind">회원정보 입력란</legend>
+        <h2>회원정보를 입력해주세요.</h2>
+        <ul class="join_input_wrap clearfix">
+          <li class="id_input_area error">
+            <label for="userId"></label>
+            <input type="email" name="user__id" id="userId" value="" placeholder="아이디(이메일)" required />
+            <i class="validator"></i>
+          </li>
+          <li class="error_id_message">
+            <span class="error_id_none">이메일을 입력하세요</span>
+            <span class="error_id_form">이메일을 올바르게 입력해주세요</span>
+          </li>
+          
+          <li class="pw_input_area">
+            <label for="userPw"></label>
+            <input type="password" name="user__pw" id="userPw" value="" placeholder="비밀번호" required />
+            <i class="validator"></i>
+          </li>
+          <li class="error_pw_message">
+            <span class="error_pw_mix">영문/숫자/특수문자 2가지 이상 조합 (8~20자)
+            </span>
+            <span class="error_pw_continue">3개 이상 연속되거나 동일한 문자/숫자 제외
+            </span>
+            <span class="error_pw_id">아이디(이메일) 제외</span>
+          </li>
+
+          <li class="pw_re_input_area">
+            <label for="userRePw"></label>
+            <input type="password" name="user__re__pw" id="userRePw" value="" placeholder="비밀번호 확인" required />
+            <i class="validator"></i>
+          </li>
+          <li class="error_pw_re_message">
+            <span class="error_pw_re_again">확인을 위해 새 비밀번호를 다시 입력해주세요.</span>
+          </li>
+
+          <li class="name_input_area validator_right">
+            <label for="userName"></label>
+            <input type="text" name="user__name" id="userName" value="" placeholder="이름" required />
+            <i class="validator"></i>
+          </li>
+          <li class="error_name_message">
+            <span class="error_name">이름을 정확히 입력하세요.</span>
+          </li>
+
+          <li class="phone_input_area error">
+            <label for="userPhone"></label>
+            <input type="tel" name="user__phone" id="userPhone" value="" placeholder="휴대폰 번호" required />
+            <i class="validator"></i>
+          </li>
+          <li class="error_phone_message">
+            <span class="error_phone">전화번호를 정확히 입력하세요.</span>
+          </li>
+        </ul>
+        <hr>        
+      </fieldset>
+      <!-- agree =========================================== -->
+      <fieldset class="agree_area">
+        <legend class="blind">쿠팡 서비스약관 동의</legend>
+        <h2>쿠팡 서비스약관에 동의해주세요</h2>
+        <div class="check_all_area">
+          <input type="checkbox" id="check_all">
+          <label for="check_all">모두 동의합니다.</label>
+        </div>
+        <div class="check_all_message">
+          <span>동의에는 필수 및 선택 목적(광고성 정보 수신 포함)에 대한 동의가 포함되어 있으며, 선택 목적의 동의를 거부하시는 경우에도 서비스 이용이 가능합니다.</span>
+        </div>
+
+        <div class="agree_check_area">
+          <input type="checkbox" id="agree_age">
+          <label for="agree_age">[필수] 만 14세 이상입니다</label>
+        </div>
+      </fieldset>
+    </form>
+  </div><!-- // #wrap -->
+
+  <!-- script -->
+  <script>
+  </script>
+</body>
+</html>

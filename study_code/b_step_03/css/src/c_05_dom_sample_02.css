@@ -1,0 +1,44 @@
+/* c_05_dom_sample_02.css */
+#wrap {
+  width: 95%;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+}
+
+h1 {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #777;
+}
+
+#viewBox {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  border: 1px solid #79f;
+  padding: 1rem;
+}
+#viewBox .slide_area {
+  width: 100%;
+  height: auto;
+  background-color: #ddf;
+}
+#viewBox .slide_area > div {
+  height: 300px;
+  padding: 1rem;
+}
+#viewBox .slide_area > div:nth-child(1) {
+  background-color: rgba(55, 180, 249, 0.5);
+}
+#viewBox .slide_area > div:nth-child(2) {
+  background-color: rgba(250, 147, 191, 0.5);
+}
+#viewBox .slide_area > div:nth-child(3) {
+  background-color: rgba(161, 40, 213, 0.5);
+}
+#viewBox .slide_area > div:nth-child(4) {
+  background-color: rgba(223, 40, 17, 0.5);
+}
+
+/*# sourceMappingURL=c_05_dom_sample_02.css.map */

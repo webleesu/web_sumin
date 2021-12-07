@@ -1,0 +1,32 @@
+/* b_03_scss_mixin_function.css */
+#wrap {
+  background-image: url(../../img/file.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial;
+}
+
+p {
+  width: 100px;
+  width: 6.25rem;
+  height: 3.125rem;
+}
+
+.div1 {
+  width: 11.1111111111vw;
+}
+
+.box2 {
+  width: 320px;
+  width: 20rem;
+  height: 640px;
+  height: 40rem;
+  border-radius: 10px;
+  border-radius: 0.625rem;
+  padding: 10px;
+  padding: 0.625rem;
+  margin: 30px;
+  margin: 1.875rem;
+}
+
+/*# sourceMappingURL=b_03_scss_mixin_function.css.map */

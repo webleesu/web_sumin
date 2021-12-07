@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* c_10_responsive.css */
+/* base */
+
+@import url("../c_10_rwd/c_10_base.css");
+@import url("../c_10_rwd/c_10_smartphone.css");
+@import url("../c_10_rwd/c_10_tablet.css");
+@import url("../c_10_rwd/c_10_pc.css");

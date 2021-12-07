@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- b_01_video.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- font : 구글 폰트 - noto-sans-KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="../fonts/fontAwesome/css/all.min.css">
+  <!-- ibm_plex -->
+  <link rel="stylesheet" href="../fonts/ibm_Plex/IBMPlex.css">
+  
+  <!-- css -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_01_video.css">
+
+  <!-- script -->
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <title>video</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <h1><a href="./a_content.html">웹</a></h1>
+
+    <div class="part">
+      <h2>영상첨부</h2>
+
+      <div class="movie">
+        <video class="movie_area" volum="0" muted controls loop preload poster="../multi/video/water-g922a17260_1920.jpg">
+          <source src="../multi/video/Dog-73249.webm" type="video/webm">
+          <source src="../multi/video/Dog-73249.ogg" type="video/ogg">
+          <source src="../multi/video/Dog-73249.mp4" type="video/mp4">
+          <p>
+            현재 사용하고 계신 브라우저는 영상을 지원하지 않습니다.<br>
+            <a href="http://google.com/chrome">최신 브라우저</a>를 이용하여 주세요
+          </p>
+        </video>
+      </div>
+
+    
+    </div>
+    <div class="part">
+      <h2>iframe - 외부문서 불러오기</h2>
+      <div class="movie">
+        <iframe src="https://www.youtube.com/embed/QCsbVXxY8jw" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div><!-- // #wrap -->
+
+  <!-- script -->
+  <script>
+  </script>
+</body>
+</html>

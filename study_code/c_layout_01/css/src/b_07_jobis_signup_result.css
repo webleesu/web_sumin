@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* b_07_jobis_signup_result.css */
+
+#wrap {  width: 1200px; height: auto; color: #333;}
+h1 { width: 100%; height: 50px; padding: 1rem;}
+h1 > a { display: block; width: 70px; height: 100%; color: #325dff; font-size: 2rem;}
+
+
+#signUp {
+  width: 500px; height: auto; 
+  margin: auto; margin-top: 100px; 
+  padding: 5px;
+}
+
+h2 { 
+  width: 100%; height: auto; 
+  margin-bottom: 25px;
+  font-size: 22px;
+}
+
+.sign_content {  width: 100%; height: auto; min-height: 500px;}
+
+/* ----------------------------------------- */
+.make_account {
+  width: 100%; height: 355px;
+  /* background-color: #eee; */
+}
+
+  .input_text {
+    width: 100%; height: 192px;
+    margin-bottom: 20px;
+  }
+
+  .input_text ul { width: 100%; height: auto;}
+  .input_text li { 
+    width: 100%; height: 40px; 
+    margin-bottom: 0.75rem; 
+    
+    /* padding: 0.5rem 0;
+    border: 1px solid #777;
+    border-radius: 0.3rem;
+    text-indent: 0.5rem; color: #676767;
+    background-color: #eee; */
+  }
+  .input_text li:last-child {margin-bottom: 0;}
+
+  .input_text input {
+    width: 100%; height: 100%; 
+    padding: 0.5rem 0; box-sizing: border-box;
+    border: 1px solid #777;
+    border-radius: 0.3rem;
+    text-indent: 0.5rem; color: #676767;
+    background-color: #eee;
+  }
+
+  .make_btn {
+    width: 100%; height: 40px;
+    padding: 1rem 0; box-sizing: content-box;
+  }
+  .make_btn > button {
+    width: 100%; height: 100%; 
+    background-color: #325dff; transition: all 200ms ease;
+    border-radius: 0.3rem; box-shadow: 0 0.3rem 0.7rem rgba(50, 94, 255, 0.616);
+    color: #fff; font-size: 1rem; font-weight: 500;
+  }
+
+  .make_btn > button:hover { 
+    transform: translateY(-0.3rem); 
+    background-color: #4f75ff; color: #171717;
+    box-shadow: 0 0.3rem 0.7rem rgba(50, 94, 255, 0.616);
+  }
+  .make_btn > button:focus { 
+    outline: 3px solid #22367e; font-size: 1.3rem;
+  }
+
+/* ----------------------------------------- */
+
+p { 
+  width: 100%; height: auto;
+  padding: 15px; font-size: 14px;
+}
+p > a { font-size: 16px; color: #325dff; font-weight: 500;}
+.sign_content > p:last-of-type { text-align: center;}

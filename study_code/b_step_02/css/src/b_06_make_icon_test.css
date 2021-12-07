@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* b_06_make_icon_test.css */
+
+#wrap {
+  width: 500px; height: auto;
+  margin: auto;
+}
+
+.lens {
+  color: #e9a0ff;
+  font-size: 10rem;
+}
+
+.language {
+  color: #131313;
+  font-size: 10rem;
+}

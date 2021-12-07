@@ -1,0 +1,17 @@
+/* Error: Undefined operation "#999 + #fa0".
+ *    ,
+ * 20 |   background-color:rgba($gray + #fa0, 0.5);
+ *    |                         ^^^^^^^^^^^^
+ *    '
+ *   scss\src\b_01_scss_basic.scss 20:25  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined operation "#999 + #fa0".\a    \2577 \a 20 \2502    background-color:rgba($gray + #fa0, 0.5);\d\a    \2502                          ^^^^^^^^^^^^\a    \2575 \a   scss\\src\\b_01_scss_basic.scss 20:25  root stylesheet';
+}

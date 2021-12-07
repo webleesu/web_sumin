@@ -1,0 +1,32 @@
+// b_03_scss_mixin_function.scss
+/* b_03_scss_mixin_function.css */
+
+@import "../_common/mixin";
+// @import url(); // css - css파일을 별도로 분리하여 참조하는 기능
+// @import ; // scss - scss파일을 불러와서 css변환시 1개의 파일로 결합
+
+
+#wrap {
+  @include bgImg("file.png");
+}
+
+
+p{
+  @include unit(width, 100);
+  height: rem(50);
+}
+
+$device: 360;
+.div1 {
+  width: vw(40);
+}
+
+
+.box2 {
+  @include unit(width, 320);
+  @include unit(height, 640);
+  @include unit(border-radius, 10);
+  @include unit(padding, 10);
+  @include unit(margin, 30);
+
+}
