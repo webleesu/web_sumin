@@ -2,6 +2,7 @@
 /* component.css */
 html, body {
   color: #171717;
+  font-weight: 400;
 }
 
 
@@ -76,7 +77,7 @@ html, body {
         width: auto;  height: auto;
         margin-right: 5px;
         padding-right: 5px;
-        font-size: 16px; font-weight: 400;
+        font-size: 16px;
         text-align: center; line-height: 20px;
       }
       .unb_btn li:after,
@@ -106,6 +107,7 @@ html, body {
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 50% 50%;
+        cursor: pointer;
       }
       .unb_language span {
         display: none;
@@ -137,13 +139,14 @@ html, body {
         width: 160px; height: 30px;
         border-radius: 15px;
         margin: auto; margin-right: 10px;
-        background-color: #EBEBEB;
+        /* background-color: #ebebeb; */
       }
   
         #search_bar {
           width: 160px; height: 30px;
           border-radius: 15px;
           text-indent: 8px;
+          background-color: #ebebeb;
         }
   
         .unb_search_icon { 

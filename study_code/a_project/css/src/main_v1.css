@@ -85,13 +85,20 @@ body {
     background-color: var(--color-sample1);
   }
 
+  .view_btn button { width: 100%; height: 100%;}
+  .view_btn button:hover { background-color: rgba(#171717, 0.5);}
+  .view_btn button:focus { outline: 2px solid #171717;}
   
   .view_after_btn {
     position: absolute;
     top: 50%; right: 0;
     width: 50px; height: 50px;
     margin-top: -25px;
-    background-color: var(--color-sample1);
+    /* background-color: var(--color-sample1); */
+    background-image: url('../../img/forward.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
   }
   
   .view_num {
@@ -119,6 +126,7 @@ body {
       width: calc(100% / var(--view-len));
       height: 100%;
     }
+    .view_content a { display: block; width: 100%; height: 100%;}
 
     .view_content_01 { 
       background-color: #9e728c77;
@@ -149,6 +157,7 @@ body {
       margin: auto;
       margin-bottom: 5px;
     }
+  .side_view a { display: block; width: 100%; height: 100%;}
 
     .side_view:last-child {margin-bottom: 0;}
 
@@ -176,9 +185,11 @@ body {
 
     .best_item:last-child { margin-right: 0;}
 
+    .best_item a { display: block; width: 100%; height: 100%;}
+
       .best_img {
         width: 320px; height: 320px;
-        background-color: rgb(127, 98, 255);
+        background-color: rgb(127, 98, 255, 0.5);
       }
 
       .best_text {
@@ -292,6 +303,8 @@ body {
 
     .challenge:last-child { margin-right: 0; }
 
+    .challenge a { display: block; width: 100%; height: 100%;}
+
 
 /* #eventBox
   =================================================== */
@@ -313,7 +326,7 @@ body {
       margin: auto; margin-right: 20px;
       /* background-color: var(--color-sample1); */
     }
-
+    .event a { display: block; width: 100%; height: 100%;}
       .event_img {
         width: 320px; height: 350px;
         background-color: var(--color-sample1);
@@ -455,6 +468,8 @@ body {
 
     .sale_item:last-child {margin-right: 0;}
 
+    .sale_item a { display: block; width: 100%; height: 100%;}
+
       .sale_img {
         width: 190px; height: 160px;
         background-color: var(--color-sample1);
@@ -500,9 +515,11 @@ body {
   padding-top: 30px;
 }
 
-  .magazine{
+  .magazine_img{
     width: 90%; height: 90%;
     margin: auto;
     background-color: var(--color-sample1);
   }
+
+  .magazine_img a { display: block; width: 100%; height: 100%;}
 
