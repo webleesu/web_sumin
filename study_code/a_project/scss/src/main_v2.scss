@@ -5,7 +5,13 @@
 @import '../common/mixin';
 @import '../common/variable';
 
-html, body { color: #171717; }
+html, body { color: #171717; font-weight: 400;}
 
-#wrap { width: 1280px; height: auto;}
+#wrap { width: 100%; height: auto;}
 @import '../common/headBox';
+
+#viewBox {
+  width: 100%; height: 600px;
+  margin-top: 150px;
+  padding: 20px 50px;
+}

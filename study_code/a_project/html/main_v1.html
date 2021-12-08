@@ -14,12 +14,13 @@
   <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
-  <link rel="stylesheet" href="../css/common/component.css">
-  <link rel="stylesheet" href="../css/src/main_v1.css">
-  <!-- <link rel="stylesheet" href="../css/src/main_v2.css"> -->
+  <!-- <link rel="stylesheet" href="../css/common/component.css"> -->
+  <!-- <link rel="stylesheet" href="../css/src/main_v1.css"> -->
+  <!-- <link rel="stylesheet" href="../css/src/main.css"> -->
+  <link rel="stylesheet" href="../css/src/main_v2.css">
 
   <!-- js -->
-  <script src="../js/common/modernizr-custom.js"></script>
+  <!-- <script src="../js/common/modernizr-custom.js"></script> -->
 
   <title>cubeme</title>
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
@@ -52,10 +53,10 @@
           <h3 class="blind">사용자 네비게이션</h3>
           <ul class="unb_btn">
             <li class="unb_language" tabindex="0">
-              <div class="language_img"></div>
-              <span><a href="#">한국어</a></span>
-              <span><a href="#">ENGLISH</a></span>
-              <span><a href="#">中國語</a></span>
+              <div class="language_img" tabindex="0"></div>
+              <a href="#"><span>한국어</span></a>
+              <a href="#"><span>ENGLISH</span></a>
+              <a href="#"><span>中國語</span></a>
             </li>
             <li class="unb_sign"><a href="#">회원가입</a></li>
             <li class="unb_login"><a href="#">로그인</a></li>
@@ -72,13 +73,29 @@
               <div class="unb_search_icon">
                 <button type="button"></button>
               </div>
-            </div>
+            </div> <!-- // .unb_search -->
+
             <div class="unb_cart">
               <a href="#"></a>
             </div>
           </div>
         </nav>
+      </nav> <!-- // #navigation -->
+
+      <nav id="hand_nav">
+        <h2 class="blind">navigation</h2>
+        <div class="hand_language" tabindex="0">
+          <ul>
+            <li><a href="#"><span>한국어</span></a></li>
+            <li><a href="#"><span>ENGLISH</span></a></li>
+            <li><a href="#"><span>中國語</span></a></li>
+          </ul>
+        </div>
+        <button type="button" class="hand_search"></button>
+        <button type="button" class="hand_cart"></button>
+        <button type="button" class="hand_menu"></button>
       </nav>
+      
     </header> <!-- // #headBox-->
 
 

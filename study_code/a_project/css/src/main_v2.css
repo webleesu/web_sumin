@@ -1,10 +1,11 @@
 /* main_v2.css */
 html, body {
   color: #171717;
+  font-weight: 400;
 }
 
 #wrap {
-  width: 1280px;
+  width: 100%;
   height: auto;
 }
 
@@ -16,174 +17,342 @@ html, body {
   z-index: 100;
   display: flex;
   justify-content: space-between;
-  width: 1280px;
+  align-items: flex-end;
+  width: 100%;
   height: 150px;
   padding: 30px 100px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-h1 {
-  width: 170px;
-  height: 60px;
-  margin-top: 30px;
+@media all and (max-width: 1279px) {
+  h1 {
+    width: 170px;
+    height: 40px;
+  }
+  h1 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/logo-cubeme-text.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  h1 a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  #headBox #navigation {
+    display: none;
+  }
+  #headBox #hand_nav {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+    height: 40px;
+  }
+  .hand_language {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../img/global_1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .hand_language > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .hand_language ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .hand_language ul li {
+    margin-bottom: 5px;
+  }
+  .hand_language a {
+    display: none;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+  }
+  .hand_language:hover ul {
+    display: block;
+  }
+  .hand_language:focus ul {
+    display: block;
+  }
+
+  #headBox #hand_nav .hand_search {
+    width: 40px;
+    height: 40px;
+    background-image: url(../../img/search.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  #headBox #hand_nav .hand_search > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #headBox #hand_nav .hand_cart {
+    width: 40px;
+    height: 40px;
+    background-image: url(../../img/cart.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  #headBox #hand_nav .hand_cart > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  #headBox #hand_nav .hand_menu {
+    width: 40px;
+    height: 40px;
+    background-image: url(../../img/menu.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  #headBox #hand_nav .hand_menu > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
-h1 a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../img/logo-cubeme-text.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-}
-h1 a > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
+@media all and (min-width: 1280px) {
+  h1 {
+    width: 170px;
+    height: 60px;
+  }
+  h1 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/logo-cubeme-text.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  h1 a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  #headBox #naviagtion {
+    display: block;
+  }
+  #headBox #hand_nav {
+    display: none;
+  }
+  #gnb ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 40px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  #gnb ul li {
+    width: auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+  }
+
+  .unb {
+    width: 300px;
+    height: auto;
+  }
+  .unb_btn {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 30px;
+    margin: auto;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  .unb_btn li {
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+  }
+  .unb_btn li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    width: 1px;
+    height: 15px;
+    background-color: #999;
+  }
+  .unb_btn li:last-child::after {
+    display: none;
+  }
+  .unb_btn .language_img {
+    display: block;
+    width: 30px;
+    height: 20px;
+    margin-left: 30px;
+    background-image: url(../../img/global_1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .unb_btn .language_img > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .unb_btn .unb_language span {
+    display: none;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .unb_btn .unb_language:hover span {
+    display: block;
+  }
+  .unb_btn .unb_language:focus span {
+    display: block;
+  }
+  .unb_btn .unb_btn a {
+    display: block;
+    text-align: center;
+  }
+  .unb_btn .unb_sign {
+    color: #E13100;
+  }
+
+  .unb_search_area {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    margin: auto;
+    margin-right: 10px;
+  }
+  .unb_search {
+    position: relative;
+    width: 160px;
+    height: 30px;
+    margin: auto;
+    margin-right: 10px;
+    border-radius: 15px;
+  }
+  .unb_search #search_bar {
+    width: 160px;
+    height: 30px;
+    border-radius: 15px;
+    text-indent: 8px;
+    background-color: #ebebeb;
+  }
+  .unb_search .unb_search_icon {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .unb_search .unb_search_icon button {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/search.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .unb_search .unb_search_icon button > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .unb_cart {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+    margin-top: 3px;
+  }
+  .unb_cart a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/cart.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .unb_cart a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
 
-#gnb ul {
-  position: absolute;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 500px;
-  height: 40px;
-  margin: auto;
-  margin-top: 50px;
-}
-#gnb ul li {
-  width: auto;
-  text-align: center;
-  line-height: 40px;
-  font-size: 18px;
-}
-
-.unb {
-  width: 300px;
-  height: auto;
-}
-.unb_btn {
-  display: flex;
-  justify-content: space-between;
-  width: auto;
-  height: 30px;
-  margin: auto;
-  margin-left: 40px;
-  margin-bottom: 20px;
-}
-.unb_btn li {
-  position: relative;
-  display: block;
-  width: auto;
-  height: auto;
-  margin-right: 5px;
-  padding-right: 5px;
-  font-size: 16px;
-  text-align: center;
-  line-height: 20px;
-}
-.unb_btn li::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 3px;
-  right: 0;
-  width: 1px;
-  height: 15px;
-  background-color: #999;
-}
-.unb_btn li:last-child::after {
-  display: none;
-}
-.unb_btn .language_img {
-  display: block;
-  width: 30px;
-  height: 20px;
-  margin-left: 30px;
-  background-image: url(../../img/global_1.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-}
-.unb_btn .language_img > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-.unb_btn .unb_language span {
-  display: none;
-  margin: 0;
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-.unb_btn .unb_language:hover span {
-  display: block;
-}
-.unb_btn .unb_language:focus span {
-  display: block;
-}
-.unb_btn .unb_btn a {
-  display: block;
-  text-align: center;
-}
-.unb_btn .unb_sign {
-  color: #E13100;
-}
-
-.unb_search_area {
-  width: 200px;
-  height: 30px;
-  margin-left: 100px;
-}
-.user_search {
-  position: relative;
-  width: 160px;
-  height: 30px;
-  margin: auto;
-  margin-right: 10px;
-  border-radius: 15px;
-  background-color: #ebebeb;
-}
-.user_search #search_bar {
+#viewBox {
   width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  text-indent: 8px;
-}
-.user_search .unb_search_icon {
-  position: absolute;
-  top: 4px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-}
-.user_search .unb_search_icon button {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin-top: 4px;
-  background-image: url(../../img/search.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-}
-.user_search .unb_search_icon button > span {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  height: 600px;
+  margin-top: 150px;
+  padding: 20px 50px;
 }
 
 /*# sourceMappingURL=main_v2.css.map */
