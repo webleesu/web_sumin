@@ -210,18 +210,18 @@ html, body {
     margin-left: 40px;
     margin-bottom: 20px;
   }
-  .unb_btn li {
+  .unb_btn > li {
     position: relative;
     display: block;
     width: auto;
     height: auto;
-    margin-right: 5px;
-    padding-right: 5px;
+    margin-right: 8px;
+    padding-right: 8px;
     font-size: 16px;
     text-align: center;
     line-height: 20px;
   }
-  .unb_btn li::after {
+  .unb_btn > li::after {
     content: "";
     display: block;
     position: absolute;
@@ -231,11 +231,11 @@ html, body {
     height: 15px;
     background-color: #999;
   }
-  .unb_btn li:last-child::after {
+  .unb_btn > li:last-child::after {
     display: none;
   }
-  .unb_btn .language_img {
-    display: block;
+  .unb_btn .unb_language {
+    position: relative;
     width: 30px;
     height: 20px;
     margin-left: 30px;
@@ -244,7 +244,7 @@ html, body {
     background-position: 50% 50%;
     background-size: contain;
   }
-  .unb_btn .language_img > span {
+  .unb_btn .unb_language > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -253,22 +253,30 @@ html, body {
     height: 0;
     overflow: hidden;
   }
-  .unb_btn .unb_language span {
+  .unb_lauguage_area {
     display: none;
-    margin: 0;
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: -50px;
+    width: 100px;
+    height: auto;
+    background-color: #efefef;
+  }
+  .unb_lauguage_area li {
+    margin: auto;
     margin-bottom: 5px;
     font-size: 14px;
   }
-  .unb_btn .unb_language:hover span {
+  .unb_lauguage_area li a {
     display: block;
+    width: 100%;
+    height: 100%;
   }
-  .unb_btn .unb_language:focus span {
-    display: block;
+  .unb_lauguage_area li a:hover {
+    background-color: #ddd;
   }
-  .unb_btn .unb_btn a {
-    display: block;
-    text-align: center;
-  }
+
   .unb_btn .unb_sign {
     color: #E13100;
   }
@@ -346,6 +354,88 @@ html, body {
     height: 0;
     overflow: hidden;
   }
+}
+
+#footBox {
+  width: 100%;
+  height: 500px;
+  padding: 70px 0;
+  background-color: #1c1c1c;
+}
+.foot_top_area {
+  display: flex;
+  justify-content: space-between;
+  width: 93.75%;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.foot_top_area h2 {
+  width: 112px;
+  height: 30px;
+  background-image: url(../../img/footer-logo-text.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.foot_top_area h2 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.foot_top_area .foot_top_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: 30px;
+  font-size: 16px;
+  text-align: left;
+  color: #ddd;
+}
+.foot_top_area .foot_top_btn > div {
+  margin-right: 20px;
+  line-height: 30px;
+}
+.foot_top_area .foot_top_btn > div:last-child {
+  margin-right: 0;
+}
+
+.foot_main_area {
+  position: relative;
+  width: 93.75%;
+  height: 300px;
+  margin: auto;
+}
+.foot_main_area .foot_main_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  height: 30px;
+  font-size: 16px;
+  text-align: left;
+  color: #ddd;
+}
+.foot_main_area .foot_main_btn li {
+  position: relative;
+}
+.foot_main_area .foot_main_btn li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 3px;
+  height: 3px;
+  background-color: #ddd;
+}
+.foot_main_area .foot_main_btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #viewBox {

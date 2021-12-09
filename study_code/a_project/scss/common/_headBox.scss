@@ -101,15 +101,15 @@
         width: auto; height: 30px;
         margin: auto; margin-left: 40px; margin-bottom: 20px;
         
-        li {
+        &>li {
           position: relative;
           display: block;
           width: auto; height: auto;
-          margin-right: 5px; padding-right: 5px;
+          margin-right: 8px; padding-right: 8px;
           font-size: 16px;
           text-align: center; line-height: 20px;
         }
-        li::after {
+        &>li::after {
           content: "";
           display: block;
           position: absolute;
@@ -117,28 +117,31 @@
           width:1px; height: 15px;
           background-color: #999;
         }
-        li:last-child::after { display: none;}
+        &>li:last-child::after { display: none;}
   
-        .language_img {
-          display: block;
+        .unb_language {
+          position: relative;
           width: 30px; height: 20px;
           margin-left: 30px;
           @include img('global_1.png');
         }
-  
-        .unb_language span {
+        @at-root .unb_lauguage_area {
           display: none;
-          margin: 0; margin-bottom: 5px;
-          font-size: 14px;
-        }
-  
-        .unb_language:hover span { display: block;}
-        .unb_language:focus span { display: block;}
-  
-        .unb_btn a {
-          display: block;
-          text-align: center;
-        }
+          position: absolute; z-index: 10; top: 30px; left: -50px;
+          width: 100px; height: auto;
+          background-color: #efefef;
+
+          li {
+            margin: auto; margin-bottom: 5px;
+            font-size: 14px;
+            a {
+              @include full;
+              &:hover { background-color: #ddd;}
+            }
+          }
+
+        } // .unb_lauguage_area
+        
         .unb_sign {color: $color_red;}
   
       } // .unb_btn
