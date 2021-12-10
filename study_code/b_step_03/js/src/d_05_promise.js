@@ -53,13 +53,17 @@ console.log( valueReusult );
 var fnDataValue = new Promise(function (resolve, reject) {
   setTimeout(function () {
     resolve('success!');
+    reject('내용이 실패!!!');
   }, 500);
 });
 fnDataValue.then(function (resolve) {
-  // console.log( resolve );
-  return '성공하였습니다.';
+  return '성공';
+}).catch(function (error) {
+  return '실패';
 }).then(function (data) {
-  console.log(data);
+  return data + ' 하였습니다.';
+}).then(function (data) {
+  return console.log(data);
 }); // promise 기능 수행 후
 // 다음을 수행
 // 실행 컨텍스트 : 브라우저에서 실행되는 순서를 파악하고 처리하는 형태
