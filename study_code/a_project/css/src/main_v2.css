@@ -673,10 +673,97 @@ html, body {
   }
 }
 #viewBox {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 600px;
   margin-top: 150px;
   padding: 20px 50px;
+}
+.view_area {
+  position: relative;
+  width: 750px;
+  height: 550px;
+  background-color: #eee;
+}
+.view_area .view_btn {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 50px;
+  margin: -25px;
+}
+.view_area .view_btn > div {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+}
+.view_area .view_btn .view_after_btn {
+  right: 0;
+  background-image: url(../../img/forward.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.view_area .view_btn .view_after_btn > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.view_area .view_btn .view_before_btn {
+  left: 0;
+  background-image: url(../../img/back.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.view_area .view_btn .view_before_btn > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.view_area .view_btn button {
+  width: 100%;
+  height: 100%;
+}
+.view {
+  overflow: hidden;
+  width: 750px;
+  height: 550px;
+}
+.view .view_in_wrap {
+  width: 500%;
+  height: 100%;
+}
+.view .view_in_wrap .view_content {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+.view .view_in_wrap .view_content_01 {
+  background-color: #9e728c77;
+}
+.view .view_in_wrap .view_content_02 {
+  background-color: #FE5AE677;
+}
+.view .view_in_wrap .view_content_03 {
+  background-color: #BCCCD477;
+}
+.view .view_in_wrap .view_content_04 {
+  background-color: #5DD95977;
+}
+.view .view_in_wrap .view_content_05 {
+  background-color: #F9495D77;
 }
 
 /*# sourceMappingURL=main_v2.css.map */

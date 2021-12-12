@@ -12,7 +12,77 @@ html, body { color: #171717; font-weight: 400;}
 @import '../common/footBox';
 
 #viewBox {
+  display: flex; justify-content: space-between;
   width: 100%; height: 600px;
   margin-top: 150px;
   padding: 20px 50px;
-}
+  
+
+  @at-root .view_area {
+    position: relative;
+    width: 750px; height: 550px;
+    background-color: #eee;
+    
+    .view_btn {
+      position: absolute; top: 50%;
+      width: 100%; height: 50px;
+      margin: -25px;
+
+      & > div {
+        position: absolute;
+        top: 50%;
+        width: 50px; height: 50px;
+        margin-top: -25px;
+      }
+      
+      .view_after_btn { 
+        right: 0;
+        @include img('forward.png');
+      }
+      .view_before_btn { 
+        left: 0;
+        @include img('back.png');
+      }
+    }
+
+
+
+    .view_btn button {
+      width: 100%; height: 100%;
+      // &:hover { transform: scale(1.3); transition: transform 300ms ease;}
+      // &:focus { border-radius: 0.25rem; outline: 3px solid #171717;}
+    }
+
+    @at-root .view {
+      overflow: hidden;
+      width: 750px; height: 550px;
+      .view_in_wrap {
+        width: calc(100% * $view_len);
+        height: 100%;
+
+        .view_content {
+          float: left;
+          width: calc(100% / $view_len);
+          height: 100%;
+
+        }
+        .view_content_01 { 
+          background-color: #9e728c77;
+        }
+        .view_content_02 { 
+          background-color: #FE5AE677;
+        }
+        .view_content_03 { 
+          background-color: #BCCCD477;
+        }
+        .view_content_04 { 
+          background-color: #5DD95977;
+        }
+        .view_content_05 { 
+          background-color: #F9495D77;
+        }
+      } // .view_in_wrap
+    } // .view
+  } // .view_area
+
+} // #viewBox
