@@ -187,11 +187,11 @@ body {
     .best_item {
       float: left;
       width: 320px; height: 420px;
-      margin-right: 20px;
+      margin-left: 10px;
       /* background-color: var(--color-sample1); */
     }
 
-    .best_item:last-child { margin-right: 0;}
+    .best_item:first-child { margin-left: 0;}
 
     .best_item a { display: block; width: 100%; height: 100%;}
 

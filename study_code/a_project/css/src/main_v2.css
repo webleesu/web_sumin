@@ -1,4 +1,70 @@
 /* main_v2.css */
+.title_area {
+  width: 78.125vw;
+  height: 60px;
+  margin: auto;
+  margin-bottom: 20px;
+  /* background-color: var(--color-sample1); */
+}
+
+.title_text {
+  float: left;
+  width: 500px;
+  height: 60px;
+}
+
+.title {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+}
+
+.sub_title {
+  width: 450px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+
+.title_all {
+  float: right;
+  width: 90px;
+  height: 30px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.text_title {
+  width: 300px;
+  height: 33px;
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.text_price {
+  width: 300px;
+  height: 33px;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.text_detail {
+  width: 300px;
+  height: 33px;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 html, body {
   color: #171717;
   font-weight: 400;
@@ -773,102 +839,13 @@ html, body {
 
 @media all and (max-width: 1279px) {
   .view_area {
-    position: relative;
     width: 100%;
     height: 90vw;
     background-color: #ddd;
   }
   .view_area .view_btn {
-    position: absolute;
-    top: 50%;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 50px;
-  }
-  .view_area .view_btn > div {
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: -25px;
-  }
-  .view_area .view_btn .view_after_btn {
-    right: 0;
-    background-image: url(../../img/forward.png);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
-  .view_area .view_btn .view_after_btn > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .view_area .view_btn .view_before_btn {
-    left: 0;
-    background-image: url(../../img/back.png);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
-  .view_area .view_btn .view_before_btn > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .view_area .view_btn button {
-    width: 100%;
-    height: 100%;
-  }
-  .view {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
-  .view .view_in_wrap {
-    width: 500%;
-    height: 100%;
-  }
-  .view .view_in_wrap .view_content {
-    float: left;
-    width: 20%;
-    height: 100%;
-  }
-  .view .view_in_wrap .view_content_01 {
-    background-color: #9e728c77;
-  }
-  .view .view_in_wrap .view_content_02 {
-    background-color: #FE5AE677;
-  }
-  .view .view_in_wrap .view_content_03 {
-    background-color: #BCCCD477;
-  }
-  .view .view_in_wrap .view_content_04 {
-    background-color: #5DD95977;
-  }
-  .view .view_in_wrap .view_content_05 {
-    background-color: #F9495D77;
-  }
-
-  .view_area .view_num {
-    position: absolute;
-    left: 20px;
-    bottom: 10px;
-    width: 70px;
-    height: 25px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 25px;
-    color: #fff;
   }
 
   #viewBox .side_view_area {
@@ -879,107 +856,12 @@ html, body {
   #viewBox {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    height: auto;
     margin-top: 150px;
     padding: 20px 50px;
   }
   .view_area {
-    position: relative;
     width: 58.6vw;
     height: 43vw;
-  }
-  .view_area .view_btn {
-    position: absolute;
-    top: 50%;
-    left: 25px;
-    width: 100%;
-    height: 50px;
-    margin: -25px;
-  }
-  .view_area .view_btn > div {
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: -25px;
-  }
-  .view_area .view_btn .view_after_btn {
-    right: 0;
-    background-image: url(../../img/forward.png);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
-  .view_area .view_btn .view_after_btn > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .view_area .view_btn .view_before_btn {
-    left: 0;
-    background-image: url(../../img/back.png);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
-  }
-  .view_area .view_btn .view_before_btn > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .view_area .view_btn button {
-    width: 100%;
-    height: 100%;
-  }
-  .view {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
-  .view .view_in_wrap {
-    width: 500%;
-    height: 100%;
-  }
-  .view .view_in_wrap .view_content {
-    float: left;
-    width: 20%;
-    height: 100%;
-  }
-  .view .view_in_wrap .view_content_01 {
-    background-color: #9e728c77;
-  }
-  .view .view_in_wrap .view_content_02 {
-    background-color: #FE5AE677;
-  }
-  .view .view_in_wrap .view_content_03 {
-    background-color: #BCCCD477;
-  }
-  .view .view_in_wrap .view_content_04 {
-    background-color: #5DD95977;
-  }
-  .view .view_in_wrap .view_content_05 {
-    background-color: #F9495D77;
-  }
-
-  .view_area .view_num {
-    position: absolute;
-    left: 20px;
-    bottom: 10px;
-    width: 70px;
-    height: 25px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 25px;
-    color: #fff;
   }
   .side_view_area {
     display: flex;
@@ -999,6 +881,43 @@ html, body {
     width: 100%;
     height: 100%;
   }
+}
+#bestBox {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+  padding: 40px;
+}
+.best_area {
+  overflow: hidden;
+  width: 78.125vw;
+  height: 420px;
+  margin: auto;
+}
+.best_area .best_item {
+  float: left;
+  width: 320px;
+  height: 420px;
+  margin-left: 20px;
+}
+.best_area .best_item:first-child {
+  margin-left: 0;
+}
+.best_area .best_item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.best_area .best_item a .best_img {
+  width: 320px;
+  height: 320px;
+  background-color: rgba(127, 98, 255, 0.5);
+}
+.best_area .best_item a .best_text {
+  width: 320px;
+  height: 100px;
+  padding: 0 10px;
+  /* background-color: var(--color-sample1); */
 }
 
 /*# sourceMappingURL=main_v2.css.map */

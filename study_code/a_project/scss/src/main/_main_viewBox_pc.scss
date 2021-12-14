@@ -1,0 +1,32 @@
+// main_viewBox_pc.scss
+
+// 1280px ~ ----------------------------------------------------------------
+@media all and (min-width :1280px){
+  #viewBox {
+    display: flex; justify-content: space-between;
+    margin-top: 150px;
+    padding: 20px 50px;
+    
+    @at-root .view_area {
+      // width: 750px; height: 550px;
+      width: 58.6vw; height: 43vw;
+      // background-color: #eee;
+
+      @at-root .side_view_area {
+        display: flex; flex-direction: column; justify-content: space-between;
+        // width: 400px; height: 550px;
+        width: 31.25vw; height: 43vw;
+        .side_view {
+          // width: 100%; height: 180px;
+          width: 100%; height: 14vw;
+          background-color: #eee;
+          margin: auto; 
+          
+          a { @include full;}
+        }
+      }
+    } // .view_area
+
+  } // #viewBox
+
+} // 1280px ~ ====================================================================

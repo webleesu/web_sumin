@@ -4,6 +4,8 @@
 
 @import '../common/mixin';
 @import '../common/variable';
+@import './main/main_common';
+
 
 html, body { color: #171717; font-weight: 400;}
 
@@ -11,186 +13,37 @@ html, body { color: #171717; font-weight: 400;}
 @import '../common/headBox';
 @import '../common/footBox';
 
-@import './main_viewBox';
+@import './main/main_viewBox';
 
-// ~1279px ------------------------------------------------------
-@media all and (max-width: 1279px){
+#bestBox {
+  width: 100%; height: 600px;
+  margin-top: 20px;
+  padding: 40px;
+  
+  @at-root .best_area {
+    // display: flex; justify-content: space-between;
+    overflow: hidden;
+    width: 78.125vw; height: 420px;
+    margin: auto;
 
-  #viewBox {
+    .best_item {
+      float: left;
+      width: 320px; height: 420px;
+      margin-left: 20px;
 
-    @at-root .view_area {
-      position: relative;
-      width: 100%; height: 90vw;
-      background-color: #ddd;
-
-      .view_btn {
-        position: absolute; top: 50%; left: 0; right: 0;
-        width: 100%; height: 50px;
-
-        & > div {
-          position: absolute;
-          top: 50%;
-          width: 50px; height: 50px;
-          margin-top: -25px;
+      &:first-child { margin-left: 0;}
+      a { 
+        @include full;
+        .best_img {
+          width: 320px; height: 320px;
+          background-color: rgb(127, 98, 255, 0.5);
         }
-
-        .view_after_btn { 
-          right: 0;
-          @include img('forward.png');
+        .best_text {
+          width: 320px; height: 100px;
+          padding: 0 10px;
+          /* background-color: var(--color-sample1); */
         }
-        .view_before_btn { 
-          left: 0;
-          @include img('back.png');
-        }
-
-        button { width: 100%; height: 100%;}
-      } // .view_btn
-
-      @at-root .view {
-        overflow: hidden;
-        width: 100%; height: 100%;
-        .view_in_wrap {
-          width: calc(100% * $view_len);
-          height: 100%;
-
-          .view_content {
-            float: left;
-            width: calc(100% / $view_len);
-            height: 100%;
-          }
-          .view_content_01 { 
-            background-color: #9e728c77;
-          }
-          .view_content_02 { 
-            background-color: #FE5AE677;
-          }
-          .view_content_03 { 
-            background-color: #BCCCD477;
-          }
-          .view_content_04 { 
-            background-color: #5DD95977;
-          }
-          .view_content_05 { 
-            background-color: #F9495D77;
-          }
-        }
-      } // .view
-
-      .view_num {
-        position: absolute;
-        left: 20px; bottom: 10px;
-        width: 70px; height: 25px;
-        font-weight: 700;
-        text-align: center; line-height: 25px;
-        color: #fff;
-      }
-    } // .view_area
-    .side_view_area{ display: none;}
-  } // #viewBox
-
-}// ~1279px ===============================================================
-
-// 1280px ~ ----------------------------------------------------------------
-@media all and (min-width :1280px){
-  #viewBox {
-    display: flex; justify-content: space-between;
-    width: 100%; height: auto;
-    margin-top: 150px;
-    padding: 20px 50px;
-    
-
-    @at-root .view_area {
-      position: relative;
-      // width: 750px; height: 550px;
-      width: 58.6vw; height: 43vw;
-      // background-color: #eee;
-      
-      .view_btn {
-        position: absolute; top: 50%; left: 25px;
-        width: 100%; height: 50px;
-        margin: -25px;
-
-        & > div {
-          position: absolute;
-          top: 50%;
-          width: 50px; height: 50px;
-          margin-top: -25px;
-        }
-        
-        .view_after_btn { 
-          right: 0;
-          @include img('forward.png');
-        }
-        .view_before_btn { 
-          left: 0;
-          @include img('back.png');
-        }
-      }
-
-
-
-      .view_btn button {
-        width: 100%; height: 100%;
-        // &:hover { transform: scale(1.3); transition: transform 300ms ease;}
-        // &:focus { border-radius: 0.25rem; outline: 3px solid #171717;}
-      }
-
-      @at-root .view {
-        overflow: hidden;
-        // width: 750px; height: 550px;
-        width: 100%; height: 100%;
-        .view_in_wrap {
-          width: calc(100% * $view_len);
-          height: 100%;
-
-          .view_content {
-            float: left;
-            width: calc(100% / $view_len);
-            height: 100%;
-
-          }
-          .view_content_01 { 
-            background-color: #9e728c77;
-          }
-          .view_content_02 { 
-            background-color: #FE5AE677;
-          }
-          .view_content_03 { 
-            background-color: #BCCCD477;
-          }
-          .view_content_04 { 
-            background-color: #5DD95977;
-          }
-          .view_content_05 { 
-            background-color: #F9495D77;
-          }
-        } // .view_in_wrap
-      } // .view
-
-      .view_num {
-        position: absolute;
-        left: 20px; bottom: 10px;
-        width: 70px; height: 25px;
-        font-weight: 700;
-        text-align: center; line-height: 25px;
-        color: #fff;
-      }
-
-      @at-root .side_view_area {
-        display: flex; flex-direction: column; justify-content: space-between;
-        // width: 400px; height: 550px;
-        width: 31.25vw; height: 43vw;
-        .side_view {
-          // width: 100%; height: 180px;
-          width: 100%; height: 14vw;
-          background-color: #eee;
-          margin: auto; 
-          
-          a { @include full;}
-        }
-      }
-    } // .view_area
-
-  } // #viewBox
-
-} // 1280px ~ ====================================================================
+      } // a
+    } // .best_item
+  } // .best_area
+} // #bestBox

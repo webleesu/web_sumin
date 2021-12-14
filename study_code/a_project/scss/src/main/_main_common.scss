@@ -1,0 +1,51 @@
+// main_common.scss
+
+
+.title_area {
+  width: 78.125vw; height: 60px;
+  margin: auto;
+  margin-bottom: 20px;
+  /* background-color: var(--color-sample1); */
+}
+
+.title_text { 
+  float: left;
+  width: 500px; height: 60px;
+}
+
+.title {
+  width: 250px; height: 30px;
+  margin-bottom: 5px;
+  font-size: 24px; font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+}
+.sub_title {
+  width: 450px; height: 20px;
+  font-size: 16px; font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.title_all {
+  float: right;
+  width: 90px; height: 30px;
+  margin-top: 30px;
+  font-size: 16px; font-weight: 400;
+}
+
+.text_title {
+  width: 300px; height: 33px;
+  display: block;
+  font-size: 18px; font-weight: 400;
+}
+.text_price {
+  width: 300px; height: 33px;
+  display: block;
+  font-size: 16px; font-weight: 700;
+}
+.text_detail {
+  width: 300px; height: 33px;
+  display: block;
+  font-size: 16px; font-weight: 400;
+}
+

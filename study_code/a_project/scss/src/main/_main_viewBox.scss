@@ -1,7 +1,7 @@
 // main_viewBox.scss
 
-@import '../common/mixin';
-@import '../common/variable';
+@import '../../common/mixin';
+@import '../../common/variable';
 
 #viewBox {
   width: 100%; height: auto;
@@ -78,3 +78,6 @@
   } // .view_area
 
 } // #viewBox
+
+@import './main_viewBox_handhelds';
+@import './main_viewBox_pc';
