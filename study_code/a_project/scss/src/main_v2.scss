@@ -13,18 +13,19 @@ html, body { color: #171717; font-weight: 400;}
 
 #viewBox {
   display: flex; justify-content: space-between;
-  width: 100%; height: 600px;
+  width: 100%; height: auto;
   margin-top: 150px;
   padding: 20px 50px;
   
 
   @at-root .view_area {
     position: relative;
-    width: 750px; height: 550px;
+    // width: 750px; height: 550px;
+    width: 58.6vw; height: 43vw;
     background-color: #eee;
     
     .view_btn {
-      position: absolute; top: 50%;
+      position: absolute; top: 50%; left: 25px;
       width: 100%; height: 50px;
       margin: -25px;
 
@@ -55,7 +56,8 @@ html, body { color: #171717; font-weight: 400;}
 
     @at-root .view {
       overflow: hidden;
-      width: 750px; height: 550px;
+      // width: 750px; height: 550px;
+      width: 100%; height: 100%;
       .view_in_wrap {
         width: calc(100% * $view_len);
         height: 100%;
@@ -83,6 +85,29 @@ html, body { color: #171717; font-weight: 400;}
         }
       } // .view_in_wrap
     } // .view
+
+    .view_num {
+      position: absolute;
+      left: 20px; bottom: 10px;
+      width: 70px; height: 25px;
+      font-weight: 700;
+      text-align: center; line-height: 25px;
+      color: #fff;
+    }
+
+    @at-root .side_view_area {
+      display: flex; flex-direction: column; justify-content: space-between;
+      // width: 400px; height: 550px;
+      width: 31.25vw; height: 43vw;
+      .side_view {
+        // width: 100%; height: 180px;
+        width: 100%; height: 14vw;
+        background-color: #eee;
+        margin: auto; 
+        
+        a { @include full;}
+      }
+    }
   } // .view_area
 
 } // #viewBox

@@ -83,7 +83,8 @@
   @at-root #gnb ul {
     position: absolute; left: 0; right: 0;
     display: flex; justify-content: space-between;
-    width: 500px; height: 40px;
+    // width: 500px; height: 40px;
+    width: 39vw; height: 40px;
     margin: auto; margin-top: 50px;
 
     li {
