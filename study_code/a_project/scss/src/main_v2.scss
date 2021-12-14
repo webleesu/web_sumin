@@ -15,72 +15,13 @@ html, body { color: #171717; font-weight: 400;}
 
 @import './main/main_viewBox';
 @import './main/main_bestBox';
+@import './main/main_benefit';
 
 @media all and (max-width: 1279px){
   .title_all { display: none;}
 }
 
-// ~1279px ------------------------------------------------------
-@media all and (max-width: 1279px){
-
-} // ~1279px ===============================================================
-
-// 1280px ~ ----------------------------------------------------------------
-@media all and (min-width: 1280px){
-
-} // 1280px ~ ====================================================================
 
 
-#benefitBox {
-  width: 100%; height: 500px;
-  margin-top: 20px;
-  padding: 80px;
-  background-color: #FFF1E0;
 
-  @at-root .benefit_title_area {
-    width: 280px; height: 100px;
-    margin: auto; margin-bottom: 60px;
 
-    .benefit_title {
-      width: 280px; height: 60px;
-      margin: auto;
-      border-radius: 30px;
-      background-color: #E17900;
-      text-align: center; line-height: 60px;
-      font-size: 36px; font-weight: 700;
-      color: #fff;
-    }
-
-    .benefit_title_detail {
-      width: 260px; height: 20px;
-      margin: auto; margin-top: 16px;
-      text-align: center; line-height: 20px;
-    }
-
-  } // .benefit_title_area
-
-  @at-root .benefit_detail_area {
-    display: flex; justify-content: space-between;
-    width: 910px; height: 170px;
-    margin: auto;
-
-    .benefit {
-      width: 270px; height: 170px;
-      margin: auto; margin-top: 15px;
-      text-align: center; font-size: 20px;
-
-      .benefit_img {
-        width: 75px; height: 75px;
-        margin: auto; margin-bottom: 20px;
-        background-color: #E17900;
-        border-radius: 100%;
-      }
-      .benefit_img_coupon { @include img($file:'wallet.png', $size: 70% auto)};
-      .benefit_img_review { @include img($file:'coin.png', $size: 70% auto)};
-      .benefit_img_friend { @include img($file:'hands.png', $size: 70% auto)};
-
-      .benefit_text { font-size: 20px; }
-      .benefit_bold { font-weight: 700; }
-    } // .benefit
-  } // .benefit_detail_area
-} // #benefitBox
