@@ -1,0 +1,33 @@
+// _main_bestBox.scss
+
+#bestBox {
+  width: 100%;
+  
+  @at-root .best_area {
+    height: 420px;
+    margin: auto;
+
+    .best_item {
+      float: left;
+      width: 320px; height: 420px;
+      margin-left: 20px;
+
+      &:first-child { margin-left: 0;}
+      a { 
+        @include full;
+        .best_img {
+          width: 320px; height: 320px;
+          background-color: rgb(127, 98, 255, 0.5);
+        }
+        .best_text {
+          width: 320px; height: 100px;
+          padding: 0 10px;
+          /* background-color: var(--color-sample1); */
+        }
+      } // a
+    } // .best_item
+  } // .best_area
+} // #bestBox
+
+@import './main_bestBox_handhelds';
+@import './main_bestBox_pc';;

@@ -1,0 +1,33 @@
+// _main_bestBox_handhelds.scss
+
+// ~1279px ------------------------------------------------------
+@media all and (max-width: 1279px){
+  #bestBox {
+    overflow: hidden;
+    width: 100%; height: 480px;
+    margin-top: 20px;
+    padding: 40px;
+
+    @at-root .best_area {
+      display: flex; justify-content: space-between; flex-wrap: nowrap;
+      width: auto; height: 420px;
+      margin: auto; margin-top: 40px;
+
+      .best_item {
+        // float: left;
+        width: 140px; height: 240px;
+        margin-left: 20px;
+
+        a {
+          @include full;
+          .best_img {
+            width: 140px; height: 140px;
+          }
+          .best_text {
+            width: 140px;
+          }
+        } // a
+      } // .best_item
+    } // .best_area
+  } // #bestBox
+} // ~1279px ===============================================================
