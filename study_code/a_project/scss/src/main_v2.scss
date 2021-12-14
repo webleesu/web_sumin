@@ -15,13 +15,11 @@ html, body { color: #171717; font-weight: 400;}
 
 @import './main/main_viewBox';
 @import './main/main_bestBox';
-@import './main/main_benefit';
+@import './main/main_benefitBox';
+@import './main/main_challengeBox';
 
 @media all and (max-width: 1279px){
   .title_all { display: none;}
 }
-
-
-
 
 
