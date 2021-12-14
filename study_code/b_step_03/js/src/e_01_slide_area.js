@@ -1,5 +1,11 @@
 "use strict";
 
+require("core-js/modules/es.array.slice.js");
+
+require("core-js/modules/es.object.to-string.js");
+
+require("core-js/modules/web.dom-collections.for-each.js");
+
 // e_01_slide_area.js
 // ===========================================
 // 광고슬라이드1 
@@ -21,34 +27,86 @@ var elNext = elBtnDetail.querySelector('.next');
 var elPrev = elBtnDetail.querySelector('.prev');
 var elViewContent = elSlide_01.querySelector('.view_content');
 var elViewConUl = elViewContent.querySelector('ul');
-var elViewAddv = elViewConUl.querySelectorAll('li'); // elAddLen
+var elViewAddv = elViewConUl.querySelectorAll('li');
+var elIndicatorDetail = elSlide_01.querySelector('.indicator ul');
+var elIndiLi = elIndicatorDetail.children;
+var elIndiList = Array.prototype.slice.call(elIndiLi); // elAddLen
 
 var addLen = elViewAddv.length;
 var OPTION_CLASSNAME = 'on';
 var checkIndex = 0; // -----------------------------------------------------------
 // 함수
 
-var fnAddCount = function fnAddCount() {
-  var i = checkIndex;
-  checkIndex < addLen - 1 ? checkIndex += 1 : checkIndex = 0; // if(checkIndex < addLen -1){
-  //   checkIndex += 1;
-  // }else{
-  //   checkIndex = 0;
-  // }
+var fnAddCountType1 = function fnAddCountType1() {
+  var i = checkIndex; // 0 -> 1 -> 2 -> 3 -> 0
 
+  checkIndex < addLen - 1 ? checkIndex += 1 : checkIndex = 0;
   elViewAddv[i].classList.remove(OPTION_CLASSNAME);
   elViewAddv[checkIndex].classList.add(OPTION_CLASSNAME);
 };
 
-var fnRemoveCount = function fnRemoveCount() {
-  var i = checkIndex;
-  checkIndex > 0 ? checkIndex -= 1 : checkIndex = addLen - 1; // if(checkIndex > 0){
-  //   checkIndex -= 1;
-  // }else {
-  //   checkIndex = addLen -1;
-  // }
+var fnRemoveCountType1 = function fnRemoveCountType1() {
+  var i = checkIndex; // 0 -> 3(length-1) -> 2 -> 1 -> 0
 
+  checkIndex > 0 ? checkIndex -= 1 : checkIndex = addLen - 1;
   elViewAddv[i].classList.remove(OPTION_CLASSNAME);
+  elViewAddv[checkIndex].classList.add(OPTION_CLASSNAME);
+}; // ----------------------------------------
+// 전체 갯수 중 선택한 순번을 제외한 나머지 형제를 선택
+
+
+var fnSiblings = function fnSiblings(select) {
+  var idx = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : checkIndex;
+  var otherArr = [];
+  select.forEach(function (element, index) {
+    //let check = element.classList.contains(OPTION_CLASSNAME);
+    // if(!check){ otherArr.push(element) }
+    if (idx !== index) {
+      otherArr.push(element);
+    }
+  });
+  return otherArr;
+}; // console.log( fnSiblings() );
+// 다음버튼클릭시 1씩 카운트업하면서, 선택순번이 아닌경우 on빼라
+
+
+var fnAddCountType2 = function fnAddCountType2() {
+  checkIndex < addLen - 1 ? checkIndex += 1 : checkIndex = 0;
+  elViewAddv[checkIndex].classList.add(OPTION_CLASSNAME);
+  fnSiblings(elViewAddv, checkIndex).forEach(function (el) {
+    el.classList.remove(OPTION_CLASSNAME);
+  });
+};
+
+var fnRemoveCountType2 = function fnRemoveCountType2() {
+  checkIndex > 0 ? checkIndex -= 1 : checkIndex = addLen - 1;
+  elViewAddv[checkIndex].classList.add(OPTION_CLASSNAME);
+  fnSiblings(elViewAddv, checkIndex).forEach(function (el) {
+    el.classList.remove(OPTION_CLASSNAME);
+  });
+};
+
+var fnIndexCountType2 = function fnIndexCountType2() {
+  elViewAddv[checkIndex].classList.add(OPTION_CLASSNAME);
+  fnSiblings(elViewAddv, checkIndex).forEach(function (el) {
+    el.classList.remove(OPTION_CLASSNAME);
+  });
+}; // ----------------------------------------------------------
+
+
+var fnAddCountType3 = function fnAddCountType3() {
+  checkIndex < addLen - 1 ? checkIndex += 1 : checkIndex = 0;
+  elViewAddv.forEach(function (el) {
+    el.classList.remove(OPTION_CLASSNAME);
+  });
+  elViewAddv[checkIndex].classList.add(OPTION_CLASSNAME);
+};
+
+var fnRemoveCountType3 = function fnRemoveCountType3() {
+  checkIndex > 0 ? checkIndex -= 1 : checkIndex = addLen - 1;
+  elViewAddv.forEach(function (el) {
+    el.classList.remove(OPTION_CLASSNAME);
+  });
   elViewAddv[checkIndex].classList.add(OPTION_CLASSNAME);
 }; // -----------------------------------------------------------
 // 이벤트 ++
@@ -56,11 +114,25 @@ var fnRemoveCount = function fnRemoveCount() {
 
 
 elNext.addEventListener('click', function (e) {
-  e.preventDefault();
-  fnAddCount();
+  e.preventDefault(); // fnAddCountType1();
+  // fnAddCountType2();
+
+  fnAddCountType3();
 }); // 이전버튼 클릭
 
 elPrev.addEventListener('click', function (e) {
-  e.preventDefault();
-  fnRemoveCount();
+  e.preventDefault(); // fnRemoveCountType1();
+  // fnRemoveCountType2();
+
+  fnRemoveCountType3();
+}); // indicator 클릭하여 순서 파악
+
+elIndiList.forEach(function (element, index) {
+  var link = element.querySelector('a');
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // console.log( index );
+
+    checkIndex = index;
+    fnIndexCountType2();
+  });
 });
