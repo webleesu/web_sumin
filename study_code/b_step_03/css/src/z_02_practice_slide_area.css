@@ -1,0 +1,82 @@
+#wrap {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 0 40px;
+}
+
+#headBox {
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+#headBox h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+#viewBox {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+}
+#viewBox .view_area {
+  position: relative;
+  width: 3200px;
+  height: 400px;
+  margin: auto;
+}
+#viewBox .view_area .btn {
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  width: 800px;
+  height: 50px;
+  transform: translateY(-calc(400px));
+}
+#viewBox .view_area .btn > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+}
+#viewBox .view_area .btn .after_btn {
+  right: 0;
+}
+#viewBox .view_area .btn .before_btn {
+  left: 0;
+}
+#viewBox .view_area ul {
+  width: 100%;
+  height: 100%;
+}
+#viewBox .view_area ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px;
+  height: 400px;
+}
+#viewBox .view_area ul li.on {
+  z-index: 10;
+  display: block;
+}
+#viewBox .view_area ul .view_01 {
+  display: none;
+  background-color: #D04AA6dd;
+}
+#viewBox .view_area ul .view_02 {
+  display: none;
+  background-color: #D23100dd;
+}
+#viewBox .view_area ul .view_03 {
+  display: none;
+  background-color: #B5FF9Ddd;
+}
+#viewBox .view_area ul .view_04 {
+  display: none;
+  background-color: #38FF01dd;
+}
+
+/*# sourceMappingURL=z_02_practice_slide_area.css.map */
