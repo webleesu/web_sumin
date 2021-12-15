@@ -14,8 +14,9 @@
   <!-- css -->
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
-  <link rel="stylesheet" href="../css/common/component.css">
-  <link rel="stylesheet" href="../css/src/event_v1.css">
+  <!-- <link rel="stylesheet" href="../css/common/component.css"> -->
+  <!-- <link rel="stylesheet" href="../css/src/event_v1.css"> -->
+  <link rel="stylesheet" href="../css/src/event_v2.css">
 
   <!-- js -->
   <script src="../js/common/modernizr-custom.js"></script>
@@ -29,7 +30,7 @@
     <!-- #headBox -->
     <header id="headBox">
       <h1>
-        <a href="./main_v1.html">
+        <a href="#">
           <span class="blind">큐브미</span>
           <!-- <img class="logo" src="../img/logo-cubeme-text.png" alt="큐브미" aria-hidden="true"> -->
         </a>
@@ -51,10 +52,15 @@
           <h3 class="blind">사용자 네비게이션</h3>
           <ul class="unb_btn">
             <li class="unb_language" tabindex="0">
-              <div class="language_img"></div>
-              <span><a href="#">한국어</a></span>
-              <span><a href="#">ENGLISH</a></span>
-              <span><a href="#">中國語</a></span>
+              <!-- <div class="language_img" tabindex="0"></div> -->
+              <ul class="unb_lauguage_area">
+                <li><a href="#">한국어</a></li>
+                <li><a href="#">ENGLISH</a></li>
+                <li><a href="#">中國語</a></li>
+              </ul>
+              <!-- <div><a href="#">한국어</a></div>
+              <div><a href="#">ENGLISH</a></div>
+              <div><a href="#">中國語</a></div> -->
             </li>
             <li class="unb_sign"><a href="#">회원가입</a></li>
             <li class="unb_login"><a href="#">로그인</a></li>
@@ -71,13 +77,32 @@
               <div class="unb_search_icon">
                 <button type="button"></button>
               </div>
-            </div>
+            </div> <!-- // .unb_search -->
+
             <div class="unb_cart">
               <a href="#"></a>
             </div>
           </div>
         </nav>
+      </nav> <!-- // #navigation -->
+
+      <nav id="hand_nav">
+        <h2 class="blind">navigation</h2>
+        <div class="hand_language" tabindex="0">
+          <ul>
+            <li><a href="#"><span>한국어</span></a></li>
+            <li><a href="#"><span>ENGLISH</span></a></li>
+            <li><a href="#"><span>中國語</span></a></li>
+          </ul>
+        </div>
+        <button type="button" class="hand_search"></button>
+        <button type="button" class="hand_cart"></button>
+        <button type="button" class="hand_menu"></button>
       </nav>
+      <!-- <div class="side_menu">
+
+      </div> -->
+      
     </header> <!-- // #headBox-->
 
 
@@ -89,7 +114,7 @@
       </div>
       <div class="event_area">
         <ul class="event_tab">
-          <li class="event_ing action"><h3><button type="button">진행중인 이벤트</button></h3></li>
+          <li class="event_ing on"><h3><button type="button">진행중인 이벤트</button></h3></li>
           <li class="event_end"><h3><button type="button">종료된 이벤트</button></h3></li>
         </ul>
         <div class="tab_content clearfix">
@@ -195,7 +220,7 @@
           </ul>
         </div>
         <button class="event_more" type="button">더보기</button>
-      </div>
+      </div> <!-- // .event_area -->
     </article>
     <!-- // #eventBox -->
 
@@ -205,7 +230,6 @@
       <div class="foot_top_area">
         <h2>
           <span class="blind">큐브미 정보</span>
-          <img src="../img/footer-logo-text.svg" alt="큐브미" aria-hidden="true">
         </h2>
         <div class="foot_top_btn">
           <div class="foot_products"><a href="#">Products</a></div>
@@ -223,12 +247,13 @@
           <li class="foot_personal"><a href="#">개인정보처리방침</a></li>
           <li class="foot_agreement"><a href="#">이용약관</a></li>
         </ul>
+
         <address class="foot_info">
           <p>(주)아모레퍼시픽 &#124; 대표이사 : 안세홍 &#124; 사업자등록번호 : 106-86-43373 &#124; 사업자정보 확인</p>
           <p>서울특별시 용산구 한강대로 100 &#124; 080-033-5454(쇼핑문의) &#124; 080-023-5454(제품문의)</p>
           <p>통신판매업신고번호 : 2017-서울용산-1308호 &#124; 건강기능식품판매업 영업신고증 제8호</p>
           <p>전자메일주소 : cubeme_mall@cubeme.co.kr &#124; 호스팅제공자 : (주)아모레퍼시픽</p>
-          <p>Copyright 2020 CUBE ME. All rights reserved.</p>
+          <p class="copyright">Copyright 2020 CUBE ME. All rights reserved.</p>
         </address>
 
         <ul class="foot_bottom_btn">
@@ -239,9 +264,9 @@
             <a href="#"></a>
           </li>
         </ul>
-      </div>
+      </div> <!-- // .foot_main_area -->
 
-    </footer>
+    </footer> <!-- // #footBox-->
     <!-- // #footBox -->
 
   </div><!-- // #wrap -->

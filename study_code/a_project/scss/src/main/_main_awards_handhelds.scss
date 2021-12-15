@@ -8,6 +8,8 @@
     @at-root .awards_area {
       height: auto;
 
+      .awards_btn > div { margin-bottom: -35px;}
+
       .awards_indicator { display: none; }
 
       @at-root .awards_main {

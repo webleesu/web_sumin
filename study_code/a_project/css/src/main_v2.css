@@ -91,15 +91,21 @@ html, body {
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  height: 150px;
-  padding: 30px 100px;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media all and (max-width: 1279px) {
+  #headBox {
+    height: 19.5vw;
+    max-height: 150px;
+    padding: 3.9vw 10vw;
+  }
+
   h1 {
-    width: 170px;
-    height: 40px;
+    width: 22.1vw;
+    max-width: 170px;
+    height: 5.2vw;
+    max-height: 40px;
   }
   h1 a {
     display: block;
@@ -128,13 +134,23 @@ html, body {
     display: block;
     display: flex;
     justify-content: space-between;
-    width: 230px;
-    height: 40px;
+    width: 30vw;
+    max-width: 230px;
+    height: auto;
+  }
+  #hand_nav button {
+    width: 5.2vw;
+    max-width: 40px;
+    height: 5.2vw;
+    max-height: 40px;
   }
   .hand_language {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 5.2vw;
+    max-width: 40px;
+    height: 5.2vw;
+    max-height: 40px;
+    cursor: pointer;
     background-image: url(../../img/global_1.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -172,8 +188,6 @@ html, body {
   }
 
   #hand_nav .hand_search {
-    width: 40px;
-    height: 40px;
     background-image: url(../../img/search.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -189,8 +203,6 @@ html, body {
     overflow: hidden;
   }
   #hand_nav .hand_cart {
-    width: 40px;
-    height: 40px;
     background-image: url(../../img/cart.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -206,8 +218,6 @@ html, body {
     overflow: hidden;
   }
   #hand_nav .hand_menu {
-    width: 40px;
-    height: 40px;
     background-image: url(../../img/menu.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -224,6 +234,11 @@ html, body {
   }
 }
 @media all and (min-width: 1280px) {
+  #headBox {
+    height: 150px;
+    padding: 30px 100px;
+  }
+
   h1 {
     width: 170px;
     height: 60px;
@@ -271,6 +286,11 @@ html, body {
     text-align: center;
     line-height: 40px;
     font-size: 18px;
+  }
+  #gnb ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .unb {
@@ -483,7 +503,8 @@ html, body {
 
   .foot_main_area {
     position: relative;
-    width: 600px;
+    width: 78.125vw;
+    max-width: 800px;
     height: auto;
     margin: auto;
   }
@@ -501,7 +522,7 @@ html, body {
   .foot_main_area .foot_main_btn li {
     position: relative;
     margin-right: 15px;
-    padding-right: 20px;
+    padding-right: 4vw;
   }
   .foot_main_area .foot_main_btn li:last-child {
     margin-right: 0;
@@ -533,7 +554,8 @@ html, body {
   }
   .foot_main_area .foot_info p.copyright {
     display: block;
-    width: 336px;
+    width: 43.75vw;
+    max-width: 336px;
     height: auto;
     margin: auto;
     color: #ddd;
@@ -968,7 +990,7 @@ html, body {
     justify-content: space-between;
     flex-wrap: nowrap;
     overflow: hidden;
-    width: 78.125vw;
+    width: 100%;
     height: 420px;
     margin: auto;
   }
@@ -1197,7 +1219,7 @@ html, body {
 }
 #challengeBox .challenge_area {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   height: 30vw;
   margin: auto;
@@ -1278,7 +1300,7 @@ html, body {
 @media all and (min-width: 1280px) {
   #eventBox .event_area {
     flex-wrap: nowrap;
-    width: 78.125vw;
+    width: 100%;
     height: 420px;
   }
   .event {
@@ -1301,6 +1323,7 @@ html, body {
   margin-top: 20px;
   background-color: #FFF1E0;
   padding-top: 80px;
+  overflow: hidden;
 }
 #awardsBox .awards_title {
   width: 280px;
@@ -1385,6 +1408,9 @@ html, body {
   }
   .awards_area {
     height: auto;
+  }
+  .awards_area .awards_btn > div {
+    margin-bottom: -35px;
   }
   .awards_area .awards_indicator {
     display: none;
@@ -1497,6 +1523,90 @@ html, body {
     display: none;
   }
 }
+#saleBox {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 80px;
+  overflow: hidden;
+}
+.sale_area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 78.125vw;
+  height: 350px;
+  margin: auto;
+  margin-top: 50px;
+}
+.sale_item {
+  width: 190px;
+  height: auto;
+  margin-right: 10px;
+}
+.sale_item:last-child {
+  margin-right: 0;
+}
+.sale_item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sale_item a .sale_img {
+  width: 190px;
+  height: 190px;
+  background-color: #eee;
+}
+.sale_item a .sale_title {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.sale_item a .sale_last_price {
+  width: 100%;
+  height: auto;
+  text-decoration: line-through;
+}
+.sale_item a .sale_price_area {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+}
+.sale_item a .sale_price_area .sale_percent {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fa3826;
+}
+.sale_item a .sale_price_area .sale_price {
+  width: 90px;
+  height: auto;
+  font-size: 18px;
+}
+.sale_item a .sale_detail {
+  width: 190px;
+  height: auto;
+}
+
+#magazineBox {
+  width: 100%;
+  height: 23.5vw;
+  background-color: #FFF1E0;
+}
+#magazineBox .magazine_img {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+#magazineBox .magazine_img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /*
 // ~1279px ------------------------------------------------------
 @media all and (max-width: 1279px){

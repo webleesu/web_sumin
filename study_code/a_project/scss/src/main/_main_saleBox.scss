@@ -1,0 +1,56 @@
+// _main_saleBox.scss
+
+#saleBox {
+  width: 100%; height: auto;
+  margin-top: 20px;
+  padding: 80px;
+  overflow: hidden;
+
+  @at-root .sale_area {
+    display: flex; justify-content: space-between; flex-wrap: nowrap;
+    width: 78.125vw; height: 350px;
+    margin: auto; margin-top: 50px;
+
+    @at-root .sale_item {
+      width: 190px; height: auto;
+      margin-right: 10px;
+      &:last-child {margin-right: 0;}
+
+      a {
+        @include full;
+
+        .sale_img {
+          width: 190px; height: 190px;
+          background-color: #eee;
+        }
+        .sale_title {
+          width: 100%; height: auto;
+          margin-top: 10px;
+          font-size: 18px;
+        }
+        .sale_last_price {
+          width: 100%; height: auto;
+          text-decoration: line-through;
+        }
+        .sale_price_area {
+          display: flex; justify-content: flex-start;
+          width: 100%; height: auto;
+
+          .sale_percent {
+            width: 50px; height: auto;
+            margin-right: 10px;
+            font-size: 18px;
+            color: #fa3826;
+          }
+          .sale_price {
+            width: 90px; height: auto;
+            font-size: 18px;
+          }
+        } // .sale_price_area
+        .sale_detail {
+          width: 190px; height: auto;
+        }
+      } // a
+    } // .sale_item
+  } // .sale_area
+} // #saleBox

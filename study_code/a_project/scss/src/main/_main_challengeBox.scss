@@ -6,11 +6,12 @@
   padding: 80px;
 
   .challenge_area {
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-around;
     // width: 78.125vw; 
     width: 100%;
     height: 30vw;
     margin: auto;
+    // padding: 0 20px;
 
     @at-root .challenge {
       width: 30vw; height: 100%;
@@ -21,4 +22,3 @@
     }
   } // .challenge_area
 } // #challengeBox
-

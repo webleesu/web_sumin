@@ -38,7 +38,7 @@
 
   @at-root .foot_main_area {
     position: relative;
-    width: 600px; height: auto;
+    width: 78.125vw; max-width: 800px; height: auto;
     margin: auto;
     .foot_main_btn {
       display: flex; justify-content: space-between;
@@ -48,7 +48,7 @@
       text-align: left; color: #ddd;
       margin-bottom: 30px;
 
-      li { position: relative; margin-right: 15px; padding-right: 20px; }
+      li { position: relative; margin-right: 15px; padding-right: 4vw; }
       li:last-child {margin-right: 0; padding-right: 0;}
       li::after {
         content: ""; display: block;
@@ -68,7 +68,7 @@
       display: none;
       &.copyright { 
         display: block; 
-        width: 336px; height: auto;
+        width: 43.75vw; max-width: 336px; height: auto;
         margin: auto;
         color: #ddd;
       }
