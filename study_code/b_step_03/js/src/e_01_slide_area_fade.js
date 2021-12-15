@@ -46,6 +46,11 @@ require("core-js/modules/es.array.concat.js");
     viewLi[countIndex].style.zIndex = '10';
     viewLi[countIndex].style.position = 'absolute';
     viewLi[countIndex].style.transition = "all ".concat(timed, "ms  ").concat(cssFn);
+  };
+
+  var fnOpacity = function fnOpacity() {
+    viewLi[countIndex + 1].style.display = 'block';
+    viewLi[countIndex].style.opacity = 0;
   }; // -------------------------------------------------------------
   // 이벤트처리
   // elNext클릭시
