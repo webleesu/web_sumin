@@ -1,0 +1,59 @@
+// _main_awards_pc.scss
+
+// 1280px ~ ----------------------------------------------------------------
+@media all and (min-width: 1280px){
+  #awardsBox {
+    height: 500px;
+  
+    @at-root .awards_area {
+      height: 300px;
+      
+      @at-root .awards_indicator {
+        display: flex; justify-content: space-between;
+        position: absolute;
+        bottom: 20px; left: 0; right: 0;
+        width: 220px; height: 20px;
+        margin: auto;
+  
+        .awards_circle {
+          width: 20px; height: 20px;
+          // margin-right: 30px;
+          border-radius: 100%;
+          background-color: #FFD9AD;
+  
+          &.on { background-color: #E17900; }
+          button {
+            @include full;
+            border-radius: 100%;
+            &:hover { background-color: rgba(23, 23, 23, 0.2);}
+            &:focus { outline: 3px solid #171717;}
+          }
+        }
+      } // .awards_indicator
+  
+      @at-root .awards_main {
+        width: 90.625vw; height: 220px;
+        margin: auto;
+  
+        .awards {
+          width: 220px; height: 220px;
+          
+          &:nth-child(1) { // 배경은 handhelds 따라가기
+            width: 160px; height: 160px;
+            margin: auto;
+            background-color: #eee;
+          }
+          &:nth-child(5) { // 배경은 handhelds 따라가기
+            width: 160px; height: 160px;
+            margin: auto;
+            background-color: #eee;
+          }
+          
+          &:nth-child(n+6){display: none;}
+        }
+
+      } // .awards_main
+    } // .awards_area
+  } // #awardsBox
+
+} // 1280px ~ ====================================================================

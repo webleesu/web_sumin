@@ -1,0 +1,66 @@
+// _main_awards.scss
+
+
+#awardsBox {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #FFF1E0;
+  padding-top: 80px;
+
+  .awards_title {
+    width: 280px; height: 60px;
+    margin: auto;
+    background-color: #E17900;
+    border-radius: 30px;
+    font-size: 22px; font-weight: 700;
+    text-align: center; line-height: 60px;
+    color: #fff;
+  } // .awards_title
+
+  @at-root .awards_area {
+    position: relative;
+    width: 100%;
+    margin: auto; margin-top: 50px;
+
+    @at-root .awards_btn {
+      > div {
+        position: absolute; z-index: 1;
+        bottom: 50%;
+        width: 70px; height: 70px;
+      }
+      .awards_after_btn {
+        right: 20px;
+  
+        button {
+          @include full;
+          @include img('forward_orange.png');
+        }
+      } // .awards_after_btn
+
+      .awards_before_btn {
+        left: 20px;
+
+        button {
+          @include full;
+          @include img('back_orange.png');
+        }
+      }
+
+    } // .awards_btn
+
+    @at-root .awards_main {
+      display: flex; justify-content: space-between;
+      // margin: auto;
+
+      .awards {
+        margin: 0 20px;
+        background-color: #eee;
+        
+      }
+
+    } // .awards_main
+  } // .awards_area
+} // #awardsBox
+
+@import './main_awards_handhelds';
+@import './main_awards_pc';

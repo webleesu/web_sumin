@@ -1296,6 +1296,207 @@ html, body {
     margin-left: 0;
   }
 }
+#awardsBox {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #FFF1E0;
+  padding-top: 80px;
+}
+#awardsBox .awards_title {
+  width: 280px;
+  height: 60px;
+  margin: auto;
+  background-color: #E17900;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+}
+.awards_area {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+}
+.awards_btn > div {
+  position: absolute;
+  z-index: 1;
+  bottom: 50%;
+  width: 70px;
+  height: 70px;
+}
+.awards_btn .awards_after_btn {
+  right: 20px;
+}
+.awards_btn .awards_after_btn button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/forward_orange.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.awards_btn .awards_after_btn button > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.awards_btn .awards_before_btn {
+  left: 20px;
+}
+.awards_btn .awards_before_btn button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/back_orange.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.awards_btn .awards_before_btn button > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.awards_main {
+  display: flex;
+  justify-content: space-between;
+}
+.awards_main .awards {
+  margin: 0 20px;
+  background-color: #eee;
+}
+
+@media all and (max-width: 1279px) {
+  #awardsBox {
+    height: calc(20vw + 300px);
+  }
+  .awards_area {
+    height: auto;
+  }
+  .awards_area .awards_indicator {
+    display: none;
+  }
+  .awards_main {
+    width: 105vw;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .awards_main .awards {
+    width: 20vw;
+    height: 20vw;
+  }
+  .awards_main .awards:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/test.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .awards_main .awards:nth-child(1) > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .awards_main .awards:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/test.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .awards_main .awards:nth-child(4) > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .awards_main .awards:nth-child(n+5) {
+    display: none;
+  }
+}
+@media all and (min-width: 1280px) {
+  #awardsBox {
+    height: 500px;
+  }
+  .awards_area {
+    height: 300px;
+  }
+  .awards_indicator {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 220px;
+    height: 20px;
+    margin: auto;
+  }
+  .awards_indicator .awards_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #FFD9AD;
+  }
+  .awards_indicator .awards_circle.on {
+    background-color: #E17900;
+  }
+  .awards_indicator .awards_circle button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  .awards_indicator .awards_circle button:hover {
+    background-color: rgba(23, 23, 23, 0.2);
+  }
+  .awards_indicator .awards_circle button:focus {
+    outline: 3px solid #171717;
+  }
+
+  .awards_main {
+    width: 90.625vw;
+    height: 220px;
+    margin: auto;
+  }
+  .awards_main .awards {
+    width: 220px;
+    height: 220px;
+  }
+  .awards_main .awards:nth-child(1) {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    background-color: #eee;
+  }
+  .awards_main .awards:nth-child(5) {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    background-color: #eee;
+  }
+  .awards_main .awards:nth-child(n+6) {
+    display: none;
+  }
+}
 /*
 // ~1279px ------------------------------------------------------
 @media all and (max-width: 1279px){

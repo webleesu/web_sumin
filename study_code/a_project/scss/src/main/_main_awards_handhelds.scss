@@ -1,0 +1,33 @@
+// _main_awards_handhelds.scss
+
+// ~1279px ------------------------------------------------------
+@media all and (max-width: 1279px){
+  #awardsBox {
+    height: calc(20vw + 300px);
+
+    @at-root .awards_area {
+      height: auto;
+
+      .awards_indicator { display: none; }
+
+      @at-root .awards_main {
+        width: 105vw; height: auto;
+        margin-bottom: 40px;
+        .awards {
+          width: 20vw; height: 20vw;
+          
+          &:nth-child(1) {
+            // margin: auto;
+            @include img_black('test.png');
+          }
+          &:nth-child(4) {
+            // margin: auto;
+            @include img_black('test.png');
+          }
+          &:nth-child(n+5){ display: none;}
+        }
+      }
+    }// .awards_area
+  } // #awardsBox
+
+} // ~1279px ===============================================================

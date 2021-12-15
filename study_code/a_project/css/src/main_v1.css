@@ -452,7 +452,7 @@ body {
         background-color: var(--color-sample1);
       }
 
-      .awra ds:last-child {margin-right: 0;}
+      .awrads:last-child {margin-right: 0;}
 
       .awards_after {
         /* float: left; */

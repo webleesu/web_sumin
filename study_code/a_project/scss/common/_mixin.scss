@@ -21,6 +21,21 @@ $imgPath:'../../img/';
   @content;
 }
 
+@mixin img_black($file, $repeat:no-repeat, $position:50% 50%, $size:contain){
+  background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(#{$imgPath}#{$file});
+    repeat: $repeat;
+    position:$position;
+    size: $size;
+  } 
+  & > span{
+    display: block; 
+    position: absolute; z-index:-1; clip:rect(0 0 0 0);
+    width: 0; height: 0; overflow: hidden;
+  }
+  @content;
+}
+
 // size 
 @mixin full($file:false, $repeat:no-repeat, $position:50% 50%, $size:initial){
   display:block; width:100%; height:100%;
