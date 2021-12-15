@@ -10,6 +10,11 @@
 html, body { color: #171717; font-weight: 400;}
 
 #wrap { width: 100%; height: auto;}
+
+@media all and (max-width: 1279px){
+  .title_all { display: none;}
+}
+
 @import '../common/headBox';
 @import '../common/footBox';
 
@@ -17,9 +22,18 @@ html, body { color: #171717; font-weight: 400;}
 @import './main/main_bestBox';
 @import './main/main_benefitBox';
 @import './main/main_challengeBox';
+@import './main/main_event';
 
+/*
+// ~1279px ------------------------------------------------------
 @media all and (max-width: 1279px){
-  .title_all { display: none;}
-}
 
 
+} // ~1279px ===============================================================
+
+// 1280px ~ ----------------------------------------------------------------
+@media all and (min-width: 1280px){
+
+
+} // 1280px ~ ====================================================================
+*/

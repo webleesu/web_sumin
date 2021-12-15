@@ -3,18 +3,18 @@
 // 1280px ~ ----------------------------------------------------------------
 @media all and (min-width: 1280px){
   #bestBox {
-    width: 100%; height: 600px;
+    width: 100%; height: auto;
     margin-top: 20px;
-    padding: 40px;
+    padding: 80px;
     
     @at-root .best_area {
-      // display: flex; justify-content: space-between;
+      display: flex; justify-content: space-between; flex-wrap: nowrap;
       overflow: hidden;
       width: 78.125vw; height: 420px;
       margin: auto;
   
       .best_item {
-        float: left;
+        // float: left;
         width: 320px; height: 420px;
         margin-left: 20px;
   

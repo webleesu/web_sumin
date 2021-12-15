@@ -1,0 +1,34 @@
+// _main_event.scss
+
+#eventBox {
+  width: 100%; height: auto;
+  margin-top: 20px;
+  padding: 80px;
+
+  .event_area {
+    display: flex; justify-content: space-between;
+    overflow: hidden;
+    margin: auto;
+
+    @at-root .event {
+      margin-left: 20px;
+      a {
+        @include full;
+        .event_img {
+          background-color: #eee;
+        }
+        .event_title {
+          height: 35px;
+          margin-top: 10px;
+          font-size: 18px; font-weight: 700;
+        }
+        .event_detail {
+          width: 320px; height: 35px;
+        }
+      } // a
+    } // .event
+  } // .event_area
+} // #eventBox
+
+@import './main_event_handhelds';
+@import './main_event_pc';

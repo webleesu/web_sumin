@@ -1,0 +1,32 @@
+// _main_event_handhelds.scss
+
+// ~1279px ------------------------------------------------------
+@media all and (max-width: 1279px){
+  #eventBox {
+    .event_area {
+      flex-wrap: wrap;
+      width: 100%; height: calc($event_height * 2 + 5.2vw);
+      // height: 104.2vw;
+
+      @at-root .event {
+        width: 30vw; height: $event_height;
+        // height: 49.5vw;
+        margin-top: 5.2vw; // 40
+
+        a {
+          .event_img {
+            width: 30vw; height: 30vw;
+          }
+          .event_title {
+            width: 30vw;
+          }
+        } // a
+
+        &:nth-child(2n-1){ margin-left: 0;}
+        &:nth-child(1){ margin-top: 0;}
+        &:nth-child(2){ margin-top: 0;}
+      } // .event
+    } // .event_area
+  } // #eventBox
+
+} // ~1279px ===============================================================

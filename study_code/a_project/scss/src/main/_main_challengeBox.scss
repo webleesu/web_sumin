@@ -3,16 +3,18 @@
 #challengeBox {
   width: 100%; height: auto;
   margin-top: 20px;
-  padding: 40px;
+  padding: 80px;
 
   .challenge_area {
     display: flex; justify-content: space-between;
-    width: 78.125vw; height: 32.8125vw;
+    // width: 78.125vw; 
+    width: 100%;
+    height: 30vw;
     margin: auto;
 
     @at-root .challenge {
-      width: 35.15625vw; height: 100%;
-      margin: auto;
+      width: 30vw; height: 100%;
+      // margin: auto;
       background-color: #eee;
 
       a { @include full; }

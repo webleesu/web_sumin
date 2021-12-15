@@ -1,6 +1,6 @@
 /* main_v2.css */
 .title_area {
-  width: 78.125vw;
+  width: 100%;
   height: 60px;
   margin: auto;
   margin-bottom: 20px;
@@ -76,6 +76,11 @@ html, body {
   height: auto;
 }
 
+@media all and (max-width: 1279px) {
+  .title_all {
+    display: none;
+  }
+}
 #headBox {
   position: fixed;
   top: 0;
@@ -922,7 +927,7 @@ html, body {
     width: 100%;
     height: 480px;
     margin-top: 20px;
-    padding: 40px;
+    padding: 80px;
   }
   .best_area {
     display: flex;
@@ -954,18 +959,20 @@ html, body {
 @media all and (min-width: 1280px) {
   #bestBox {
     width: 100%;
-    height: 600px;
+    height: auto;
     margin-top: 20px;
-    padding: 40px;
+    padding: 80px;
   }
   .best_area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     overflow: hidden;
     width: 78.125vw;
     height: 420px;
     margin: auto;
   }
   .best_area .best_item {
-    float: left;
     width: 320px;
     height: 420px;
     margin-left: 20px;
@@ -1186,19 +1193,18 @@ html, body {
   width: 100%;
   height: auto;
   margin-top: 20px;
-  padding: 40px;
+  padding: 80px;
 }
 #challengeBox .challenge_area {
   display: flex;
   justify-content: space-between;
-  width: 78.125vw;
-  height: 32.8125vw;
+  width: 100%;
+  height: 30vw;
   margin: auto;
 }
 .challenge {
-  width: 35.15625vw;
+  width: 30vw;
   height: 100%;
-  margin: auto;
   background-color: #eee;
 }
 .challenge a {
@@ -1207,10 +1213,101 @@ html, body {
   height: 100%;
 }
 
+#eventBox {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 80px;
+}
+#eventBox .event_area {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: auto;
+}
+.event {
+  margin-left: 20px;
+}
+.event a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.event a .event_img {
+  background-color: #eee;
+}
+.event a .event_title {
+  height: 35px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.event a .event_detail {
+  width: 320px;
+  height: 35px;
+}
+
 @media all and (max-width: 1279px) {
-  .title_all {
-    display: none;
+  #eventBox .event_area {
+    flex-wrap: wrap;
+    width: 100%;
+    height: calc((30vw + 80px) * 2 + 5.2vw);
+  }
+  .event {
+    width: 30vw;
+    height: calc(30vw + 80px);
+    margin-top: 5.2vw;
+  }
+  .event a .event_img {
+    width: 30vw;
+    height: 30vw;
+  }
+  .event a .event_title {
+    width: 30vw;
+  }
+  .event:nth-child(2n-1) {
+    margin-left: 0;
+  }
+  .event:nth-child(1) {
+    margin-top: 0;
+  }
+  .event:nth-child(2) {
+    margin-top: 0;
   }
 }
+@media all and (min-width: 1280px) {
+  #eventBox .event_area {
+    flex-wrap: nowrap;
+    width: 78.125vw;
+    height: 420px;
+  }
+  .event {
+    width: 320px;
+    height: 100%;
+  }
+  .event a .event_img {
+    width: 320px;
+    height: 350px;
+  }
+  .event a .event_title {
+    width: 320px;
+  }
+  .event:first-child {
+    margin-left: 0;
+  }
+}
+/*
+// ~1279px ------------------------------------------------------
+@media all and (max-width: 1279px){
+
+
+} // ~1279px ===============================================================
+
+// 1280px ~ ----------------------------------------------------------------
+@media all and (min-width: 1280px){
+
+
+} // 1280px ~ ====================================================================
+*/
 
 /*# sourceMappingURL=main_v2.css.map */

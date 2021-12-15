@@ -1,0 +1,28 @@
+// _main_event_pc.scss
+
+// 1280px ~ ----------------------------------------------------------------
+@media all and (min-width: 1280px){
+  
+  #eventBox {
+
+    .event_area {
+      flex-wrap: nowrap;
+      width: 78.125vw; height: 420px;
+
+      @at-root .event {
+        width: 320px; height: 100%;
+        a {
+          .event_img {
+            width: 320px; height: 350px;
+          }
+          .event_title {
+            width: 320px;
+          }
+        } // a
+
+        &:first-child {margin-left: 0;}
+      } // .event
+    } // .event_area
+  } // #eventBox
+
+} // 1280px ~ ====================================================================
