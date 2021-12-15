@@ -31,11 +31,13 @@
     margin: auto;
 
     .benefit {
-      margin: auto; margin-top: 15px;
+      margin: auto; 
+      margin-top: 15px;
       text-align: center; font-size: 20px;
 
       .benefit_img {
-        width: 75px; height: 75px;
+        min-width: 40px; width: 10vw; max-width: 75px; 
+        min-height: 40px; height: 10vw; max-height: 75px;
         margin: auto; margin-bottom: 20px;
         background-color: #E17900;
         border-radius: 100%;

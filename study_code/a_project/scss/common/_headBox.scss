@@ -18,7 +18,8 @@
     padding: 3.9vw 10vw;
   }
   @at-root h1 {
-    width: 22.1vw; max-width: 170px; height: 5.2vw; max-height: 40px;
+    min-width: 100px;width: 22.1vw; max-width: 170px; 
+    min-height: 20px; height: 5.2vw; max-height: 40px; // height: 5.2vw;
     // margin-top: 30px;
     a{ 
       @include full;
@@ -32,16 +33,16 @@
   #hand_nav { 
     display: block;
     display: flex; justify-content: space-between;
-    width: 30vw; max-width: 230px; height: auto;
+    min-width: 150px; width: 30vw; max-width: 230px; height: auto;
     // margin-top: 40px;
 
     button {
-      width: 5.2vw; max-width: 40px; height: 5.2vw; max-height: 40px;
+      min-width: 25px; width: 5.2vw; max-width: 40px; min-height: 25px; height: 5.2vw; max-height: 40px;
     }
 
     @at-root .hand_language {
       position: relative;
-      width: 5.2vw; max-width: 40px; height: 5.2vw; max-height: 40px;
+      min-width: 25px; width: 5.2vw; max-width: 40px; min-height: 25px; height: 5.2vw; max-height: 40px;
       cursor: pointer;
       @include img('global_1.png');
       ul {

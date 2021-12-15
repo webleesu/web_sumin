@@ -10,7 +10,7 @@
 
 .title_text { 
   float: left;
-  width: 500px; height: 60px;
+  width: 65vw; max-width: 500px; height: 60px;
 }
 
 .title {
@@ -21,7 +21,7 @@
   text-align: left;
 }
 .sub_title {
-  width: 450px; height: 20px;
+  width: 65vw; max-width: 500px; height: 20px;
   font-size: 16px; font-weight: 400;
   line-height: 20px;
   text-align: left;
