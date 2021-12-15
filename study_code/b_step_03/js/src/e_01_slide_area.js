@@ -22,7 +22,7 @@ require("core-js/modules/es.array.filter.js");
 // 1.3 순번이 마지막에 가면 처음으로 이동
 // 2. 이전버튼을 클릭시 위 기능을 동일하게 수행
 // -------------------------------------
-window.addEventListener('load', function () {
+(function () {
   // 요소 선택
   var elSlide_01 = document.querySelector('.slide_01');
   var elBtnDetail = elSlide_01.querySelector('.view_btn');
@@ -139,28 +139,25 @@ window.addEventListener('load', function () {
       fnIndexCountType2();
     });
   }); // ============================================================
+  // const fnT = function( i = '값 입력하세요~~!' ){  
+  //   // if(!i){ 
+  //   //   return '값 입력되지 않았음' 
+  //   // }else{
+  //   //   return i;
+  //   // }
+  //   // return i || '값 입력되지 않았음';
+  //   return i;  
+  // }
+  // console.log( fnT(12) );
 
-  var fnT = function fnT() {
-    var i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '값 입력하세요~~!';
-    // if(!i){ 
-    //   return '값 입력되지 않았음' 
-    // }else{
-    //   return i;
-    // }
-    // return i || '값 입력되지 않았음';
-    return i;
-  };
-
-  console.log(fnT(12));
   var arrayList = ['a', 'b', 'c', 'd']; // console.log(arrayList[0]);
   // console.log(arrayList[2]);
   // for(let i=0; i<4; i++){
   //   console.log( arrayList[i] );
   // }
 
-  arrayList.forEach(function (d, i) {
-    // console.log( d );
-    console.log(arrayList[i]);
+  arrayList.forEach(function (d, i) {// console.log( d );
+    // console.log(arrayList[i]);
   }); // forEach ( 배열의 각요소, 각요소의 순번 )
 
   var arrayList2 = ['a', 'b', 'c', 'd'];
@@ -173,7 +170,7 @@ window.addEventListener('load', function () {
   });
   var otherArr2 = arrayList.filter(function (el) {
     return el !== arrayList2[selectI];
-  });
-  console.log(otherArr);
-  console.log(otherArr2); // -----------------------------------------
-});
+  }); // console.log( otherArr );
+  // console.log( otherArr2 );
+  // console.clear();
+})(); // -----------------------------------------
