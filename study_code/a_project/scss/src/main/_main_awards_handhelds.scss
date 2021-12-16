@@ -1,22 +1,27 @@
 // _main_awards_handhelds.scss
 
-// ~1279px ------------------------------------------------------
+
+
+// 1279px ------------------------------------------------------
 @media all and (max-width: 1279px){
   #awardsBox {
-    height: calc(20vw + 300px);
+    height: calc(30vw + 300px); // awards height 따라서 변동
 
     @at-root .awards_area {
       height: auto;
 
+      .awards_btn {display: none;}
       .awards_btn > div { margin-bottom: -35px;}
 
       .awards_indicator { display: none; }
 
       @at-root .awards_main {
-        width: 105vw; height: auto;
+        width: 130vw; height: auto;
+        margin-left: -15vw;
         margin-bottom: 40px;
         .awards {
-          width: 20vw; height: 20vw;
+          width: 30vw; height: 30vw;
+          // margin: 0 10px;
           
           &:nth-child(1) {
             // margin: auto;
@@ -32,4 +37,4 @@
     }// .awards_area
   } // #awardsBox
 
-} // ~1279px ===============================================================
+} // 1279px ===============================================================

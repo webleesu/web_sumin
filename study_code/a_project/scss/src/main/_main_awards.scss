@@ -23,38 +23,12 @@
     width: 100%;
     margin: auto; margin-top: 50px;
 
-    @at-root .awards_btn {
-      > div {
-        position: absolute; z-index: 1;
-        bottom: 50%;
-        width: 70px; height: 70px;
-      }
-      .awards_after_btn {
-        right: 20px;
-  
-        button {
-          @include full;
-          @include img('forward_orange.png');
-        }
-      } // .awards_after_btn
-
-      .awards_before_btn {
-        left: 20px;
-
-        button {
-          @include full;
-          @include img('back_orange.png');
-        }
-      }
-
-    } // .awards_btn
 
     @at-root .awards_main {
       display: flex; justify-content: space-between;
       // margin: auto;
 
       .awards {
-        margin: 0 20px;
         background-color: #eee;
         
       }

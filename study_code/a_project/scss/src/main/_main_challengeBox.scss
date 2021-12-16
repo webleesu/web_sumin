@@ -1,20 +1,20 @@
 // _main_challengeBox.scss
 
 #challengeBox {
-  width: 100%; height: auto;
+  width: 100%; height: auto; min-height: 400px;
   margin-top: 20px;
   padding: 10vw;
 
   .challenge_area {
-    display: flex; justify-content: space-around;
+    display: flex; justify-content: space-between;
     // width: 78.125vw; 
     width: 100%;
-    height: 30vw;
-    margin: auto;
+    height: auto;
+    margin: auto; margin-top: 40px;
     // padding: 0 20px;
 
     @at-root .challenge {
-      width: 30vw; height: 100%;
+      width: 38vw; height: 38vw;
       // margin: auto;
       background-color: #eee;
 
@@ -22,3 +22,56 @@
     }
   } // .challenge_area
 } // #challengeBox
+
+// ~767px ---------------------------------------------------------------
+@media all and (max-width: 767px){
+  #challengeBox {
+    width: 100%; height: auto; min-height: 400px;
+    margin-top: 20px;
+    padding: 10vw;
+  
+    .challenge_area {
+      display: flex; flex-direction: column; justify-content: flex-start;
+      // width: 78.125vw; 
+      width: auto;
+      height: auto;
+      margin: auto; margin-top: 40px;
+      // padding: 0 20px;
+  
+      @at-root .challenge {
+        width: 70vw; height: 70vw;
+        margin: auto;
+        background-color: #eee;
+  
+        &:first-child {margin-bottom: 11vw;}
+        a { @include full; }
+      }
+    } // .challenge_area
+  } // #challengeBox
+} // ~767px ============================================================================
+
+// 768px ~ 1279px ----------------------------------------------------------------------
+@media all and (min-width: 768px) and (max-width: 1279px){
+  #challengeBox {
+    width: 100%; height: auto; min-height: 400px;
+    margin-top: 20px;
+    padding: 10vw;
+  
+    .challenge_area {
+      display: flex; justify-content: space-between;
+      // width: 78.125vw; 
+      width: 100%;
+      height: auto;
+      margin: auto; margin-top: 40px;
+      // padding: 0 20px;
+  
+      @at-root .challenge {
+        width: 38vw; height: 38vw;
+        // margin: auto;
+        background-color: #eee;
+  
+        a { @include full; }
+      }
+    } // .challenge_area
+  } // #challengeBox
+} // 768px ~ 1279px ====================================================================

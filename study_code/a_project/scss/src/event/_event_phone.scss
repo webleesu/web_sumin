@@ -33,7 +33,7 @@
   
         li {
           float: left;
-          margin: 3px 20px 20px 0;
+          margin: 3px auto 20px 0;
           padding: 0 10px; padding-bottom: 11px;
   
           &.on {
@@ -50,7 +50,7 @@
         margin: auto; margin-top: 50px; margin-bottom: 200px;
 
         .event_ing_wrap {
-          display: flex; justify-content: space-around; flex-wrap: wrap;
+          display: flex; flex-direction: column; justify-content: flex-start; //flex-wrap: wrap;
           width: 100%; height: auto;
           @at-root .event {
             position: relative;

@@ -11,9 +11,9 @@ html, body { color: #171717; font-weight: 400;}
 
 #wrap { width: 100%; height: auto;}
 
-@media all and (max-width: 1279px){
-  .title_all { display: none;}
-}
+// @media all and (max-width: 1279px){
+//   .title_all { display: none;}
+// }
 
 @import '../common/headBox';
 @import '../common/footBox';

@@ -1,17 +1,53 @@
 // _main_event_handhelds.scss
 
-// ~1279px ------------------------------------------------------
-@media all and (max-width: 1279px){
+// ~ 767px ------------------------------------------------------------------
+@media all and (max-width: 767px){
   #eventBox {
     .event_area {
+      flex-direction: column; justify-content: flex-start;
+      flex-wrap: nowrap;
+      width: 100%; height: calc($event_phone_height * 2 + 6vw);
+      // height: 104.2vw;
+
+      @at-root .event {
+        width: $event_phone_width; height: $event_phone_height;
+        // margin-left: 20px;
+        // height: 49.5vw;
+        margin: auto;
+        margin-top: 6vw; 
+
+        a {
+          .event_img {
+            width: $event_phone_width; height: $event_phone_width;
+          }
+          .event_title {
+            width: $event_phone_width;
+          }
+        } // a
+
+        // &:nth-child(2n-1){ margin-left: 0;}
+        &:nth-child(1){ margin-top: 0;}
+        // &:nth-child(2){ margin-top: 0;}
+      } // .event
+    } // .event_area
+  } // #eventBox
+
+} // ~ 767px =================================================================
+
+// 768px ~ 1279px ------------------------------------------------------
+@media all and (min-width:768px) and (max-width: 1279px){
+  #eventBox {
+    .event_area {
+      justify-content: space-around;
       flex-wrap: wrap;
       width: 100%; height: calc($event_height * 2 + 5.2vw);
       // height: 104.2vw;
 
       @at-root .event {
         width: 30vw; height: $event_height;
+        margin-left: 20px;
         // height: 49.5vw;
-        margin-top: 5.2vw; // 40
+        margin-top: 5.2vw;
 
         a {
           .event_img {

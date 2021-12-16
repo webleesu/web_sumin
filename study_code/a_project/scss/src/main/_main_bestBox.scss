@@ -1,22 +1,24 @@
 // _main_bestBox.scss
 
 #bestBox {
-  width: 100%;
+  width: 100%; height: auto;
+  padding: 10vw;
   
   @at-root .best_area {
+    display: flex; 
     height: 420px;
     margin: auto;
+    margin-top: 20px;
 
     .best_item {
       float: left;
-      width: 320px; height: 420px;
+
       margin-left: 20px;
 
       &:first-child { margin-left: 0;}
       a { 
         @include full;
         .best_img {
-          width: 320px; height: 320px;
           background-color: rgb(127, 98, 255, 0.5);
         }
         .best_text {
