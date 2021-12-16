@@ -45,14 +45,14 @@
           width: 20px; height: 20px;
           // margin-right: 30px;
           border-radius: 100%;
-          background-color: #FFD9AD;
+          background-color: $color_primary_circle;
   
-          &.on { background-color: #E17900; }
+          &.on { background-color: $color_primary; }
           button {
             @include full;
             border-radius: 100%;
-            &:hover { background-color: rgba(23, 23, 23, 0.2);}
-            &:focus { outline: 3px solid #171717;}
+            &:hover { background-color: rgba($color: $color_black, $alpha: 0.3);}
+            &:focus { outline: 3px solid $color_black;}
           }
         }
       } // .awards_indicator
@@ -65,15 +65,15 @@
           width: 220px; height: 220px;
           margin: 0 20px;
           
-          &:nth-child(1) { // 배경은 handhelds 따라가기
+          &:nth-child(1) {
             width: 160px; height: 160px;
             margin: auto;
-            background-color: #eee;
+            @include img_black('awards_01.jpg');
           }
-          &:nth-child(5) { // 배경은 handhelds 따라가기
+          &:nth-child(5) {
             width: 160px; height: 160px;
             margin: auto;
-            background-color: #eee;
+            @include img_black('awards_05.jpg');
           }
           
           &:nth-child(n+6){display: none;}

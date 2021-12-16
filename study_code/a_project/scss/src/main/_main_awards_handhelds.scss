@@ -25,11 +25,11 @@
           
           &:nth-child(1) {
             // margin: auto;
-            @include img_black('test.png');
+            @include img_black('awards_01.jpg');
           }
           &:nth-child(4) {
             // margin: auto;
-            @include img_black('test.png');
+            @include img_black('awards_04.jpg');
           }
           &:nth-child(n+5){ display: none;}
         }

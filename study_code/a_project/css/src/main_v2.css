@@ -71,7 +71,7 @@
 }
 
 html, body {
-  color: #171717;
+  color: #1c1c1c;
   font-weight: 400;
 }
 
@@ -363,7 +363,7 @@ html, body {
     left: -50px;
     width: 100px;
     height: auto;
-    background-color: #efefef;
+    background-color: #ffffff;
   }
   .unb_lauguage_area li {
     margin: auto;
@@ -376,11 +376,11 @@ html, body {
     height: 100%;
   }
   .unb_lauguage_area li a:hover {
-    background-color: #ddd;
+    background-color: #ebebeb;
   }
 
   .unb_btn .unb_sign {
-    color: #E13100;
+    color: #EC0F0C;
   }
 
   .unb_search_area {
@@ -457,7 +457,7 @@ html, body {
     overflow: hidden;
   }
 }
-@media all and (max-width: 1279px) {
+@media all and (max-width: 767px) {
   #footBox {
     width: 100%;
     height: 400px;
@@ -498,7 +498,166 @@ html, body {
     margin: auto;
     font-size: 16px;
     text-align: left;
-    color: #ddd;
+    color: #ebebeb;
+  }
+  .foot_top_area .foot_top_btn > div {
+    margin-right: 20px;
+    line-height: 30px;
+  }
+  .foot_top_area .foot_top_btn > div:last-child {
+    margin-right: 0;
+  }
+
+  .foot_main_area {
+    position: relative;
+    width: 78.125vw;
+    max-width: 800px;
+    height: auto;
+    margin: auto;
+  }
+  .foot_main_area .foot_main_btn {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    text-align: left;
+    color: #ebebeb;
+    margin-bottom: 30px;
+  }
+  .foot_main_area .foot_main_btn li {
+    position: relative;
+    margin-right: 15px;
+    padding-right: 4vw;
+  }
+  .foot_main_area .foot_main_btn li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .foot_main_area .foot_main_btn li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 3px;
+    height: 3px;
+    background-color: #ebebeb;
+  }
+  .foot_main_area .foot_main_btn li:last-child::after {
+    display: none;
+  }
+  .foot_main_area .foot_main_btn .foot_personal {
+    font-weight: 700;
+  }
+  .foot_main_area .foot_main_btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .foot_main_area .foot_info p {
+    display: none;
+  }
+  .foot_main_area .foot_info p.copyright {
+    display: block;
+    width: 43.75vw;
+    max-width: 336px;
+    height: auto;
+    color: #ebebeb;
+  }
+  .foot_main_area .foot_bottom_btn {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: auto;
+  }
+  .foot_main_area .foot_bottom_btn li {
+    margin-right: 20px;
+  }
+  .foot_facebook a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/facebook.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .foot_facebook a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .foot_instagram a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/instagram.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .foot_instagram a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #footBox {
+    width: 100%;
+    height: 400px;
+    padding: 7.8125vw;
+    background-color: #1c1c1c;
+  }
+
+  .foot_top_area {
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .foot_top_area h2 {
+    width: 112px;
+    height: 30px;
+    margin-bottom: 60px;
+    background-image: url(../../img/footer-logo-text.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .foot_top_area h2 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .foot_top_area .foot_top_btn {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    height: auto;
+    max-height: 30px;
+    margin: auto;
+    font-size: 16px;
+    text-align: left;
+    color: #ebebeb;
   }
   .foot_top_area .foot_top_btn > div {
     margin-right: 20px;
@@ -523,7 +682,7 @@ html, body {
     height: auto;
     font-size: 16px;
     text-align: left;
-    color: #ddd;
+    color: #ebebeb;
     margin-bottom: 30px;
   }
   .foot_main_area .foot_main_btn li {
@@ -543,7 +702,7 @@ html, body {
     right: 0;
     width: 3px;
     height: 3px;
-    background-color: #ddd;
+    background-color: #ebebeb;
   }
   .foot_main_area .foot_main_btn li:last-child::after {
     display: none;
@@ -565,7 +724,7 @@ html, body {
     max-width: 336px;
     height: auto;
     margin: auto;
-    color: #ddd;
+    color: #ebebeb;
   }
   .foot_main_area .foot_bottom_btn {
     display: flex;
@@ -656,7 +815,7 @@ html, body {
     height: 30px;
     font-size: 16px;
     text-align: left;
-    color: #ddd;
+    color: #ebebeb;
   }
   .foot_top_area .foot_top_btn > div {
     margin-right: 20px;
@@ -679,7 +838,7 @@ html, body {
     height: 30px;
     font-size: 16px;
     text-align: left;
-    color: #ddd;
+    color: #ebebeb;
   }
   .foot_main_area .foot_main_btn li {
     position: relative;
@@ -698,7 +857,7 @@ html, body {
     right: 0;
     width: 3px;
     height: 3px;
-    background-color: #ddd;
+    background-color: #ebebeb;
   }
   .foot_main_area .foot_main_btn li:last-child::after {
     display: none;
@@ -719,7 +878,7 @@ html, body {
   .foot_main_area .foot_info p {
     display: block;
     margin-bottom: 20px;
-    color: #ddd;
+    color: #ebebeb;
   }
   .foot_main_area .foot_info p:last-child {
     margin-bottom: 0;
@@ -869,14 +1028,14 @@ html, body {
   font-weight: 700;
   text-align: center;
   line-height: 25px;
-  color: #fff;
+  color: #ffffff;
 }
 
 @media all and (max-width: 1279px) {
   .view_area {
     width: 100%;
     height: 90vw;
-    background-color: #ddd;
+    background-color: #ebebeb;
   }
   .view_area .view_btn {
     left: 0;
@@ -908,7 +1067,7 @@ html, body {
   .side_view_area .side_view {
     width: 100%;
     height: 14vw;
-    background-color: #eee;
+    background-color: #ebebeb;
     margin: auto;
   }
   .side_view_area .side_view a {
@@ -941,7 +1100,7 @@ html, body {
   height: 100%;
 }
 .best_area .best_item a .best_img {
-  background-color: rgba(127, 98, 255, 0.5);
+  background-color: #ebebeb;
 }
 .best_area .best_item a .best_text {
   width: 320px;
@@ -1008,7 +1167,7 @@ html, body {
   width: 100%;
   height: 500px;
   margin-top: 20px;
-  background-color: #FFF1E0;
+  background-color: #fff1e0;
 }
 .benefit_title_area {
   width: 280px;
@@ -1020,12 +1179,12 @@ html, body {
   height: 60px;
   margin: auto;
   border-radius: 30px;
-  background-color: #E17900;
+  background-color: #e17900;
   text-align: center;
   line-height: 60px;
   font-size: 36px;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
 }
 .benefit_title_area .benefit_title_detail {
   width: 260px;
@@ -1054,7 +1213,7 @@ html, body {
   max-height: 75px;
   margin: auto;
   margin-bottom: 20px;
-  background-color: #E17900;
+  background-color: #e17900;
   border-radius: 100%;
 }
 .benefit_detail_area .benefit .benefit_img_coupon {
@@ -1220,7 +1379,7 @@ html, body {
 .challenge {
   width: 38vw;
   height: 38vw;
-  background-color: #eee;
+  background-color: #ebebeb;
 }
 .challenge a {
   display: block;
@@ -1249,7 +1408,7 @@ html, body {
     width: 70vw;
     height: 70vw;
     margin: auto;
-    background-color: #eee;
+    background-color: #ebebeb;
   }
   .challenge:first-child {
     margin-bottom: 11vw;
@@ -1279,7 +1438,7 @@ html, body {
   .challenge {
     width: 38vw;
     height: 38vw;
-    background-color: #eee;
+    background-color: #ebebeb;
   }
   .challenge a {
     display: block;
@@ -1304,7 +1463,7 @@ html, body {
   height: 100%;
 }
 .event a .event_img {
-  background-color: #eee;
+  background-color: #ebebeb;
 }
 .event a .event_title {
   height: 35px;
@@ -1398,7 +1557,7 @@ html, body {
 #awardsBox {
   width: 100%;
   margin-top: 20px;
-  background-color: #FFF1E0;
+  background-color: #fff1e0;
   padding-top: 80px;
   overflow: hidden;
 }
@@ -1406,13 +1565,13 @@ html, body {
   width: 280px;
   height: 60px;
   margin: auto;
-  background-color: #E17900;
+  background-color: #e17900;
   border-radius: 30px;
   font-size: 22px;
   font-weight: 700;
   text-align: center;
   line-height: 60px;
-  color: #fff;
+  color: #ffffff;
 }
 .awards_area {
   position: relative;
@@ -1425,7 +1584,82 @@ html, body {
   justify-content: space-between;
 }
 .awards_main .awards {
-  background-color: #eee;
+  background-color: #ebebeb;
+}
+.awards_main .awards:nth-child(1) {
+  background-image: url(../../img/awards_01.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.awards_main .awards:nth-child(1) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.awards_main .awards:nth-child(2) {
+  background-image: url(../../img/awards_02.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.awards_main .awards:nth-child(2) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.awards_main .awards:nth-child(3) {
+  background-image: url(../../img/awards_03.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.awards_main .awards:nth-child(3) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.awards_main .awards:nth-child(4) {
+  background-image: url(../../img/awards_04.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.awards_main .awards:nth-child(4) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.awards_main .awards:nth-child(5) {
+  background-image: url(../../img/awards_05.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.awards_main .awards:nth-child(5) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 @media all and (max-width: 1279px) {
@@ -1455,10 +1689,10 @@ html, body {
     height: 30vw;
   }
   .awards_main .awards:nth-child(1) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/test.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/awards_01.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: cover;
   }
   .awards_main .awards:nth-child(1) > span {
     display: block;
@@ -1470,10 +1704,10 @@ html, body {
     overflow: hidden;
   }
   .awards_main .awards:nth-child(4) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/test.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/awards_04.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: cover;
   }
   .awards_main .awards:nth-child(4) > span {
     display: block;
@@ -1560,10 +1794,10 @@ html, body {
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    background-color: #FFD9AD;
+    background-color: #ffd9ad;
   }
   .awards_indicator .awards_circle.on {
-    background-color: #E17900;
+    background-color: #e17900;
   }
   .awards_indicator .awards_circle button {
     display: block;
@@ -1572,10 +1806,10 @@ html, body {
     border-radius: 100%;
   }
   .awards_indicator .awards_circle button:hover {
-    background-color: rgba(23, 23, 23, 0.2);
+    background-color: rgba(28, 28, 28, 0.3);
   }
   .awards_indicator .awards_circle button:focus {
-    outline: 3px solid #171717;
+    outline: 3px solid #1c1c1c;
   }
 
   .awards_main {
@@ -1592,13 +1826,37 @@ html, body {
     width: 160px;
     height: 160px;
     margin: auto;
-    background-color: #eee;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/awards_01.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .awards_main .awards:nth-child(1) > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
   .awards_main .awards:nth-child(5) {
     width: 160px;
     height: 160px;
     margin: auto;
-    background-color: #eee;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/awards_05.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .awards_main .awards:nth-child(5) > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
   .awards_main .awards:nth-child(n+6) {
     display: none;
@@ -1608,7 +1866,7 @@ html, body {
   width: 100%;
   height: auto;
   margin-top: 20px;
-  padding: 80px;
+  padding: 10vw;
   overflow: hidden;
 }
 .sale_area {
@@ -1636,7 +1894,7 @@ html, body {
 .sale_item a .sale_img {
   width: 190px;
   height: 190px;
-  background-color: #eee;
+  background-color: #ebebeb;
 }
 .sale_item a .sale_title {
   width: 100%;
@@ -1660,7 +1918,7 @@ html, body {
   height: auto;
   margin-right: 10px;
   font-size: 18px;
-  color: #fa3826;
+  color: #EC0F0C;
 }
 .sale_item a .sale_price_area .sale_price {
   width: 90px;
@@ -1675,7 +1933,7 @@ html, body {
 #magazineBox {
   width: 100%;
   height: 23.5vw;
-  background-color: #FFF1E0;
+  background-color: #fff1e0;
 }
 #magazineBox .magazine_img {
   width: 100%;

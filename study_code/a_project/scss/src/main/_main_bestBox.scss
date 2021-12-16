@@ -19,7 +19,7 @@
       a { 
         @include full;
         .best_img {
-          background-color: rgb(127, 98, 255, 0.5);
+          background-color: $color_gray;
         }
         .best_text {
           width: 320px; height: 100px;

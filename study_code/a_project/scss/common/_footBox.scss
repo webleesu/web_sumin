@@ -3,15 +3,13 @@
 @import '../common/mixin';
 @import '../common/variable';
 
-
-
-// ~1279px -----------------------------------------------------------------------
-@media all and (max-width: 1279px){
+// ~767px ------------------------------------------------------------------------
+@media all and (max-width: 767px){
   #footBox {
     width: 100%; height: 400px;
     // padding: 60px;
     padding: 7.8125vw;
-    background-color: #1c1c1c;
+    background-color: $color_black;
   } // #footBox
 
   @at-root .foot_top_area {
@@ -30,7 +28,7 @@
       max-width: 300px; height: auto; max-height: 30px;
       margin: auto;
       font-size: 16px;
-      text-align: left; color: #ddd;
+      text-align: left; color: $color_gray;
 
       & > div { margin-right: 20px; line-height: 30px;}
       & > div:last-child { margin-right: 0;}
@@ -42,11 +40,11 @@
     width: 78.125vw; max-width: 800px; height: auto;
     margin: auto;
     .foot_main_btn {
-      display: flex; justify-content: space-between;
+      display: flex; justify-content: space-around;
       flex-wrap: wrap;
       width: 100%; height: auto;
       font-size: 16px;
-      text-align: left; color: #ddd;
+      text-align: left; color: $color_gray;
       margin-bottom: 30px;
 
       li { position: relative; margin-right: 15px; padding-right: 4vw; }
@@ -55,7 +53,7 @@
         content: ""; display: block;
         position: absolute; top: 50%; right: 0;
         width: 3px; height: 3px;
-        background-color: #ddd;
+        background-color: $color_gray;
       }
       li:last-child::after { display: none; }
 
@@ -70,8 +68,8 @@
       &.copyright { 
         display: block; 
         width: 43.75vw; max-width: 336px; height: auto;
-        margin: auto;
-        color: #ddd;
+        // margin: auto;
+        color: $color_gray;
       }
     }
 
@@ -98,7 +96,103 @@
       }
     }
   } // .foot_main_area
-} // ~1279px =====================================================================
+
+} // ~767px ======================================================================
+
+// 768px ~ 1279px -----------------------------------------------------------------------
+@media all and (min-width: 768px) and (max-width: 1279px){
+  #footBox {
+    width: 100%; height: 400px;
+    // padding: 60px;
+    padding: 7.8125vw;
+    background-color: $color_black;
+  } // #footBox
+
+  @at-root .foot_top_area {
+    width: 100%; height: 120px;
+    margin: auto;
+    margin-bottom: 40px;
+
+    h2 {
+      width: 112px; height: 30px;
+      margin-bottom: 60px;
+      @include img('footer-logo-text.svg');
+    }
+
+    .foot_top_btn {
+      display: flex; justify-content: space-between;
+      max-width: 300px; height: auto; max-height: 30px;
+      margin: auto;
+      font-size: 16px;
+      text-align: left; color: $color_gray;
+
+      & > div { margin-right: 20px; line-height: 30px;}
+      & > div:last-child { margin-right: 0;}
+    }
+  } // .foot_top_area
+
+  @at-root .foot_main_area {
+    position: relative;
+    width: 78.125vw; max-width: 800px; height: auto;
+    margin: auto;
+    .foot_main_btn {
+      display: flex; justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%; height: auto;
+      font-size: 16px;
+      text-align: left; color: $color_gray;
+      margin-bottom: 30px;
+
+      li { position: relative; margin-right: 15px; padding-right: 4vw; }
+      li:last-child {margin-right: 0; padding-right: 0;}
+      li::after {
+        content: ""; display: block;
+        position: absolute; top: 50%; right: 0;
+        width: 3px; height: 3px;
+        background-color: $color_gray;
+      }
+      li:last-child::after { display: none; }
+
+      .foot_personal { font-weight: 700;}
+
+      a { @include full;}
+    } // .foot_main_btn
+
+
+    .foot_info p { 
+      display: none;
+      &.copyright { 
+        display: block; 
+        width: 43.75vw; max-width: 336px; height: auto;
+        margin: auto;
+        color: $color_gray;
+      }
+    }
+
+    .foot_bottom_btn {
+      display: flex; justify-content: space-between;
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 80px; height: auto;
+
+
+      li {
+        margin-right: 20px;
+
+        @at-root .foot_facebook a {
+          display: block;
+          width: 30px; height: 30px;
+          @include img('facebook.png');
+        }
+        @at-root .foot_instagram a{
+          display: block;
+          width: 30px; height: 30px;
+          @include img('instagram.png');
+        }
+      }
+    }
+  } // .foot_main_area
+} // 768px ~ 1279px =====================================================================
 
 // 1280px ~ ----------------------------------------------------------------------
 
@@ -106,7 +200,7 @@
   #footBox {
     width: 100%; height: 600px;
     padding: 70px 60px;
-    background-color: #1c1c1c;
+    background-color: $color_black;
   
     @at-root .foot_top_area {
       display: flex; justify-content: space-between;
@@ -122,7 +216,7 @@
         display: flex; justify-content: space-between;
         width: 300px; height: 30px;
         font-size: 16px;
-        text-align: left; color: #ddd;
+        text-align: left; color: $color_gray;
 
         & > div { margin-right: 20px; line-height: 30px;}
         & > div:last-child { margin-right: 0;}
@@ -138,7 +232,7 @@
         display: flex; justify-content: space-between;
         width: 600px; height: 30px;
         font-size: 16px;
-        text-align: left; color: #ddd;
+        text-align: left; color: $color_gray;
 
         li { position: relative; margin-right: 0px; padding-right: 30px; }
         li:last-child {margin-right: 0; padding-right: 0;}
@@ -146,7 +240,7 @@
           content: ""; display: block;
           position: absolute; top: calc(50% - 5px); right: 0;
           width: 3px; height: 3px;
-          background-color: #ddd;
+          background-color: $color_gray;
         }
         li:last-child::after { display: none; }
 
@@ -162,7 +256,7 @@
         p { 
           display: block;
           margin-bottom: 20px;
-          color: #ddd;
+          color: $color_gray;
         
           &:last-child { margin-bottom: 0;}
         }

@@ -19,7 +19,7 @@
         .side_view {
           // width: 100%; height: 180px;
           width: 100%; height: 14vw;
-          background-color: #eee;
+          background-color: $color_gray;
           margin: auto; 
           
           a { @include full;}

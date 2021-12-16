@@ -16,7 +16,7 @@
       a {
         @include full;
         .event_img {
-          background-color: #eee;
+          background-color: $color_gray;
         }
         .event_title {
           height: 35px;

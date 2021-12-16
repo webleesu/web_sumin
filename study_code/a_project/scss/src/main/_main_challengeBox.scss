@@ -16,7 +16,7 @@
     @at-root .challenge {
       width: 38vw; height: 38vw;
       // margin: auto;
-      background-color: #eee;
+      background-color: $color_gray;
 
       a { @include full; }
     }
@@ -41,7 +41,7 @@
       @at-root .challenge {
         width: 70vw; height: 70vw;
         margin: auto;
-        background-color: #eee;
+        background-color: $color_gray;
   
         &:first-child {margin-bottom: 11vw;}
         a { @include full; }
@@ -68,7 +68,7 @@
       @at-root .challenge {
         width: 38vw; height: 38vw;
         // margin: auto;
-        background-color: #eee;
+        background-color: $color_gray;
   
         a { @include full; }
       }

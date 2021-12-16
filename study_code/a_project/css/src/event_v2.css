@@ -363,7 +363,7 @@ html, body {
     left: -50px;
     width: 100px;
     height: auto;
-    background-color: #efefef;
+    background-color: #ffffff;
   }
   .unb_lauguage_area li {
     margin: auto;
@@ -376,11 +376,11 @@ html, body {
     height: 100%;
   }
   .unb_lauguage_area li a:hover {
-    background-color: #ddd;
+    background-color: #ebebeb;
   }
 
   .unb_btn .unb_sign {
-    color: #E13100;
+    color: #EC0F0C;
   }
 
   .unb_search_area {
@@ -457,7 +457,7 @@ html, body {
     overflow: hidden;
   }
 }
-@media all and (max-width: 1279px) {
+@media all and (max-width: 767px) {
   #footBox {
     width: 100%;
     height: 400px;
@@ -498,7 +498,166 @@ html, body {
     margin: auto;
     font-size: 16px;
     text-align: left;
-    color: #ddd;
+    color: #ebebeb;
+  }
+  .foot_top_area .foot_top_btn > div {
+    margin-right: 20px;
+    line-height: 30px;
+  }
+  .foot_top_area .foot_top_btn > div:last-child {
+    margin-right: 0;
+  }
+
+  .foot_main_area {
+    position: relative;
+    width: 78.125vw;
+    max-width: 800px;
+    height: auto;
+    margin: auto;
+  }
+  .foot_main_area .foot_main_btn {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    text-align: left;
+    color: #ebebeb;
+    margin-bottom: 30px;
+  }
+  .foot_main_area .foot_main_btn li {
+    position: relative;
+    margin-right: 15px;
+    padding-right: 4vw;
+  }
+  .foot_main_area .foot_main_btn li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .foot_main_area .foot_main_btn li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 3px;
+    height: 3px;
+    background-color: #ebebeb;
+  }
+  .foot_main_area .foot_main_btn li:last-child::after {
+    display: none;
+  }
+  .foot_main_area .foot_main_btn .foot_personal {
+    font-weight: 700;
+  }
+  .foot_main_area .foot_main_btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .foot_main_area .foot_info p {
+    display: none;
+  }
+  .foot_main_area .foot_info p.copyright {
+    display: block;
+    width: 43.75vw;
+    max-width: 336px;
+    height: auto;
+    color: #ebebeb;
+  }
+  .foot_main_area .foot_bottom_btn {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: auto;
+  }
+  .foot_main_area .foot_bottom_btn li {
+    margin-right: 20px;
+  }
+  .foot_facebook a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/facebook.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .foot_facebook a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .foot_instagram a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/instagram.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .foot_instagram a > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1279px) {
+  #footBox {
+    width: 100%;
+    height: 400px;
+    padding: 7.8125vw;
+    background-color: #1c1c1c;
+  }
+
+  .foot_top_area {
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .foot_top_area h2 {
+    width: 112px;
+    height: 30px;
+    margin-bottom: 60px;
+    background-image: url(../../img/footer-logo-text.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .foot_top_area h2 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .foot_top_area .foot_top_btn {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    height: auto;
+    max-height: 30px;
+    margin: auto;
+    font-size: 16px;
+    text-align: left;
+    color: #ebebeb;
   }
   .foot_top_area .foot_top_btn > div {
     margin-right: 20px;
@@ -523,7 +682,7 @@ html, body {
     height: auto;
     font-size: 16px;
     text-align: left;
-    color: #ddd;
+    color: #ebebeb;
     margin-bottom: 30px;
   }
   .foot_main_area .foot_main_btn li {
@@ -543,7 +702,7 @@ html, body {
     right: 0;
     width: 3px;
     height: 3px;
-    background-color: #ddd;
+    background-color: #ebebeb;
   }
   .foot_main_area .foot_main_btn li:last-child::after {
     display: none;
@@ -565,7 +724,7 @@ html, body {
     max-width: 336px;
     height: auto;
     margin: auto;
-    color: #ddd;
+    color: #ebebeb;
   }
   .foot_main_area .foot_bottom_btn {
     display: flex;
@@ -656,7 +815,7 @@ html, body {
     height: 30px;
     font-size: 16px;
     text-align: left;
-    color: #ddd;
+    color: #ebebeb;
   }
   .foot_top_area .foot_top_btn > div {
     margin-right: 20px;
@@ -679,7 +838,7 @@ html, body {
     height: 30px;
     font-size: 16px;
     text-align: left;
-    color: #ddd;
+    color: #ebebeb;
   }
   .foot_main_area .foot_main_btn li {
     position: relative;
@@ -698,7 +857,7 @@ html, body {
     right: 0;
     width: 3px;
     height: 3px;
-    background-color: #ddd;
+    background-color: #ebebeb;
   }
   .foot_main_area .foot_main_btn li:last-child::after {
     display: none;
@@ -719,7 +878,7 @@ html, body {
   .foot_main_area .foot_info p {
     display: block;
     margin-bottom: 20px;
-    color: #ddd;
+    color: #ebebeb;
   }
   .foot_main_area .foot_info p:last-child {
     margin-bottom: 0;

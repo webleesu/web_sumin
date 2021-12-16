@@ -2,28 +2,35 @@
 
 // color =====================================
 $color_white: #ffffff;
-$color_red : #E13100;
-
+$color_black: #1c1c1c;
+$color_red : #EC0F0C;
+$color_gray: #ebebeb;
+$color_dark_gray: #999;
+$color_primary: #e17900;
+$color_primary_light: #fff1e0; 
+$color_primary_circle: #ffd9ad;
 
 // color =========================
-$color_primary_01: #1a5d54;
-$color_primary_02: #834c33;
+
+// $color_primary_01: #1a5d54;
+// $color_primary_02: #834c33;
 $color_light_gray_01: #c4c4c4;
 $color_light_gray_02: #aaaaaa;
 $color_light_gray_03: #757575;
 $color_deep_gray: #505050;
 $color_black_01: #333333;
 $color_black_02: #171717;
-$color_white: #ffffff;
+// $color_white: #ffffff;
 $color_gray_op: rgba(85,85,85,0.1);
 $color_yellow_01: #ffbd55;
 $color_yellow_02: #f7e9d3;
 $color_white_02: #efefef;
+
 // ================================
 // border 
-$line1 : 1px solid $color_light_gray_03;
-$line2 : 1px solid $color_primary_01;
-$line3 : 2px solid $color_primary_01;
+// $line1 : 1px solid $color_light_gray_03;
+// $line2 : 1px solid $color_primary_01;
+// $line3 : 2px solid $color_primary_01;
 
 // font ===========================
 $font_family_en:"noto sans KR";

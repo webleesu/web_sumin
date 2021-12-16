@@ -21,7 +21,7 @@ $imgPath:'../../img/';
   @content;
 }
 
-@mixin img_black($file, $repeat:no-repeat, $position:50% 50%, $size:contain){
+@mixin img_black($file, $repeat:no-repeat, $position:50% 50%, $size:cover){
   background: {
     image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(#{$imgPath}#{$file});
     repeat: $repeat;

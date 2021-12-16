@@ -4,18 +4,18 @@
 #awardsBox {
   width: 100%;
   margin-top: 20px;
-  background-color: #FFF1E0;
+  background-color: $color_primary_light;
   padding-top: 80px;
   overflow: hidden;
 
   .awards_title {
     width: 280px; height: 60px;
     margin: auto;
-    background-color: #E17900;
+    background-color: $color_primary;
     border-radius: 30px;
     font-size: 22px; font-weight: 700;
     text-align: center; line-height: 60px;
-    color: #fff;
+    color: $color_white;
   } // .awards_title
 
   @at-root .awards_area {
@@ -29,8 +29,12 @@
       // margin: auto;
 
       .awards {
-        background-color: #eee;
-        
+        background-color: $color_gray;
+        &:nth-child(1) { @include img('awards_01.jpg', $size: cover)}
+        &:nth-child(2) { @include img('awards_02.jpg', $size: cover)}
+        &:nth-child(3) { @include img('awards_03.jpg', $size: cover)}
+        &:nth-child(4) { @include img('awards_04.jpg', $size: cover)}
+        &:nth-child(5) { @include img('awards_05.jpg', $size: cover)}
       }
 
     } // .awards_main
