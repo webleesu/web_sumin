@@ -44,7 +44,7 @@
       position: relative;
       min-width: 25px; width: 5.2vw; max-width: 40px; min-height: 25px; height: 5.2vw; max-height: 40px;
       cursor: pointer;
-      @include img('global_1.png');
+      @include img('global.png');
       ul {
         display: none;
         position: absolute;
@@ -142,7 +142,7 @@
         position: relative;
         width: 30px; height: 20px;
         margin-left: 30px;
-        @include img('global_1.png');
+        @include img('global.png');
       }
       @at-root .unb_lauguage_area {
         display: none;
