@@ -19,7 +19,8 @@
       a { 
         @include full;
         .best_img {
-          background-color: $color_gray;
+          border-radius: 8px;
+          background-color: rgba($color_primary_light, 0.4);
         }
         .best_text {
           width: 320px; height: 100px;
@@ -27,6 +28,15 @@
           /* background-color: var(--color-sample1); */
         }
       } // a
+
+      &:nth-child(1) .best_img { @include img('cube_01.png'); }
+      &:nth-child(2) .best_img { @include img('cube_02.png'); }
+      &:nth-child(3) .best_img { @include img('cube_03.png'); }
+      &:nth-child(4) .best_img { @include img('cube_04.png'); }
+      &:nth-child(5) .best_img { @include img('cube_05.png'); }
+      &:nth-child(6) .best_img { @include img('cube_06.png'); }
+      &:nth-child(7) .best_img { @include img('cube_07.png'); }
+      &:nth-child(8) .best_img { @include img('cube_08.png'); }
     } // .best_item
   } // .best_area
 } // #bestBox

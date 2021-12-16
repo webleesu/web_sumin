@@ -21,7 +21,8 @@
 
         .sale_img {
           width: 190px; height: 190px;
-          background-color: $color_gray;
+          border-radius: 8px;
+          background-color: rgba($color_primary_light, 0.4);
         }
         .sale_title {
           width: 100%; height: auto;
@@ -51,6 +52,11 @@
           width: 190px; height: auto;
         }
       } // a
+      &:nth-child(1) .sale_img { @include img('cube_01.png'); }
+      &:nth-child(2) .sale_img { @include img('cube_02.png'); }
+      &:nth-child(3) .sale_img { @include img('cube_03.png'); }
+      &:nth-child(4) .sale_img { @include img('cube_04.png'); }
+      &:nth-child(5) .sale_img { @include img('cube_05.png'); }
     } // .sale_item
   } // .sale_area
 } // #saleBox

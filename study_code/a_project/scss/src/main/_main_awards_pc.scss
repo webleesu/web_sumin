@@ -13,10 +13,12 @@
           position: absolute; z-index: 1;
           bottom: 50%;
           width: 70px; height: 70px;
+          &:hover { background-color: rgba($color_black, 0.4); border-radius: 4px; }
+          &:focus { border: 3px solid $color_black; border-radius: 4px; }
         }
         .awards_after_btn {
           right: 20px;
-    
+
           button {
             @include full;
             @include img('forward_orange.png');
@@ -52,7 +54,7 @@
             @include full;
             border-radius: 100%;
             &:hover { background-color: rgba($color: $color_black, $alpha: 0.3);}
-            &:focus { outline: 3px solid $color_black;}
+            &:focus { border: 3px solid $color_black;}
           }
         }
       } // .awards_indicator

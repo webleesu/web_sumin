@@ -80,6 +80,11 @@ html, body {
   height: auto;
 }
 
+a:hover {
+  outline: 2px solid #1c1c1c;
+  border-radius: 4px;
+}
+
 #headBox {
   position: fixed;
   top: 0;
@@ -341,6 +346,7 @@ html, body {
     width: 30px;
     height: 20px;
     margin-left: 30px;
+    cursor: pointer;
     background-image: url(../../img/global.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -354,6 +360,10 @@ html, body {
     width: 0;
     height: 0;
     overflow: hidden;
+  }
+  .unb_btn .unb_language:hover {
+    outline: 2px solid #1c1c1c;
+    border-radius: 4px;
   }
   .unb_lauguage_area {
     display: none;
@@ -953,6 +963,10 @@ html, body {
   height: 50px;
   margin-top: -25px;
 }
+.view_area .view_btn > div:hover {
+  border-radius: 4px;
+  background-color: rgba(28, 28, 28, 0.4);
+}
 .view_area .view_btn .view_after_btn {
   right: 0;
   background-image: url(../../img/forward.png);
@@ -1025,6 +1039,8 @@ html, body {
   bottom: 10px;
   width: 70px;
   height: 25px;
+  background-color: rgba(28, 28, 28, 0.3);
+  border-radius: 4px;
   font-weight: 700;
   text-align: center;
   line-height: 25px;
@@ -1100,13 +1116,134 @@ html, body {
   height: 100%;
 }
 .best_area .best_item a .best_img {
-  background-color: #ebebeb;
+  border-radius: 8px;
+  background-color: rgba(255, 241, 224, 0.4);
 }
 .best_area .best_item a .best_text {
   width: 320px;
   height: 100px;
   padding: 0 10px;
   /* background-color: var(--color-sample1); */
+}
+.best_area .best_item:nth-child(1) .best_img {
+  background-image: url(../../img/cube_01.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.best_area .best_item:nth-child(1) .best_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.best_area .best_item:nth-child(2) .best_img {
+  background-image: url(../../img/cube_02.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.best_area .best_item:nth-child(2) .best_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.best_area .best_item:nth-child(3) .best_img {
+  background-image: url(../../img/cube_03.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.best_area .best_item:nth-child(3) .best_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.best_area .best_item:nth-child(4) .best_img {
+  background-image: url(../../img/cube_04.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.best_area .best_item:nth-child(4) .best_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.best_area .best_item:nth-child(5) .best_img {
+  background-image: url(../../img/cube_05.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.best_area .best_item:nth-child(5) .best_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.best_area .best_item:nth-child(6) .best_img {
+  background-image: url(../../img/cube_06.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.best_area .best_item:nth-child(6) .best_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.best_area .best_item:nth-child(7) .best_img {
+  background-image: url(../../img/cube_07.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.best_area .best_item:nth-child(7) .best_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.best_area .best_item:nth-child(8) .best_img {
+  background-image: url(../../img/cube_08.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.best_area .best_item:nth-child(8) .best_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 @media all and (max-width: 1279px) {
@@ -1475,6 +1612,66 @@ html, body {
   width: 320px;
   height: 35px;
 }
+.event:nth-child(1) .event_img {
+  background-image: url(../../img/event_01.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event:nth-child(1) .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.event:nth-child(2) .event_img {
+  background-image: url(../../img/event_02.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event:nth-child(2) .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.event:nth-child(3) .event_img {
+  background-image: url(../../img/event_04.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event:nth-child(3) .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.event:nth-child(4) .event_img {
+  background-image: url(../../img/event_03.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event:nth-child(4) .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
 @media all and (max-width: 767px) {
   #eventBox .event_area {
@@ -1736,6 +1933,14 @@ html, body {
     width: 70px;
     height: 70px;
   }
+  .awards_btn > div:hover {
+    background-color: rgba(28, 28, 28, 0.4);
+    border-radius: 4px;
+  }
+  .awards_btn > div:focus {
+    border: 3px solid #1c1c1c;
+    border-radius: 4px;
+  }
   .awards_btn .awards_after_btn {
     right: 20px;
   }
@@ -1809,7 +2014,7 @@ html, body {
     background-color: rgba(28, 28, 28, 0.3);
   }
   .awards_indicator .awards_circle button:focus {
-    outline: 3px solid #1c1c1c;
+    border: 3px solid #1c1c1c;
   }
 
   .awards_main {
@@ -1894,7 +2099,8 @@ html, body {
 .sale_item a .sale_img {
   width: 190px;
   height: 190px;
-  background-color: #ebebeb;
+  border-radius: 8px;
+  background-color: rgba(255, 241, 224, 0.4);
 }
 .sale_item a .sale_title {
   width: 100%;
@@ -1929,6 +2135,81 @@ html, body {
   width: 190px;
   height: auto;
 }
+.sale_item:nth-child(1) .sale_img {
+  background-image: url(../../img/cube_01.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.sale_item:nth-child(1) .sale_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.sale_item:nth-child(2) .sale_img {
+  background-image: url(../../img/cube_02.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.sale_item:nth-child(2) .sale_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.sale_item:nth-child(3) .sale_img {
+  background-image: url(../../img/cube_03.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.sale_item:nth-child(3) .sale_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.sale_item:nth-child(4) .sale_img {
+  background-image: url(../../img/cube_04.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.sale_item:nth-child(4) .sale_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.sale_item:nth-child(5) .sale_img {
+  background-image: url(../../img/cube_05.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.sale_item:nth-child(5) .sale_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
 #magazineBox {
   width: 100%;
@@ -1938,7 +2219,6 @@ html, body {
 #magazineBox .magazine_img {
   width: 100%;
   height: 100%;
-  background-color: #eee;
 }
 #magazineBox .magazine_img a {
   display: block;
