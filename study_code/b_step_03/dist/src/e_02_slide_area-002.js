@@ -95,21 +95,70 @@ const slidePrev = document.querySelector('.prev');
 
 let SLIDE_COUNT = 0;
 let TIME_OPTION = 500;
+let PERMISSION = true;
 ulStyle.transition = `left ${TIME_OPTION}ms linear`;
+
+const fnDelay = async (ms = 0) => {
+  return await new Promise(resolve=>{
+    setTimeout(() => { resolve(); }, ms);
+  });
+};
+
+const fnAniSlide = async () => {
+  await fnDelay();
+  ulStyle.transition = `left ${TIME_OPTION}ms linear`;
+  ulStyle.left = (-100 * SLIDE_COUNT) + '%';
+  await fnDelay(TIME_OPTION + 100);
+  PERMISSION = true;
+}
 
 slideNext.addEventListener('click', (e) => {
   e.preventDefault();
-  SLIDE_COUNT += 1;
+  if(PERMISSION){
+    PERMISSION = false;
+    
+    SLIDE_COUNT += 1;
+  
+    if(SLIDE_COUNT >= slideLen){
+      SLIDE_COUNT = 0;
+      ulStyle.transition = null;
+      ulStyle.left = 100 + '%';
+    }
+  
+/*
+    setTimeout(() => {
+      ulStyle.transition = `left ${TIME_OPTION}ms linear`;
+      ulStyle.left = (-100 * SLIDE_COUNT) + '%';
 
-  if(SLIDE_COUNT >= slideLen){
-    SLIDE_COUNT = 0;
-  }
-  if(elSlideUl.style.left === ''){
-    elSlideUl.style.left = '100%';
-  }
-  elSlideUl.style.left = (-100 * SLIDE_COUNT) + '%';
-})
+      setTimeout(() => {
+        PERMISSION = true;
+      }, TIME_OPTION + 200);
 
+    }, 0);
+*/
+    fnAniSlide();
+  } // if
+}); // slideNext.click
+
+// ------------------------------------------------------------------
+slidePrev.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if(PERMISSION){
+    PERMISSION = false;
+
+    SLIDE_COUNT -= 1;
+
+    if(SLIDE_COUNT <= -1){
+      SLIDE_COUNT = 3;
+      ulStyle.transition = null;
+      ulStyle.left = -300 + '%'
+    }
+    fnAniSlidePre();
+
+  }
+
+}); // slidePrev.click
 
 
   // -----------------------------------------------------------
