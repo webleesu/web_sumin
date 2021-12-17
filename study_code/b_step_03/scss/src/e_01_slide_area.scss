@@ -1,6 +1,8 @@
 //e_01_slide_area.scss
 /* e_01_slide_area */
 @use "sass:math";
+@import "../common/variable";
+@import "../common/mixin";
 
 #wrap {
   width: 90%; min-width:31.25rem; height: auto;
@@ -8,9 +10,16 @@
   padding: 1rem; padding-bottom: 31.25rem;
 }
 
-#headBox { width: 100%; height: 5rem; border-bottom: 1px solid #777;
+#headBox { 
+  display: flex; justify-content:space-around;
+  width: 100%; height: 5rem; border-bottom: 1px solid #777;
   @at-root h1{ font-size: 1.5rem; }
 }// #headBox
+#navBox {
+  >ul{
+    display: flex;
+  }
+}
 
 #viewBox {
   width: 100%; height: auto;
@@ -61,5 +70,38 @@
       }// for
       &.on { display: block; }
     }// li
+  }
+}
+
+
+.slide_02 .view_content ul{
+  position: relative;  
+  li{
+    position: absolute; top: 0; left: 0; 
+    &.act{
+      display: block;
+      z-index:100;
+    }
+  }
+}
+
+.indicator {
+  position: absolute; z-index:500;
+  right: 0; bottom: 1rem; width: auto; height:auto;
+  background-color: #fff; border-radius:3rem;
+  > ul {
+    display: flex; 
+    width: auto; height: 100%; padding: 0.5rem;
+    
+  }
+  li {
+    width: 2rem; height: 2rem;
+    margin-right: 1rem;
+    > a { display: block; width: 100%; height: 100%; border-radius:100%;
+    background-color: #354;
+    > span {@include blind}
+    }
+    &.act > a{ background-color: #fa0; transform: scale(1.1);}
+    &:last-child{margin-right: 0;}
   }
 }
