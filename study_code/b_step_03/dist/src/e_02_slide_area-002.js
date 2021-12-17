@@ -25,9 +25,11 @@
   // 1-3 elSlideLi요소의 사이즈를 변경 (복제된 요소는 기존 변수로 선정된 요소와는 별개로 처리)
   // 1-4 메인에 보여주어야 하는 요소를 맞추기 위해 위치 이동 (왼쪽방향으로 -100%만큼 이동)
 
-  elSlideUl.style.width = ((slideLen + 1) * 100) +'%';
-  elSlideUl.style.position = 'relative';
-  elSlideUl.style.marginLeft = '-100%';
+  const ulStyle = elSlideUl.style;
+  ulStyle.width = ((slideLen + 1) * 100) +'%';
+  ulStyle.position = 'relative';
+  ulStyle.left = 0;
+  ulStyle.marginLeft = '-100%';
   // elSlideContent.style.overflowX = 'hidden';
 
   const elSlideLiRe = elSlideUl.querySelectorAll('li');
@@ -39,9 +41,74 @@
   
   // ----------------------------------------------------------------
 
+/*
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
 
+  let i = 0;
+  // const fnNextBtn = function clickCounter(){
+  //   if(i < 2){
+  //     i+=1;
+  //     elSlideUl.style.left = -(i * 100) + '%';
+  //   }else {
+  //     elSlideUl.style.left = '100%';
+  //     i = -1;
+  //   }
+  // }
 
+  const fnNextBtn = function clickCounter(){
+    if(elSlideUl.style.left !== '-200%'){
+      i+=1;
+      elSlideUl.style.left = -(i * 100) + '%';
+      
+    }else {
+      elSlideUl.style.left = '100%';
+      i = -1;
+    }
+  }
 
+  const fnPrevBtn = function clickCounter(){
+    if(elSlideUl.style.left === '0%'){
+      elSlideUl.style.left = '-300%';
+      i = -1;
+      
+    }else {
+      i+=1;
+      elSlideUl.style.left = (i * 100) + '%';
+    }
+  }
+
+  
+
+  nextBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    fnNextBtn();
+  });
+
+  prevBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    fnPrevBtn();
+  });
+*/
+const slideNext = document.querySelector('.next');
+const slidePrev = document.querySelector('.prev');
+
+let SLIDE_COUNT = 0;
+let TIME_OPTION = 500;
+ulStyle.transition = `left ${TIME_OPTION}ms linear`;
+
+slideNext.addEventListener('click', (e) => {
+  e.preventDefault();
+  SLIDE_COUNT += 1;
+
+  if(SLIDE_COUNT >= slideLen){
+    SLIDE_COUNT = 0;
+  }
+  if(elSlideUl.style.left === ''){
+    elSlideUl.style.left = '100%';
+  }
+  elSlideUl.style.left = (-100 * SLIDE_COUNT) + '%';
+})
 
 
 
