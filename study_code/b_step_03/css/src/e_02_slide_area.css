@@ -249,9 +249,6 @@ h1 {
 #viewBox .slide_wrapper > li.slide_con_04 {
   background-color: #ABA1F4;
 }
-#viewBox .slide_wrapper > li:nth-child(5) {
-  background-color: #333;
-}
 #viewBox h3 {
   font-size: 2rem;
   font-weight: 600;
