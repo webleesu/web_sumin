@@ -18,6 +18,7 @@ const scriptData = '/dist/src/e_02_slide_area-002.js';
 const body = document.querySelector('body');
 const elWrap = document.querySelector('#wrap');
 
+
 // 생성 요소
 const mkHeadBox = document.createElement('hedaer');
 mkHeadBox.id = 'headBox';
@@ -41,15 +42,17 @@ const fnScript = (codeUrl) => {
 
 // -----------------------------------------------------------
 fetch(headBox)
-  .then( response => response.text() )
-  .then( (textElement) => {
-    mkHeadBox.innerHTML = textElement;
-    elWrap.prepend(mkHeadBox);
-  });
+.then( response => response.text() )
+.then( (textElement) => {
+  mkHeadBox.innerHTML = textElement;
+  elWrap.prepend(mkHeadBox);
+});
 
 fetch(viewBox)
-  .then(response => response.text() )
-  .then(textElement => {
-    fnMakeEl(mkViewBox, textElement);
-    fnScript(scriptData);
-  });
+.then(response => response.text() )
+.then(textElement => {
+  fnMakeEl(mkViewBox, textElement);
+  fnScript(scriptData);
+});
+// -----------------------------------------------------------
+
