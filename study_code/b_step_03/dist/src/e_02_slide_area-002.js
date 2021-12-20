@@ -141,6 +141,7 @@ slideNext.addEventListener('click', (e) => {
 }); // slideNext.click
 
 // ------------------------------------------------------------------
+/* 이전버튼 내가 시도 -> 실패
 slidePrev.addEventListener('click', (e) => {
   e.preventDefault();
 
@@ -159,7 +160,53 @@ slidePrev.addEventListener('click', (e) => {
   }
 
 }); // slidePrev.click
+*/
 
 
+// 이전버튼 클릭
+slidePrev.addEventListener('click', (e) => {
+  e.preventDefault();
+  if(PERMISSION === true){
+    PERMISSION = false;
+
+    SLIDE_COUNT -= 1;
+    // 최종결과물이 다음버튼 클릭시 음수 수치, 이전버튼 클릭시 양수 수치 
+    ulStyle.left = ( -100 * SLIDE_COUNT ) + '%';
+
+    
+
+    // TIME_OPTION 시간이 지난 후에 SLIDE_COUNT 값을 파악하여 추가 진행
+    /*
+    setTimeout( () => {
+      if(SLIDE_COUNT <= -1){
+        SLIDE_COUNT = slideLen -1;
+        ulStyle.transition = null;
+        ulStyle.left = (-100 * SLIDE_COUNT) + '%'; 
+        setTimeout( () => {
+          ulStyle.transition = `left ${TIME_OPTION}ms linear`;
+          // PERMISSION = true;
+        }, 10);
+      }
+    }, TIME_OPTION);
+    */
+
+    const aniPrevSlide = async () => {
+      ulStyle.left = ( -100 * SLIDE_COUNT ) + '%';
+      await fnDelay(TIME_OPTION);
+      if(SLIDE_COUNT <= -1){
+        SLIDE_COUNT = slideLen -1;
+        ulStyle.transition = null;
+        ulStyle.left = (-100 * SLIDE_COUNT) + '%'; 
+      }
+      await fnDelay(200);
+      ulStyle.transition = `left ${TIME_OPTION}ms linear`;
+      await fnDelay();
+      PERMISSION = true;
+    };
+    aniPrevSlide();
+
+  } // if
+
+}); // slidePrev.click
   // -----------------------------------------------------------
 })()
