@@ -40,6 +40,9 @@
         &:nth-child(3) { @include img('awards_03.jpg', $size: cover)}
         &:nth-child(4) { @include img('awards_04.jpg', $size: cover)}
         &:nth-child(5) { @include img('awards_05.jpg', $size: cover)}
+        // &.black {
+
+        // }
       }
 
     } // .awards_main
