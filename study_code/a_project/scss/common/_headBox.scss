@@ -6,7 +6,7 @@
 #headBox {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; justify-content: space-between; align-items: flex-end;
-  width: 100%;
+  width: 100%; max-width: 1920px; margin: auto;
   background-color: rgba($color_white, 0.8);
   
 } // #headBox
@@ -96,7 +96,7 @@
     position: absolute; left: 0; right: 0;
     display: flex; justify-content: space-between;
     // width: 500px; height: 40px;
-    width: 39vw; height: 40px;
+    width: 39vw; max-width: 750px; height: 40px;
     margin: auto; margin-top: 50px;
 
     li {

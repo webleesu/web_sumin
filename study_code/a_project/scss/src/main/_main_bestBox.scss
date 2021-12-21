@@ -1,8 +1,9 @@
 // _main_bestBox.scss
 
 #bestBox {
-  width: 100%; height: auto;
-  padding: 10vw;
+  width: 100%; max-width: 1920px; height: auto; margin: auto;
+  // padding: 10vw;
+  padding: 80px;
   
   @at-root .best_area {
     display: flex; 

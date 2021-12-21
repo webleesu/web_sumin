@@ -8,9 +8,13 @@
     @at-root .awards_area {
       height: 300px;
       
+      
       @at-root .awards_btn {
+        position: absolute;
+        top: calc(50% - 25px); z-index: 1;
+        width: 100%; max-width: 1920px; height: 50px; margin: auto;
         > div {
-          position: absolute; z-index: 1;
+          position: absolute;
           bottom: 50%;
           width: 70px; height: 70px;
           &:hover { background-color: rgba($color_black, 0.4); border-radius: 4px; }
@@ -60,7 +64,7 @@
       } // .awards_indicator
   
       @at-root .awards_main {
-        width: 90.625vw; height: 220px;
+        width: 90.625vw; max-width: 1740px; height: 220px;
         margin: auto;
   
         .awards {

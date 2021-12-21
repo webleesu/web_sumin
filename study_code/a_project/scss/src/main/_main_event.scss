@@ -1,9 +1,10 @@
 // _main_event.scss
 
 #eventBox {
-  width: 100%; height: auto;
-  margin-top: 20px;
-  padding: 10vw;
+  width: 100%; max-width: 1920px; height: auto;
+  margin: auto; margin-top: 20px;
+  // padding: 10vw;
+  padding: 80px;
   // overflow: hidden;
 
   .event_area {

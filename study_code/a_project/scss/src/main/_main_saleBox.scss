@@ -1,14 +1,15 @@
 // _main_saleBox.scss
 
 #saleBox {
-  width: 100%; height: auto;
-  margin-top: 20px;
-  padding: 10vw;
+  width: 100%; max-width: 1920px; height: auto;
+  margin: auto; margin-top: 20px;
+  // padding: 10vw;
+  padding: 80px;
   overflow: hidden;
 
   @at-root .sale_area {
     display: flex; justify-content: space-between; flex-wrap: nowrap;
-    width: 78.125vw; height: 350px;
+    width: 78.125vw; max-width: 1500px; height: 350px;
     margin: auto; margin-top: 50px;
 
     @at-root .sale_item {

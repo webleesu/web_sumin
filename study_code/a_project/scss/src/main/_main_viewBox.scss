@@ -1,10 +1,11 @@
 // main_viewBox.scss
 
 #viewBox {
-  width: 100%; height: auto;
+  width: 100%; max-width: 1920px; height: auto; margin: auto;
 
   @at-root .view_area {
     position: relative;
+    // margin: auto;
     
     .view_btn {
       position: absolute; top: 50%;

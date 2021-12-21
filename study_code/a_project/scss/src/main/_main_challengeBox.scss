@@ -1,9 +1,9 @@
 // _main_challengeBox.scss
 
 #challengeBox {
-  width: 100%; height: auto; min-height: 400px;
-  margin-top: 20px;
-  padding: 10vw;
+  width: 100%; max-width: 1920px; height: auto; min-height: 400px;
+  margin: auto; margin-top: 20px;
+  padding: 80px;
 
   .challenge_area {
     display: flex; justify-content: space-between;
@@ -14,7 +14,7 @@
     // padding: 0 20px;
 
     @at-root .challenge {
-      width: 38vw; height: 38vw;
+      width: 38vw; max-width: 730px; height: 38vw; max-height: 730px;
       // margin: auto;
       background-color: $color_gray;
 

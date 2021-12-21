@@ -19,9 +19,14 @@
   } // .awards_title
 
   @at-root .awards_area {
-    position: relative;
     width: 100%;
     margin: auto; margin-top: 50px;
+
+    .awards_part {
+      position: relative;
+      width: 100%; max-width: 1920px; height: 100%;
+      margin: auto;
+    }
 
 
     @at-root .awards_main {
