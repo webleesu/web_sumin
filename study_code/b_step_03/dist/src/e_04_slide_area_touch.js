@@ -17,6 +17,8 @@ const path = "../temp/slide_area3.html";
 
 const elViewBox = document.querySelector('#viewBox');
 const elTitle = document.querySelector('head>title');
+// let elViewWrap;
+// let elViewLi;
 
 fetch(path)
 .then( (response) => response.text()  )
@@ -39,11 +41,57 @@ fetch(path)
 })
 .then((el)=>{
   const elViewCon = elViewBox.querySelector('.view_content');
+  elViewCon.style.overflowX = 'hidden';
 
-  // elViewCon.addEventListener('touchend', (e)=>{
-  //   console.log( 'changed : ', e.changedTouches[0] );
-  //   console.log( 'touches : ', e.touches[0] );
-  // })
+  // 좌표 x의 이동점의 차이가 100px이상 나면 해당하는 위치로 이동
+  const pointer = {}; // { start, end, gap };
 
-  console.log( elViewCon.offset());
+  // 기능 -----------------------------------------------------
+  el[0].style.position = 'relative';
+  el[0].style.left = 0;
+  el[0].style.transition = 'left 500ms linear';
+  let SLIDE_COUNT = 0;
+
+  // 함수 -----------------------------------------------------
+  const fnSlideMove = () => {
+    if(pointer.gap >= 100){
+      SLIDE_COUNT -= 1;
+      // el[0].style.left = 100 * SLIDE_COUNT + '%';
+    }else if(pointer.gap <= -100){
+      SLIDE_COUNT += 1;
+      // el[0].style.left = 100 * SLIDE_COUNT + '%';
+    }
+    el[0].style.left = 100 * SLIDE_COUNT + '%';
+  };
+  
+  // 이벤트 -----------------------------------------------------
+  elViewCon.addEventListener('touchstart', (e) => {
+    // console.log( '시작점 :', e.changedTouches[0].pageX );
+    pointer.start = e.changedTouches[0].pageX;
+
+  });
+
+  elViewCon.addEventListener('touchend', (e) => {
+    // console.log( '끝점 :', e.changedTouches[0].pageX );
+    pointer.end = e.changedTouches[0].pageX;
+
+    pointer.gap = pointer.start - pointer.end;
+    // console.log( pointer );
+    /* 갭이 100이상 차이날 경우 앞 뒤 li보여주는 내 풀이
+    if(pointer.gap >= 100){
+      el[0].style.marginLeft = '-200%';
+    }else if( pointer.gap <= -100){
+      el[0].style.marginLeft = '0%';
+    }
+    */
+  
+  // let gap = Math.abs(pointer.gap); // 절대값
+
+  fnSlideMove();
+
+
+
+  });  
+
+
 })
