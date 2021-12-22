@@ -47,28 +47,47 @@ fetch(path)
   const pointer = {}; // { start, end, gap };
 
   // 기능 -----------------------------------------------------
+  let SLIDE_COUNT = 0;
+  let PERMISSION = true;
+  let TIMED = 500;
   el[0].style.position = 'relative';
   el[0].style.left = 0;
-  el[0].style.transition = 'left 500ms linear';
-  let SLIDE_COUNT = 0;
+  el[0].style.transition = `left ${TIMED}ms linear`;
+  let conWidth = elViewCon.clientWidth;
+
+  
 
   // 함수 -----------------------------------------------------
   const fnSlideMove = () => {
-    if(pointer.gap >= 100){
-      SLIDE_COUNT -= 1;
-      // el[0].style.left = 100 * SLIDE_COUNT + '%';
-    }else if(pointer.gap <= -100){
-      SLIDE_COUNT += 1;
-      // el[0].style.left = 100 * SLIDE_COUNT + '%';
+    if(PERMISSION){
+      PERMISSION = false;
+      if(pointer.gap >= 100){
+        SLIDE_COUNT -= 1;
+        // el[0].style.left = 100 * SLIDE_COUNT + '%';
+      }else if(pointer.gap <= -100){
+        SLIDE_COUNT += 1;
+        // el[0].style.left = 100 * SLIDE_COUNT + '%';
+      }
+      el[0].style.left = 100 * SLIDE_COUNT + '%';
+      setTimeout(() => {
+        PERMISSION = true;
+      }, TIMED);
     }
-    el[0].style.left = 100 * SLIDE_COUNT + '%';
   };
-  
+
   // 이벤트 -----------------------------------------------------
   elViewCon.addEventListener('touchstart', (e) => {
     // console.log( '시작점 :', e.changedTouches[0].pageX );
     pointer.start = e.changedTouches[0].pageX;
 
+  });
+
+
+  // **************************** 무브부분 부터 선생님 코드 가져와야함 ****************
+  elViewCon.addEventListener('touchmove', (e) => {
+    let _nowPointer = e.changedTouches[0].pageX;
+    let _pointerMove = pointer.start - _nowPointer;
+    console.log( parseInt(_pointerMove / conWidth * 100) );
   });
 
   elViewCon.addEventListener('touchend', (e) => {
