@@ -35,4 +35,15 @@ fetch(path)
   const elViewLi = elViewBox.querySelectorAll('li');
   const cloneEl = elViewLi[elViewLi.length -1].cloneNode(true); // li 틀이 아닌 내부 요소까지 전부 복제
   elViewWrap.prepend(cloneEl); // 마지막 요소를 복제해서 제일 앞으로 배치
+  return [elViewWrap, elViewLi];
+})
+.then((el)=>{
+  const elViewCon = elViewBox.querySelector('.view_content');
+
+  // elViewCon.addEventListener('touchend', (e)=>{
+  //   console.log( 'changed : ', e.changedTouches[0] );
+  //   console.log( 'touches : ', e.touches[0] );
+  // })
+
+  console.log( elViewCon.offset());
 })
