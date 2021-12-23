@@ -10,9 +10,37 @@
 const elViewBox = document.querySelector('#viewBox');
 const elSlideBtn = elViewBox.querySelector('.slide_btn');
 const elSlideWrap = elViewBox.querySelector('.view_wrap');
-let elSlideLi = elSlideWrap.querySelectorAll('li');
-let PERMISSION = true;
+const elModal = elViewBox.querySelector('.modal_area');
+const elMovie = elModal.querySelector('.movie');
+const elModalClose = elModal.querySelector('.modal_close > button');
 
+let elSlideLi = elSlideWrap.querySelectorAll('li');
+
+let elSlide = [...elSlideLi];
+let PERMISSION = true;
+elViewBox.style.overflowX = 'hidden';
+let dbVideoData = [];
+let videoCode = (fileName, type = 'mp4') => {
+        return `<video controls autoPlay muted preload>
+                  <source src="${fileName}" type="video/${type}" /> 
+                </video>`};
+// -----------------------------------------------------------------
+
+// elSlide.forEach( (el,idx) => {
+//   el.setAttribute('data-num', idx);
+// })
+
+const path = "../data/video_modal.json";
+fetch(path)
+.then(response => response.json() )
+.then( (data)=>{
+  dbVideoData = [...data];
+  elSlide.forEach( (el,idx) => {
+    el.setAttribute('data-num', dbVideoData[idx].id);
+  });
+});
+
+// -----------------------------------------------------------------
 // const elSlideArr = [].slice.call(elSlideLi);
 // const elSlideArr = [...elSlideLi];
 // elSlideWrap.prepend(elSlideArr.at(-1)); // 마지막 li를 복제가 아닌 그대로 뜯어서 맨 앞으로 위치 변경
@@ -71,9 +99,44 @@ const fnSlideMove = (e) => {
   }
 };
 
+
+elSlideWrap.prepend( elSlide.at(-1) );
+elSlideWrap.prepend( elSlide.at(-2) );
+elSlideLi = elSlideWrap.querySelectorAll('li');
+
 // 이벤트
 elSlideBtn.addEventListener('click', fnSlideMove);
 
+elSlideWrap.addEventListener('click', (e)=>{
+  e.preventDefault();
+  let el = e.target;
+  let selectData;
+  // tagName 이 대문자로 나오기 때문에 toLowerCase로 소문자로 바꿔줌
+  if(el.tagName.toLowerCase() === 'button'){
+    let num = el.parentNode.getAttribute('data-num'); // 임의로 설정한 data-num 을 가져오기 위함 (getAttribute)
+    // elModal.classList.add('on');
+    // elModalClose.focus(); // 강제 포커스 우선 처리
+    // console.log(num);
+
+    selectData = dbVideoData.filter((data)=>{
+      return data.id === parseInt(num);
+    });
+    // console.log(selectData[0].file);
+    let src = `../multi/video/${selectData[0].file}.mp4`;
+    // videoSrc.src = '../multi/video/' + selectData[0].file + '.mp4';
+    // videoCode(videoSrc.src);
+    
+    elMovie.innerHTML = videoCode(src)
+    elModal.classList.add('on');
+    elModalClose.focus();
+  }
+});
+
+elModalClose.addEventListener('click', (e)=>{
+  e.preventDefault();
+  elModal.classList.remove('on');
+  elMovie.children[0].remove();
+});
 
 // ------------------------------------------------
 // this
@@ -112,3 +175,5 @@ for(let elem of document.querySelectorAll('*')) {
   elem.addEventListener('click', e=> console.log(`버블링 : ${elem.tagName}`));
 }
 */
+// =====================================================================================
+// li를 클릭시 해당하는 내용에 맞는 영상을 모달창에 띄워 처리 

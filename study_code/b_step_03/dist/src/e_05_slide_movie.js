@@ -6,20 +6,21 @@
  * 2. js문서 별도로 제작 기능 수행
  */
 // ===================================================
+{ // 중괄호로 감싸면 외부에서 접근 X
+  const path = '../temp/slide_movie.html';
+  const body = document.querySelector('body');
+  const viewBox = document.querySelector('#viewBox');
 
-const path = '../temp/slide_movie.html';
-const body = document.querySelector('body');
-const viewBox = document.querySelector('#viewBox');
+  const fnScript = () => {
+    const mkScript = document.createElement('script');
+    mkScript.src = '../dist/src/slide_movie.js';
+    body.prepend(mkScript);
+  }
 
-const fnScript = () => {
-  const mkScript = document.createElement('script');
-  mkScript.src = '../dist/src/slide_movie.js';
-  body.prepend(mkScript);
+  fetch(path)
+    .then( response => response.text() )
+    .then( (element) => {
+      viewBox.innerHTML = element;
+      fnScript();
+    })
 }
-
-fetch(path)
-  .then( response => response.text() )
-  .then( (element) => {
-    viewBox.innerHTML = element;
-    fnScript();
-  })

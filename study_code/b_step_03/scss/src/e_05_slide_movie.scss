@@ -25,9 +25,10 @@
     }
     .next { float: right; }
     .prev { float: left; }
-    &:hover { background-color: #f7f;}
+    &:hover { background-color: #7cf;}
   } 
   .view_content {
+    position: relative;
     width: 100%; height: 100%; background-color: #dfa;
 
     > ul { width: 100%; height: 100%;}
@@ -40,11 +41,11 @@
       
       button { width: 100%; height: 100%; border-radius: 1rem; background-color: rgba(200,200,200,0.7);}
     }
-    li:nth-child(1) { z-index: 10; transform: translateX(-150%) scale(0.3);}
-    li:nth-child(2) { z-index: 20; transform: translateX(-90%) scale(0.7);}
-    li:nth-child(3) { z-index: 30; transform: translateX(0) scale(1);}
-    li:nth-child(4) { z-index: 20; transform: translateX(90%) scale(0.7);}
-    li:nth-child(5) { z-index: 10; transform: translateX(150%) scale(0.3);}
+    li:nth-child(1){z-index:10; transform:translateX(-150%) scale(0.3); opacity:0;}
+    li:nth-child(2){z-index:20; transform:translateX(-90%) scale(0.7); opacity:1}
+    li:nth-child(3){z-index:30; transform:translateX(0) scale(1); opacity:1}
+    li:nth-child(4){z-index:20; transform:translateX(90%) scale(0.7); opacity:1}
+    li:nth-child(5){z-index:10; transform:translateX(150%) scale(0.3); opacity:0;}
   }
 // ----------------------------------------------------------------------------
   @at-root .modal_area {
