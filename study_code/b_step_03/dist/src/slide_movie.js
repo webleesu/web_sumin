@@ -11,12 +11,13 @@ const elViewBox = document.querySelector('#viewBox');
 const elSlideBtn = elViewBox.querySelector('.slide_btn');
 const elSlideWrap = elViewBox.querySelector('.view_wrap');
 let elSlideLi = elSlideWrap.querySelectorAll('li');
+let PERMISSION = true;
 
 // const elSlideArr = [].slice.call(elSlideLi);
 // const elSlideArr = [...elSlideLi];
 // elSlideWrap.prepend(elSlideArr.at(-1)); // 마지막 li를 복제가 아닌 그대로 뜯어서 맨 앞으로 위치 변경
 
-/* 줄이기전 코드
+/* 줄이기전 코드 ----------------------------------------------------------------------
 const fnSlideMove = () => {
   let elSlide = [...elSlideLi]; // 1,2,3,4,5
   elSlideWrap.prepend( elSlide.at(-1) ); // 5,1,2,3,4 - 실질적 가지고 있는 배열 : 1,2,3,4,5
@@ -28,23 +29,50 @@ const fnSlideMove2 = () => {
   elSlideWrap.append( elSlide.at(0) );
   elSlideLi = elSlideWrap.querySelectorAll('li'); // 순서 바뀐것을 컴퓨터가 모르기에 다시 재선택
 };
-*/
 
+const fnSlideMove = (permission) => {
+  let elSlide = [...elSlideLi];
+  if(permission){
+    elSlideWrap.prepend( elSlide.at(-1) ); 
+  } else {
+    elSlideWrap.append( elSlide.at(0) );
+  }
+  elSlideLi = elSlideWrap.querySelectorAll('li');
+};
 
 
 // 이벤트
 elSlideBtn.addEventListener('click', (e) => {
-  let target = (name) => e.target.classList.contains(name);
-  if(target('next')){ // 'next'버튼 클릭시 수행하는 기능
-    console.log('다음버튼 클릭시');
-    fnSlideMove2();
-    // console.log( elSlideArr.at(0) ); 강제 배열화 시켜야만 at 사용 가능
-    
-  }else { // 'prev'버튼 클릭시 수행하는 기능
-    console.log('이전버튼 클릭시');
-    fnSlideMove();
-  }
+  e.preventDefault();
+  let target = e.target.classList.contains('next');
+  fnSlideMove( !target );
+
+  // if(target('next')){ // 'next'버튼 클릭시 수행하는 기능
+  //   // console.log('다음버튼 클릭시');
+  //   // console.log( elSlideArr.at(0) ); 강제 배열화 시켜야만 at 사용 가능
+  //   fnSlideMove();
+  // }else { // 'prev'버튼 클릭시 수행하는 기능
+  //   // console.log('이전버튼 클릭시');
+  //   fnSlideMove(true);
+  // }
 });
+*/
+// 줄인 후 코드 --------------------------------------------------------------------------
+const fnSlideMove = (e) => {
+  e.preventDefault();
+  if(PERMISSION) {
+    PERMISSION = false;
+    let target = e.target.classList.contains('next');
+    let elSlide = [...elSlideLi];
+    (target) ? elSlideWrap.append( elSlide.at(0) ) : elSlideWrap.prepend( elSlide.at(-1) );
+
+    elSlideLi = elSlideWrap.querySelectorAll('li');
+    setTimeout(() => { PERMISSION = true}, 500);
+  }
+};
+
+// 이벤트
+elSlideBtn.addEventListener('click', fnSlideMove);
 
 
 // ------------------------------------------------
