@@ -10,30 +10,49 @@
 const elViewBox = document.querySelector('#viewBox');
 const elSlideBtn = elViewBox.querySelector('.slide_btn');
 const elSlideWrap = elViewBox.querySelector('.view_wrap');
-const elSlideLi = elSlideWrap.querySelectorAll('li');
+let elSlideLi = elSlideWrap.querySelectorAll('li');
+
 // const elSlideArr = [].slice.call(elSlideLi);
-const elSlideArr = [...elSlideLi];
-elSlideWrap.prepend(elSlideArr.at(-1)); // 마지막 li를 복제가 아닌 그대로 뜯어서 맨 앞으로 위치 변경
+// const elSlideArr = [...elSlideLi];
+// elSlideWrap.prepend(elSlideArr.at(-1)); // 마지막 li를 복제가 아닌 그대로 뜯어서 맨 앞으로 위치 변경
+
+/* 줄이기전 코드
+const fnSlideMove = () => {
+  let elSlide = [...elSlideLi]; // 1,2,3,4,5
+  elSlideWrap.prepend( elSlide.at(-1) ); // 5,1,2,3,4 - 실질적 가지고 있는 배열 : 1,2,3,4,5
+  elSlideLi = elSlideWrap.querySelectorAll('li'); // 순서 바뀐것을 컴퓨터가 모르기에 다시 재선택
+};
+
+const fnSlideMove2 = () => {
+  let elSlide = [...elSlideLi];
+  elSlideWrap.append( elSlide.at(0) );
+  elSlideLi = elSlideWrap.querySelectorAll('li'); // 순서 바뀐것을 컴퓨터가 모르기에 다시 재선택
+};
+*/
 
 
 
-// // 이벤트
-// elSlideBtn.addEventListener('click', (e) => {
-//   let target = (name) => e.target.classList.contains(name);
-//   if(target('next')){ // 'next'버튼 클릭시 수행하는 기능
-//     console.log('다음버튼 클릭시');
-//     // console.log( elSlideArr.at(0) ); 강제 배열화 시켜야만 at 사용 가능
+// 이벤트
+elSlideBtn.addEventListener('click', (e) => {
+  let target = (name) => e.target.classList.contains(name);
+  if(target('next')){ // 'next'버튼 클릭시 수행하는 기능
+    console.log('다음버튼 클릭시');
+    fnSlideMove2();
+    // console.log( elSlideArr.at(0) ); 강제 배열화 시켜야만 at 사용 가능
     
-//   }else { // 'prev'버튼 클릭시 수행하는 기능
-//     console.log('이전버튼 클릭시');
-//   }
-// });
+  }else { // 'prev'버튼 클릭시 수행하는 기능
+    console.log('이전버튼 클릭시');
+    fnSlideMove();
+  }
+});
 
 
 // ------------------------------------------------
 // this
-let elBtn = elViewBox.querySelector('.slide_btn');
-let elNext = elViewBox.querySelector('.next');
+
+// let elBtn = elViewBox.querySelector('.slide_btn');
+// let elNext = elViewBox.querySelector('.next');
+
 /*
 elBtn.addEventListener('click', (e)=>{
   // function(){} 함수일 경우 이벤트 주체, ()=>{} 함수에서는 전체문맥
