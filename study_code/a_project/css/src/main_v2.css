@@ -80,11 +80,6 @@ html, body {
   height: auto;
 }
 
-a:hover {
-  outline: 2px solid #1c1c1c;
-  border-radius: 4px;
-}
-
 #headBox {
   position: fixed;
   top: 0;
@@ -98,6 +93,14 @@ a:hover {
   max-width: 1920px;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.8);
+}
+#headBox a:hover {
+  outline: 2px solid #1c1c1c;
+  border-radius: 4px;
+}
+#headBox button:hover {
+  outline: 2px solid #1c1c1c;
+  border-radius: 4px;
 }
 
 @media all and (max-width: 1279px) {
@@ -376,7 +379,7 @@ a:hover {
     left: -50px;
     width: 100px;
     height: auto;
-    background-color: #ffffff;
+    background-color: rgba(255, 241, 224, 0.8);
   }
   .unb_lauguage_area li {
     margin: auto;
@@ -389,7 +392,8 @@ a:hover {
     height: 100%;
   }
   .unb_lauguage_area li a:hover {
-    background-color: #ebebeb;
+    background-color: #e17900;
+    color: #ffffff;
   }
 
   .unb_btn .unb_sign {
@@ -915,7 +919,7 @@ a:hover {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/facebook.png);
+    background-image: url(../../img/facebook_white.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -934,7 +938,7 @@ a:hover {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/instagram.png);
+    background-image: url(../../img/instagram_white.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -955,12 +959,17 @@ a:hover {
   height: auto;
   margin: auto;
 }
+#viewBox a:hover {
+  outline: 2px solid #1c1c1c;
+  border-radius: 4px;
+}
 .view_area {
   position: relative;
 }
 .view_area .view_btn {
   position: absolute;
   top: 50%;
+  z-index: 20;
   width: 100%;
   height: 50px;
 }
@@ -969,7 +978,7 @@ a:hover {
   top: 50%;
   width: 50px;
   height: 50px;
-  margin-top: -25px;
+  transform: translateY(-50%);
 }
 .view_area .view_btn > div:hover {
   border-radius: 4px;
@@ -1017,28 +1026,107 @@ a:hover {
   height: 100%;
 }
 .view .view_in_wrap {
-  width: 500%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   height: 100%;
 }
-.view .view_in_wrap .view_content {
-  float: left;
-  width: 20%;
+.view_content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
 }
-.view .view_in_wrap .view_content_01 {
-  background-color: #9e728c77;
+.view_content.on {
+  display: block;
 }
-.view .view_in_wrap .view_content_02 {
-  background-color: #FE5AE677;
+.view_content a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.view .view_in_wrap .view_content_03 {
-  background-color: #BCCCD477;
+
+.view_content_01 {
+  background-image: url(../../img/view_01.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
-.view .view_in_wrap .view_content_04 {
-  background-color: #5DD95977;
+.view_content_01 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
-.view .view_in_wrap .view_content_05 {
-  background-color: #F9495D77;
+
+.view_content_02 {
+  background-image: url(../../img/view_02.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.view_content_02 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.view_content_03 {
+  background-image: url(../../img/view_03.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.view_content_03 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.view_content_04 {
+  background-image: url(../../img/view_04.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.view_content_04 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.view_content_05 {
+  background-image: url(../../img/view_05.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.view_content_05 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .view_area .view_num {
@@ -1103,6 +1191,57 @@ a:hover {
     display: block;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
+    padding: 1rem 1.5rem;
+  }
+  .side_view_area .side_view p {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .side_view_area .side_view_event {
+    background-image: url(../../img/view_side_01.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .side_view_area .side_view_event > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .side_view_area .side_view_magazine {
+    background-image: url(../../img/view_side_02.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .side_view_area .side_view_magazine > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .side_view_area .side_view_brand {
+    background-image: url(../../img/view_side_03.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .side_view_area .side_view_brand > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
 }
 #bestBox {
@@ -1112,14 +1251,20 @@ a:hover {
   margin: auto;
   padding: 80px;
 }
+#bestBox a:hover {
+  outline: 2px solid #1c1c1c;
+  border-radius: 4px;
+}
 .best_area {
   display: flex;
-  height: 420px;
+  height: 430px;
   margin: auto;
   margin-top: 20px;
+  padding: 5px 0;
 }
 .best_area .best_item {
   float: left;
+  margin-bottom: 10px;
   margin-left: 20px;
 }
 .best_area .best_item:first-child {
@@ -1295,7 +1440,7 @@ a:hover {
     flex-wrap: wrap;
     overflow: hidden;
     width: 100%;
-    height: 420px;
+    height: 430px;
   }
   .best_area .best_item {
     width: 320px;
@@ -1537,6 +1682,36 @@ a:hover {
   max-height: 730px;
   background-color: #ebebeb;
 }
+.challenge:nth-child(1) {
+  background-image: url(../../img/challenge_01.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.challenge:nth-child(1) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.challenge:nth-child(2) {
+  background-image: url(../../img/challenge_02.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.challenge:nth-child(2) > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 .challenge a {
   display: block;
   width: 100%;
@@ -1614,11 +1789,20 @@ a:hover {
   display: flex;
   overflow: hidden;
   margin: auto;
+  padding: 0 5px;
+}
+.event {
+  margin-bottom: 10px;
 }
 .event a {
   display: block;
   width: 100%;
   height: 100%;
+  height: 420px;
+}
+.event a:hover {
+  border: 2px solid #1c1c1c;
+  border-radius: 4px;
 }
 .event a .event_img {
   background-color: #ebebeb;
@@ -1754,7 +1938,7 @@ a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
     width: auto;
-    height: 420px;
+    height: 430px;
   }
   .event {
     width: 320px;
@@ -2252,12 +2436,25 @@ a:hover {
 
 #magazineBox {
   width: 100%;
-  height: 23.5vw;
+  height: 21.875vw;
   background-color: #fff1e0;
 }
 #magazineBox .magazine_img {
   width: 100%;
   height: 100%;
+  background-image: url(../../img/magazine.jpeg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+#magazineBox .magazine_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 #magazineBox .magazine_img a {
   display: block;

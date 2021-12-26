@@ -277,12 +277,12 @@
           @at-root .foot_facebook a {
             display: block;
             width: 30px; height: 30px;
-            @include img('facebook.png');
+            @include img('facebook_white.png');
           }
           @at-root .foot_instagram a{
             display: block;
             width: 30px; height: 30px;
-            @include img('instagram.png');
+            @include img('instagram_white.png');
           }
         }
       }

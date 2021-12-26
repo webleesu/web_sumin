@@ -22,8 +22,21 @@
           background-color: $color_gray;
           margin: auto; 
           
-          a { @include full;}
+          
+          a { 
+            @include full;
+            box-sizing: border-box;
+            padding: 1rem 1.5rem;;
+          }
+          p { 
+            // margin: 1rem 1.5rem;
+            font-size: 20px; 
+            color: $color_white;
+          }
         }
+        .side_view_event { @include img('view_side_01.jpg', $size: cover) }
+        .side_view_magazine { @include img('view_side_02.jpg', $size: cover) }
+        .side_view_brand { @include img('view_side_03.jpg', $size: cover) }
       }
     } // .view_area
 

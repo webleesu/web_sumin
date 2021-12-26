@@ -4,16 +4,19 @@
   width: 100%; max-width: 1920px; height: auto; margin: auto;
   // padding: 10vw;
   padding: 80px;
+
+  a:hover { outline: 2px solid $color_black; border-radius: 4px; }
   
   @at-root .best_area {
     display: flex; 
-    height: 420px;
+    height: 430px;
     margin: auto;
     margin-top: 20px;
+    padding: 5px 0;
 
     .best_item {
       float: left;
-
+      margin-bottom: 10px;
       margin-left: 20px;
 
       &:first-child { margin-left: 0;}

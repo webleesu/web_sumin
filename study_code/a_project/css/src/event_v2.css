@@ -94,6 +94,14 @@ html, body {
   margin: auto;
   background-color: rgba(255, 255, 255, 0.8);
 }
+#headBox a:hover {
+  outline: 2px solid #1c1c1c;
+  border-radius: 4px;
+}
+#headBox button:hover {
+  outline: 2px solid #1c1c1c;
+  border-radius: 4px;
+}
 
 @media all and (max-width: 1279px) {
   #headBox {
@@ -371,7 +379,7 @@ html, body {
     left: -50px;
     width: 100px;
     height: auto;
-    background-color: #ffffff;
+    background-color: rgba(255, 241, 224, 0.8);
   }
   .unb_lauguage_area li {
     margin: auto;
@@ -384,7 +392,8 @@ html, body {
     height: 100%;
   }
   .unb_lauguage_area li a:hover {
-    background-color: #ebebeb;
+    background-color: #e17900;
+    color: #ffffff;
   }
 
   .unb_btn .unb_sign {
@@ -910,7 +919,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/facebook.png);
+    background-image: url(../../img/facebook_white.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -929,7 +938,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/instagram.png);
+    background-image: url(../../img/instagram_white.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;

@@ -11,11 +11,17 @@
     display: flex;
     overflow: hidden;
     margin: auto;
+    padding: 0 5px;
 
     @at-root .event {
-      // margin-left: 20px;
+      margin-bottom: 10px;
       a {
         @include full;
+        height: 420px;
+        &:hover {
+          border: 2px solid $color_black; border-radius: 4px;
+        }
+      
         .event_img {
           background-color: $color_gray;
         }

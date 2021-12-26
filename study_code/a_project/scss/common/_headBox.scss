@@ -8,6 +8,9 @@
   display: flex; justify-content: space-between; align-items: flex-end;
   width: 100%; max-width: 1920px; margin: auto;
   background-color: rgba($color_white, 0.8);
+
+  a:hover { outline: 2px solid $color_black; border-radius: 4px; }
+  button:hover { outline: 2px solid $color_black; border-radius: 4px; }
   
 } // #headBox
 
@@ -151,14 +154,14 @@
         display: none;
         position: absolute; z-index: 10; top: 30px; left: -50px;
         width: 100px; height: auto;
-        background-color: $color_white;
+        background-color: rgba($color_primary_light, 0.8);
 
         li {
           margin: auto; margin-bottom: 5px;
           font-size: 14px;
           a {
             @include full;
-            &:hover { background-color: $color_gray;}
+            &:hover { background-color: $color_primary; color: $color_white;}
           }
         }
 
