@@ -2504,7 +2504,8 @@ html, body {
   height: 21.875vw;
   background-color: #fff1e0;
 }
-#magazineBox .magazine_img {
+
+.magazine_img {
   width: 100%;
   height: 100%;
   background-image: url(../../img/magazine.jpeg);
@@ -2512,7 +2513,7 @@ html, body {
   background-position: 50% 50%;
   background-size: cover;
 }
-#magazineBox .magazine_img > span {
+.magazine_img > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -2521,7 +2522,7 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-#magazineBox .magazine_img a {
+.magazine_img a {
   display: block;
   width: 100%;
   height: 100%;

@@ -2,41 +2,36 @@
 
 // 768px ~ 1279px -----------------------------------------------------------------
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #eventBox {
 
-    .event_total_title {
-      width: 200px;
+  .event_total_title {
+    width: 200px;
 
-      h2 {
-        text-align: center; 
-      }
-    } // .event_total_title
+    h2 {
+      text-align: center; 
+    }
+  } // .event_total_title
 
-    @at-root .event_area {
-      position: relative;
-      min-height: 1300px;
-      padding: 30px 0;
+  .event_area {
+    position: relative;
+    min-height: 1300px;
+    padding: 30px 0;
 
-      .event_tab {
+    .event_tab {
+      li {
+        margin: 3px 20px 20px 0;
+      } // li
+    } // .event_tab
+  } // .event_area
 
-        li {
-          margin: 3px 20px 20px 0;
+  .tab_content {
+    .event_ing_wrap {
+      justify-content: space-around; flex-wrap: wrap;
+    } // .event_ing_wrap
 
-        } // li
-      } // .event_tab
+  .event {
+    margin-left: 2vw; margin-right: 2vw;
+    // &:nth-child(2n) { margin-right: 0;}
 
-      @at-root .tab_content {
-        .event_ing_wrap {
-          justify-content: space-around; flex-wrap: wrap;
-
-          @at-root .event {
-            margin-left: 2vw; margin-right: 2vw;
-            // &:nth-child(2n) { margin-right: 0;}
-
-          } // .event
-        } // .event_ing_wrap
-      } // .tab_content
-
-    } // .event_area
-  } // #eventBox
+  } // .event
+  } // .tab_content
 } // 768px ~ 1279px ===============================================================

@@ -1000,13 +1000,15 @@ html, body {
   line-height: 100px;
   text-transform: uppercase;
 }
+
 .event_area {
   position: relative;
   width: 93.75vw;
   height: auto;
   margin: auto;
 }
-.event_area .event_tab {
+
+.event_tab {
   width: 84.375vw;
   max-width: 1200px;
   height: 40px;
@@ -1014,17 +1016,18 @@ html, body {
   padding: 0;
   border-bottom: 1px solid #333;
 }
-.event_area .event_tab li {
+.event_tab li {
   float: left;
   padding: 0 10px;
   padding-bottom: 11px;
 }
-.event_area .event_tab li.on {
+.event_tab li.on {
   border-bottom: 3px solid #1c1c1c;
 }
-.event_area .event_tab li.on button {
+.event_tab li.on button {
   font-weight: 700;
 }
+
 .tab_content {
   width: 84.735vw;
   height: auto;
@@ -1033,11 +1036,13 @@ html, body {
   margin-top: 50px;
   margin-bottom: 200px;
 }
-.tab_content .event_ing_wrap {
+
+.event_ing_wrap {
   display: flex;
   width: 100%;
   height: auto;
 }
+
 .event {
   position: relative;
   width: 300px;
@@ -1082,7 +1087,7 @@ html, body {
   border: 3px solid #1c1c1c;
 }
 
-.event_area .event_more {
+.event_more {
   position: absolute;
   bottom: 110px;
   left: 50%;
@@ -1095,13 +1100,13 @@ html, body {
   color: #ffffff;
   background-color: #333;
 }
-.event_area .event_more:hover {
+.event_more:hover {
   border: 3px solid #1c1c1c;
   background-color: #ffffff;
   color: #1c1c1c;
   font-weight: 700;
 }
-.event_area .event_more:focus {
+.event_more:focus {
   border: 3px solid #1c1c1c;
   background-color: #ffffff;
   color: #1c1c1c;
@@ -1115,6 +1120,7 @@ html, body {
   #eventBox .event_total_title h2 {
     text-align: center;
   }
+
   .event_area {
     position: relative;
     min-height: 1300px;
@@ -1123,21 +1129,24 @@ html, body {
   .event_area .event_tab li {
     margin: 3px auto 20px 0;
   }
-  .tab_content .event_ing_wrap {
+
+  .event_ing_wrap {
     flex-direction: column;
     justify-content: flex-start;
   }
+
   .event {
     margin: auto;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #eventBox .event_total_title {
+  .event_total_title {
     width: 200px;
   }
-  #eventBox .event_total_title h2 {
+  .event_total_title h2 {
     text-align: center;
   }
+
   .event_area {
     position: relative;
     min-height: 1300px;
@@ -1146,11 +1155,12 @@ html, body {
   .event_area .event_tab li {
     margin: 3px 20px 20px 0;
   }
+
   .tab_content .event_ing_wrap {
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  .event {
+  .tab_content .event {
     margin-left: 2vw;
     margin-right: 2vw;
   }
@@ -1163,6 +1173,7 @@ html, body {
   #eventBox .event_total_title h2 {
     text-align: left;
   }
+
   .event_area {
     position: relative;
     min-height: 1100px;
@@ -1171,6 +1182,7 @@ html, body {
   .event_area .event_tab li {
     margin: 3px 20px 20px 0;
   }
+
   .tab_content {
     max-width: 1200px;
   }
@@ -1178,6 +1190,7 @@ html, body {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
   .event {
     margin-right: 90px;
   }
