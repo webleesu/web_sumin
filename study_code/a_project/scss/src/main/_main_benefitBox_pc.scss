@@ -4,18 +4,18 @@
 @media all and (min-width: 1280px){
   #benefitBox {
     padding: 80px;
-
-    @at-root .benefit_title_area {
-      margin-bottom: 60px;
-    } // .benefit_title_area
-
-    @at-root .benefit_detail_area {
-      display: flex; justify-content: space-between;
-      width: 910px; height: 170px;
-
-      .benefit {
-        width: 270px; height: 170px;
-      } // .benefit
-    } // .benefit_detail_area
   } // #benefitBox
+
+  .benefit_title_area {
+    margin-bottom: 60px;
+  } // .benefit_title_area
+
+  .benefit_detail_area {
+    display: flex; justify-content: space-between;
+    width: 910px; height: 170px;
+
+    .benefit {
+      width: 270px; height: 170px;
+    } // .benefit
+  } // .benefit_detail_area
 } // 1280px ~ ====================================================================

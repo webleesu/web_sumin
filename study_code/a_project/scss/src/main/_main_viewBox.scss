@@ -3,101 +3,102 @@
 #viewBox {
   width: 100%; max-width: 1920px; height: auto; margin: auto;
   a:hover { outline: 2px solid $color_black; border-radius: 4px; }
-
-  @at-root .view_area {
-    position: relative;
-    // margin: auto;
-    
-    .view_btn {
-      position: absolute; top: 50%; z-index: 20;
-      width: 100%; height: 50px;
-
-      & > div {
-        position: absolute;
-        top: 50%; 
-        width: 50px; height: 50px;
-        transform: translateY(-50%);
-        &:hover { 
-          border-radius: 4px;
-          background-color: rgba($color_black, 0.4);
-        }
-      }
-      
-      .view_after_btn { 
-        right: 0;
-        @include img('forward.png');
-      }
-      .view_before_btn { 
-        left: 0;
-        @include img('back.png');
-      }
-      button {
-        width: 100%; height: 100%;
-        // &:hover { transform: scale(1.3); transition: transform 300ms ease;}
-        // &:focus { border-radius: 0.25rem; outline: 3px solid #171717;}
-      }
-    } // .view_btn
-
-    @at-root .view {
-      overflow: hidden;
-      // width: 750px; height: 550px;
-      width: 100%; height: 100%;
-      .view_in_wrap {
-        position: relative;
-        display: flex; justify-content: space-between;
-        width: 100%;
-        height: 100%;
-
-        @at-root .view_content {
-          display: none;
-          position: absolute; top: 0; left: 0;
-          // float: left;
-          width: 100%;
-          height: 100%;
-
-          &.on {
-            display: block;
-            
-          }
-
-          a { @include full; }
-        }
-        @at-root .view_content_01 { 
-          // background-color: #9e728c77;
-          @include img('view_01.jpg', $size: cover);
-        }
-        @at-root .view_content_02 { 
-          // background-color: #FE5AE677;
-          @include img('view_02.jpg', $size: cover);
-        }
-        @at-root .view_content_03 { 
-          // background-color: #BCCCD477;
-          @include img('view_03.jpg', $size: cover);
-        }
-        @at-root .view_content_04 { 
-          // background-color: #5DD95977;
-          @include img('view_04.jpg', $size: cover);
-        }
-        @at-root .view_content_05 { 
-          // background-color: #F9495D77;
-          @include img('view_05.jpg', $size: cover);
-        }
-      } // .view_in_wrap
-    } // .view
-
-    .view_num {
-      position: absolute;
-      left: 20px; bottom: 10px;
-      width: 70px; height: 25px;
-      background-color: rgba($color_black, 0.3);
-      border-radius: 4px;
-      font-weight: 700;
-      text-align: center; line-height: 25px;
-      color: $color_white;
-    }
-  } // .view_area
-
 } // #viewBox
+
+.view_area {
+  position: relative;
+  // margin: auto;
+} // .view_area
+  
+.view_btn {
+  position: absolute; top: 50%; z-index: 20;
+  width: 100%; height: 50px;
+  
+  & > div {
+    position: absolute;
+    top: 50%; 
+    width: 50px; height: 50px;
+    transform: translateY(-50%);
+    &:hover { 
+      border-radius: 4px;
+      background-color: rgba($color_black, 0.4);
+    }
+  }
+  
+  .view_after_btn { 
+    right: 0;
+    @include img('forward.png');
+  }
+  .view_before_btn { 
+    left: 0;
+    @include img('back.png');
+  }
+  button {
+    width: 100%; height: 100%;
+    // &:hover { transform: scale(1.3); transition: transform 300ms ease;}
+    // &:focus { border-radius: 0.25rem; outline: 3px solid #171717;}
+  }
+} // .view_btn
+
+.view {
+  overflow: hidden;
+  // width: 750px; height: 550px;
+  width: 100%; height: 100%;
+  .view_in_wrap {
+    position: relative;
+    display: flex; justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  } // .view_in_wrap
+} // .view
+
+.view_content {
+  display: none;
+  position: absolute; top: 0; left: 0;
+  // float: left;
+  width: 100%;
+  height: 100%;
+  
+  &.on {
+    display: block;
+    
+  }
+  
+  a { @include full; }
+}
+
+.view_content_01 { 
+  // background-color: #9e728c77;
+  @include img('view_01.jpg', $size: cover);
+}
+.view_content_02 { 
+  // background-color: #FE5AE677;
+  @include img('view_02.jpg', $size: cover);
+}
+.view_content_03 { 
+  // background-color: #BCCCD477;
+  @include img('view_03.jpg', $size: cover);
+}
+.view_content_04 { 
+  // background-color: #5DD95977;
+  @include img('view_04.jpg', $size: cover);
+}
+.view_content_05 { 
+  // background-color: #F9495D77;
+  @include img('view_05.jpg', $size: cover);
+}
+  
+.view_num {
+position: absolute;
+left: 20px; bottom: 10px;
+width: 70px; height: 25px;
+background-color: rgba($color_black, 0.3);
+border-radius: 4px;
+font-weight: 700;
+text-align: center; line-height: 25px;
+color: $color_white;
+}
+
 
 @import './main_viewBox_handhelds';
 @import './main_viewBox_pc';

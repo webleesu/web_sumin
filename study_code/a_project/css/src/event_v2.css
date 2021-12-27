@@ -97,6 +97,7 @@ html, body {
 #headBox a:hover {
   outline: 2px solid #1c1c1c;
   border-radius: 4px;
+  text-decoration: none;
 }
 #headBox button:hover {
   outline: 2px solid #1c1c1c;
@@ -158,6 +159,7 @@ html, body {
     height: 5.2vw;
     max-height: 40px;
   }
+
   .hand_language {
     position: relative;
     min-width: 25px;
@@ -166,11 +168,10 @@ html, body {
     min-height: 25px;
     height: 5.2vw;
     max-height: 40px;
-    cursor: pointer;
     background-image: url(../../img/global.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: cover;
   }
   .hand_language > span {
     display: block;
@@ -181,21 +182,34 @@ html, body {
     height: 0;
     overflow: hidden;
   }
-  .hand_language ul {
+  .hand_language_area {
     display: none;
     position: absolute;
-    top: 50px;
-    left: 0;
+    bottom: -90px;
+    right: -25px;
+    width: 100px;
+    height: auto;
+    background-color: rgba(255, 241, 224, 0.8);
   }
-  .hand_language ul li {
-    margin-bottom: 5px;
+  .hand_language_area.on {
+    display: block;
   }
-  .hand_language a {
-    display: none;
-    width: 50px;
-    height: 20px;
-    font-size: 14px;
+  .hand_language_area li {
+    margin-bottom: 10px;
   }
+  .hand_language_area li:last-child {
+    margin-bottom: 0;
+  }
+  .hand_language_area li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .hand_language_area li a:hover {
+    background-color: #e17900;
+    color: #ffffff;
+  }
+
   .hand_language:hover ul {
     display: block;
   }
@@ -203,13 +217,13 @@ html, body {
     display: block;
   }
 
-  #hand_nav .hand_search {
+  .hand_search {
     background-image: url(../../img/search.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
   }
-  #hand_nav .hand_search > span {
+  .hand_search > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -218,13 +232,14 @@ html, body {
     height: 0;
     overflow: hidden;
   }
-  #hand_nav .hand_cart {
+
+  .hand_cart {
     background-image: url(../../img/cart.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
   }
-  #hand_nav .hand_cart > span {
+  .hand_cart > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -233,13 +248,14 @@ html, body {
     height: 0;
     overflow: hidden;
   }
-  #hand_nav .hand_menu {
+
+  .hand_menu {
     background-image: url(../../img/menu.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
   }
-  #hand_nav .hand_menu > span {
+  .hand_menu > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -314,6 +330,7 @@ html, body {
     width: 300px;
     height: auto;
   }
+
   .unb_btn {
     display: flex;
     justify-content: space-between;
@@ -371,6 +388,10 @@ html, body {
     outline: 2px solid #1c1c1c;
     border-radius: 4px;
   }
+  .unb_btn .unb_sign {
+    color: #EC0F0C;
+  }
+
   .unb_lauguage_area {
     display: none;
     position: absolute;
@@ -396,10 +417,6 @@ html, body {
     color: #ffffff;
   }
 
-  .unb_btn .unb_sign {
-    color: #EC0F0C;
-  }
-
   .unb_search_area {
     display: flex;
     justify-content: space-between;
@@ -409,6 +426,7 @@ html, body {
     margin: auto;
     margin-right: 10px;
   }
+
   .unb_search {
     position: relative;
     width: 160px;
@@ -417,21 +435,23 @@ html, body {
     margin-right: 10px;
     border-radius: 15px;
   }
-  .unb_search #search_bar {
+
+  #search_bar {
     width: 160px;
     height: 30px;
     border-radius: 15px;
     text-indent: 8px;
     background-color: #ebebeb;
   }
-  .unb_search .unb_search_icon {
+
+  .unb_search_icon {
     position: absolute;
     top: 4px;
     right: 10px;
     width: 20px;
     height: 20px;
   }
-  .unb_search .unb_search_icon button {
+  .unb_search_icon button {
     width: 100%;
     height: 100%;
     background-image: url(../../img/search.png);
@@ -439,7 +459,7 @@ html, body {
     background-position: 50% 50%;
     background-size: contain;
   }
-  .unb_search .unb_search_icon button > span {
+  .unb_search_icon button > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -573,17 +593,19 @@ html, body {
     width: 100%;
     height: 100%;
   }
-  .foot_main_area .foot_info p {
+
+  .foot_info p {
     display: none;
   }
-  .foot_main_area .foot_info p.copyright {
+  .foot_info p.copyright {
     display: block;
     width: 43.75vw;
     max-width: 336px;
     height: auto;
     color: #ebebeb;
   }
-  .foot_main_area .foot_bottom_btn {
+
+  .foot_bottom_btn {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -592,14 +614,14 @@ html, body {
     width: 80px;
     height: auto;
   }
-  .foot_main_area .foot_bottom_btn li {
+  .foot_bottom_btn li {
     margin-right: 20px;
   }
   .foot_facebook a {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/facebook.png);
+    background-image: url(../../img/facebook_black.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -618,7 +640,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/instagram.png);
+    background-image: url(../../img/instagram_black.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -691,7 +713,8 @@ html, body {
     height: auto;
     margin: auto;
   }
-  .foot_main_area .foot_main_btn {
+
+  .foot_main_btn {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -702,16 +725,16 @@ html, body {
     color: #ebebeb;
     margin-bottom: 30px;
   }
-  .foot_main_area .foot_main_btn li {
+  .foot_main_btn li {
     position: relative;
     margin-right: 15px;
     padding-right: 4vw;
   }
-  .foot_main_area .foot_main_btn li:last-child {
+  .foot_main_btn li:last-child {
     margin-right: 0;
     padding-right: 0;
   }
-  .foot_main_area .foot_main_btn li::after {
+  .foot_main_btn li::after {
     content: "";
     display: block;
     position: absolute;
@@ -721,21 +744,22 @@ html, body {
     height: 3px;
     background-color: #ebebeb;
   }
-  .foot_main_area .foot_main_btn li:last-child::after {
+  .foot_main_btn li:last-child::after {
     display: none;
   }
-  .foot_main_area .foot_main_btn .foot_personal {
+  .foot_main_btn .foot_personal {
     font-weight: 700;
   }
-  .foot_main_area .foot_main_btn a {
+  .foot_main_btn a {
     display: block;
     width: 100%;
     height: 100%;
   }
-  .foot_main_area .foot_info p {
+
+  .foot_info p {
     display: none;
   }
-  .foot_main_area .foot_info p.copyright {
+  .foot_info p.copyright {
     display: block;
     width: 43.75vw;
     max-width: 336px;
@@ -743,7 +767,8 @@ html, body {
     margin: auto;
     color: #ebebeb;
   }
-  .foot_main_area .foot_bottom_btn {
+
+  .foot_bottom_btn {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -752,14 +777,14 @@ html, body {
     width: 80px;
     height: auto;
   }
-  .foot_main_area .foot_bottom_btn li {
+  .foot_bottom_btn li {
     margin-right: 20px;
   }
   .foot_facebook a {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/facebook.png);
+    background-image: url(../../img/facebook_black.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -778,7 +803,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/instagram.png);
+    background-image: url(../../img/instagram_black.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -801,6 +826,7 @@ html, body {
     padding: 70px 60px;
     background-color: #1c1c1c;
   }
+
   .foot_top_area {
     display: flex;
     justify-content: space-between;
@@ -851,7 +877,8 @@ html, body {
     height: 300px;
     margin: auto;
   }
-  .foot_main_area .foot_main_btn {
+
+  .foot_main_btn {
     display: flex;
     justify-content: space-between;
     width: 600px;
@@ -860,16 +887,16 @@ html, body {
     text-align: left;
     color: #ebebeb;
   }
-  .foot_main_area .foot_main_btn li {
+  .foot_main_btn li {
     position: relative;
     margin-right: 0px;
     padding-right: 30px;
   }
-  .foot_main_area .foot_main_btn li:last-child {
+  .foot_main_btn li:last-child {
     margin-right: 0;
     padding-right: 0;
   }
-  .foot_main_area .foot_main_btn li::after {
+  .foot_main_btn li::after {
     content: "";
     display: block;
     position: absolute;
@@ -879,31 +906,33 @@ html, body {
     height: 3px;
     background-color: #ebebeb;
   }
-  .foot_main_area .foot_main_btn li:last-child::after {
+  .foot_main_btn li:last-child::after {
     display: none;
   }
-  .foot_main_area .foot_main_btn .foot_personal {
+  .foot_main_btn .foot_personal {
     font-weight: 700;
   }
-  .foot_main_area .foot_main_btn a {
+  .foot_main_btn a {
     display: block;
     width: 100%;
     height: 100%;
   }
-  .foot_main_area .foot_info {
+
+  .foot_info {
     width: 600px;
     height: 250px;
     margin-top: 40px;
   }
-  .foot_main_area .foot_info p {
+  .foot_info p {
     display: block;
     margin-bottom: 20px;
     color: #ebebeb;
   }
-  .foot_main_area .foot_info p:last-child {
+  .foot_info p:last-child {
     margin-bottom: 0;
   }
-  .foot_main_area .foot_bottom_btn {
+
+  .foot_bottom_btn {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -912,7 +941,7 @@ html, body {
     width: 80px;
     height: auto;
   }
-  .foot_main_area .foot_bottom_btn li {
+  .foot_bottom_btn li {
     margin-right: 20px;
   }
   .foot_facebook a {

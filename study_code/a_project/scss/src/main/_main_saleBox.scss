@@ -6,58 +6,59 @@
   // padding: 10vw;
   padding: 80px;
   overflow: hidden;
-
-  @at-root .sale_area {
-    display: flex; justify-content: space-between; flex-wrap: nowrap;
-    width: 78.125vw; max-width: 1500px; height: 350px;
-    margin: auto; margin-top: 50px;
-
-    @at-root .sale_item {
-      width: 190px; height: auto;
-      margin-right: 10px;
-      &:last-child {margin-right: 0;}
-
-      a {
-        @include full;
-
-        .sale_img {
-          width: 190px; height: 190px;
-          border-radius: 8px;
-          background-color: rgba($color_primary_light, 0.4);
-        }
-        .sale_title {
-          width: 100%; height: auto;
-          margin-top: 10px;
-          font-size: 18px;
-        }
-        .sale_last_price {
-          width: 100%; height: auto;
-          text-decoration: line-through;
-        }
-        .sale_price_area {
-          display: flex; justify-content: flex-start;
-          width: 100%; height: auto;
-
-          .sale_percent {
-            width: 50px; height: auto;
-            margin-right: 10px;
-            font-size: 18px;
-            color: $color_red;
-          }
-          .sale_price {
-            width: 90px; height: auto;
-            font-size: 18px;
-          }
-        } // .sale_price_area
-        .sale_detail {
-          width: 190px; height: auto;
-        }
-      } // a
-      &:nth-child(1) .sale_img { @include img('cube_01.png'); }
-      &:nth-child(2) .sale_img { @include img('cube_02.png'); }
-      &:nth-child(3) .sale_img { @include img('cube_03.png'); }
-      &:nth-child(4) .sale_img { @include img('cube_04.png'); }
-      &:nth-child(5) .sale_img { @include img('cube_05.png'); }
-    } // .sale_item
-  } // .sale_area
 } // #saleBox
+
+.sale_area {
+  display: flex; justify-content: space-between; flex-wrap: nowrap;
+  width: 78.125vw; max-width: 1500px; height: 350px;
+  margin: auto; margin-top: 50px;
+} // .sale_area
+
+.sale_item {
+  width: 190px; height: auto;
+  margin-right: 10px;
+  &:last-child {margin-right: 0;}
+
+  a {
+    @include full;
+
+  } // a
+  .sale_img {
+    width: 190px; height: 190px;
+    border-radius: 8px;
+    background-color: rgba($color_primary_light, 0.4);
+  }
+  .sale_title {
+    width: 100%; height: auto;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .sale_last_price {
+    width: 100%; height: auto;
+    text-decoration: line-through;
+  }
+  .sale_price_area {
+    display: flex; justify-content: flex-start;
+    width: 100%; height: auto;
+
+    .sale_percent {
+      width: 50px; height: auto;
+      margin-right: 10px;
+      font-size: 18px;
+      color: $color_red;
+    }
+    .sale_price {
+      width: 90px; height: auto;
+      font-size: 18px;
+    }
+  } // .sale_price_area
+  .sale_detail {
+    width: 190px; height: auto;
+  }
+  
+  &:nth-child(1) .sale_img { @include img('cube_01.png'); }
+  &:nth-child(2) .sale_img { @include img('cube_02.png'); }
+  &:nth-child(3) .sale_img { @include img('cube_03.png'); }
+  &:nth-child(4) .sale_img { @include img('cube_04.png'); }
+  &:nth-child(5) .sale_img { @include img('cube_05.png'); }
+} // .sale_item

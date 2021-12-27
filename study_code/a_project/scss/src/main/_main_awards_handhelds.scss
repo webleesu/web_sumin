@@ -6,35 +6,36 @@
 @media all and (max-width: 1279px){
   #awardsBox {
     height: calc(30vw + 300px); // awards height 따라서 변동
-
-    @at-root .awards_area {
-      height: auto;
-
-      .awards_btn {display: none;}
-      .awards_btn > div { margin-bottom: -35px;}
-
-      .awards_indicator { display: none; }
-
-      @at-root .awards_main {
-        width: 130vw; height: auto;
-        margin-left: -15vw;
-        margin-bottom: 40px;
-        .awards {
-          width: 30vw; height: 30vw;
-          // margin: 0 10px;
-          
-          &:nth-child(1) {
-            // margin: auto;
-            @include img_black('awards_01.jpg');
-          }
-          &:nth-child(4) {
-            // margin: auto;
-            @include img_black('awards_04.jpg');
-          }
-          &:nth-child(n+5){ display: none;}
-        }
-      }
-    }// .awards_area
   } // #awardsBox
+
+  .awards_area {
+    height: auto;
+
+    .awards_btn {display: none;}
+    .awards_btn > div { margin-bottom: -35px;}
+
+    .awards_indicator { display: none; }
+  }// .awards_area
+
+  .awards_main {
+    width: 130vw; height: auto;
+    margin-left: -15vw;
+    margin-bottom: 40px;
+    
+    .awards {
+      width: 30vw; height: 30vw;
+      // margin: 0 10px;
+      
+      &:nth-child(1) {
+        // margin: auto;
+        @include img_black('awards_01.jpg');
+      }
+      &:nth-child(4) {
+        // margin: auto;
+        @include img_black('awards_04.jpg');
+      }
+      &:nth-child(n+5){ display: none;}
+    }
+  } // .awards_main
 
 } // 1279px ===============================================================

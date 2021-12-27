@@ -5,33 +5,32 @@
 
   #benefitBox {
     padding: 20px;
-
-    @at-root .benefit_title_area {
-      margin-bottom: 30px;
-
-    } // .benefit_title_area
-
-    @at-root .benefit_detail_area {
-      width: 100%; height: auto;
-
-      .benefit {
-        min-width: 340px; width: 58.6vw; max-width: 380px; height: 100px;
-
-        .benefit_img {
-          float: left;
-        }
-        .benefit_img_coupon { @include img($file:'wallet.png', $size: 70% auto)};
-        .benefit_img_review { @include img($file:'coin.png', $size: 70% auto)};
-        .benefit_img_friend { @include img($file:'hands.png', $size: 70% auto)};
-  
-        .benefit_text { 
-          float: left; 
-          width: auto; height: auto;
-          // margin-top: 10px; 
-          margin-left: 30px;
-          line-height: 30px;
-        }
-      } // .benefit
-    } // .benefit_detail_area
   } // #benefitBox
+
+  .benefit_title_area {
+    margin-bottom: 30px;
+  } // .benefit_title_area
+
+  .benefit_detail_area {
+    width: 100%; height: auto;
+
+    .benefit {
+      min-width: 340px; width: 58.6vw; max-width: 380px; height: 100px;
+
+      .benefit_img {
+        float: left;
+      }
+      .benefit_img_coupon { @include img($file:'wallet.png', $size: 70% auto)};
+      .benefit_img_review { @include img($file:'coin.png', $size: 70% auto)};
+      .benefit_img_friend { @include img($file:'hands.png', $size: 70% auto)};
+
+      .benefit_text { 
+        float: left; 
+        width: auto; height: auto;
+        // margin-top: 10px; 
+        margin-left: 30px;
+        line-height: 30px;
+      }
+    } // .benefit
+  } // .benefit_detail_area
 } // ~1279px ===============================================================

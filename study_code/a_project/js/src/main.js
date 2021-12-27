@@ -9,7 +9,6 @@ let clickCount = 0;
 elLanguage.addEventListener('click', (e)=>{
   e.preventDefault();
   
-
   if(clickCount === 0){
     elLanArea.style.display = 'block';
     clickCount = 1;
@@ -17,7 +16,26 @@ elLanguage.addEventListener('click', (e)=>{
     elLanArea.style.display = 'none';
     clickCount = 0;
   }
-})
+});
+
+// const handheldsClick;
+const elHandLanguage = document.querySelector('.hand_language');
+const elHandUl = elHandLanguage.querySelector('.hand_language_area');
+let handClickCount = 0;
+
+elHandLanguage.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if(handClickCount === 0){
+    console.log(elHandUl.style.display);
+    elHandUl.style.display = 'block';
+    handClickCount = 1;
+  }else {
+    elHandUl.style.display = 'none';
+    handClickCount = 0;
+  }
+
+});
 
 
 
@@ -68,7 +86,6 @@ const fnDelay = async ( t = timed ) => {
 
 const fnOpacity = () => {
   conLi[SLIDE_COUNT].style.display = 'block';
-  // conLi[SLIDE_COUNT].style.display = 'block';
 
   conLi[BEFORE_COUNT].style.transition = `all ${timed}ms ease`;
   conLi[BEFORE_COUNT].style.opacity = 0;
@@ -116,3 +133,6 @@ elPrev.addEventListener('click', (e)=>{
     fnNowCount();
   }
 });
+
+// awards 광고 슬라이드 =================================================================================
+// 변수

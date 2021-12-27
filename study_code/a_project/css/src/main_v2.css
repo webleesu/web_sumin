@@ -97,6 +97,7 @@ html, body {
 #headBox a:hover {
   outline: 2px solid #1c1c1c;
   border-radius: 4px;
+  text-decoration: none;
 }
 #headBox button:hover {
   outline: 2px solid #1c1c1c;
@@ -158,6 +159,7 @@ html, body {
     height: 5.2vw;
     max-height: 40px;
   }
+
   .hand_language {
     position: relative;
     min-width: 25px;
@@ -166,11 +168,10 @@ html, body {
     min-height: 25px;
     height: 5.2vw;
     max-height: 40px;
-    cursor: pointer;
     background-image: url(../../img/global.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: cover;
   }
   .hand_language > span {
     display: block;
@@ -181,21 +182,34 @@ html, body {
     height: 0;
     overflow: hidden;
   }
-  .hand_language ul {
+  .hand_language_area {
     display: none;
     position: absolute;
-    top: 50px;
-    left: 0;
+    bottom: -90px;
+    right: -25px;
+    width: 100px;
+    height: auto;
+    background-color: rgba(255, 241, 224, 0.8);
   }
-  .hand_language ul li {
-    margin-bottom: 5px;
+  .hand_language_area.on {
+    display: block;
   }
-  .hand_language a {
-    display: none;
-    width: 50px;
-    height: 20px;
-    font-size: 14px;
+  .hand_language_area li {
+    margin-bottom: 10px;
   }
+  .hand_language_area li:last-child {
+    margin-bottom: 0;
+  }
+  .hand_language_area li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .hand_language_area li a:hover {
+    background-color: #e17900;
+    color: #ffffff;
+  }
+
   .hand_language:hover ul {
     display: block;
   }
@@ -203,13 +217,13 @@ html, body {
     display: block;
   }
 
-  #hand_nav .hand_search {
+  .hand_search {
     background-image: url(../../img/search.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
   }
-  #hand_nav .hand_search > span {
+  .hand_search > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -218,13 +232,14 @@ html, body {
     height: 0;
     overflow: hidden;
   }
-  #hand_nav .hand_cart {
+
+  .hand_cart {
     background-image: url(../../img/cart.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
   }
-  #hand_nav .hand_cart > span {
+  .hand_cart > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -233,13 +248,14 @@ html, body {
     height: 0;
     overflow: hidden;
   }
-  #hand_nav .hand_menu {
+
+  .hand_menu {
     background-image: url(../../img/menu.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
   }
-  #hand_nav .hand_menu > span {
+  .hand_menu > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -314,6 +330,7 @@ html, body {
     width: 300px;
     height: auto;
   }
+
   .unb_btn {
     display: flex;
     justify-content: space-between;
@@ -371,6 +388,10 @@ html, body {
     outline: 2px solid #1c1c1c;
     border-radius: 4px;
   }
+  .unb_btn .unb_sign {
+    color: #EC0F0C;
+  }
+
   .unb_lauguage_area {
     display: none;
     position: absolute;
@@ -396,10 +417,6 @@ html, body {
     color: #ffffff;
   }
 
-  .unb_btn .unb_sign {
-    color: #EC0F0C;
-  }
-
   .unb_search_area {
     display: flex;
     justify-content: space-between;
@@ -409,6 +426,7 @@ html, body {
     margin: auto;
     margin-right: 10px;
   }
+
   .unb_search {
     position: relative;
     width: 160px;
@@ -417,21 +435,23 @@ html, body {
     margin-right: 10px;
     border-radius: 15px;
   }
-  .unb_search #search_bar {
+
+  #search_bar {
     width: 160px;
     height: 30px;
     border-radius: 15px;
     text-indent: 8px;
     background-color: #ebebeb;
   }
-  .unb_search .unb_search_icon {
+
+  .unb_search_icon {
     position: absolute;
     top: 4px;
     right: 10px;
     width: 20px;
     height: 20px;
   }
-  .unb_search .unb_search_icon button {
+  .unb_search_icon button {
     width: 100%;
     height: 100%;
     background-image: url(../../img/search.png);
@@ -439,7 +459,7 @@ html, body {
     background-position: 50% 50%;
     background-size: contain;
   }
-  .unb_search .unb_search_icon button > span {
+  .unb_search_icon button > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -573,17 +593,19 @@ html, body {
     width: 100%;
     height: 100%;
   }
-  .foot_main_area .foot_info p {
+
+  .foot_info p {
     display: none;
   }
-  .foot_main_area .foot_info p.copyright {
+  .foot_info p.copyright {
     display: block;
     width: 43.75vw;
     max-width: 336px;
     height: auto;
     color: #ebebeb;
   }
-  .foot_main_area .foot_bottom_btn {
+
+  .foot_bottom_btn {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -592,14 +614,14 @@ html, body {
     width: 80px;
     height: auto;
   }
-  .foot_main_area .foot_bottom_btn li {
+  .foot_bottom_btn li {
     margin-right: 20px;
   }
   .foot_facebook a {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/facebook.png);
+    background-image: url(../../img/facebook_black.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -618,7 +640,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/instagram.png);
+    background-image: url(../../img/instagram_black.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -691,7 +713,8 @@ html, body {
     height: auto;
     margin: auto;
   }
-  .foot_main_area .foot_main_btn {
+
+  .foot_main_btn {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -702,16 +725,16 @@ html, body {
     color: #ebebeb;
     margin-bottom: 30px;
   }
-  .foot_main_area .foot_main_btn li {
+  .foot_main_btn li {
     position: relative;
     margin-right: 15px;
     padding-right: 4vw;
   }
-  .foot_main_area .foot_main_btn li:last-child {
+  .foot_main_btn li:last-child {
     margin-right: 0;
     padding-right: 0;
   }
-  .foot_main_area .foot_main_btn li::after {
+  .foot_main_btn li::after {
     content: "";
     display: block;
     position: absolute;
@@ -721,21 +744,22 @@ html, body {
     height: 3px;
     background-color: #ebebeb;
   }
-  .foot_main_area .foot_main_btn li:last-child::after {
+  .foot_main_btn li:last-child::after {
     display: none;
   }
-  .foot_main_area .foot_main_btn .foot_personal {
+  .foot_main_btn .foot_personal {
     font-weight: 700;
   }
-  .foot_main_area .foot_main_btn a {
+  .foot_main_btn a {
     display: block;
     width: 100%;
     height: 100%;
   }
-  .foot_main_area .foot_info p {
+
+  .foot_info p {
     display: none;
   }
-  .foot_main_area .foot_info p.copyright {
+  .foot_info p.copyright {
     display: block;
     width: 43.75vw;
     max-width: 336px;
@@ -743,7 +767,8 @@ html, body {
     margin: auto;
     color: #ebebeb;
   }
-  .foot_main_area .foot_bottom_btn {
+
+  .foot_bottom_btn {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -752,14 +777,14 @@ html, body {
     width: 80px;
     height: auto;
   }
-  .foot_main_area .foot_bottom_btn li {
+  .foot_bottom_btn li {
     margin-right: 20px;
   }
   .foot_facebook a {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/facebook.png);
+    background-image: url(../../img/facebook_black.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -778,7 +803,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/instagram.png);
+    background-image: url(../../img/instagram_black.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -801,6 +826,7 @@ html, body {
     padding: 70px 60px;
     background-color: #1c1c1c;
   }
+
   .foot_top_area {
     display: flex;
     justify-content: space-between;
@@ -851,7 +877,8 @@ html, body {
     height: 300px;
     margin: auto;
   }
-  .foot_main_area .foot_main_btn {
+
+  .foot_main_btn {
     display: flex;
     justify-content: space-between;
     width: 600px;
@@ -860,16 +887,16 @@ html, body {
     text-align: left;
     color: #ebebeb;
   }
-  .foot_main_area .foot_main_btn li {
+  .foot_main_btn li {
     position: relative;
     margin-right: 0px;
     padding-right: 30px;
   }
-  .foot_main_area .foot_main_btn li:last-child {
+  .foot_main_btn li:last-child {
     margin-right: 0;
     padding-right: 0;
   }
-  .foot_main_area .foot_main_btn li::after {
+  .foot_main_btn li::after {
     content: "";
     display: block;
     position: absolute;
@@ -879,31 +906,33 @@ html, body {
     height: 3px;
     background-color: #ebebeb;
   }
-  .foot_main_area .foot_main_btn li:last-child::after {
+  .foot_main_btn li:last-child::after {
     display: none;
   }
-  .foot_main_area .foot_main_btn .foot_personal {
+  .foot_main_btn .foot_personal {
     font-weight: 700;
   }
-  .foot_main_area .foot_main_btn a {
+  .foot_main_btn a {
     display: block;
     width: 100%;
     height: 100%;
   }
-  .foot_main_area .foot_info {
+
+  .foot_info {
     width: 600px;
     height: 250px;
     margin-top: 40px;
   }
-  .foot_main_area .foot_info p {
+  .foot_info p {
     display: block;
     margin-bottom: 20px;
     color: #ebebeb;
   }
-  .foot_main_area .foot_info p:last-child {
+  .foot_info p:last-child {
     margin-bottom: 0;
   }
-  .foot_main_area .foot_bottom_btn {
+
+  .foot_bottom_btn {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -912,7 +941,7 @@ html, body {
     width: 80px;
     height: auto;
   }
-  .foot_main_area .foot_bottom_btn li {
+  .foot_bottom_btn li {
     margin-right: 20px;
   }
   .foot_facebook a {
@@ -963,35 +992,37 @@ html, body {
   outline: 2px solid #1c1c1c;
   border-radius: 4px;
 }
+
 .view_area {
   position: relative;
 }
-.view_area .view_btn {
+
+.view_btn {
   position: absolute;
   top: 50%;
   z-index: 20;
   width: 100%;
   height: 50px;
 }
-.view_area .view_btn > div {
+.view_btn > div {
   position: absolute;
   top: 50%;
   width: 50px;
   height: 50px;
   transform: translateY(-50%);
 }
-.view_area .view_btn > div:hover {
+.view_btn > div:hover {
   border-radius: 4px;
   background-color: rgba(28, 28, 28, 0.4);
 }
-.view_area .view_btn .view_after_btn {
+.view_btn .view_after_btn {
   right: 0;
   background-image: url(../../img/forward.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
 }
-.view_area .view_btn .view_after_btn > span {
+.view_btn .view_after_btn > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -1000,14 +1031,14 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-.view_area .view_btn .view_before_btn {
+.view_btn .view_before_btn {
   left: 0;
   background-image: url(../../img/back.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
 }
-.view_area .view_btn .view_before_btn > span {
+.view_btn .view_before_btn > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -1016,10 +1047,11 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-.view_area .view_btn button {
+.view_btn button {
   width: 100%;
   height: 100%;
 }
+
 .view {
   overflow: hidden;
   width: 100%;
@@ -1032,6 +1064,7 @@ html, body {
   width: 100%;
   height: 100%;
 }
+
 .view_content {
   display: none;
   position: absolute;
@@ -1129,7 +1162,7 @@ html, body {
   overflow: hidden;
 }
 
-.view_area .view_num {
+.view_num {
   position: absolute;
   left: 20px;
   bottom: 10px;
@@ -1154,7 +1187,7 @@ html, body {
     right: 0;
   }
 
-  #viewBox .side_view_area {
+  .side_view_area {
     display: none;
   }
 }
@@ -1165,12 +1198,14 @@ html, body {
     margin-top: 150px;
     padding: 20px 50px;
   }
+
   .view_area {
     width: 58.6vw;
     max-width: 1100px;
     height: 43vw;
     max-height: 825px;
   }
+
   .side_view_area {
     display: flex;
     flex-direction: column;
@@ -1255,6 +1290,7 @@ html, body {
   outline: 2px solid #1c1c1c;
   border-radius: 4px;
 }
+
 .best_area {
   display: flex;
   height: 430px;
@@ -1415,22 +1451,24 @@ html, body {
     overflow: hidden;
     min-height: 480px;
   }
+
   .best_area {
     justify-content: space-between;
     flex-wrap: nowrap;
     width: auto;
     height: 240px;
   }
-  .best_area .best_item {
+
+  .best_item {
     width: 140px;
     height: 240px;
     margin-top: 10px;
   }
-  .best_area .best_item a .best_img {
+  .best_item a .best_img {
     width: 140px;
     height: 140px;
   }
-  .best_area .best_item a .best_text {
+  .best_item a .best_text {
     width: 140px;
   }
 }
@@ -1442,18 +1480,19 @@ html, body {
     width: 100%;
     height: 430px;
   }
-  .best_area .best_item {
+
+  .best_item {
     width: 320px;
     height: 420px;
   }
-  .best_area .best_item:first-child {
+  .best_item:first-child {
     margin-left: 0;
   }
-  .best_area .best_item a .best_img {
+  .best_item a .best_img {
     width: 320px;
     height: 320px;
   }
-  .best_area .best_item a .best_text {
+  .best_item a .best_text {
     width: 320px;
     height: 100px;
     padding: 0 10px;
@@ -1466,6 +1505,7 @@ html, body {
   margin-top: 20px;
   background-color: #fff1e0;
 }
+
 .benefit_title_area {
   width: 280px;
   height: 100px;
@@ -1569,6 +1609,7 @@ html, body {
   #benefitBox {
     padding: 20px;
   }
+
   .benefit_title_area {
     margin-bottom: 30px;
   }
@@ -1643,6 +1684,7 @@ html, body {
   #benefitBox {
     padding: 80px;
   }
+
   .benefit_title_area {
     margin-bottom: 60px;
   }
@@ -1667,7 +1709,8 @@ html, body {
   margin-top: 20px;
   padding: 80px;
 }
-#challengeBox .challenge_area {
+
+.challenge_area {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -1675,6 +1718,7 @@ html, body {
   margin: auto;
   margin-top: 40px;
 }
+
 .challenge {
   width: 38vw;
   max-width: 730px;
@@ -1726,7 +1770,8 @@ html, body {
     margin-top: 20px;
     padding: 10vw;
   }
-  #challengeBox .challenge_area {
+
+  .challenge_area {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1735,6 +1780,7 @@ html, body {
     margin: auto;
     margin-top: 40px;
   }
+
   .challenge {
     width: 70vw;
     height: 70vw;
@@ -1758,7 +1804,8 @@ html, body {
     margin-top: 20px;
     padding: 10vw;
   }
-  #challengeBox .challenge_area {
+
+  .challenge_area {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -1766,6 +1813,7 @@ html, body {
     margin: auto;
     margin-top: 40px;
   }
+
   .challenge {
     width: 38vw;
     height: 38vw;
@@ -1785,12 +1833,14 @@ html, body {
   margin-top: 20px;
   padding: 80px;
 }
-#eventBox .event_area {
+
+.event_area {
   display: flex;
   overflow: hidden;
   margin: auto;
   padding: 0 5px;
 }
+
 .event {
   margin-bottom: 10px;
 }
@@ -1879,13 +1929,14 @@ html, body {
 }
 
 @media all and (max-width: 767px) {
-  #eventBox .event_area {
+  .event_area {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
     width: 100%;
     height: calc((60vw + 80px) * 2 + 6vw);
   }
+
   .event {
     width: 60vw;
     height: calc(60vw + 80px);
@@ -1904,12 +1955,13 @@ html, body {
   }
 }
 @media all and (min-width: 768px) and (max-width: 1279px) {
-  #eventBox .event_area {
+  .event_area {
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     height: calc((30vw + 80px) * 2 + 5.2vw);
   }
+
   .event {
     width: 30vw;
     height: calc(30vw + 80px);
@@ -1975,6 +2027,7 @@ html, body {
   line-height: 60px;
   color: #ffffff;
 }
+
 .awards_area {
   width: 100%;
   margin: auto;
@@ -1987,6 +2040,7 @@ html, body {
   height: 100%;
   margin: auto;
 }
+
 .awards_main {
   display: flex;
   justify-content: space-between;
@@ -2074,6 +2128,7 @@ html, body {
   #awardsBox {
     height: calc(30vw + 300px);
   }
+
   .awards_area {
     height: auto;
   }
@@ -2086,6 +2141,7 @@ html, body {
   .awards_area .awards_indicator {
     display: none;
   }
+
   .awards_main {
     width: 130vw;
     height: auto;
@@ -2134,9 +2190,11 @@ html, body {
   #awardsBox {
     height: 500px;
   }
+
   .awards_area {
     height: 300px;
   }
+
   .awards_btn {
     position: absolute;
     top: calc(50% - 25px);
@@ -2247,6 +2305,11 @@ html, body {
     height: 220px;
     margin: 0 20px;
   }
+  .awards_main .awards.black {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+  }
   .awards_main .awards:nth-child(1) {
     width: 160px;
     height: 160px;
@@ -2296,6 +2359,7 @@ html, body {
   padding: 80px;
   overflow: hidden;
 }
+
 .sale_area {
   display: flex;
   justify-content: space-between;
@@ -2306,6 +2370,7 @@ html, body {
   margin: auto;
   margin-top: 50px;
 }
+
 .sale_item {
   width: 190px;
   height: auto;
@@ -2319,42 +2384,42 @@ html, body {
   width: 100%;
   height: 100%;
 }
-.sale_item a .sale_img {
+.sale_item .sale_img {
   width: 190px;
   height: 190px;
   border-radius: 8px;
   background-color: rgba(255, 241, 224, 0.4);
 }
-.sale_item a .sale_title {
+.sale_item .sale_title {
   width: 100%;
   height: auto;
   margin-top: 10px;
   font-size: 18px;
 }
-.sale_item a .sale_last_price {
+.sale_item .sale_last_price {
   width: 100%;
   height: auto;
   text-decoration: line-through;
 }
-.sale_item a .sale_price_area {
+.sale_item .sale_price_area {
   display: flex;
   justify-content: flex-start;
   width: 100%;
   height: auto;
 }
-.sale_item a .sale_price_area .sale_percent {
+.sale_item .sale_price_area .sale_percent {
   width: 50px;
   height: auto;
   margin-right: 10px;
   font-size: 18px;
   color: #EC0F0C;
 }
-.sale_item a .sale_price_area .sale_price {
+.sale_item .sale_price_area .sale_price {
   width: 90px;
   height: auto;
   font-size: 18px;
 }
-.sale_item a .sale_detail {
+.sale_item .sale_detail {
   width: 190px;
   height: auto;
 }

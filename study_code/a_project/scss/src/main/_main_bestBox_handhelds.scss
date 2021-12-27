@@ -8,25 +8,24 @@
   #bestBox {
     overflow: hidden;
     min-height: 480px;
-
-    @at-root .best_area {
-      justify-content: space-between; flex-wrap: nowrap;
-      width: auto; height: 240px;
-
-
-      .best_item {
-        width: 140px; height: 240px;
-        margin-top: 10px;
-
-        a {
-          .best_img {
-            width: 140px; height: 140px;
-          }
-          .best_text {
-            width: 140px;
-          }
-        } // a
-      } // .best_item
-    } // .best_area
   } // #bestBox
+
+  .best_area {
+    justify-content: space-between; flex-wrap: nowrap;
+    width: auto; height: 240px;
+  } // .best_area
+  
+  .best_item {
+    width: 140px; height: 240px;
+    margin-top: 10px;
+
+    a {
+      .best_img {
+        width: 140px; height: 140px;
+      }
+      .best_text {
+        width: 140px;
+      }
+    } // a
+  } // .best_item
 } // ~1279px ===============================================================

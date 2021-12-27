@@ -6,42 +6,42 @@
   // padding: 10vw;
   padding: 80px;
   // overflow: hidden;
-
-  .event_area {
-    display: flex;
-    overflow: hidden;
-    margin: auto;
-    padding: 0 5px;
-
-    @at-root .event {
-      margin-bottom: 10px;
-      a {
-        @include full;
-        height: 420px;
-        &:hover {
-          border: 2px solid $color_black; border-radius: 4px;
-        }
-      
-        .event_img {
-          background-color: $color_gray;
-        }
-        .event_title {
-          height: 35px;
-          margin-top: 10px;
-          font-size: 18px; font-weight: 700;
-        }
-        .event_detail {
-          width: 320px; height: 35px;
-        }
-      } // a
-
-      &:nth-child(1) .event_img { @include img('event_01.jpg', $size: cover); }
-      &:nth-child(2) .event_img { @include img('event_02.png', $size: cover); }
-      &:nth-child(3) .event_img { @include img('event_04.png', $size: cover); }
-      &:nth-child(4) .event_img { @include img('event_03.jpg', $size: cover); }
-    } // .event
-  } // .event_area
 } // #eventBox
+
+.event_area {
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 5px;
+} // .event_area
+
+.event {
+  margin-bottom: 10px;
+  a {
+    @include full;
+    height: 420px;
+    &:hover {
+      border: 2px solid $color_black; border-radius: 4px;
+    }
+  
+    .event_img {
+      background-color: $color_gray;
+    }
+    .event_title {
+      height: 35px;
+      margin-top: 10px;
+      font-size: 18px; font-weight: 700;
+    }
+    .event_detail {
+      width: 320px; height: 35px;
+    }
+  } // a
+
+  &:nth-child(1) .event_img { @include img('event_01.jpg', $size: cover); }
+  &:nth-child(2) .event_img { @include img('event_02.png', $size: cover); }
+  &:nth-child(3) .event_img { @include img('event_04.png', $size: cover); }
+  &:nth-child(4) .event_img { @include img('event_03.jpg', $size: cover); }
+} // .event
 
 @import './main_event_handhelds';
 @import './main_event_pc';

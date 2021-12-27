@@ -9,7 +9,7 @@
   width: 100%; max-width: 1920px; margin: auto;
   background-color: rgba($color_white, 0.8);
 
-  a:hover { outline: 2px solid $color_black; border-radius: 4px; }
+  a:hover { outline: 2px solid $color_black; border-radius: 4px; text-decoration: none; }
   button:hover { outline: 2px solid $color_black; border-radius: 4px; }
   
 } // #headBox
@@ -42,38 +42,46 @@
     button {
       min-width: 25px; width: 5.2vw; max-width: 40px; min-height: 25px; height: 5.2vw; max-height: 40px;
     }
+  } // #hand_nav
 
-    @at-root .hand_language {
-      position: relative;
-      min-width: 25px; width: 5.2vw; max-width: 40px; min-height: 25px; height: 5.2vw; max-height: 40px;
-      cursor: pointer;
-      @include img('global.png');
-      ul {
-        display: none;
-        position: absolute;
-        top: 50px; left: 0;
-        li {
-          margin-bottom: 5px;
+  @at-root .hand_language {
+    position: relative;
+    min-width: 25px; width: 5.2vw; max-width: 40px; min-height: 25px; height: 5.2vw; max-height: 40px;
+    @include img('global.png', $size: cover);
+
+    @at-root .hand_language_area {
+      display: none;
+      position: absolute;
+      bottom: -90px; right: -25px;
+      width: 100px; height: auto;
+      background-color: rgba($color_primary_light, 0.8);
+
+      &.on{ display: block;}
+
+      li {
+        margin-bottom: 10px;
+
+        &:last-child{ margin-bottom: 0;}
+        
+        a {
+          @include full;
+          &:hover { background-color: $color_primary; color: $color_white;}
+        
         }
       }
-      a { 
-        display: none;
-        width: 50px; height: 20px;
-        font-size: 14px;
-      }
-      &:hover ul { display: block;}
-      &:focus ul { display: block;}
-    } // .hand_language
+    }
+    &:hover ul { display: block;}
+    &:focus ul { display: block;}
+  } // .hand_language
 
-    .hand_search {
-      @include img('search.png');
-    }
-    .hand_cart {
-      @include img('cart.png');
-    }
-    .hand_menu {
-      @include img('menu.png');
-    }
+  .hand_search {
+    @include img('search.png');
+  }
+  .hand_cart {
+    @include img('cart.png');
+  }
+  .hand_menu {
+    @include img('menu.png');
   }
 } // ~1279px ===============================================================
 
@@ -83,7 +91,7 @@
     height: 150px;
     padding: 30px 100px;
   }
-  @at-root h1 {
+  h1 {
     width: 170px; height: 60px;
     // margin-top: 30px;
     a{ 
@@ -93,6 +101,7 @@
       
     }
   } // h1
+
   #naviagtion { display: block;}
   #hand_nav {display: none;}
   @at-root #gnb ul {
@@ -117,106 +126,107 @@
   @at-root .unb {
     width: 300px; height: auto;
 
-    @at-root .unb_btn {
-      // float: left;
-      display: flex; justify-content: space-between;
-      width: auto; height: 30px;
-      margin: auto; margin-left: 40px; margin-bottom: 20px;
-      
-      &>li {
-        position: relative;
-        display: block;
-        width: auto; height: auto;
-        margin-right: 8px; padding-right: 8px;
-        font-size: 16px;
-        text-align: center; line-height: 20px;
-      }
-      &>li::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 3px; right: 0;
-        width:1px; height: 15px;
-        background-color: $color_dark_gray;
-      }
-      &>li:last-child::after { display: none;}
-
-      .unb_language {
-        position: relative;
-        width: 30px; height: 20px;
-        margin-left: 30px;
-        cursor: pointer;
-        @include img('global.png');
-
-        &:hover { outline: 2px solid $color_black; border-radius: 4px;}
-      }
-      @at-root .unb_lauguage_area {
-        display: none;
-        position: absolute; z-index: 10; top: 30px; left: -50px;
-        width: 100px; height: auto;
-        background-color: rgba($color_primary_light, 0.8);
-
-        li {
-          margin: auto; margin-bottom: 5px;
-          font-size: 14px;
-          a {
-            @include full;
-            &:hover { background-color: $color_primary; color: $color_white;}
-          }
-        }
-
-      } // .unb_lauguage_area
-      
-      .unb_sign {color: $color_red;}
-
-    } // .unb_btn
-
-    @at-root .unb_search_area {
-      // float: left;
-      display: flex; justify-content: space-between;
-      width: 200px; height: 30px;
-      border-radius: 15px;
-      margin: auto; margin-right: 10px;
-
-      @at-root .unb_search {
-        position: relative;
-        width: 160px; height: 30px;
-        margin: auto; margin-right: 10px;
-        border-radius: 15px;
-
-        #search_bar {
-          width: 160px; height: 30px;
-          border-radius: 15px;
-          text-indent: 8px;
-          background-color: $color_gray;
-        }
-
-        .unb_search_icon {
-          position: absolute;
-          top: 4px; right: 10px;
-          width: 20px; height: 20px;
-  
-          button {
-            // display: block;
-            width: 100%; height: 100%;
-            // margin-top: 4px;
-            @include img('search.png');
-          }
-        }
-      } // .unb_search
-
-      @at-root .unb_cart {
-        width: 24px; height: 24px;
-        margin: auto; margin-top: 3px;
-
-        a {
-          @include full;
-          @include img('cart.png');
-        }
-      }
-
-    } // .unb_search_area
   } // .unb
+  @at-root .unb_btn {
+    // float: left;
+    display: flex; justify-content: space-between;
+    width: auto; height: 30px;
+    margin: auto; margin-left: 40px; margin-bottom: 20px;
+    
+    &>li {
+      position: relative;
+      display: block;
+      width: auto; height: auto;
+      margin-right: 8px; padding-right: 8px;
+      font-size: 16px;
+      text-align: center; line-height: 20px;
+    }
+    &>li::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 3px; right: 0;
+      width:1px; height: 15px;
+      background-color: $color_dark_gray;
+    }
+    &>li:last-child::after { display: none;}
+
+    .unb_language {
+      position: relative;
+      width: 30px; height: 20px;
+      margin-left: 30px;
+      cursor: pointer;
+      @include img('global.png');
+
+      &:hover { outline: 2px solid $color_black; border-radius: 4px;}
+    }
+    
+    .unb_sign {color: $color_red;}
+    
+  } // .unb_btn
+
+  .unb_lauguage_area {
+    display: none;
+    position: absolute; z-index: 10; top: 30px; left: -50px;
+    width: 100px; height: auto;
+    background-color: rgba($color_primary_light, 0.8);
+
+    li {
+      margin: auto; margin-bottom: 5px;
+      font-size: 14px;
+      a {
+        @include full;
+        &:hover { background-color: $color_primary; color: $color_white;}
+      }
+    }
+
+  } // .unb_lauguage_area
+
+  .unb_search_area {
+    // float: left;
+    display: flex; justify-content: space-between;
+    width: 200px; height: 30px;
+    border-radius: 15px;
+    margin: auto; margin-right: 10px;
+  } // .unb_search_area
+
+  .unb_search {
+    position: relative;
+    width: 160px; height: 30px;
+    margin: auto; margin-right: 10px;
+    border-radius: 15px;
+  } // .unb_search
+
+  #search_bar {
+    width: 160px; height: 30px;
+    border-radius: 15px;
+    text-indent: 8px;
+    background-color: $color_gray;
+  }
+
+  .unb_search_icon {
+    position: absolute;
+    top: 4px; right: 10px;
+    width: 20px; height: 20px;
+
+    button {
+      // display: block;
+      width: 100%; height: 100%;
+      // margin-top: 4px;
+      @include img('search.png');
+    }
+  }
+
+  .unb_cart {
+    width: 24px; height: 24px;
+    margin: auto; margin-top: 3px;
+
+    a {
+      @include full;
+      @include img('cart.png');
+    }
+  }
+
 
 } // 1280px ~ ====================================================================
 

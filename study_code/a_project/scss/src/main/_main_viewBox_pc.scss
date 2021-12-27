@@ -6,40 +6,41 @@
     display: flex; justify-content: space-between;
     margin-top: 150px;
     padding: 20px 50px;
-    
-    @at-root .view_area {
-      // width: 750px; height: 550px;
-      width: 58.6vw; max-width: 1100px; height: 43vw; max-height: 825px;
-      // background-color: #eee;
-
-      @at-root .side_view_area {
-        display: flex; flex-direction: column; justify-content: space-between;
-        // width: 400px; height: 550px;
-        width: 31.25vw; max-width: 600px; height: 43vw; max-height: 825.6px;
-        .side_view {
-          // width: 100%; height: 180px;
-          width: 100%; height: 14vw; max-height: 268px;
-          background-color: $color_gray;
-          margin: auto; 
-          
-          
-          a { 
-            @include full;
-            box-sizing: border-box;
-            padding: 1rem 1.5rem;;
-          }
-          p { 
-            // margin: 1rem 1.5rem;
-            font-size: 20px; 
-            color: $color_white;
-          }
-        }
-        .side_view_event { @include img('view_side_01.jpg', $size: cover) }
-        .side_view_magazine { @include img('view_side_02.jpg', $size: cover) }
-        .side_view_brand { @include img('view_side_03.jpg', $size: cover) }
-      }
-    } // .view_area
-
   } // #viewBox
+    
+  .view_area {
+    // width: 750px; height: 550px;
+    width: 58.6vw; max-width: 1100px; height: 43vw; max-height: 825px;
+    // background-color: #eee;
+  } // .view_area
+
+  .side_view_area {
+    display: flex; flex-direction: column; justify-content: space-between;
+    // width: 400px; height: 550px;
+    width: 31.25vw; max-width: 600px; height: 43vw; max-height: 825.6px;
+    
+    .side_view {
+      // width: 100%; height: 180px;
+      width: 100%; height: 14vw; max-height: 268px;
+      background-color: $color_gray;
+      margin: auto; 
+      
+      
+      a { 
+        @include full;
+        box-sizing: border-box;
+        padding: 1rem 1.5rem;;
+      }
+      p { 
+        // margin: 1rem 1.5rem;
+        font-size: 20px; 
+        color: $color_white;
+      }
+    }
+    .side_view_event { @include img('view_side_01.jpg', $size: cover) }
+    .side_view_magazine { @include img('view_side_02.jpg', $size: cover) }
+    .side_view_brand { @include img('view_side_03.jpg', $size: cover) }
+  }
+
 
 } // 1280px ~ ====================================================================

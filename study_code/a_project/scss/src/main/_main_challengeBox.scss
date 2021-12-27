@@ -4,27 +4,27 @@
   width: 100%; max-width: 1920px; height: auto; min-height: 400px;
   margin: auto; margin-top: 20px;
   padding: 80px;
-
-  .challenge_area {
-    display: flex; justify-content: space-between;
-    // width: 78.125vw; 
-    width: 100%;
-    height: auto;
-    margin: auto; margin-top: 40px;
-    // padding: 0 20px;
-
-    @at-root .challenge {
-      width: 38vw; max-width: 730px; height: 38vw; max-height: 730px;
-      // margin: auto;
-      background-color: $color_gray;
-
-      &:nth-child(1) {@include img('challenge_01.jpg', $size: cover)}
-      &:nth-child(2) {@include img('challenge_02.jpg', $size: cover)}
-
-      a { @include full; }
-    }
-  } // .challenge_area
 } // #challengeBox
+
+.challenge_area {
+  display: flex; justify-content: space-between;
+  // width: 78.125vw; 
+  width: 100%;
+  height: auto;
+  margin: auto; margin-top: 40px;
+  // padding: 0 20px;
+} // .challenge_area
+
+.challenge {
+  width: 38vw; max-width: 730px; height: 38vw; max-height: 730px;
+  // margin: auto;
+  background-color: $color_gray;
+
+  &:nth-child(1) {@include img('challenge_01.jpg', $size: cover)}
+  &:nth-child(2) {@include img('challenge_02.jpg', $size: cover)}
+
+  a { @include full; }
+} // .challenge
 
 // ~767px ---------------------------------------------------------------
 @media all and (max-width: 767px){
@@ -32,25 +32,25 @@
     width: 100%; height: auto; min-height: 400px;
     margin-top: 20px;
     padding: 10vw;
-  
-    .challenge_area {
-      display: flex; flex-direction: column; justify-content: flex-start;
-      // width: 78.125vw; 
-      width: auto;
-      height: auto;
-      margin: auto; margin-top: 40px;
-      // padding: 0 20px;
-  
-      @at-root .challenge {
-        width: 70vw; height: 70vw;
-        margin: auto;
-        background-color: $color_gray;
-  
-        &:first-child {margin-bottom: 11vw;}
-        a { @include full; }
-      }
-    } // .challenge_area
   } // #challengeBox
+
+  .challenge_area {
+    display: flex; flex-direction: column; justify-content: flex-start;
+    // width: 78.125vw; 
+    width: auto;
+    height: auto;
+    margin: auto; margin-top: 40px;
+    // padding: 0 20px;
+  } // .challenge_area
+
+  .challenge {
+    width: 70vw; height: 70vw;
+    margin: auto;
+    background-color: $color_gray;
+
+    &:first-child {margin-bottom: 11vw;}
+    a { @include full; }
+  } // .challenge
 } // ~767px ============================================================================
 
 // 768px ~ 1279px ----------------------------------------------------------------------
@@ -59,22 +59,22 @@
     width: 100%; height: auto; min-height: 400px;
     margin-top: 20px;
     padding: 10vw;
-  
-    .challenge_area {
-      display: flex; justify-content: space-between;
-      // width: 78.125vw; 
-      width: 100%;
-      height: auto;
-      margin: auto; margin-top: 40px;
-      // padding: 0 20px;
-  
-      @at-root .challenge {
-        width: 38vw; height: 38vw;
-        // margin: auto;
-        background-color: $color_gray;
-  
-        a { @include full; }
-      }
-    } // .challenge_area
   } // #challengeBox
+
+  .challenge_area {
+    display: flex; justify-content: space-between;
+    // width: 78.125vw; 
+    width: 100%;
+    height: auto;
+    margin: auto; margin-top: 40px;
+    // padding: 0 20px;
+  } // .challenge_area
+
+  .challenge {
+    width: 38vw; height: 38vw;
+    // margin: auto;
+    background-color: $color_gray;
+
+    a { @include full; }
+  } // .challenge
 } // 768px ~ 1279px ====================================================================

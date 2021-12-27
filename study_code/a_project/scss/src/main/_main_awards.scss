@@ -17,8 +17,9 @@
     text-align: center; line-height: 60px;
     color: $color_white;
   } // .awards_title
+} // #awardsBox
 
-  @at-root .awards_area {
+  .awards_area {
     width: 100%;
     margin: auto; margin-top: 50px;
 
@@ -27,27 +28,22 @@
       width: 100%; max-width: 1920px; height: 100%;
       margin: auto;
     }
-
-
-    @at-root .awards_main {
-      display: flex; justify-content: space-between;
-      // margin: auto;
-
-      .awards {
-        background-color: $color_gray;
-        &:nth-child(1) { @include img('awards_01.jpg', $size: cover)}
-        &:nth-child(2) { @include img('awards_02.jpg', $size: cover)}
-        &:nth-child(3) { @include img('awards_03.jpg', $size: cover)}
-        &:nth-child(4) { @include img('awards_04.jpg', $size: cover)}
-        &:nth-child(5) { @include img('awards_05.jpg', $size: cover)}
-        // &.black {
-
-        // }
-      }
-
-    } // .awards_main
   } // .awards_area
-} // #awardsBox
+  
+  .awards_main {
+    display: flex; justify-content: space-between;
+    // margin: auto;
+
+    .awards {
+      background-color: $color_gray;
+      &:nth-child(1) { @include img('awards_01.jpg', $size: cover)}
+      &:nth-child(2) { @include img('awards_02.jpg', $size: cover)}
+      &:nth-child(3) { @include img('awards_03.jpg', $size: cover)}
+      &:nth-child(4) { @include img('awards_04.jpg', $size: cover)}
+      &:nth-child(5) { @include img('awards_05.jpg', $size: cover)}
+
+    }
+  } // .awards_main
 
 @import './main_awards_handhelds';
 @import './main_awards_pc';
