@@ -32,13 +32,27 @@ const elImg = elImgArea.children;
 const elImgArr = [...elImg]; //[].slice.call(elImg);
 // --------------------------------------------------
 // 이벤트
-window.addEventListener('scroll',(e)=>{
-  const moveScroll = parseInt(e.currentTarget.scrollY / 50);
-  console.log(moveScroll);
+window.addEventListener('scroll',(e)=>{       // 브라우저에서 스크롤이 실행되었을때
+  const targetScroll = e.currentTarget.scrollY;  // 브라우저(this)가 스크롤이 움직인 값 파악(scrollY)
+  let moveScroll = parseInt(targetScroll / 20);   // 스크롤 값을 줄이기 위해 일정값을 나눠 숫자 제한
+  
+  // 이미지 중에서 moveScroll의 값에 해당하는 이미지 나타나고, 나머지는 사라지게 수행
+  // 이미지처리 --------------------------------------------------------------------------
+  // if(moveScroll >= COUNT_NUM){ moveScroll = COUNT_NUM-1; } // moveScroll 의 최대값을 COUNT_NUM을 넘기지 않도록 처리
+  let scrollN = (moveScroll >= COUNT_NUM) ? COUNT_NUM -1 : moveScroll;
+  console.log(scrollN);
+
   elImgArr.forEach((img,idx)=>{
-    img.classList.remove(OPTION_ON);
-    elImgArr[moveScroll].classList.add(OPTION_ON);
+    // img.classList.remove(OPTION_ON);  // 이미지 각각 전부 .on을 제거
+    // elImgArr[moveScroll].classList.add(OPTION_ON); // moveScroll 순번의 이미지는 .on첨부
+    // 정리: scrollNS값과 idx순번을 비교하여 일치하면 나타나고 불일치하면 사라지게
+    (idx !== scrollN) ? img.classList.remove(OPTION_ON) : img.classList.add(OPTION_ON);
   });
+  // 이미지 담는 요소 이동 수행(moveScroll이 음수로 나타나기 시작하는 시점)
+  let topMove =  COUNT_NUM + 10 - moveScroll; // 이미지가 모두 처리된 시점으르 기준으로 해당 요소는 위로 이동하게
+  if(topMove <= 0){
+    elViewBox.style.top = (topMove*4)+'px';
+  }
 });
 
 
