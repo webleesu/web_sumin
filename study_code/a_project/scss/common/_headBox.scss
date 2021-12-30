@@ -14,6 +14,55 @@
   
 } // #headBox
 
+
+.side_menu {
+  display: none;
+  position: fixed; z-index: 150; top: 0; bottom: 0; left: 0; right: 0;
+  float: right;
+  width: 100vw; height: 100vh;
+  // margin: auto;
+  background-color: rgba($color_black, 0.4);
+}
+.side_menu_area {
+  position: absolute;
+  top: 0; bottom: 0; right: 0;
+  width: 78.125vw; height: 100%;
+  padding: 20px;
+  background-color: #fff;
+
+  .close_btn {
+    position: absolute; top: 20px; right: 20px;
+    width: 40px; height: 40px;
+    @include img('close.png');
+  }
+}
+
+.side_header {
+  display: flex; flex-direction: column;
+  width: 100%; height: 100px;
+
+  .side_language {
+    > div { display: none;}
+    > div.on { display: block;}
+    margin-bottom: 20px;
+  }
+
+  .side_user {
+    display: flex; justify-content: space-between;
+    width: 120px; height: 20px;
+  }
+}
+
+.side_menu_part {
+  display: flex; flex-direction: column;
+  margin-top: 30px;
+  .shop_sub_menu {
+    display: flex; flex-direction: column;
+    padding-left: 20px;
+  }
+}
+
+
 // ~1279px ----------------------------------------------------------------------------
 @media all and (max-width: 1279px) {
   #headBox {

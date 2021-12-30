@@ -104,6 +104,84 @@ html, body {
   border-radius: 4px;
 }
 
+.side_menu {
+  display: none;
+  position: fixed;
+  z-index: 150;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  float: right;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(28, 28, 28, 0.4);
+}
+
+.side_menu_area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 78.125vw;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+.side_menu_area .close_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../img/close.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.side_menu_area .close_btn > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.side_header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+}
+.side_header .side_language {
+  margin-bottom: 20px;
+}
+.side_header .side_language > div {
+  display: none;
+}
+.side_header .side_language > div.on {
+  display: block;
+}
+.side_header .side_user {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  height: 20px;
+}
+
+.side_menu_part {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.side_menu_part .shop_sub_menu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
 @media all and (max-width: 1279px) {
   #headBox {
     height: 19.5vw;
@@ -1927,6 +2005,21 @@ html, body {
   height: 0;
   overflow: hidden;
 }
+.event:nth-child(5) .event_img {
+  background-image: url(../../img/event_05.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event:nth-child(5) .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
 @media all and (max-width: 767px) {
   .event_area {
@@ -2534,12 +2627,11 @@ html, body {
 
 
 } // ~1279px ===============================================================
-
-// 1280px ~ ----------------------------------------------------------------
-@media all and (min-width: 1280px){
-
-
-} // 1280px ~ ====================================================================
 */
+@media all and (min-width: 1280px) {
+  .side_menu {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=main_v2.css.map */
