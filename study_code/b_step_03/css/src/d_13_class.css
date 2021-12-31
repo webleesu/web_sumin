@@ -7,7 +7,7 @@
 }
 
 #headBox {
-  height: 100%;
+  width: 100%;
   height: 70px;
   padding: 1rem;
   border: 1px solid #aaa;
@@ -29,15 +29,15 @@
   background-color: #dfd;
 }
 
-#formBox {
+.formBox {
   border: 1px solid #555;
 }
-#formBox form {
+.formBox form {
   width: 500px;
   height: auto;
   background-color: #fff;
 }
-#formBox fieldset {
+.formBox fieldset {
   width: 100%;
   height: auto;
   padding: 1rem;
@@ -47,26 +47,26 @@
   height: auto;
 }
 
-#formBox .login_area > div {
+.formBox .login_area > div {
   display: flex;
   justify-content: flex-start;
   border-bottom: 1px solid #555;
   margin-bottom: 0.5rem;
 }
-#formBox label {
+.formBox label {
   width: 100px;
   height: 30px;
 }
-#formBox input[type=text], #formBox input[type=password] {
+.formBox input[type=text], .formBox input[type=password] {
   width: 50%;
   height: 30px;
   border: 1px solid #777;
   background-color: #dff;
 }
-#formBox button[type=button] {
+.formBox .pw_view {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #a7f;
+  background-color: #07f;
   color: #fff;
 }
 
