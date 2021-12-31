@@ -16,6 +16,15 @@ class CheckMember {
   }
 };
 
+const fnEvent = (element, handlerType, fn) => {
+  handlerType.forEach( handler => {
+    element.addEventListener(handler, (e) => {
+      e.preventDefault();
+      fn(e);
+    });
+  });
+};
+
 // --------------------------------------------------------------------
 // 이벤트
 // 비밀번호 확인버튼 클릭시 비번 확인
@@ -28,13 +37,11 @@ const fnPwType = function(e){
   }
 };
 
-pwViewBtn.addEventListener('mousedown', fnPwType );
-
-pwViewBtn.addEventListener('mouseup',  fnPwType );
-
-// 해당 버튼에서 벗어나도 비밀번호 가려지도록
-pwViewBtn.addEventListener('mouseleave', fnPwType );
-
+// pwViewBtn.addEventListener('mousedown', fnPwType );
+// pwViewBtn.addEventListener('mouseup',  fnPwType );
+// // 해당 버튼에서 벗어나도 비밀번호 가려지도록
+// pwViewBtn.addEventListener('mouseleave', fnPwType );
+fnEvent(pwViewBtn, ['mousedown', 'mouseup', 'mouseleave'], fnPwType);
 
 
 // data 전송시 객체로 처리
@@ -42,4 +49,52 @@ submitBtn.addEventListener('click', (e)=> {
   e.preventDefault();
   const sendData = new CheckMember(userId.value, userPw.value, userRemember.checked);
   console.log(sendData);
-})
+});
+
+const fnMkScript = (file)=>{
+  const mkScript = document.createElement('style');
+  mkScript.setAttribute('class', 'box');
+  mkScript.setAttribute('src', file);
+};
+
+const fnMakeEl = (el, attribute, text)=>{
+  const element = document.createElement(el);
+  let check;
+  // let name;
+  class PropertySet{
+    constructor (type, name){
+      this.type = type,
+      this.name = name
+    }
+  };
+  let fnProps = (type, name)=>{ 
+    check = new PropertySet(type, name); 
+  };
+  const fnAttr = (attr)=>{
+    if(attr[0] === '.'){ 
+      fnProps('class', attr.slice(1));
+    }else if(attr[0] === '#'){
+      fnProps('id', attr.slice(1));
+    }else{
+      fnProps('data-type', attr);
+    }
+  };
+  if(!!attribute){
+    if(typeof(attribute) === 'array'){ 
+      fnAttr(attr) 
+      element.setAttribute(check.type, check.name);
+    }else{
+      attribute.forEach((attr)=>{  
+        fnAttr(attr)  
+        element.setAttribute(check.type, check.name);
+      });
+    }
+  }
+    element.innerText = text;
+    console.log( element );
+}
+
+fnMakeEl('div', ['.box','#test'], 'lorem text');
+fnMakeEl('div', ['#box'], 'lorem text');
+fnMakeEl('div', ['.box'], 'lorem text');
+fnMakeEl('div', null, 'lorem text');
