@@ -1,23 +1,20 @@
 import logo from './logo.svg';
+import Header from './component/Header';
+import ContentBox from './component/ContentBox';
 import './App.css';
 
+
 function App() {
+  
+  const myName = 'leesu';
+  const web = 'react';
+  const h1Style = { color: '#f50', textTransform: 'uppercase'}
+
+  // ------------------------------------
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header site = {myName} url = "http://naver.com" />
+      <ContentBox name = {myName} web = {web} />
     </div>
   );
 }
