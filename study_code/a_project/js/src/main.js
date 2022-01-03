@@ -136,3 +136,16 @@ elPrev.addEventListener('click', (e)=>{
 
 // awards 광고 슬라이드 =================================================================================
 // 변수
+const elNextBtn = document.querySelector('.awards_after_btn');
+const elPrevBtn = document.querySelector('.awards_before_btn');
+
+const elAwardsUl = document.querySelector('.awards_main');
+const elAwardsLi = elAwardsUl.querySelectorAll('.awards');
+
+/**
+ * 시나리오
+ * 1. class black 삭제
+ * 2. 다음 버튼 누르면 nth-child(1), (5)에는 class black 추가
+ * 3. 슬라이드 하나씩 움직이기 - transform transition
+ * 4. indicator 같이 움직이기
+ */
