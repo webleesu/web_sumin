@@ -1,33 +1,19 @@
-/* reset.css, common.css */
-:root {
-  font-size: 16px;
-}
+/*  reset.css, common.css */
+:root { font-size: 16px; }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  width: 100%; height: 100%;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1, h2, h3, h4, h5, h6, p, dl, dt, dd {
-  margin: 0; padding: 0;
-}
-ul, ol {
-  list-style: none;
-}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-
-html, body {
-  width: 100%;
-  height: 100%;
-  font-family: "apple GD", "noto sans KR", "noto sans KR", "IBM Plex Sans KR", sans-serif;
-  font-weight: 300;
 }
 
 html, body,
@@ -108,4 +94,60 @@ main, figure, figcaption, hgroup {
   display: block;
 }
 
-#root { width: 100%; height: 100%;}
+/* common.css */
+/* IR: image replace */
+.blind_wrap a > span,
+.blind_wrap button > span,
+.blind {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.blind_wrap a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.none {
+  display: none;
+}
+
+.clearfix {
+  width: 100%;
+  height: auto;
+}
+
+.clearfix:after, .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 0;
+}
+
+#wrap {
+  height: auto;
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #ddd;
+}
+
+/*# sourceMappingURL=common.css.map */
+
+#root { width: 100%; height: 100%; }

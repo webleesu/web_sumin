@@ -1,9 +1,11 @@
+import ConBox from './ConBox';
 
-export default function Main(){
-  return(
-    <main>
-      <section>section</section>
-      <article>article</article>
+export default function Main() {
+  return (
+    <main className="container">
+        <section id="viewBox">section</section>
+        <ConBox />
+        
     </main>
   )
 }
