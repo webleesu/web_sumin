@@ -15,17 +15,12 @@ import Gnb from "./Gnb";
 
 // ----------------------------------------
 // const props = 
-export default function Header({site, url}) {
-
-  const myName = 'leesu';
-  const web = 'react';
-  const h1Style = { color: '#f50', textTransform: 'uppercase'}
-  
+export default function Header(props) {
   
   return(
     <header id="headBox">
-      <h1 style={ h1Style }>
-        <a href={url} targe="_blank">{site}</a>
+      <h1 style={ props.style }>
+        <a>{props.heading} 정보</a>
       </h1>
       <Gnb />
     </header>

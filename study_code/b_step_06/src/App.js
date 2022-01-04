@@ -1,6 +1,8 @@
-import logo from './logo.svg';
+import React from 'react'; // index.js에서 불러오고 있음
 import Header from './component/Header';
-import ContentBox from './component/ContentBox';
+import Main from './component/Main';
+import Footer from './component/Footer';
+// import ContentBox from './component/ContentBox';
 import './App.css';
 
 
@@ -13,8 +15,9 @@ function App() {
   // ------------------------------------
   return (
     <div className="App">
-      <Header site = {myName} url = "http://naver.com" />
-      <ContentBox name = {myName} web = {web} />
+      <Header heading={web} name={myName} style={h1Style} />
+      <Main />
+      <Footer />
     </div>
   );
 }
