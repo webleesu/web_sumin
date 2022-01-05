@@ -5,14 +5,22 @@
 
 #headBox {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: flex-end;
-  width: 100%; max-width: 1920px; margin: auto;
+  // display: flex; justify-content: space-between; align-items: flex-end;
+  width: 100%; margin: auto;
   background-color: rgba($color_white, 0.8);
 
+  // .head_wrapper { max-width: 1920px;}
   a:hover { outline: 2px solid $color_black; border-radius: 4px; text-decoration: none; }
   button:hover { outline: 2px solid $color_black; border-radius: 4px; }
   
 } // #headBox
+
+.head_wrapper {
+  // position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  width: 100%; max-width: 1920px; margin: auto;
+  // background-color: rgba($color_white, 0.8);
+}
 
 
 .side_menu {
