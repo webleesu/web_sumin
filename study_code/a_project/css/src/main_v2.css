@@ -86,6 +86,8 @@ html, body {
   left: 0;
   right: 0;
   z-index: 100;
+  display: flex;
+  align-items: flex-end;
   width: 100%;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.8);
@@ -130,13 +132,13 @@ html, body {
   right: 0;
   width: 78.125vw;
   height: 100%;
-  padding: 20px;
+  padding: 30px;
   background-color: #fff;
 }
 .side_menu_area .close_btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
   width: 40px;
   height: 40px;
   background-image: url(../../img/close.png);
@@ -157,19 +159,49 @@ html, body {
 .side_header {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  height: 100px;
+  height: 70px;
 }
-.side_header .side_language {
+
+.side_language {
+  position: relative;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
   margin-bottom: 20px;
 }
-.side_header .side_language > div {
-  display: none;
-}
-.side_header .side_language > div.on {
+.side_language::before {
+  position: absolute;
+  top: 3px;
+  right: -20px;
+  content: "";
   display: block;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: rotate(-45deg);
 }
-.side_header .side_user {
+.side_language::before:hover {
+  outline: 2px solid #1c1c1c;
+  border-radius: 4px;
+}
+.side_language > div {
+  display: none;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  z-index: 10;
+  background-color: #fff1e0;
+  text-align: center;
+}
+.side_language > div.on {
+  display: block;
+  background-color: transparent;
+}
+
+.side_user {
   display: flex;
   justify-content: space-between;
   width: 120px;
@@ -181,10 +213,59 @@ html, body {
   flex-direction: column;
   margin-top: 30px;
 }
+.side_menu_part > li {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
 .side_menu_part .shop_sub_menu {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
   padding-left: 20px;
+}
+.side_menu_part .shop_sub_menu > li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.side_footer_area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  margin: auto;
+  background-color: #ebebeb;
+}
+
+.side_footer {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 100%;
+  margin: auto;
+}
+.side_footer li {
+  position: relative;
+  width: 100px;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 70px;
+}
+.side_footer li:first-child::after {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  content: "";
+  display: block;
+  width: 0.5px;
+  height: 30px;
+  background-color: #333;
 }
 
 @media all and (max-width: 1279px) {

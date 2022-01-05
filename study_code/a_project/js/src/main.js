@@ -37,6 +37,31 @@ elHandLanguage.addEventListener('click', (e) => {
 
 });
 
+// handhelds 메뉴 클릭시 사이드 메뉴 보이기 ==================================================
+// 변수 ------------------------------------------------------------------
+const elMenuBtn = document.querySelector('.hand_menu');
+const elCloseBtn = document.querySelector('.close_btn');
+const elMenuHand = document.querySelector('#hand_nav');
+const elSideMenu = document.querySelector('.side_menu');
+
+elMenuBtn.addEventListener('click', (e)=>{
+  e.preventDefault();
+  // elMenuHand.style.display = 'none';
+  elSideMenu.style.display = 'block';
+});
+
+elCloseBtn.addEventListener('click', (e)=> {
+  e.preventDefault();
+  elSideMenu.style.display = 'none';
+  // elMenuHand.style.display = 'block';
+});
+
+
+// handhelds side menu language ===========================================================
+// 변수 -----------------------------------------------------------------
+const elSideLan = document.querySelector('.side_language');
+
+
 
 
 
