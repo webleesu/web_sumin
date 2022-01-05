@@ -11,10 +11,10 @@ export default function Card(props) {
   ];
   const styleArr = [ {color: '#333'}, {color: '#f00'}]
   const [ckN, setCkN] = useState(0);
-  const [checking, setChecked] = useState(new Set());
-  const fnCheck = () => {  // check 상태 확인 오류 잡기
+  const [checkState, setCheckState] = useState('');
+  const fnCheck = (e) => { 
     setCkN( ()=> ckN === 0 ? 1 : 0) 
-    setChecked( () => ckN === 1 ? 'checked' : 'none')
+    setCheckState( e.target.checked );
   };
 
   return(
@@ -27,16 +27,15 @@ export default function Card(props) {
         <dd>{data.content}</dd>
       </dl>
       <div className='btns'>
-        <form className='blind'>
-          <input type='checkbox' 
-                  id={data.checkName} 
-                  name={data.checkName} 
-                  onChange={ fnCheck }
-                  checked // check 상태 확인 오류 잡기
-                  value='좋아요 체크' />
-        </form>
+        <input className='blind' 
+                type='checkbox' 
+                id={data.checkName} 
+                name={data.checkName} 
+                onChange={ fnCheck }
+                data-checked={checkState}
+                value='좋아요 체크' />
         
-        <button type='button' onClick={fnCheck} style={btnStyleArr[ckN]}>좋아요<MdFavorite style={styleArr[ckN]} /></button>
+        <label htmlFor={data.checkName} type='button' style={btnStyleArr[ckN]}>좋아요<MdFavorite style={styleArr[ckN]} /></label>
         <a className='link' href={data.detailLink}>상세보기</a>
       </div>
     </li>
