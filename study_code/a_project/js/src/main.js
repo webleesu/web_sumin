@@ -59,8 +59,18 @@ elCloseBtn.addEventListener('click', (e)=> {
 
 // handhelds side menu language ===========================================================
 // 변수 -----------------------------------------------------------------
-const elSideLan = document.querySelector('.side_language');
+const elSideLanLi = document.querySelector('.side_language');
+const elSideLanguage = elSideLanLi.querySelectorAll('.side_language > div');
 
+
+/**
+ * div(각각 언어)가 li내부에 3가 있고 div에 display: none 처리가 되어있다.
+ * elSideLanLi를 클릭했을때 display none이면 전부다 block으로 변경 후 
+ * 모든 div에 background-color 넣기
+ * 클릭 했을때 display block이면 전부 none처리
+ * 내부에 div를 선택하면 선택한 div에 .on 첨부
+ * 나머지는 삭제
+ */
 
 
 
@@ -127,10 +137,8 @@ const fnOpacity = () => {
     })
 }
 
-// elNext
-elNext.addEventListener('click', (e)=>{
-  e.preventDefault();
-  
+
+const fnSlide = () => {
   if(permission){
     permission = false;
     if(SLIDE_COUNT < slideLen-1){
@@ -141,6 +149,12 @@ elNext.addEventListener('click', (e)=>{
     fnOpacity();
     fnNowCount();
   }
+}
+// elNext
+elNext.addEventListener('click', (e)=>{
+  e.preventDefault();
+  fnSlide();
+  
 });
 
 // elPrev
@@ -158,6 +172,18 @@ elPrev.addEventListener('click', (e)=>{
     fnNowCount();
   }
 });
+
+let slideGo;
+
+const fnSlideMove = () => {
+  slideGo = setInterval(() => {
+    SLIDE_COUNT += 1;
+    fnSlide();
+  }, 5000);
+}
+
+fnSlideMove();
+
 
 // awards 광고 슬라이드 =================================================================================
 // 변수
