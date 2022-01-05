@@ -1,5 +1,7 @@
 import ConBox from './ConBox';
 import Review from './Review.jsx'
+import CardList from './CardList';
+
 
 export default function Main() {
   return (
@@ -7,6 +9,7 @@ export default function Main() {
         <section id="viewBox">section</section>
         <ConBox />
         <Review />
+        <CardList />
     </main>
   )
 }
