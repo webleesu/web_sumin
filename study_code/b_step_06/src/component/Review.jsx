@@ -25,7 +25,7 @@ export default function Review(){
   useEffect(() => {
     axios.get('./data/dataSample.json')
     .then(res => res.data )
-    .then(console.log)
+    // .then(console.log)
 
   },[])
 
