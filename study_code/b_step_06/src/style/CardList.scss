@@ -25,8 +25,11 @@
     box-shadow:0.1rem 0.1rem 0.1rem rgba(0,0,0,0.3);
 
   @at-root .img_set {
+    display: flex; justify-content: flex-end;
+    align-items: flex-end; align-content: flex-end;
       width: 100%; height:200px; 
       margin-bottom:1rem; border-radius:0.2rem; 
+      padding: 0.5rem; color: #fff;
       background-color: #ddd;}
 
   dl { 
