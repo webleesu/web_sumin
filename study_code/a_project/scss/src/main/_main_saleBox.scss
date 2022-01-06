@@ -38,7 +38,7 @@
     text-decoration: line-through;
   }
   .sale_price_area {
-    display: flex; justify-content: flex-start;
+    display: flex; 
     width: 100%; height: auto;
 
     .sale_percent {
@@ -48,10 +48,11 @@
       color: $color_red;
     }
     .sale_price {
-      width: 90px; height: auto;
+      width: auto; height: auto;
       font-size: 18px;
     }
   } // .sale_price_area
+
   .sale_detail {
     width: 190px; height: auto;
   }

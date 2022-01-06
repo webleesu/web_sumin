@@ -10,7 +10,7 @@
 
 @at-root .best_area {
   display: flex; 
-  height: 430px;
+  
   margin: auto;
   margin-top: 20px;
   padding: 5px 0;
@@ -28,7 +28,7 @@
         background-color: rgba($color_primary_light, 0.4);
       }
       .best_text {
-        width: 320px; height: 100px;
+        height: 100px;
         padding: 0 10px;
         /* background-color: var(--color-sample1); */
       }

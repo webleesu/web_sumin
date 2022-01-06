@@ -6,25 +6,32 @@
   .title_all { display: none;}
 
   #bestBox {
-    overflow: hidden;
+    overflow: auto;
     min-height: 480px;
+    -ms-overflow-style: none; // IE and Edge 스크롤바 없애기
+    scrollbar-width: none; // Firefox 스크롤바 없애기
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari, Opera 스크롤바 없애기
+    }
   } // #bestBox
+
 
   .best_area {
     justify-content: space-between; flex-wrap: nowrap;
-    width: auto; height: 240px;
+    width: auto; height: 400px;
   } // .best_area
   
   .best_item {
-    width: 140px; height: 240px;
+    width: 200px; height: 340px;
     margin-top: 10px;
 
     a {
       .best_img {
-        width: 140px; height: 140px;
+        width: 200px; height: 200px;
       }
       .best_text {
-        width: 140px;
+        width: 200px;
       }
     } // a
   } // .best_item
