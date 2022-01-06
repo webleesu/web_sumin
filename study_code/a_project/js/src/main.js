@@ -86,14 +86,19 @@ const elPrev = elViewBox.querySelector('.view_before_btn');;
 
 const view = elViewArea.querySelector('.view');
 const conUl = view.querySelector('.view_in_wrap');
-const conLi = conUl.querySelectorAll('.view_content');
+let conLi;
+const fnConLi =  ()=>{
+  const li = conUl.querySelectorAll('.view_content');
+  conLi =  [].slice.call(li);
+};
+fnConLi();
 
 const elTotalCount = elViewArea.querySelector('.view_total_count');
 const elNowCount = elViewArea.querySelector('.view_now_count');
 // -----------------------------------------------------------------------
 // 추가 변수
-let SLIDE_COUNT = 0;
 const slideLen = conLi.length;
+let SLIDE_COUNT = 0;
 let BEFORE_COUNT = SLIDE_COUNT;
 let timed = 500;
 let cssFn = 'ease';
@@ -118,15 +123,21 @@ const fnDelay = async ( t = timed ) => {
   });
   return await promise;
 };
+// 1. 뒤에 즉시 나타나기(opacity:1, display:block, z:01)
+// 2. on의 opacity처리되기 (500ms시간동안 )
+// 3. 일정시간뒤 on삭제 (500ms 뒤에수행)
+// 4. 나타난요소에 on 첨부 (4번과동일수행 on에 z100)
+
 
 const fnOpacity = () => {
   conLi[SLIDE_COUNT].style.display = 'block';
+  // conLi[SLIDE_COUNT].style.zIndex = 10;
 
   conLi[BEFORE_COUNT].style.transition = `all ${timed}ms ease`;
   conLi[BEFORE_COUNT].style.opacity = 0;
 
-  conLi[BEFORE_COUNT].classList.remove('on');
-  conLi[SLIDE_COUNT].classList.add('on');
+  // conLi[BEFORE_COUNT].classList.remove('on');
+  // conLi[SLIDE_COUNT].classList.add('on');
 
   fnDelay(timed)
     .then( () => {
@@ -177,7 +188,7 @@ let slideGo;
 
 const fnSlideMove = () => {
   slideGo = setInterval(() => {
-    SLIDE_COUNT += 1;
+    // SLIDE_COUNT += 1;
     fnSlide();
   }, 5000);
 }
@@ -200,3 +211,6 @@ const elAwardsLi = elAwardsUl.querySelectorAll('.awards');
  * 3. 슬라이드 하나씩 움직이기 - transform transition
  * 4. indicator 같이 움직이기
  */
+
+const deviceSize = `screen and (min-width:1200px)`;
+const mediaQuery = window.matchMedia(deviceSize);

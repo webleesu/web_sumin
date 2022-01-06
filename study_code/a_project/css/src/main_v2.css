@@ -1162,8 +1162,8 @@ html, body {
 
 .view_btn {
   position: absolute;
+  z-index: 500;
   top: 50%;
-  z-index: 20;
   width: 100%;
   height: 50px;
 }
@@ -1222,6 +1222,7 @@ html, body {
 }
 .view .view_in_wrap {
   position: relative;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -1233,11 +1234,14 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 1;
   width: 100%;
   height: 100%;
 }
 .view_content.on {
   display: block;
+  z-index: 50;
+  opacity: 1;
 }
 .view_content a {
   display: block;
@@ -1327,6 +1331,7 @@ html, body {
 
 .view_num {
   position: absolute;
+  z-index: 500;
   left: 20px;
   bottom: 10px;
   width: 70px;
@@ -2302,6 +2307,14 @@ html, body {
   overflow: hidden;
 }
 
+.black::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 28, 28, 0.5);
+}
+
 @media all and (max-width: 1279px) {
   #awardsBox {
     height: calc(30vw + 300px);
@@ -2329,36 +2342,6 @@ html, body {
   .awards_main .awards {
     width: 30vw;
     height: 30vw;
-  }
-  .awards_main .awards:nth-child(1) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/awards_01.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-  }
-  .awards_main .awards:nth-child(1) > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .awards_main .awards:nth-child(4) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/awards_04.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-  }
-  .awards_main .awards:nth-child(4) > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
   }
   .awards_main .awards:nth-child(n+5) {
     display: none;
@@ -2439,39 +2422,6 @@ html, body {
     overflow: hidden;
   }
 
-  .awards_indicator {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    width: 220px;
-    height: 20px;
-    margin: auto;
-  }
-  .awards_indicator .awards_circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background-color: #ffd9ad;
-  }
-  .awards_indicator .awards_circle.on {
-    background-color: #e17900;
-  }
-  .awards_indicator .awards_circle button {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-  }
-  .awards_indicator .awards_circle button:hover {
-    background-color: rgba(28, 28, 28, 0.3);
-  }
-  .awards_indicator .awards_circle button:focus {
-    border: 3px solid #1c1c1c;
-  }
-
   .awards_main {
     width: 90.625vw;
     max-width: 1740px;
@@ -2487,42 +2437,6 @@ html, body {
     width: 160px;
     height: 160px;
     margin: auto;
-  }
-  .awards_main .awards:nth-child(1) {
-    width: 160px;
-    height: 160px;
-    margin: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/awards_01.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-  }
-  .awards_main .awards:nth-child(1) > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
-  }
-  .awards_main .awards:nth-child(5) {
-    width: 160px;
-    height: 160px;
-    margin: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/awards_05.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-  }
-  .awards_main .awards:nth-child(5) > span {
-    display: block;
-    position: absolute;
-    z-index: -1;
-    clip: rect(0 0 0 0);
-    width: 0;
-    height: 0;
-    overflow: hidden;
   }
   .awards_main .awards:nth-child(n+6) {
     display: none;
