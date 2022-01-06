@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect, useState } from "react"
 import '../style/Review.scss';
 import axios from 'axios';
