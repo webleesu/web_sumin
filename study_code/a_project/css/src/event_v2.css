@@ -947,7 +947,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/facebook_black.png);
+    background-image: url(../../img/facebook_white.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -966,7 +966,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/instagram_black.png);
+    background-image: url(../../img/instagram_white.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;

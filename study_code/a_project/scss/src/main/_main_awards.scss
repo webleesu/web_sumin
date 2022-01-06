@@ -36,20 +36,25 @@
 
   .awards {
     background-color: $color_gray;
-    &:nth-child(1) { @include img('awards_01.jpg', $size: cover)}
-    &:nth-child(2) { @include img('awards_02.jpg', $size: cover)}
-    &:nth-child(3) { @include img('awards_03.jpg', $size: cover)}
-    &:nth-child(4) { @include img('awards_04.jpg', $size: cover)}
-    &:nth-child(5) { @include img('awards_05.jpg', $size: cover)}
+    transition: all 500ms ease;
+
+    &.awards_01{@include img('awards_01.jpg', $size: cover)}
+    &.awards_02{@include img('awards_02.jpg', $size: cover)}
+    &.awards_03{@include img('awards_03.jpg', $size: cover)}
+    &.awards_04{@include img('awards_04.jpg', $size: cover)}
+    &.awards_05{@include img('awards_05.jpg', $size: cover)}
+    &.awards_06{@include img('awards_06.jpg', $size: cover)}
+    &.awards_07{@include img('awards_07.jpg', $size: cover)}
+    &.awards_08{@include img('awards_08.jpg', $size: cover)}
     
   }
 } // .awards_main
 
-.black::after {
-  content: ""; display: block;
-  width: 100%; height: 100%;
-  background-color: rgba($color_black, 0.5);
-}
+// .black::after {
+//   content: ""; display: block;
+//   width: 100%; height: 100%;
+//   background-color: rgba($color_black, 0.5);
+// }
 
 @import './main_awards_handhelds';
 @import './main_awards_pc';

@@ -197,12 +197,6 @@ fnSlideMove();
 
 
 // awards 광고 슬라이드 =================================================================================
-// 변수
-const elNextBtn = document.querySelector('.awards_after_btn');
-const elPrevBtn = document.querySelector('.awards_before_btn');
-
-const elAwardsUl = document.querySelector('.awards_main');
-const elAwardsLi = elAwardsUl.querySelectorAll('.awards');
 
 /**
  * 시나리오
@@ -212,5 +206,44 @@ const elAwardsLi = elAwardsUl.querySelectorAll('.awards');
  * 4. indicator 같이 움직이기
  */
 
-const deviceSize = `screen and (min-width:1200px)`;
-const mediaQuery = window.matchMedia(deviceSize);
+// 변수
+const elAwardsBtn = document.querySelector('.awards_btn');
+// const elNextBtn = document.querySelector('.awards_after_btn');
+// const elPrevBtn = document.querySelector('.awards_before_btn');
+
+const elAwardsUl = document.querySelector('.awards_main');
+let elAwardsLi = elAwardsUl.querySelectorAll('.awards');
+
+let PERMISSION = true;
+
+
+
+
+// 이벤트
+// elAwardsBtn.addEventListener('click', (e)=>{
+//   let target = (name) => e.target.classList.contains(name);
+
+//   if(target('awards_after_btn')){ // 다음버튼 클릭시
+//     console.log('next');
+//   }else { // 이전 버튼 클릭시
+//     console.log('prev');
+//   }
+// });
+
+const fnAwardSlideMove = (e) => {
+  e.preventDefault();
+  if(PERMISSION){
+    PERMISSION = false;
+    let target = (name) => e.target.classList.contains(name);
+    let elSlide = [...elAwardsLi];
+    if(target('awards_after_btn')){
+      elAwardsUl.append( elSlide.at(0) );
+    }else {
+      elAwardsUl.prepend( elSlide.at(-1) );
+    }
+    elAwardsLi = elAwardsUl.querySelectorAll('.awards');
+    setTimeout(() => { PERMISSION = true}, 500);
+  }
+};
+
+elAwardsBtn.addEventListener('click', fnAwardSlideMove);

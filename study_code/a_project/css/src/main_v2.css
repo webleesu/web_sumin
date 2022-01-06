@@ -947,7 +947,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/facebook_black.png);
+    background-image: url(../../img/facebook_white.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -966,7 +966,7 @@ html, body {
     display: block;
     width: 30px;
     height: 30px;
-    background-image: url(../../img/instagram_black.png);
+    background-image: url(../../img/instagram_white.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -2230,14 +2230,15 @@ html, body {
 }
 .awards_main .awards {
   background-color: #ebebeb;
+  transition: all 500ms ease;
 }
-.awards_main .awards:nth-child(1) {
+.awards_main .awards.awards_01 {
   background-image: url(../../img/awards_01.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
-.awards_main .awards:nth-child(1) > span {
+.awards_main .awards.awards_01 > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -2246,13 +2247,13 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-.awards_main .awards:nth-child(2) {
+.awards_main .awards.awards_02 {
   background-image: url(../../img/awards_02.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
-.awards_main .awards:nth-child(2) > span {
+.awards_main .awards.awards_02 > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -2261,13 +2262,13 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-.awards_main .awards:nth-child(3) {
+.awards_main .awards.awards_03 {
   background-image: url(../../img/awards_03.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
-.awards_main .awards:nth-child(3) > span {
+.awards_main .awards.awards_03 > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -2276,13 +2277,13 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-.awards_main .awards:nth-child(4) {
+.awards_main .awards.awards_04 {
   background-image: url(../../img/awards_04.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
-.awards_main .awards:nth-child(4) > span {
+.awards_main .awards.awards_04 > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -2291,13 +2292,13 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-.awards_main .awards:nth-child(5) {
+.awards_main .awards.awards_05 {
   background-image: url(../../img/awards_05.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
-.awards_main .awards:nth-child(5) > span {
+.awards_main .awards.awards_05 > span {
   display: block;
   position: absolute;
   z-index: -1;
@@ -2306,13 +2307,50 @@ html, body {
   height: 0;
   overflow: hidden;
 }
-
-.black::after {
-  content: "";
+.awards_main .awards.awards_06 {
+  background-image: url(../../img/awards_06.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.awards_main .awards.awards_06 > span {
   display: block;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(28, 28, 28, 0.5);
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.awards_main .awards.awards_07 {
+  background-image: url(../../img/awards_07.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.awards_main .awards.awards_07 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.awards_main .awards.awards_08 {
+  background-image: url(../../img/awards_08.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.awards_main .awards.awards_08 > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 @media all and (max-width: 1279px) {
@@ -2323,14 +2361,61 @@ html, body {
   .awards_area {
     height: auto;
   }
-  .awards_area .awards_btn {
-    display: none;
+
+  .awards_btn {
+    position: absolute;
+    top: calc(50% + 25px);
+    z-index: 1;
+    width: 100%;
+    max-width: 1920px;
+    height: 50px;
+    margin: auto;
   }
-  .awards_area .awards_btn > div {
-    margin-bottom: -35px;
+  .awards_btn button {
+    position: absolute;
+    bottom: 50%;
+    width: 70px;
+    height: 70px;
   }
-  .awards_area .awards_indicator {
-    display: none;
+  .awards_btn button:hover {
+    background-color: rgba(28, 28, 28, 0.4);
+    border-radius: 4px;
+  }
+  .awards_btn button:focus {
+    border: 3px solid #1c1c1c;
+    border-radius: 4px;
+  }
+  .awards_btn .awards_after_btn {
+    right: 20px;
+    background-image: url(../../img/forward.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .awards_btn .awards_after_btn > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  .awards_btn .awards_before_btn {
+    left: 20px;
+    background-image: url(../../img/back.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+  .awards_btn .awards_before_btn > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
   }
 
   .awards_main {
@@ -2342,6 +2427,20 @@ html, body {
   .awards_main .awards {
     width: 30vw;
     height: 30vw;
+  }
+  .awards_main .awards:nth-child(1)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.5);
+  }
+  .awards_main .awards:nth-child(4)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.5);
   }
   .awards_main .awards:nth-child(n+5) {
     display: none;
@@ -2365,33 +2464,28 @@ html, body {
     height: 50px;
     margin: auto;
   }
-  .awards_btn > div {
+  .awards_btn button {
     position: absolute;
     bottom: 50%;
     width: 70px;
     height: 70px;
   }
-  .awards_btn > div:hover {
+  .awards_btn button:hover {
     background-color: rgba(28, 28, 28, 0.4);
     border-radius: 4px;
   }
-  .awards_btn > div:focus {
+  .awards_btn button:focus {
     border: 3px solid #1c1c1c;
     border-radius: 4px;
   }
   .awards_btn .awards_after_btn {
     right: 20px;
-  }
-  .awards_btn .awards_after_btn button {
-    display: block;
-    width: 100%;
-    height: 100%;
     background-image: url(../../img/forward_orange.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
   }
-  .awards_btn .awards_after_btn button > span {
+  .awards_btn .awards_after_btn > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -2402,17 +2496,12 @@ html, body {
   }
   .awards_btn .awards_before_btn {
     left: 20px;
-  }
-  .awards_btn .awards_before_btn button {
-    display: block;
-    width: 100%;
-    height: 100%;
     background-image: url(../../img/back_orange.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
   }
-  .awards_btn .awards_before_btn button > span {
+  .awards_btn .awards_before_btn > span {
     display: block;
     position: absolute;
     z-index: -1;
@@ -2433,10 +2522,24 @@ html, body {
     height: 220px;
     margin: 0 20px;
   }
-  .awards_main .awards.black {
+  .awards_main .awards:nth-child(1), .awards_main .awards:nth-child(5) {
     width: 160px;
     height: 160px;
     margin: auto;
+  }
+  .awards_main .awards:nth-child(1)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.5);
+  }
+  .awards_main .awards:nth-child(5)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.5);
   }
   .awards_main .awards:nth-child(n+6) {
     display: none;
