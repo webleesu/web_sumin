@@ -4,7 +4,7 @@
 @import '../common/variable';
 
 #headBox {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   display: flex; align-items: flex-end;
   width: 100%; margin: auto;
   background-color: rgba($color_white, 0.8);
@@ -16,10 +16,8 @@
 } // #headBox
 
 .head_wrapper {
-  // position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; justify-content: space-between; align-items: flex-end;
   width: 100%; max-width: 1920px; margin: auto;
-  // background-color: rgba($color_white, 0.8);
 }
 
 
