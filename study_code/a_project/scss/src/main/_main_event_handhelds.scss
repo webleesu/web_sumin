@@ -37,7 +37,7 @@
   .event_area {
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 100%; height: calc($event_height * 2 + 5.2vw);
+    width: 100%; height: calc($event_height * 2 + 5.2vw + 10px);
     // height: 104.2vw;
   } // .event_area
 

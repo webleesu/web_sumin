@@ -21,110 +21,6 @@
 }
 
 
-.side_menu {
-  display: none;
-  position: fixed; z-index: 150; top: 0; bottom: 0; left: 0; right: 0;
-  float: right;
-  width: 100vw; height: 100vh;
-  // margin: auto;
-  background-color: rgba($color_black, 0.4);
-}
-.side_menu_area {
-  position: absolute;
-  top: 0; bottom: 0; right: 0;
-  width: 78.125vw; height: 100%;
-  padding: 30px;
-  background-color: #fff;
-
-  .close_btn {
-    position: absolute; top: 30px; right: 30px;
-    width: 40px; height: 40px;
-    @include img('close.png');
-  }
-}
-
-.side_header {
-  display: flex; flex-direction: column; justify-content: space-between;
-  width: 100%; height: 70px;
-}
-
-.side_language {
-  position: relative;
-  width: 80px; height: 30px;
-  cursor: pointer;
-  &::before {
-    position: absolute; top: 3px; right: -20px;
-    content: ""; display: block;
-    width: 10px; height: 10px;
-    border-left: 2px solid $color_deep_gray;
-    border-bottom: 2px solid $color_deep_gray;
-    transform: rotate(-45deg);
-    // 밑 호버 수정
-    &:hover { outline: 2px solid $color_black; border-radius: 4px;}
-
-  }
-  > div { 
-    display: none;
-    width: 100%; height: 30px;
-    position: relative; z-index: 10;
-    background-color: $color_primary_light;
-    text-align: center;
-    
-  }
-  > div.on { display: block; background-color: transparent;}
-  margin-bottom: 20px;
-}
-.side_user {
-  display: flex; justify-content: space-between;
-  width: 120px; height: 20px;
-}
-
-.side_menu_part {
-  display: flex; flex-direction: column;
-  margin-top: 30px;
-  >li {
-    margin-bottom: 10px;
-    font-size: 20px; font-weight: 700;
-    text-transform: capitalize;
-  }
-  .shop_sub_menu {
-    display: flex; flex-direction: column;
-    padding-top: 10px;
-    padding-left: 20px;
-    >li {
-      margin-bottom: 10px;
-      font-size: 18px; font-weight: 400;
-    }
-  }
-}
-
-.side_footer_area {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  width: 100%; height: 70px;
-  margin: auto;
-  background-color: $color_gray;
-
-}
-.side_footer{
-  display: flex; justify-content: space-between;
-  width: 200px; height: 100%; 
-  margin: auto;
-
-  li {
-    position: relative;
-    width: 100px; height: 100%;
-    font-size: 18px;
-    text-align: center; line-height: 70px;
-    &:first-child::after {
-      position: absolute; top: 20px; right: 0;
-      content: ""; display: block;
-      width: 0.5px; height: 30px;
-      background-color: $color_deep_gray;
-    }
-  }
-  
-}
-
 
 // ~1279px ----------------------------------------------------------------------------
 @media all and (max-width: 1279px) {
@@ -175,7 +71,7 @@
 
         &:last-child{ margin-bottom: 0;}
         
-        a {
+        button {
           @include full;
           &:hover { background-color: $color_primary; color: $color_white;}
         
@@ -195,6 +91,113 @@
   .hand_menu {
     @include img('menu.png');
   }
+
+  .side_menu {
+    display: none;
+    position: fixed; z-index: 150; top: 0; bottom: 0; left: 0; right: 0;
+    float: right;
+    width: 100vw; height: 100vh;
+    // margin: auto;
+    background-color: rgba($color_black, 0.4);
+  }
+  .side_menu_area {
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 78.125vw; height: 100%;
+    padding: 30px;
+    background-color: #fff;
+  
+    .close_btn {
+      position: absolute; top: 30px; right: 30px;
+      width: 40px; height: 40px;
+      @include img('close.png');
+    }
+  }
+  
+  .side_header {
+    display: flex; flex-direction: column; justify-content: space-between;
+    width: 100%; height: 70px;
+  }
+  
+  .side_language {
+    position: relative;
+    width: 80px; height: 30px;
+    cursor: pointer;
+    &::before {
+      position: absolute; top: 3px; right: -20px;
+      content: ""; display: block;
+      width: 10px; height: 10px;
+      border-left: 2px solid $color_deep_gray;
+      border-bottom: 2px solid $color_deep_gray;
+      transform: rotate(-45deg);
+      // 밑 호버 수정
+      &:hover { outline: 2px solid $color_black; border-radius: 4px;}
+  
+    }
+    .language_check { width: 100%; height: 30px; text-align: center;}
+
+    > div { 
+      display: none;
+      width: 100%; height: 30px;
+      position: relative; z-index: 10;
+      background-color: $color_primary_light;
+      text-align: center;
+      
+    }
+    // > div.on { display: block; background-color: transparent;}
+    margin-bottom: 20px;
+  }
+  .side_user {
+    display: flex; justify-content: space-between;
+    width: 120px; height: 20px;
+  }
+  
+  .side_menu_part {
+    display: flex; flex-direction: column;
+    margin-top: 30px;
+    >li {
+      margin-bottom: 10px;
+      font-size: 20px; font-weight: 700;
+      text-transform: capitalize;
+    }
+    .shop_sub_menu {
+      display: flex; flex-direction: column;
+      padding-top: 10px;
+      padding-left: 20px;
+      >li {
+        margin-bottom: 10px;
+        font-size: 18px; font-weight: 400;
+      }
+    }
+  }
+  
+  .side_footer_area {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    width: 100%; height: 70px;
+    margin: auto;
+    background-color: $color_gray;
+  
+  }
+  .side_footer{
+    display: flex; justify-content: space-between;
+    width: 200px; height: 100%; 
+    margin: auto;
+  
+    li {
+      position: relative;
+      width: 100px; height: 100%;
+      font-size: 18px;
+      text-align: center; line-height: 70px;
+      &:first-child::after {
+        position: absolute; top: 20px; right: 0;
+        content: ""; display: block;
+        width: 0.5px; height: 30px;
+        background-color: $color_deep_gray;
+      }
+    }
+    
+  }
+
 } // ~1279px ===============================================================
 
 // 1280px ~ ----------------------------------------------------------------

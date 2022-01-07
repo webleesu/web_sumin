@@ -15,7 +15,7 @@
     width: 100%; height: auto;
 
     .benefit {
-      min-width: 340px; width: 58.6vw; max-width: 380px; height: 100px;
+      min-width: 260px; width: 58.6vw; max-width: 380px; height: 100px;
 
       .benefit_img {
         float: left;
@@ -28,8 +28,9 @@
         float: left; 
         width: auto; height: auto;
         // margin-top: 10px; 
-        margin-left: 30px;
+        margin-left: 20px;
         line-height: 30px;
+        font-size: 16px;
       }
     } // .benefit
   } // .benefit_detail_area

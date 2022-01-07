@@ -19,7 +19,7 @@
   margin-bottom: 10px;
   a {
     @include full;
-    height: 420px;
+    // height: 420px;
     &:hover {
       border: 2px solid $color_black; border-radius: 4px;
     }
@@ -33,7 +33,7 @@
       font-size: 18px; font-weight: 700;
     }
     .event_detail {
-      width: 320px; height: 35px;
+      width: 320px; min-height: 35px; height: auto;
     }
   } // a
 

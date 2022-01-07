@@ -46,7 +46,7 @@
     .benefit_img_review { @include img($file:'coin.png', $size: 70% auto)};
     .benefit_img_friend { @include img($file:'hands.png', $size: 70% auto)};
 
-    .benefit_text { font-size: 20px; }
+    // .benefit_text { font-size: 20px; }
     .benefit_bold { font-weight: 700; }
   } // .benefit
 } // .benefit_detail_area

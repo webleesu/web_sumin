@@ -60,17 +60,47 @@ elCloseBtn.addEventListener('click', (e)=> {
 // handhelds side menu language ===========================================================
 // 변수 -----------------------------------------------------------------
 const elSideLanLi = document.querySelector('.side_language');
+const elSideLanguageCk = elSideLanLi.querySelector('.language_check');
 const elSideLanguage = elSideLanLi.querySelectorAll('.side_language > div');
 
+const elKorean = elSideLanguage[0];
+const elEnglish = elSideLanguage[1];
+const elChinese = elSideLanguage[2];
 
-/**
- * div(각각 언어)가 li내부에 3가 있고 div에 display: none 처리가 되어있다.
- * elSideLanLi를 클릭했을때 display none이면 전부다 block으로 변경 후 
- * 모든 div에 background-color 넣기
- * 클릭 했을때 display block이면 전부 none처리
- * 내부에 div를 선택하면 선택한 div에 .on 첨부
- * 나머지는 삭제
- */
+let sideClick = true;
+
+elSideLanLi.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if(sideClick === true){
+    elSideLanguageCk.style.display = 'none';
+    elKorean.style.display = 'block';
+    elEnglish.style.display = 'block';
+    elChinese.style.display = 'block';
+    sideClick = false;
+  } else {
+    elSideLanguageCk.style.display = 'block';
+    elKorean.style.display = 'none';
+    elEnglish.style.display = 'none';
+    elChinese.style.display = 'none';
+    sideClick = true;
+  }
+});
+
+elKorean.addEventListener('click', (e)=> {
+  e.preventDefault();
+  elSideLanguageCk.innerText = '한국어';
+});
+elEnglish.addEventListener('click', (e)=> {
+  e.preventDefault();
+  elSideLanguageCk.innerText = 'ENGLISH';
+});
+elChinese.addEventListener('click', (e)=> {
+  e.preventDefault();
+  elSideLanguageCk.innerText = '中國語';
+});
+
+
 
 
 
@@ -216,19 +246,6 @@ let elAwardsLi = elAwardsUl.querySelectorAll('.awards');
 
 let PERMISSION = true;
 
-
-
-
-// 이벤트
-// elAwardsBtn.addEventListener('click', (e)=>{
-//   let target = (name) => e.target.classList.contains(name);
-
-//   if(target('awards_after_btn')){ // 다음버튼 클릭시
-//     console.log('next');
-//   }else { // 이전 버튼 클릭시
-//     console.log('prev');
-//   }
-// });
 
 const fnAwardSlideMove = (e) => {
   e.preventDefault();
