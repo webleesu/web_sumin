@@ -2524,15 +2524,17 @@ html, body {
     margin: 0 20px;
   }
   .awards_main .awards:nth-child(1), .awards_main .awards:nth-child(5) {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     margin: auto;
+    transform: translateY(20%);
   }
   .awards_main .awards:nth-child(1)::after {
     content: "";
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 0.25rem;
     background-color: rgba(28, 28, 28, 0.5);
   }
   .awards_main .awards:nth-child(5)::after {
@@ -2540,6 +2542,7 @@ html, body {
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 0.25rem;
     background-color: rgba(28, 28, 28, 0.5);
   }
   .awards_main .awards:nth-child(n+6) {
