@@ -17,9 +17,7 @@ export default function RouterPage() {
       <Route path="/person" element={<Person />} />
       <Route path="/rule" element={<Rule />} />
       <Route path="/product" element={<Product />} />
-      <Route path="/etc" element={<Etc />} />
       <Route path="*" element={<NotFound />} />
-
     </Routes>
   )
 }
