@@ -1,78 +1,4 @@
 /* event_v2.css */
-.title_area {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 60px;
-  margin: auto;
-  margin-bottom: 20px;
-  /* background-color: var(--color-sample1); */
-}
-
-.title_text {
-  width: 60vw;
-  max-width: 500px;
-  height: 60px;
-}
-
-.title {
-  width: 250px;
-  height: 30px;
-  margin-bottom: 5px;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  text-align: left;
-}
-
-.sub_title {
-  width: 100%;
-  max-width: 500px;
-  height: 20px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: left;
-}
-
-.title_all {
-  width: 12vw;
-  min-width: 90px;
-  height: 30px;
-  margin-top: 30px;
-  text-align: right;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.text_title {
-  width: 100%;
-  height: 33px;
-  display: block;
-  font-size: 18px;
-  font-weight: 400;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.text_price {
-  width: 100%;
-  height: 33px;
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.text_detail {
-  width: 100%;
-  height: auto;
-  min-height: 33px;
-  display: block;
-  font-size: 16px;
-  font-weight: 400;
-  text-overflow: ellipsis;
-}
-
 html, body {
   color: #1c1c1c;
   font-weight: 400;
@@ -1135,6 +1061,11 @@ html, body {
     overflow: hidden;
   }
 }
+@media all and (min-width: 1280px) {
+  .side_menu {
+    display: none;
+  }
+}
 #eventBox {
   width: 100%;
   height: auto;
@@ -1205,7 +1136,7 @@ html, body {
   margin-bottom: 60px;
 }
 .event .event_img {
-  width: 39vw;
+  width: 100%;
   height: 39vw;
   max-height: 300px;
   background-color: #ebebeb;
@@ -1214,11 +1145,15 @@ html, body {
   width: 100%;
   height: 40px;
   line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .event .event_date {
   width: 100%;
   height: 40px;
   line-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .event .event_hover {
   display: none;
@@ -1241,6 +1176,102 @@ html, body {
 .event > a:focus .event_hover {
   display: block;
   border: 3px solid #1c1c1c;
+}
+
+.event_con_01 .event_img {
+  background-image: url(../../img/event_01.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event_con_01 .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.event_con_02 .event_img {
+  background-image: url(../../img/event_02.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event_con_02 .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.event_con_03 .event_img {
+  background-image: url(../../img/event_03.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event_con_03 .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.event_con_04 .event_img {
+  background-image: url(../../img/event_04.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event_con_04 .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.event_con_05 .event_img {
+  background-image: url(../../img/event_05.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event_con_05 .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.event_con_06 .event_img {
+  background-image: url(../../img/event_06.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.event_con_06 .event_img > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .event_more {
