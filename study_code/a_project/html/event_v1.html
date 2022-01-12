@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../css/src/event_v2.css">
 
   <!-- js -->
-  <script src="../js/common/modernizr-custom.js"></script>
+  <!-- <script src="../js/common/modernizr-custom.js"></script> -->
 
   <title>event</title>
   <link rel="shortcut icon" href="../favicon.png" type="image/png">
@@ -103,9 +103,10 @@
             <button class="close_btn"></button>
             <ul class="side_header">
               <li class="side_language">
-                <div class="lan_korean on"><a href="#"><span>한국어</span></a></div>
-                <div class="lan_english"><a href="#"><span>ENGLISH</span></a></div>
-                <div class="lan_chinese"><a href="#"><span>中國語</span></a></div>
+                <span class="language_check">한국어</span>
+                <div class="lan_korean"><button href="#"><span>한국어</span></button></div>
+                <div class="lan_english"><button href="#"><span>ENGLISH</span></button></div>
+                <div class="lan_chinese"><button href="#"><span>中國語</span></button></div>
               </li>
               <li class="side_user">
                 <div class="side_login"><a href="#">로그인</a></div>
@@ -310,7 +311,8 @@
   </div><!-- // #wrap -->
 
   <!-- script -->
-  <script></script>
+  <script src="../js/src/component.js"></script>
+  <script src="../js/src/main.js"></script>
   
 </body>
 </html>
