@@ -20,8 +20,8 @@
   // margin: auto;
   background-color: $color_gray;
 
-  &:nth-child(1) {@include img('challenge_01.jpg', $size: cover)}
-  &:nth-child(2) {@include img('challenge_02.jpg', $size: cover)}
+  &:nth-child(1) {@include img('challenge_diet.png', $size: cover)}
+  &:nth-child(2) {@include img('challenge_fitness.png', $size: cover)}
 
   a { @include full; }
 } // .challenge

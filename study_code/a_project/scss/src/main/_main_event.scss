@@ -21,7 +21,7 @@
     @include full;
     // height: 420px;
     &:hover {
-      border: 2px solid $color_black; border-radius: 4px;
+      outline: 2px solid $color_black; border-radius: 4px;
     }
   
     .event_img {

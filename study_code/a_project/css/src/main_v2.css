@@ -1885,7 +1885,7 @@ html, body {
   background-color: #ebebeb;
 }
 .challenge:nth-child(1) {
-  background-image: url(../../img/challenge_01.jpg);
+  background-image: url(../../img/challenge_diet.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -1900,7 +1900,7 @@ html, body {
   overflow: hidden;
 }
 .challenge:nth-child(2) {
-  background-image: url(../../img/challenge_02.jpg);
+  background-image: url(../../img/challenge_fitness.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -2008,7 +2008,7 @@ html, body {
   height: 100%;
 }
 .event a:hover {
-  border: 2px solid #1c1c1c;
+  outline: 2px solid #1c1c1c;
   border-radius: 4px;
 }
 .event a .event_img {
@@ -2152,22 +2152,23 @@ html, body {
     margin-left: 0;
   }
   .event:nth-child(1) {
-    margin-top: 0;
+    margin-top: 5px;
   }
   .event:nth-child(2) {
-    margin-top: 0;
+    margin-top: 5px;
   }
 }
 @media all and (min-width: 1280px) {
-  #eventBox .event_area {
+  .event_area {
     justify-content: space-between;
     flex-wrap: wrap;
     width: auto;
     height: 430px;
   }
+
   .event {
     width: 320px;
-    height: 100%;
+    height: calc(100% - 5px);
     margin-left: 20px;
   }
   .event a .event_img {

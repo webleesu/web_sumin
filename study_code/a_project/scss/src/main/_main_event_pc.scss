@@ -2,29 +2,26 @@
 
 // 1280px ~ ----------------------------------------------------------------
 @media all and (min-width: 1280px){
-  
-  #eventBox {
 
-    .event_area {
-      justify-content: space-between;
-      flex-wrap: wrap;
-      width: auto; height: 430px;
+  .event_area {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: auto; height: 430px;
+  } // .event_area
 
-      @at-root .event {
-        width: 320px; height: 100%;
-        margin-left: 20px;
-        a {
-          .event_img {
-            width: 320px; height: 350px;
-          }
-          .event_title {
-            width: 320px;
-          }
-        } // a
+  .event {
+    width: 320px; height: calc(100% - 5px);
+    margin-left: 20px;
+    a {
+      .event_img {
+        width: 320px; height: 350px;
+      }
+      .event_title {
+        width: 320px;
+      }
+    } // a
 
-        &:first-child {margin-left: 0;}
-      } // .event
-    } // .event_area
-  } // #eventBox
+    &:first-child {margin-left: 0;}
+  } // .event
 
 } // 1280px ~ ====================================================================
