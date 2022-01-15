@@ -1,26 +1,54 @@
 // Main.js (page)
 
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import ViewDetail from './main/ViewDetail';
+import React, { useState, useEffect } from 'react';
+
 import '../style/Main.scss';
+import '../style/MainViewBox.scss';
 
 export default function Main() {
+  
+  const listData = ['content_01', 'content_02', 'content_03', 'content_04'];
+  const [num, setNum] = useState(0);
 
-  const [detail, setDetail] = useState([]);
+  const setStyle = {    
+    transition: (num===0) ? null : 'margin 500ms ease' ,
+    marginLeft: `${num * -100}%`
+  }
 
   useEffect( ()=>{
-    axios.get('./data/viewDetail.json')
-    .then(res => setDetail(res.data) )    
-  }, [])
+    console.log( listData[num] );
+  }, [num])
+
+  const fnClassAdd = (i)=>{
+    const ON = (i === num) ? '  on' : '';
+    const VIEW = 'view_';
+    const textNum = '000' + (i+1);
+    const VIEW_TEXT = VIEW + textNum.slice(-2);
+    return VIEW_TEXT+ ON;
+  };
+
+  // const viewData = listData.filter( (list,idx) => idx === num );
 
   return (
     <div className='main_area'>
       <h2>Title</h2>
       <div className='view_part'>
-        { 
-          detail.map( (data) => <ViewDetail key={data.id} /> )  
-        }
+        <div className='slide_btn'>
+          <button type='button' className='next' onClick={ ()=>{ setNum( num >= 3 ? 0 : num + 1 ) }}>다음</button>
+          <button type='button' className='prev' onClick={ ()=>{ setNum( num <= 0 ? 3 : num - 1 ) }}>이전</button>
+        </div>
+        <div className='view_contents'>
+          <ul style={setStyle}>
+            {/* {listData.map( (list, idx)=> 
+                <li className={ fnClassAdd(idx) } key={idx}>{list}</li> )} */}
+
+            {/* {viewData.map((list, idx)=> 
+                <li className={ fnClassAdd(idx) } key={idx}>{list}</li> )} */}
+
+            {listData.map( (list, idx)=> 
+                            <li className={ fnClassAdd(idx) } key={idx}>{list}</li> )}
+          </ul>
+        </div>
       </div>
     </div>
   )
