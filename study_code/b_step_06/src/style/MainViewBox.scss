@@ -6,7 +6,7 @@
     button { padding:0.3rem 1rem; background-color: #ddd; margin:0 1rem; }
   }
 
-  $len : 4; 
+  $len: 5; 
   .view_contents {
     overflow: hidden;
     width: 100%; height: 500px; border:1px solid #999;
@@ -25,3 +25,16 @@
   }
 
 }
+
+@keyframes firstSlide {
+  0% { margin-left: 100%; }
+  100% { margin-left:0%; }
+}
+
+@keyframes lastSlide {
+  0% {margin-left:0%;}
+  100% {margin-left:100%;}
+}
+
+// transition 은 1회성의 움직임에대한 시간,
+// animation은 전체의 시간
