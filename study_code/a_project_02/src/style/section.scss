@@ -1,0 +1,46 @@
+// section.scss
+
+#viewBox {
+  width: 100%; max-width: 1920px; height: auto;
+  background-color: #fbf4e4;
+}
+
+.red {
+  color: #f43b00;
+}
+.red_stroke {
+  -webkit-text-stroke: 2px #f43b00;
+  color: transparent;
+}
+
+.view_01 {
+  position: relative;
+  width: 100%; height: 896px;
+  h2 {
+    display: flex; flex-direction: column; 
+    position: absolute; top: 50px; right: 50px; z-index: 1;
+    // width: 700px; height: auto;
+    text-align: left;
+    font-size: 120px; font-weight: 700;
+  } // h2
+
+
+  .view_01_img {
+    position: absolute; top: 200px; left: 50px;
+    width: 1040px; height: 612px;
+    background-image: url(../image/img_first.jpg);
+  }
+
+  circle {
+    width: 156px; height: 156px;
+  }
+  text {
+    transform: rotate(180deg);
+  }
+
+} // .view_01
+
+.view_02 {
+  position: relative;
+  width: 100%; height: 1176px;
+} // .view_02

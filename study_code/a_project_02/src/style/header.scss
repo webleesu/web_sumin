@@ -1,0 +1,19 @@
+// header.scss
+
+#headBox {
+  width: 100%; max-width: 1920px; height: 120px;
+  margin: auto; 
+  background-color: #fbf4e4;
+
+  .head_area{
+    display: flex; justify-content: space-between;
+    align-items: center;
+    width: 80%; max-width: 1920px; height: 120px;
+    margin: auto;
+
+    h1 {
+      width: 117px; height: 30px;
+      background-image: url('../image/dalkomm.svg');
+    }
+  }
+}
