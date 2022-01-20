@@ -2213,6 +2213,7 @@ html, body {
   max-width: 1920px;
   height: 100%;
   margin: auto;
+  overflow: hidden;
 }
 
 .awards_main {
@@ -2546,7 +2547,12 @@ html, body {
     border-radius: 0.25rem;
     background-color: rgba(28, 28, 28, 0.5);
   }
-  .awards_main .awards:nth-child(n+6) {
+  .awards_main .awards:nth-child(6) {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  .awards_main .awards:nth-child(n+7) {
     display: none;
   }
 }

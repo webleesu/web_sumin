@@ -62,8 +62,11 @@
         border-radius: 0.25rem;
         background-color: rgba($color_black, 0.5);
       }
-      
-      &:nth-child(n+6){display: none;}
+      &:nth-child(6) {
+        width: 0; height: 0;
+        opacity: 0;
+      }
+      &:nth-child(n+7){display: none;}
     }
 
   } // .awards_main
