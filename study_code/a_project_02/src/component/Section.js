@@ -19,11 +19,11 @@ export default function Section() {
             <h2 className='red'>
               <strong>달콤, 상상이 일상이 되는 곳</strong>
             </h2>
-            <p className='red'>
+            <p className='red view_02_big'>
               Dal.Komm Life begins <br />
               with imagination
             </p>
-            <p className='red'>
+            <p className='red view_02_normal'>
               가장 트랜디한 커피전문점, <br />
               그리고 다양한 음악과 문화를 소비하는 플랫폼으로서 맛과 식의 경험을 넘어 향유할 수 있는 공간이 되어 <br />
               여러분의 달콤한 상상, 행복한 상상을 응원하겠습니다.
