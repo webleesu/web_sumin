@@ -42,5 +42,5 @@ export default function Section() {
           <li className='view_07'></li>
         </ul>
       </section>
-  )
+  );
 }

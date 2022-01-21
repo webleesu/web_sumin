@@ -12,5 +12,5 @@ export default function Navigation(){
         <li><a href="#">SHOP</a></li>
       </ul>
     </nav>
-  )
+  );
 }
