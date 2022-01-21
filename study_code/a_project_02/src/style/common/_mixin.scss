@@ -1,0 +1,23 @@
+// mixin.scss
+@use "sass:math"; 
+
+$baseSize: 16;
+
+// image
+// style폴더 내에 있는 scss파일에서 image폴더 내 해당 이미지까지의 경로
+$imgPath:'../image/';
+
+@mixin img($file, $repeat:no-repeat, $position:50% 50%, $size:contain){
+  background: {
+    image: url(#{$imgPath}#{$file});
+    repeat: $repeat;
+    position:$position;
+    size: $size;
+  } 
+  & > span{
+    display: block; 
+    position: absolute; z-index:-1; clip:rect(0 0 0 0);
+    width: 0; height: 0; overflow: hidden;
+  }
+  @content;
+}
