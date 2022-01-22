@@ -18,11 +18,11 @@ export default function Navigation(){
     <nav className="gnb">
         <div className='underline'></div>
       <ul>
-        <li><a href="#" onClick={fnUnderlineClick}>Dal.Komm</a></li>
-        <li><a href="#" onClick={fnUnderlineClick}>메뉴 · 매장</a></li>
-        <li><a href="#" onClick={fnUnderlineClick}>창업안내</a></li>
-        <li><a href="#" onClick={fnUnderlineClick}>새로운 소식</a></li>
-        <li><a href="#" onClick={fnUnderlineClick}>SHOP</a></li>
+        <li onClick={fnUnderlineClick}><a href="#">Dal.Komm</a></li>
+        <li onClick={fnUnderlineClick}><a href="#">메뉴 · 매장</a></li>
+        <li onClick={fnUnderlineClick}><a href="#">창업안내</a></li>
+        <li onClick={fnUnderlineClick}><a href="#">새로운 소식</a></li>
+        <li onClick={fnUnderlineClick}><a href="#">SHOP</a></li>
       </ul>
     </nav>
   );
