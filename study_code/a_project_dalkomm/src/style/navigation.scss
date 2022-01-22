@@ -7,11 +7,14 @@
   // line-height: 120px;
   li {
     width: auto; height: 30px; margin: auto;
+    &:hover, &:focus {
+      color: #ff592e;
+    }
   }
 }
 
 .underline {
-  position: absolute; top: 0; left: 0;
+  position: absolute; top: 80px; left: 0;
   width: 0; height: 2px;
   background-color: #ff592e;
   transition: all 500ms;
