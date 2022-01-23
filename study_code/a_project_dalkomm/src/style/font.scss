@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+// spoqa 폰트
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+// Montserrat 폰트
+@import url('https://fonts.googleapis.com/css2?family=&Montserrat:wght@500;700;900&display=swap');
+
+
+body,
+a,
+button, input, select, textarea{
+	font-family:'Spoqa Han Sans Neo', 'sans-serif', '돋움', Dotum, '굴림', Gulim, Verdana, Arial, sans-serif;
+	font-weight: normal;
+}
+
+
+// goldplay대체 - 여기어때 잘난체
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: 700; // normal
+  font-style: normal;
+}
+
+// cooper black 대체 - hahmlet 폰트
+@font-face {
+  font-family: 'Hahmlet-ExtraBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/Hahmlet-ExtraBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// 꼬딕씨 폰트 대체 - 엘리스디지털배움체B
+@font-face {
+  font-family: 'EliceDigitalBaeum_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// 폰트 별로 클래스 명 지정
+.jalnan { font-family: 'yg-jalnan';}
+.hamlet {font-family: 'Hahmlet-ExtraBold';}
+.elice {font-family: 'EliceDigitalBaeum_Bold';}

@@ -17,10 +17,10 @@ export default function Section() {
           </li>
           <li className='view_02'>
             <div class="view_02_text_wrap">
-              <h2 className='red'>
+              <h2 className='red elice'>
                 <strong>달콤, 상상이 일상이 되는 곳</strong>
               </h2>
-              <p className='red view_02_big'>
+              <p className='red view_02_big hamlet'>
                 Dal.Komm Life begins <br />
                 with imagination
               </p>
