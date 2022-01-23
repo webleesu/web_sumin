@@ -1,0 +1,25 @@
+// footer.scss
+
+#footBox {
+  width: 100%; height: auto; min-height: 700px;
+  padding: 120px;
+  background-color: #fff;
+}
+
+.footer_wrap {
+  display: flex; justify-content: space-between;
+  text-align: left;
+}
+
+.footer_for {
+  margin-top: 30px;
+  color: rgba(34,34,34,.7);
+  li {
+    margin-top: 16px;
+    &:first-child {margin-top: 0;}
+  }
+}
+
+.footer_contact {
+  color: #ff592e;
+}

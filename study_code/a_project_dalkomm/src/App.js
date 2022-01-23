@@ -5,6 +5,7 @@ import './style/font.scss';
 import './style/common/reset.scss';
 import './style/common/common.scss';
 import './style/app.scss';
+import Footer from './component/Footer';
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <Section />
-      
+      <Footer />
     </div>
   );
 }

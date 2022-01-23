@@ -18,7 +18,7 @@ export default function Navigation(){
         <div className='underline'></div>
       <ul>
         <li onClick={fnUnderlineClick}><a href="#">Dal.Komm</a></li>
-        <li onClick={fnUnderlineClick}><a href="#">메뉴 · 매장</a></li>
+        <li onClick={fnUnderlineClick}><a href="#">메뉴 &#183; 매장</a></li>
         <li onClick={fnUnderlineClick}><a href="#">창업안내</a></li>
         <li onClick={fnUnderlineClick}><a href="#">새로운 소식</a></li>
         <li onClick={fnUnderlineClick}><a href="#">SHOP</a></li>

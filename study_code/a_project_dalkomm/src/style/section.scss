@@ -72,12 +72,12 @@
     @include img('circle_img.png');
   }
   .circle_02 {
-    position: absolute; left: -77px; bottom: 350px;
+    position: absolute; left: -77px; bottom: 150px;
     width: 300px; height: 300px;
     @include img('circle_big.svg');
   }
   .circle_03 {
-    position: absolute; left: 200px; bottom: 250px;
+    position: absolute; left: 200px; bottom: 100px;
     width: 77px; height: 61px;
     @include img('circle_small.svg');
   }
