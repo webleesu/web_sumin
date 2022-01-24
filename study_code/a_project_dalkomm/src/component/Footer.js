@@ -2,6 +2,10 @@
 import React from 'react';
 import '../style/footer.scss';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
 export default function Footer() {
   return (
     <footer id='footBox'>
@@ -43,7 +47,7 @@ export default function Footer() {
             <option value='http://www.danalenter.co.kr/index.do'>다날엔터테인먼트</option>
           </select>
         </li>
-        
+
         <li className='footer_infomation_wrap'>
           <address className='footer_infomation'>
             <a href='#'>주)다날에프엔비+</a>
@@ -60,8 +64,14 @@ export default function Footer() {
             </span>
           </address>
           <div className='footer_download'>
-            <a href='#' className='footer_btn_appstore'>App Store</a>
-            <a href='#' className='footer_btn_googleplay'>Google Play</a>
+            <a href='#' className='footer_btn_appstore'>
+              <FontAwesomeIcon icon={['fab', 'apple']} className='apple_icon' />
+              App Store
+            </a>
+            <a href='#' className='footer_btn_googleplay'>
+            <FontAwesomeIcon icon={['fab', 'google-play']} className='google_icon' />
+              Google Play
+            </a>
             <a href='#' className='footer_btn_qr'></a>
           </div>
         </li>
