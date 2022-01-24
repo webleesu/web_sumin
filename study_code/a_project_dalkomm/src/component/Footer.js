@@ -33,6 +33,39 @@ export default function Footer() {
           </ul>
         </li>
       </ul>
+
+      <ul className='footer_info_wrap'>
+        <li className='footer_family'>
+          <select name='family site'>
+            <option value='http://www.dalkomm.com/'>FAMILY SITE</option>
+            <option value='https://danal.co.kr/Index.do'>다날</option>
+            <option value='https://www.danalpay.com/main/main.aspx'>다날페이먼트</option>
+            <option value='http://www.danalenter.co.kr/index.do'>다날엔터테인먼트</option>
+          </select>
+        </li>
+        
+        <li className='footer_infomation_wrap'>
+          <address className='footer_infomation'>
+            <a href='#'>주)다날에프엔비+</a>
+            <span className='footer_info_address'>
+            &#124; 주소지 &#58; 경기도 성남시 분당구 황새울로 359번길 7, 한국정보공학 3층 
+            </span>
+            <br />
+            <span className='footer_info_ceo'>
+              대표이사 &#58; 박경철 &#124; 사업자등록번호 &#58; 144-81-09353 &#124; 통신판매업신고 &#58; 제 2016-성남분당-0680호
+            </span>
+            <br />
+            <span className='footer_info_copy'>
+              Copyright &#169; 2022 (주)달콤 All Rights Reserved.
+            </span>
+          </address>
+          <div className='footer_download'>
+            <a href='#' className='footer_btn_appstore'>App Store</a>
+            <a href='#' className='footer_btn_googleplay'>Google Play</a>
+            <a href='#' className='footer_btn_qr'></a>
+          </div>
+        </li>
+      </ul>
     </footer>
   );
 }

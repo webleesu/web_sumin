@@ -6,7 +6,7 @@ export default function Section() {
     <section id='viewBox'>
         <ul className="view_wrap">
           <li className='view_01'>
-            <h2>
+            <h2 className='jalnan'>
               <span className='red'>Dal.Komm</span>
               <span className='red'>Life Happens</span>
               <span className='red_stroke'>Coffee Helps</span>
