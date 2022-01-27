@@ -1,5 +1,7 @@
 // Section.js
 import '../style/section.scss';
+import Dal_K from '../image/Dal_K.svg';
+import Fox_M from '../image/Fox_M.svg';
 
 export default function Section() {
   return(
@@ -15,6 +17,7 @@ export default function Section() {
             {/* <text>Dal.Komm CAFE Dal.Komm</text> */}
             {/* <circle>Dal.Komm CAFE Dal.Komm</circle> */}
           </li>
+
           <li className='view_02'>
             <div class="view_02_text_wrap">
               <h2 className='red elice'>
@@ -35,7 +38,24 @@ export default function Section() {
             <div className='circle_02'></div>
             <div className='circle_03'></div>
           </li>
-          <li className='view_03'></li>
+
+          <li className='view_03'>
+            <h2 className='elice'>
+              <strong>
+                환상의 바리스타&nbsp;
+                <img src={Dal_K} alt='Dal.K'/>
+                와 얼렁뚱땅 파티쉐&nbsp;
+                <img src={Fox_M} alt='Fox.M' />
+              </strong>
+            </h2>
+            <p>
+              그들의 이야기로 펼쳐지는
+              <br />
+              달콤의 상상력을 기대해주세요
+            </p>
+            <div className='view_03_bg'></div>
+          </li>
+
           <li className='view_04'></li>
           <li className='view_05'></li>
           <li className='view_06'></li>

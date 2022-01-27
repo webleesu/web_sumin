@@ -1,6 +1,7 @@
 @charset "UTF-8";
 // section.scss
 
+@import './common/variable';
 @import './common/mixin';
 
 #viewBox {
@@ -67,7 +68,7 @@
   
 
   .circle_01 {
-    position: absolute; top: 0; right: -10px;
+    position: absolute; top: 0; right: 0;
     width: 419px; height: 424px;
     @include img('circle_img.png');
   }
@@ -82,3 +83,30 @@
     @include img('circle_small.svg');
   }
 } // .view_02 ===============================================================
+
+.view_03 {
+  position: relative;
+  width: 100%; height: 1080px;
+  padding: 200px 0;
+
+  h2 {
+    width: auto; height: auto;
+    margin: auto; margin-bottom: 40px;
+    font-size: 2.5vw; // 1440기준 36px
+    font-weight: 700;
+    color: $color_blue;
+  }
+  p {
+    width: auto; height: auto;
+    margin: auto;
+    font-size: 4.167vw; // 1440기준 60px
+    font-weight: 700;
+    color: $color_blue;
+  }
+
+  .view_03_bg {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    width: 100%; height: 490px;
+    @include img('bg_dal_story.svg', $size: cover)
+  }
+} // .view_03 ===============================================================
