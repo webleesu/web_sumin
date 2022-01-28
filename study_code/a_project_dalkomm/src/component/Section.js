@@ -58,7 +58,16 @@ export default function Section() {
             <div className='view_03_bg'></div>
           </li>
 
-          <li className='view_04'></li>
+          <li className='view_04'>
+            <section className='view_04_text_wrap'>
+              <h2 className='elice'>상상이 일상이 되는<br />달콤의 놀이터</h2>
+              <p>MZ세대를 위한 PLAYGROUND, 오픈 된 공간을 자유롭게 경험하세요</p>
+            </section>
+            <div className='view_04_rectangle'><span className='blind'>PLAYGROUND food</span></div>
+            <div className='view_04_circle'><span className='blind'>PLAYGROUND story</span></div>
+            <div className='view_04_pentagon'><span className='blind'>PLAYGROUND stay</span></div>
+          </li>
+
           <li className='view_05'></li>
           <li className='view_06'></li>
 
