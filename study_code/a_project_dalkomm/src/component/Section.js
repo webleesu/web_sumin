@@ -59,7 +59,7 @@ export default function Section() {
           </li>
 
           <li className='view_04'>
-            <section className='view_04_text_wrap'>
+            <section className='view_04_text_wrap red'>
               <h2 className='elice'>상상이 일상이 되는<br />달콤의 놀이터</h2>
               <p>MZ세대를 위한 PLAYGROUND, 오픈 된 공간을 자유롭게 경험하세요</p>
             </section>
@@ -68,7 +68,20 @@ export default function Section() {
             <div className='view_04_pentagon'><span className='blind'>PLAYGROUND stay</span></div>
           </li>
 
-          <li className='view_05'></li>
+          <li className='view_05'>
+            <section className='view_05_text_wrap'>
+              <h2 className='elice red'>달콤이 선사하는 다채로운 경험</h2>
+              <p className='red'>
+                커피의 본질적인 것을 통한 커피의 전문성을 부각 시키는 컨텐츠와 함께
+                <br />
+                비쥬얼, 맛, 건강함, 그리고 마시는 재미까지 함께 선사합니다
+              </p>
+            </section>
+            <div className='img_moving'>
+              <div className='sliding_menu'></div>
+              <div className='bottom'></div>
+            </div>
+          </li>
           <li className='view_06'></li>
 
           <li className='view_07'>

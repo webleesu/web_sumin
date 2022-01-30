@@ -8,12 +8,15 @@
   width: 100%; max-width: 1920px; height: auto;
   background-color: #fbf4e4;
 }
+.view_wrap {
+  overflow-x: hidden;
+}
 
 .red {
-  color: #f43b00;
+  color: $color_red;
 }
 .red_stroke {
-  -webkit-text-stroke: 2px #f43b00;
+  -webkit-text-stroke: 2px $color_red;
   color: transparent;
 }
 
@@ -128,7 +131,6 @@
   width: 100%; height: auto;
   margin: auto;
   padding: 120px;
-  color: $color_primary;
   h2 {
     margin-bottom: 40px;
     font-size: 4.51vw; // 1440기준 65px
@@ -145,7 +147,73 @@
   @include img('img_play_01.jpg', $size: cover)
 }
 
+.view_04_circle {
+  position: absolute; z-index: -1;
+  top: 300px; right: -100px;
+  width: 400px; height: 400px;
+  border-radius: 300px;
+  @include img('img_play_02.jpg', $size: cover)
+}
+
+.view_04_pentagon {
+  position: absolute; z-index: -1;
+  bottom: 50px; left: 0; right: 0;
+  width: 400px; height: 350px;
+  margin: auto;
+  clip-path: polygon(65% 0, 100% 10%, 100% 100%, 0 100%, 0 40%); // clip-path로 오각형 도형 만들기
+  @include img('img_play_03.jpg', $size: cover);
+}
+
 // .view_04 ================================================================
+
+.view_05 {
+  position: relative;
+  width: 100%; height: auto;
+  padding-top: 200px;
+}
+
+.view_05_text_wrap {
+  width: auto; height: auto;
+  margin: auto; 
+  margin-bottom: 250px;
+  h2 {
+    margin-bottom: 30px;
+    font-size: 4.51vw; // 1440기준 65px
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+.img_moving {
+  position: relative; bottom: 0;
+  width: 100%; height: 475px;
+
+  .sliding_menu {
+    position: absolute; z-index: 1;
+    left: 0;
+    width: 400%; height: 375px;
+    @include img('menu.png', $repeat: repeat-x); // repeat-x 를 통해서 애니메이션이 이동할때 무한으로 도는듯한 느낌
+    animation: sliding_menu 20s linear infinite;
+  }
+
+  .bottom {
+    position: absolute; bottom: 0; z-index: 0;
+    width: 100%; height: 300px;
+    background-color: $color_white;
+  }
+}
+
+@keyframes sliding_menu {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 3567px 0;
+  }
+}
+
+// .view_05 ================================================================
 
 .view_07 {
   width: 100%; height: 800px; 
