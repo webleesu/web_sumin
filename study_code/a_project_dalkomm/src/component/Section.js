@@ -82,6 +82,7 @@ export default function Section() {
               <div className='bottom'></div>
             </div>
           </li>
+          
           <li className='view_06'></li>
 
           <li className='view_07'>

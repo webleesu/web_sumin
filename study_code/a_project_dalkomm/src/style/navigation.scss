@@ -1,22 +1,47 @@
 // navigation.scss
 @import './common/variable';
 
-.gnb ul {
+.gnb {
+  position: relative; z-index: 10;
   display: flex; justify-content: space-between;
-  width: 780px; height: 120px;
+  width: 800px; height: auto;
   // line-height: 120px;
-  li {
+  &:hover .gnb_sub {
+    display: block;
+  }
+  > li {
+    position: relative;
     width: auto; height: 30px; margin: auto;
+    text-align: left;
     
     &:hover {
       color: $color_primary;
     }
-    a:focus {
+    > a:focus {
       color: $color_primary;
     }
-    a {
+    > a {
       font-size: 18px; font-weight: bold;
     }
+  } // .gnb li
+} // .gnb
+
+.gnb_sub {
+  display: none;
+  position: absolute; top: 0px; left: 0; z-index: 1;
+  width: 125px;
+  padding-top: 50px;
+  // margin-top: 20px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  color: $color_black;
+
+  &:hover { display: block;}
+
+  li {
+    margin-top: 10px;
+    &:first-child {margin-top: 0;}
   }
 }
 
