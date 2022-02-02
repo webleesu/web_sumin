@@ -28,7 +28,7 @@
 
 .gnb_sub {
   display: none;
-  position: absolute; top: 0px; left: 0; z-index: 1;
+  position: absolute; top: 0px; left: 0; z-index: -1;
   width: 125px;
   padding-top: 50px;
   // margin-top: 20px;
@@ -42,6 +42,7 @@
   li {
     margin-top: 10px;
     &:first-child {margin-top: 0;}
+    &:hover { color: $color_primary;}
   }
 }
 
