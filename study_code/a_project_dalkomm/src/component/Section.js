@@ -4,6 +4,28 @@ import Dal_K from '../image/Dal_K.svg';
 import Fox_M from '../image/Fox_M.svg';
 
 export default function Section() {
+
+  let scrollY = window.scrollY;
+  window.addEventListener('scroll', (e)=>{
+    console.log('scroll', window.scrollY);
+  });
+
+  let isScrollDown = false;
+  let isScrollUp = false;
+  if(window.scrollY > 900){
+    isScrollDown = true;
+    console.log('isScrollDown',isScrollDown);
+  }else {
+    isScrollDown = false;
+  }
+  if(window.scrollY < 900){
+    isScrollUp = true;
+    console.log('isScrollUp',isScrollUp);
+  }else {
+    isScrollUp = false;
+  }
+
+
   return(
     <section id='viewBox'>
         <ul className="view_wrap">
@@ -19,7 +41,7 @@ export default function Section() {
           </li>
 
           <li className='view_02'>
-            <div class="view_02_text_wrap">
+            <section className={"view_02_text_wrap " + (isScrollDown ? 'text_slide_up' : '') + (isScrollUp ? 'text_slide_down' : '')}>
               <h2 className='red elice'>
                 <strong>달콤, 상상이 일상이 되는 곳</strong>
               </h2>
@@ -32,7 +54,7 @@ export default function Section() {
                 그리고 다양한 음악과 문화를 소비하는 플랫폼으로서 맛과 식의 경험을 넘어 향유할 수 있는 공간이 되어 <br />
                 여러분의 달콤한 상상, 행복한 상상을 응원하겠습니다.
               </p>
-            </div>
+            </section>
             
             <div className='circle_01'></div>
             <div className='circle_02'></div>
