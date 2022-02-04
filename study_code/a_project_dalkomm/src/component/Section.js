@@ -2,6 +2,7 @@
 import '../style/section.scss';
 import Dal_K from '../image/Dal_K.svg';
 import Fox_M from '../image/Fox_M.svg';
+import { useState } from 'react';
 
 export default function Section() {
 
@@ -12,18 +13,34 @@ export default function Section() {
 
   let isScrollDown = false;
   let isScrollUp = false;
+
   if(window.scrollY > 900){
     isScrollDown = true;
     console.log('isScrollDown',isScrollDown);
   }else {
     isScrollDown = false;
+    console.log('isScrollDown',isScrollDown);
   }
-  if(window.scrollY < 900){
+  
+  if(window.scrollY < 800){
     isScrollUp = true;
     console.log('isScrollUp',isScrollUp);
   }else {
     isScrollUp = false;
+    console.log('isScrollUp',isScrollUp);
   }
+
+  const animationArr = [
+    {animation: 'slideUp 1s ease-out forwards'},
+    {animation: 'slideDown 1s ease-out forwards'}
+  ];
+
+  const [ani, setAni] = useState(0);
+  // if(window.scrollY > 900){
+  //   setAni(ani = 1)
+  // }else {
+  //   setAni(ani = 0)
+  // }
 
 
   return(
@@ -41,7 +58,12 @@ export default function Section() {
           </li>
 
           <li className='view_02'>
-            <section className={"view_02_text_wrap " + (isScrollDown ? 'text_slide_up' : '') + (isScrollUp ? 'text_slide_down' : '')}>
+            <section 
+              // className={"view_02_text_wrap " + (isScrollDown ? 'text_slide_up' : '')}
+              className='view_02_text_wrap'
+              style={animationArr[ani]}
+
+            >
               <h2 className='red elice'>
                 <strong>달콤, 상상이 일상이 되는 곳</strong>
               </h2>
