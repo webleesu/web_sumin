@@ -140,7 +140,8 @@ html, body {
   #headBox {
     height: 19.5vw;
     max-height: 150px;
-    padding: 3.9vw 10vw;
+    padding: 3.9vw 9vw;
+    overflow: hidden;
   }
 
   h1 {
@@ -2457,14 +2458,16 @@ html, body {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(28, 28, 28, 0.5);
+    border-radius: 0.25rem;
+    background-color: rgba(28, 28, 28, 0.3);
   }
   .awards_main .awards:nth-child(4)::after {
     content: "";
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(28, 28, 28, 0.5);
+    border-radius: 0.25rem;
+    background-color: rgba(28, 28, 28, 0.3);
   }
   .awards_main .awards:nth-child(n+5) {
     display: none;
@@ -2559,7 +2562,7 @@ html, body {
     width: 100%;
     height: 100%;
     border-radius: 0.25rem;
-    background-color: rgba(28, 28, 28, 0.5);
+    background-color: rgba(28, 28, 28, 0.3);
   }
   .awards_main .awards:nth-child(5)::after {
     content: "";
@@ -2567,7 +2570,7 @@ html, body {
     width: 100%;
     height: 100%;
     border-radius: 0.25rem;
-    background-color: rgba(28, 28, 28, 0.5);
+    background-color: rgba(28, 28, 28, 0.3);
   }
   .awards_main .awards:nth-child(6) {
     width: 0;
@@ -2586,6 +2589,11 @@ html, body {
   margin-top: 20px;
   padding: 80px;
   overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#saleBox::-webkit-scrollbar {
+  display: none;
 }
 
 .sale_area {

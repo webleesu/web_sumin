@@ -66,7 +66,8 @@ html, body {
   #headBox {
     height: 19.5vw;
     max-height: 150px;
-    padding: 3.9vw 10vw;
+    padding: 3.9vw 9vw;
+    overflow: hidden;
   }
 
   h1 {

@@ -43,10 +43,11 @@
 @media all and (max-width: 1279px) {
   #headBox {
     height: 19.5vw; max-height: 150px;
-    padding: 3.9vw 10vw;
+    padding: 3.9vw 9vw;
+    overflow: hidden;
   }
   @at-root h1 {
-    min-width: 100px;width: 22.1vw; max-width: 170px; 
+    min-width: 100px; width: 22.1vw; max-width: 170px; 
     min-height: 20px; height: 5.2vw; max-height: 40px; // height: 5.2vw;
     // margin-top: 30px;
     a{ 

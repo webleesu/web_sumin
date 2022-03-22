@@ -6,6 +6,12 @@
   // padding: 10vw;
   padding: 80px;
   overflow: auto;
+  -ms-overflow-style: none; // IE and Edge 스크롤바 없애기
+  scrollbar-width: none; // Firefox 스크롤바 없애기
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera 스크롤바 없애기
+  }
 } // #saleBox
 
 .sale_area {
