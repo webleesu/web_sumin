@@ -1,28 +1,5 @@
 // main.js
 
-// #header 스크롤시 움직임============================================================
-const elHeader = document.querySelector('#headBox');
-const removeContains = elHeader.classList.contains('remove_header');
-const dropContains = elHeader.classList.contains('drop_header');
-// let scrollY = this.scrollY;
-let wheelPermission = true;
-
-
-window.addEventListener('mousewheel', (e) => {
-  
-  let wheel = e.wheelDelta;
-  if(wheel < 0 && removeContains !== true){ //마우스 휠을 아래로 내리면 헤더 사라짐
-    elHeader.classList.add('remove_header');
-    elHeader.classList.remove('drop_header');
-    elHeader.style.top = '-500px';
-  } else { // 마우스 휠을 위로 올리면 헤더 나타남
-    elHeader.classList.add('drop_header');
-    elHeader.classList.remove('remove_header');
-    elHeader.style.top = 0;
-  }
-
-});
-
 // #viewBox 광고영역 슬라이드 ==============================================================
 // 변수 ------------------------------------------------------------------
 const elViewBox = document.querySelector('#viewBox');
