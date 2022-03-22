@@ -30,7 +30,29 @@ html, body {
   outline: 2px solid #1c1c1c;
   border-radius: 4px;
 }
+#headBox.remove_header {
+  animation: removeHeader 0.5s;
+}
+#headBox.drop_header {
+  animation: dropHeader 0.5s;
+}
 
+@keyframes removeHeader {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -300px;
+  }
+}
+@keyframes dropHeader {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0;
+  }
+}
 .head_wrapper {
   display: flex;
   justify-content: space-between;

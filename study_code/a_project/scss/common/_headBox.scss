@@ -13,7 +13,24 @@
   a:hover { outline: 2px solid $color_black; border-radius: 4px; text-decoration: none; }
   button:hover { outline: 2px solid $color_black; border-radius: 4px; }
   
+  &.remove_header {
+    animation: removeHeader 0.5s;
+  }
+  &.drop_header {
+    animation: dropHeader 0.5s;
+  }
+
 } // #headBox
+
+@keyframes removeHeader {
+  0% { top: 0; }
+  100% { top: -300px; }
+}
+
+@keyframes dropHeader {
+  0% { top: -300px }
+  100% { top: 0; }
+}
 
 .head_wrapper {
   display: flex; justify-content: space-between; align-items: flex-end;

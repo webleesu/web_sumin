@@ -1,5 +1,25 @@
 // main.js
 
+// #header 스크롤시 움직임============================================================
+const elHeader = document.querySelector('#headBox');
+const elHeaderHeight = elHeader.style.maxHeight;
+
+let scrollY = this.scrollY;
+
+window.addEventListener('mousewheel', (e) => {
+  let wheel = e.wheelDelta;
+  console.log(wheel);
+  if(wheel < 0){
+    elHeader.classList.add('remove_header');
+    elHeader.classList.remove('drop_header');
+    elHeader.style.top = '-500px';
+  } else {
+    elHeader.classList.add('drop_header');
+    elHeader.classList.remove('remove_header');
+    elHeader.style.top = 0;
+  }
+});
+
 // #viewBox 광고영역 슬라이드 ==============================================================
 // 변수 ------------------------------------------------------------------
 const elViewBox = document.querySelector('#viewBox');
@@ -162,4 +182,3 @@ elAwardsBtn.addEventListener('click', fnAwardSlideMove);
 
 
 // --------------------------------------------------------------------------
-// header 진행중
